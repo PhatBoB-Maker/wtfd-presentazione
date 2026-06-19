@@ -390,34 +390,30 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
 #concept-env h2 { margin: 18px 0; }
 #concept-env .env-intro { color: var(--text-mid); font-size: 14px; line-height: 1.85; max-width: 620px; margin-bottom: 48px; }
 
-.concept-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.concept-cover {
+  position: relative;
+  max-width: 640px;
+  cursor: pointer;
 }
+.concept-cover .placeholder { cursor: default; }
 
-.concept-grid .img-block { position: relative; }
-
-.concept-cap {
-  position: absolute;
-  top: 10px; left: 10px;
-  z-index: 2;
+.concept-cover-hint {
+  margin-top: 14px;
   font-family: var(--sans);
-  font-size: 9px;
-  letter-spacing: 0.2em;
-  color: var(--text);
-  background: rgba(8,7,5,0.65);
-  padding: 4px 9px;
-  pointer-events: none;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-low);
 }
 
-.concept-grid .img-block { cursor: zoom-in; }
-
-/* --- hover zoom overlay (centro schermo) --- */
-#concept-zoom-overlay {
+/* ============================================================
+   LIGHTBOX CONCEPT (click per ingrandire, scorre tutta la galleria)
+   Niente hover: tutto guidato da click espliciti, nessuna zona morta.
+   ============================================================ */
+#concept-lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(8,7,5,0.88);
+  background: rgba(8,7,5,0.92);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -426,19 +422,82 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
   transition: opacity 0.3s ease;
   z-index: 500;
 }
-#concept-zoom-overlay.open { opacity: 1; }
-#concept-zoom-overlay img {
-  max-width: 80vw;
-  max-height: 84vh;
+#concept-lightbox.open { opacity: 1; pointer-events: auto; }
+
+.lightbox-stage {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 86vw;
+  max-height: 88vh;
+}
+
+#concept-lightbox img {
+  max-width: 86vw;
+  max-height: 88vh;
   width: auto;
   height: auto;
   object-fit: contain;
   box-shadow: 0 30px 90px rgba(0,0,0,0.65);
-  transform: scale(0.9);
-  transition: transform 0.35s ease;
-  pointer-events: none;
 }
-#concept-zoom-overlay.open img { transform: scale(1); pointer-events: auto; }
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(8,7,5,0.78);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 24px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+.lightbox-arrow:hover    { border-color: var(--accent); background: rgba(8,7,5,0.95); }
+.lightbox-arrow.is-hidden { opacity: 0; pointer-events: none; }
+.lightbox-arrow-prev { left: 16px; }
+.lightbox-arrow-next { right: 16px; }
+
+.lightbox-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(8,7,5,0.78);
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+.lightbox-close:hover { border-color: var(--accent); background: rgba(8,7,5,0.95); }
+
+.lightbox-counter {
+  position: absolute;
+  bottom: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--text-low);
+  white-space: nowrap;
+}
 
 /* ============================================================
    THREE PILLARS
@@ -700,7 +759,9 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
   .looking-cards { grid-template-columns: 1fr; }
   #contacts .inner { grid-template-columns: 1fr; }
   .bell-card { grid-template-columns: 1fr; }
-  .concept-grid { grid-template-columns: 1fr; }
+  .lightbox-arrow { width: 32px; height: 32px; font-size: 16px; }
+  .lightbox-arrow-prev { left: 6px; }
+  .lightbox-arrow-next { right: 6px; }
 }
 
 /* ============================================================
@@ -924,41 +985,28 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
     <span class="label" data-k="env_label"></span>
     <h2 data-k="env_title"></h2>
     <p class="env-intro" data-k="env_intro"></p>
-    <div class="concept-grid">
-      <div class="img-block rv d1">
-        <span class="concept-cap">01</span>
-        <img src="assets/gallery/env1.png" alt="Concept ambientazione 01"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-        <div class="placeholder">
-          <div class="placeholder-icon">⬜</div>
-          <span>env1.png</span>
-        </div>
-      </div>
-      <div class="img-block rv d2">
-        <span class="concept-cap">02</span>
-        <img src="assets/gallery/env2.png" alt="Concept ambientazione 02"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-        <div class="placeholder">
-          <div class="placeholder-icon">⬜</div>
-          <span>env2.png</span>
-        </div>
-      </div>
-      <div class="img-block rv d3">
-        <span class="concept-cap">03</span>
-        <img src="assets/gallery/env3.png" alt="Concept ambientazione 03"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-        <div class="placeholder">
-          <div class="placeholder-icon">⬜</div>
-          <span>env3.png</span>
-        </div>
+    <div class="concept-cover img-block" id="concept-cover">
+      <img src="assets/gallery/env1.png" alt="Concept ambientazione"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="placeholder">
+        <div class="placeholder-icon">⬜</div>
+        <span>env1.png</span>
       </div>
     </div>
+    <p class="concept-cover-hint" data-k="env_cover_hint"></p>
   </div>
 </section>
 
-<!-- Overlay zoom per i concept ambientazione (hover) -->
-<div id="concept-zoom-overlay">
-  <img id="concept-zoom-img" src="" alt="">
+<!-- Lightbox concept ambientazione: click per ingrandire, frecce per scorrere tutte e 9
+     le immagini, chiusura solo con la × / Esc / click fuori dall'immagine. Niente hover. -->
+<div id="concept-lightbox">
+  <div class="lightbox-stage">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Chiudi" type="button">×</button>
+    <button class="lightbox-arrow lightbox-arrow-prev" id="lightbox-prev" aria-label="Precedente" type="button">‹</button>
+    <img id="lightbox-img" src="" alt="">
+    <button class="lightbox-arrow lightbox-arrow-next" id="lightbox-next" aria-label="Successivo" type="button">›</button>
+    <span class="lightbox-counter" id="lightbox-counter"></span>
+  </div>
 </div>
 
 <!-- ============================================================
@@ -1130,16 +1178,21 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
         <span class="tcard-badge badge-on" data-k="badge_on"></span>
       </div>
       <div class="tcard rv d1">
+        <div class="tcard-name">Tiziana Pirina</div>
+        <div class="tcard-roles" data-k="team6_roles"></div>
+        <span class="tcard-badge badge-on" data-k="badge_on"></span>
+      </div>
+      <div class="tcard rv d2">
         <div class="tcard-name" data-k="team3_name"></div>
         <div class="tcard-roles" data-k="team3_roles"></div>
         <span class="tcard-badge badge-neg" data-k="badge_neg"></span>
       </div>
-      <div class="tcard rv d2">
+      <div class="tcard rv d1">
         <div class="tcard-name" data-k="team4_name"></div>
         <div class="tcard-roles" data-k="team4_roles"></div>
         <span class="tcard-badge badge-neg" data-k="badge_neg"></span>
       </div>
-      <div class="tcard rv d1">
+      <div class="tcard rv d2">
         <div class="tcard-name" data-k="team5_name"></div>
         <div class="tcard-roles" data-k="team5_roles"></div>
         <span class="tcard-badge badge-seek" data-k="badge_seek"></span>
@@ -1236,6 +1289,7 @@ const T = {
     env_label: "Ambientazione",
     env_title: "Pianura Padana rurale — Concept Environment",
     env_intro: "Riferimenti visivi per gli spazi di gioco: campi, fossi, canneti, cascine isolate nella nebbia. Registro dark fantasy radicato nel reale, non fantasy generico. Il gioco non è open world ma strutturato a livelli — ogni concept qui sotto rappresenta un possibile spazio contenuto, non una mappa continua.",
+    env_cover_hint: "Clicca sull'immagine per scorrere tutte le concept (9)",
 
     pillars_label: "Il cuore del gioco",
     p1_title: "Autenticità",
@@ -1284,6 +1338,7 @@ const T = {
     team3_name:   "Animatore",      team3_roles: "Character Animation · Combat System",
     team4_name:   "Programmatore",  team4_roles: "Unreal Engine · Gameplay Narrativo",
     team5_name:   "3D Artist",      team5_roles: "Character Design · Asset 3D",
+    team6_roles:  "Character · Creature Artist",
     badge_on:     "Confermato",
     badge_neg:    "In ingaggio",
     badge_seek:   "In ricerca",
@@ -1331,6 +1386,7 @@ const T = {
     env_label: "Setting concepts",
     env_title: "Rural Po Valley — Environment Concepts",
     env_intro: "Visual references for the game's spaces: fields, ditches, reed beds, isolated farmhouses in the fog. Dark fantasy register rooted in reality, not generic fantasy. The game is not open world but level-based — each concept below represents one contained space, not a continuous map.",
+    env_cover_hint: "Click the image to browse all concepts (9)",
 
     pillars_label: "The core",
     p1_title: "Authenticity",
@@ -1379,6 +1435,7 @@ const T = {
     team3_name:   "Animator",    team3_roles: "Character Animation · Combat System",
     team4_name:   "Programmer",  team4_roles: "Unreal Engine · Narrative Gameplay",
     team5_name:   "3D Artist",   team5_roles: "Character Design · 3D Assets",
+    team6_roles:  "Character Creature Artist",
     badge_on:     "Confirmed",
     badge_neg:    "In negotiation",
     badge_seek:   "In search",
@@ -1798,37 +1855,60 @@ const GAMEPLAY_GALLERIES = {
 })();
 
 /* ---------------------------------------------------------------
-   CONCEPT AMBIENTAZIONE — hover zoom centrato
+   CONCEPT AMBIENTAZIONE — lightbox a click (niente hover: zero
+   zone morte, zero interferenze con elementi sottostanti)
 --------------------------------------------------------------- */
 (function() {
-  const overlay = document.getElementById('concept-zoom-overlay');
-  const zoomImg = document.getElementById('concept-zoom-img');
-  if (!overlay || !zoomImg) return;
-  let hideTimer = null;
-  const close = () => overlay.classList.remove('open');
+  const cover    = document.getElementById('concept-cover');
+  const lightbox = document.getElementById('concept-lightbox');
+  const img      = document.getElementById('lightbox-img');
+  const prevBtn  = document.getElementById('lightbox-prev');
+  const nextBtn  = document.getElementById('lightbox-next');
+  const closeBtn = document.getElementById('lightbox-close');
+  const counter  = document.getElementById('lightbox-counter');
+  if (!cover || !lightbox || !img) return;
 
-  document.querySelectorAll('.concept-grid .img-block img').forEach(img => {
-    img.addEventListener('mouseenter', () => {
-      clearTimeout(hideTimer);
-      zoomImg.src = img.currentSrc || img.src;
-      overlay.classList.add('open');
-    });
-    // breve margine per dare tempo al cursore di raggiungere l'immagine zoomata
-    img.addEventListener('mouseleave', () => {
-      hideTimer = setTimeout(close, 220);
-    });
+  // elenco completo delle 9 concept: non serve tenerle nel DOM, bastano i percorsi
+  const slides = Array.from({ length: 9 }, (_, i) => 'assets/gallery/env' + (i + 1) + '.png');
+
+  let activeIdx = 0;
+
+  function render() {
+    img.src = slides[activeIdx];
+    if (counter) counter.textContent = (activeIdx + 1) + ' / ' + slides.length;
+    if (prevBtn) prevBtn.classList.toggle('is-hidden', activeIdx <= 0);
+    if (nextBtn) nextBtn.classList.toggle('is-hidden', activeIdx >= slides.length - 1);
+  }
+
+  function open(idx) {
+    activeIdx = Math.max(0, Math.min(slides.length - 1, idx));
+    render();
+    lightbox.classList.add('open');
+  }
+
+  function close() { lightbox.classList.remove('open'); }
+
+  function go(delta) {
+    activeIdx = Math.max(0, Math.min(slides.length - 1, activeIdx + delta));
+    render();
+  }
+
+  cover.addEventListener('click', () => open(0));
+  if (closeBtn) closeBtn.addEventListener('click', close);
+  if (prevBtn) prevBtn.addEventListener('click', () => go(-1));
+  if (nextBtn) nextBtn.addEventListener('click', () => go(1));
+
+  // click sullo sfondo scuro (fuori dall'immagine/frecce) chiude la lightbox
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
   });
 
-  // l'immagine zoomata è l'unica area "viva": appena il cursore esce dai suoi bordi, si chiude
-  zoomImg.addEventListener('mouseenter', () => clearTimeout(hideTimer));
-  zoomImg.addEventListener('mouseleave', () => {
-    hideTimer = setTimeout(close, 80);
+  // Esc chiude la lightbox
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) close();
   });
 })();
 
-/* ---------------------------------------------------------------
-   INIT
---------------------------------------------------------------- */
 setLang('it');
 </script>
 </body>
