@@ -384,6 +384,63 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
 .text-block p { color: var(--text-mid); font-size: 14px; line-height: 1.85; }
 
 /* ============================================================
+   CONCEPT AMBIENTAZIONE (Environment Concepts)
+   ============================================================ */
+#concept-env .inner > .label { margin-bottom: 0; }
+#concept-env h2 { margin: 18px 0; }
+#concept-env .env-intro { color: var(--text-mid); font-size: 14px; line-height: 1.85; max-width: 620px; margin-bottom: 48px; }
+
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.concept-grid .img-block { position: relative; }
+
+.concept-cap {
+  position: absolute;
+  top: 10px; left: 10px;
+  z-index: 2;
+  font-family: var(--sans);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--text);
+  background: rgba(8,7,5,0.65);
+  padding: 4px 9px;
+  pointer-events: none;
+}
+
+.concept-grid .img-block { cursor: zoom-in; }
+
+/* --- hover zoom overlay (centro schermo) --- */
+#concept-zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8,7,5,0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 500;
+}
+#concept-zoom-overlay.open { opacity: 1; }
+#concept-zoom-overlay img {
+  max-width: 80vw;
+  max-height: 84vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.65);
+  transform: scale(0.9);
+  transition: transform 0.35s ease;
+  pointer-events: none;
+}
+#concept-zoom-overlay.open img { transform: scale(1); pointer-events: auto; }
+
+/* ============================================================
    THREE PILLARS
    ============================================================ */
 #pillars { background: var(--bg); }
@@ -643,6 +700,7 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
   .looking-cards { grid-template-columns: 1fr; }
   #contacts .inner { grid-template-columns: 1fr; }
   .bell-card { grid-template-columns: 1fr; }
+  .concept-grid { grid-template-columns: 1fr; }
 }
 
 /* ============================================================
@@ -857,6 +915,51 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
     </div>
   </div>
 </section>
+
+<!-- ============================================================
+     CONCEPT AMBIENTAZIONE (Environment Concepts)
+     ============================================================ -->
+<section id="concept-env" style="background: var(--bg2);">
+  <div class="inner rv">
+    <span class="label" data-k="env_label"></span>
+    <h2 data-k="env_title"></h2>
+    <p class="env-intro" data-k="env_intro"></p>
+    <div class="concept-grid">
+      <div class="img-block rv d1">
+        <span class="concept-cap">01</span>
+        <img src="assets/gallery/env1.png" alt="Concept ambientazione 01"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="placeholder">
+          <div class="placeholder-icon">⬜</div>
+          <span>env1.png</span>
+        </div>
+      </div>
+      <div class="img-block rv d2">
+        <span class="concept-cap">02</span>
+        <img src="assets/gallery/env2.png" alt="Concept ambientazione 02"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="placeholder">
+          <div class="placeholder-icon">⬜</div>
+          <span>env2.png</span>
+        </div>
+      </div>
+      <div class="img-block rv d3">
+        <span class="concept-cap">03</span>
+        <img src="assets/gallery/env3.png" alt="Concept ambientazione 03"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="placeholder">
+          <div class="placeholder-icon">⬜</div>
+          <span>env3.png</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Overlay zoom per i concept ambientazione (hover) -->
+<div id="concept-zoom-overlay">
+  <img id="concept-zoom-img" src="" alt="">
+</div>
 
 <!-- ============================================================
      THREE PILLARS
@@ -1130,6 +1233,10 @@ const T = {
     borda_title: "La Borda",
     borda_text:  "Un'entità antica della pianura padana — incappucciata, informe, invisibile finché non vuole essere vista. Non è un'invenzione: è documentata nelle tradizioni orali romagnole. Nel gioco, il suo meccanismo e la sua natura sono più profondi e più tragici di quanto qualsiasi fonte folkloristica abbia mai descritto.",
 
+    env_label: "Ambientazione",
+    env_title: "Pianura Padana rurale — Concept Environment",
+    env_intro: "Riferimenti visivi per gli spazi di gioco: campi, fossi, canneti, cascine isolate nella nebbia. Registro dark fantasy radicato nel reale, non fantasy generico. Il gioco non è open world ma strutturato a livelli — ogni concept qui sotto rappresenta un possibile spazio contenuto, non una mappa continua.",
+
     pillars_label: "Il cuore del gioco",
     p1_title: "Autenticità",
     p1_text:  "Niente fantasy. Ogni figura ha base reale nella tradizione locale. Horror credibile perché affonda in superstizioni vere.",
@@ -1220,6 +1327,10 @@ const T = {
     borda_label: "The threat",
     borda_title: "The Borda",
     borda_text:  "An ancient entity of the Po Valley plain — hooded, formless, invisible until it chooses to be seen. Not an invention: documented in Romagna oral tradition. In the game, its mechanism and nature run deeper and darker than any folkloric source has ever described.",
+
+    env_label: "Setting concepts",
+    env_title: "Rural Po Valley — Environment Concepts",
+    env_intro: "Visual references for the game's spaces: fields, ditches, reed beds, isolated farmhouses in the fog. Dark fantasy register rooted in reality, not generic fantasy. The game is not open world but level-based — each concept below represents one contained space, not a continuous map.",
 
     pillars_label: "The core",
     p1_title: "Authenticity",
@@ -1684,6 +1795,35 @@ const GAMEPLAY_GALLERIES = {
     if (vid) { vid.pause(); vid.currentTime = 0; }
     currentId = null;
   };
+})();
+
+/* ---------------------------------------------------------------
+   CONCEPT AMBIENTAZIONE — hover zoom centrato
+--------------------------------------------------------------- */
+(function() {
+  const overlay = document.getElementById('concept-zoom-overlay');
+  const zoomImg = document.getElementById('concept-zoom-img');
+  if (!overlay || !zoomImg) return;
+  let hideTimer = null;
+  const close = () => overlay.classList.remove('open');
+
+  document.querySelectorAll('.concept-grid .img-block img').forEach(img => {
+    img.addEventListener('mouseenter', () => {
+      clearTimeout(hideTimer);
+      zoomImg.src = img.currentSrc || img.src;
+      overlay.classList.add('open');
+    });
+    // breve margine per dare tempo al cursore di raggiungere l'immagine zoomata
+    img.addEventListener('mouseleave', () => {
+      hideTimer = setTimeout(close, 220);
+    });
+  });
+
+  // l'immagine zoomata è l'unica area "viva": appena il cursore esce dai suoi bordi, si chiude
+  zoomImg.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+  zoomImg.addEventListener('mouseleave', () => {
+    hideTimer = setTimeout(close, 80);
+  });
 })();
 
 /* ---------------------------------------------------------------
