@@ -426,18 +426,22 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
 
 .lightbox-stage {
   position: relative;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 86vw;
-  max-height: 88vh;
+  /* Viewport fisso, uguale per tutte le immagini (rapporto 3:2, via di mezzo
+     tra le concept più larghe 16:9-ish e quelle più "quadre" 5:4): le frecce
+     sono ancorate ai bordi di questo box, che non cambia mai dimensione da
+     una slide all'altra. Il min() rispetta sia il limite di larghezza (vw)
+     sia quello di altezza (vh, convertito in vw equivalenti via calc) sia un
+     tetto massimo in px sugli schermi grandi. */
+  width: min(90vw, calc(86vh * 1.5), 1300px);
+  aspect-ratio: 3 / 2;
 }
 
 #concept-lightbox img {
-  max-width: 86vw;
-  max-height: 88vh;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   box-shadow: 0 30px 90px rgba(0,0,0,0.65);
 }
@@ -1435,7 +1439,7 @@ const T = {
     team3_name:   "Animator",    team3_roles: "Character Animation · Combat System",
     team4_name:   "Programmer",  team4_roles: "Unreal Engine · Narrative Gameplay",
     team5_name:   "3D Artist",   team5_roles: "Character Design · 3D Assets",
-    team6_roles:  "Character Creature Artist",
+    team6_roles:  "Character · Creature Artist",
     badge_on:     "Confirmed",
     badge_neg:    "In negotiation",
     badge_seek:   "In search",
