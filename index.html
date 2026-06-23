@@ -1335,8 +1335,8 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
     </div>
 
     <!-- Video -->
-    <div style="background: #000; position: relative;">
-      <video id="plan-video" style="width: 100%; display: block; max-height: 70vh;" controls>
+    <div style="background: #000; position: relative; z-index: 1;">
+      <video id="plan-video" style="width: 100%; display: block; max-height: 70vh; cursor: pointer; position: relative; z-index: 2;" controls preload="metadata">
         <source src="assets/production_plan.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -1393,9 +1393,14 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
     if (bg && bgWasPlaying) bg.play().catch(function(){});
   };
 
-  // Chiudi cliccando fuori
+  // Chiudi cliccando sul backdrop (non sul contenuto)
   document.getElementById('plan-modal').addEventListener('click', function(e) {
-    if (e.target === this) window.closePlanModal();
+    if (e.target === document.getElementById('plan-modal')) window.closePlanModal();
+  });
+
+  // Assicura che i click sul video non chiudano il modale
+  document.getElementById('plan-video').addEventListener('click', function(e) {
+    e.stopPropagation();
   });
 
   // Slider volume video
