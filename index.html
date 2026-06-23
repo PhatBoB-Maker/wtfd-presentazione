@@ -1263,6 +1263,155 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
 </section>
 
 <!-- ============================================================
+     PRODUCTION PLAN CTA
+     ============================================================ -->
+<section id="production-plan" style="background: var(--bg2); padding-top: 80px; padding-bottom: 80px;">
+  <div class="inner" style="text-align: center;">
+    <span class="label rv" style="display:block; margin-bottom: 16px;">Production Plan</span>
+    <h2 class="rv d1" style="margin-bottom: 20px; font-family: var(--serif);">What's the Production Plan?</h2>
+    <p class="rv d2" style="color: var(--text-mid); font-size: 14px; max-width: 540px; margin: 0 auto 40px; line-height: 1.85;">
+      A complete walkthrough of how we're building Where the Fog Dies — milestones, team, revenue share, and timeline.
+    </p>
+    <button class="rv d3" id="open-plan-btn" onclick="openPlanModal()" style="
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s;
+    "
+    onmouseover="this.style.background='var(--accent)'; this.style.color='#fff';"
+    onmouseout="this.style.background='transparent'; this.style.color='var(--text)';">
+      ▶ &nbsp; Watch the Production Plan
+    </button>
+  </div>
+</section>
+
+<!-- ============================================================
+     VIDEO MODAL
+     ============================================================ -->
+<div id="plan-modal" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(4,3,2,0.92);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+">
+  <div style="
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+  ">
+    <!-- Close button -->
+    <button onclick="closePlanModal()" style="
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      width: 36px;
+      height: 36px;
+      background: var(--accent);
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 1;
+      line-height: 1;
+    ">×</button>
+
+    <!-- Header -->
+    <div style="padding: 28px 32px 20px; border-bottom: 1px solid var(--border);">
+      <span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mid);">Where the Fog Dies</span>
+      <div style="font-family: var(--serif); font-size: 22px; margin-top: 4px;">Production Plan</div>
+    </div>
+
+    <!-- Video -->
+    <div style="background: #000; position: relative;">
+      <video id="plan-video" style="width: 100%; display: block; max-height: 70vh;" controls>
+        <source src="assets/production_plan.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Volume control -->
+    <div style="padding: 16px 32px 24px; display: flex; align-items: center; gap: 14px;">
+      <span style="font-size: 11px; color: var(--text-mid); letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap;">Volume</span>
+      <input type="range" id="plan-vol-slider" min="0" max="1" step="0.02" value="0.8"
+        style="
+          flex: 1;
+          -webkit-appearance: none;
+          height: 2px;
+          background: var(--border-acc);
+          outline: none;
+          cursor: pointer;
+          accent-color: var(--accent);
+        ">
+      <span id="plan-vol-pct" style="font-size: 11px; color: var(--text-mid); width: 34px; text-align: right;">80%</span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var bgWasPlaying = false;
+
+  window.openPlanModal = function() {
+    var m = document.getElementById('plan-modal');
+    m.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+
+    // Pausa musica di sfondo
+    var bg = document.getElementById('bg-audio');
+    bgWasPlaying = bg && !bg.paused;
+    if (bg && !bg.paused) bg.pause();
+
+    // Imposta volume video
+    var v = document.getElementById('plan-video');
+    v.volume = parseFloat(document.getElementById('plan-vol-slider').value);
+  };
+
+  window.closePlanModal = function() {
+    var m = document.getElementById('plan-modal');
+    m.style.display = 'none';
+    document.body.style.overflow = '';
+
+    // Ferma video
+    var v = document.getElementById('plan-video');
+    v.pause();
+
+    // Riprendi musica di sfondo se era attiva
+    var bg = document.getElementById('bg-audio');
+    if (bg && bgWasPlaying) bg.play().catch(function(){});
+  };
+
+  // Chiudi cliccando fuori
+  document.getElementById('plan-modal').addEventListener('click', function(e) {
+    if (e.target === this) window.closePlanModal();
+  });
+
+  // Slider volume video
+  document.getElementById('plan-vol-slider').addEventListener('input', function() {
+    document.getElementById('plan-video').volume = parseFloat(this.value);
+    document.getElementById('plan-vol-pct').textContent = Math.round(this.value * 100) + '%';
+  });
+
+  // ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') window.closePlanModal();
+  });
+})();
+</script>
+
+<!-- ============================================================
      JAVASCRIPT
      ============================================================ -->
 <script>
