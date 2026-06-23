@@ -1267,12 +1267,10 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
      ============================================================ -->
 <section id="production-plan" style="background: var(--bg2); padding-top: 80px; padding-bottom: 80px;">
   <div class="inner" style="text-align: center;">
-    <span class="label rv" style="display:block; margin-bottom: 16px;">Production Plan</span>
-    <h2 class="rv d1" style="margin-bottom: 20px; font-family: var(--serif);">What's the Production Plan?</h2>
-    <p class="rv d2" style="color: var(--text-mid); font-size: 14px; max-width: 540px; margin: 0 auto 40px; line-height: 1.85;">
-      A complete walkthrough of how we're building Where the Fog Dies — milestones, team, revenue share, and timeline.
-    </p>
-    <button class="rv d3" id="open-plan-btn" onclick="openPlanModal()" style="
+    <span class="label rv" data-k="plan_label" style="display:block; margin-bottom: 16px;"></span>
+    <h2 class="rv d1" data-k="plan_title" style="margin-bottom: 20px; font-family: var(--serif);"></h2>
+    <p class="rv d2" data-k="plan_desc" style="color: var(--text-mid); font-size: 14px; max-width: 540px; margin: 0 auto 40px; line-height: 1.85;"></p>
+    <button class="rv d3" id="open-plan-btn" data-k="plan_btn" onclick="openPlanModal()" style="
       background: transparent;
       border: 1px solid var(--accent);
       color: var(--text);
@@ -1287,7 +1285,6 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
     "
     onmouseover="this.style.background='var(--accent)'; this.style.color='#fff';"
     onmouseout="this.style.background='transparent'; this.style.color='var(--text)';">
-      ▶ &nbsp; Watch the Production Plan
     </button>
   </div>
 </section>
@@ -1331,7 +1328,7 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
     <!-- Header -->
     <div style="padding: 28px 32px 20px; border-bottom: 1px solid var(--border);">
       <span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mid);">Where the Fog Dies</span>
-      <div style="font-family: var(--serif); font-size: 22px; margin-top: 4px;">Production Plan</div>
+      <div data-k="plan_modal_title" style="font-family: var(--serif); font-size: 22px; margin-top: 4px;"></div>
     </div>
 
     <!-- Video -->
@@ -1341,6 +1338,9 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
         Your browser does not support the video tag.
       </video>
     </div>
+
+    <!-- Avviso lingua video (visibile solo in versione IT) -->
+    <p data-k="plan_video_note" data-hide-empty style="margin: 0; padding: 14px 32px 0; font-size: 11px; color: var(--text-mid); text-align: center; letter-spacing: 0.04em;"></p>
 
     <!-- Volume control -->
     <div style="padding: 16px 32px 24px; display: flex; align-items: center; gap: 14px;">
@@ -1519,6 +1519,12 @@ const T = {
     cont_status_text:  "Pre-produzione avanzata. Storia madre completa (20 sezioni, 2 finali scritti). Game Design Document in avvio. Team parzialmente formato.",
     cont_seek_label:   "Quello che cerchiamo",
     cont_seek_text:    "Collaboratori con esperienza specifica e interesse genuino per un horror narrativo radicato nel folklore storico.",
+    plan_label:        "Piano di Produzione",
+    plan_title:        "Cos'è il Piano di Produzione?",
+    plan_desc:         "Una panoramica completa di come stiamo costruendo Where the Fog Dies — milestone, team, revenue share e tempistiche.",
+    plan_btn:          "▶ &nbsp; Guarda il Piano di Produzione",
+    plan_modal_title:  "Piano di Produzione",
+    plan_video_note:   "⚠ Il video del Piano di Produzione è in lingua inglese.",
   },
 
   en: {
@@ -1616,6 +1622,12 @@ const T = {
     cont_status_text:  "Advanced pre-production. Narrative story complete (20 sections, 2 written endings). Game Design Document in progress. Team partially formed.",
     cont_seek_label:   "What we're looking for",
     cont_seek_text:    "Collaborators with specific experience and genuine interest in a narrative horror project rooted in historical folklore.",
+    plan_label:        "Production Plan",
+    plan_title:        "What's the Production Plan?",
+    plan_desc:         "A complete walkthrough of how we're building Where the Fog Dies — milestones, team, revenue share, and timeline.",
+    plan_btn:          "▶ &nbsp; Watch the Production Plan",
+    plan_modal_title:  "Production Plan",
+    plan_video_note:   "",
   }
 };
 
@@ -1629,7 +1641,10 @@ function setLang(l) {
   document.documentElement.lang = l;
   document.querySelectorAll('[data-k]').forEach(el => {
     const v = T[l][el.getAttribute('data-k')];
-    if (v !== undefined) el.innerHTML = v;
+    if (v !== undefined) {
+      el.innerHTML = v;
+      if (el.hasAttribute('data-hide-empty')) el.style.display = v ? '' : 'none';
+    }
   });
   document.getElementById('lang-btn').textContent = l === 'it' ? 'EN' : 'IT';
 }
