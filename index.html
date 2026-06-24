@@ -1339,9 +1339,6 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
       </video>
     </div>
 
-    <!-- Avviso lingua video (visibile solo in versione IT) -->
-    <p data-k="plan_video_note" data-hide-empty style="margin: 0; padding: 14px 32px 0; font-size: 11px; color: var(--text-mid); text-align: center; letter-spacing: 0.04em;"></p>
-
     <!-- Volume control -->
     <div style="padding: 16px 32px 24px; display: flex; align-items: center; gap: 14px;">
       <span style="font-size: 11px; color: var(--text-mid); letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap;">Volume</span>
@@ -1364,6 +1361,12 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
 (function() {
   var bgWasPlaying = false;
 
+  // Traccia video per lingua: IT e EN sono due file separati in assets/
+  var PLAN_VIDEO = {
+    it: 'assets/production_plan_it.mp4',
+    en: 'assets/production_plan.mp4'
+  };
+
   window.openPlanModal = function() {
     var m = document.getElementById('plan-modal');
     m.style.display = 'flex';
@@ -1374,8 +1377,16 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
     bgWasPlaying = bg && !bg.paused;
     if (bg && !bg.paused) bg.pause();
 
-    // Imposta volume video
+    // Scegli la traccia video in base alla lingua corrente del sito
     var v = document.getElementById('plan-video');
+    var curLang = (typeof lang !== 'undefined') ? lang : 'it';
+    var wantedSrc = (curLang === 'en') ? PLAN_VIDEO.en : PLAN_VIDEO.it;
+    if (v.getAttribute('src') !== wantedSrc) {
+      v.setAttribute('src', wantedSrc);
+      v.load();
+    }
+
+    // Imposta volume video
     v.volume = parseFloat(document.getElementById('plan-vol-slider').value);
   };
 
@@ -1524,7 +1535,6 @@ const T = {
     plan_desc:         "Una panoramica completa di come stiamo costruendo Where the Fog Dies — milestone, team, revenue share e tempistiche.",
     plan_btn:          "▶ &nbsp; Guarda il Piano di Produzione",
     plan_modal_title:  "Piano di Produzione",
-    plan_video_note:   "⚠ Il video del Piano di Produzione è in lingua inglese.",
   },
 
   en: {
@@ -1627,7 +1637,6 @@ const T = {
     plan_desc:         "A complete walkthrough of how we're building Where the Fog Dies — milestones, team, revenue share, and timeline.",
     plan_btn:          "▶ &nbsp; Watch the Production Plan",
     plan_modal_title:  "Production Plan",
-    plan_video_note:   "",
   }
 };
 
