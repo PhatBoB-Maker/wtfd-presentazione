@@ -1202,6 +1202,16 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
         <span class="tcard-badge badge-on" data-k="badge_on"></span>
       </div>
       <div class="tcard rv d2">
+        <div class="tcard-name">Francesco Braido</div>
+        <div class="tcard-roles" data-k="team8_roles"></div>
+        <span class="tcard-badge badge-on" data-k="badge_on"></span>
+      </div>
+      <div class="tcard rv d1">
+        <div class="tcard-name">Jacopo Arboit</div>
+        <div class="tcard-roles" data-k="team9_roles"></div>
+        <span class="tcard-badge badge-on" data-k="badge_on"></span>
+      </div>
+      <div class="tcard rv d2">
         <div class="tcard-name" data-k="team5_name"></div>
         <div class="tcard-roles" data-k="team5_roles"></div>
         <span class="tcard-badge badge-seek" data-k="badge_seek"></span>
@@ -1441,20 +1451,20 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
 --------------------------------------------------------------- */
 const T = {
   it: {
-    hero_meta:    "Horror Narrativo · Prima Persona · Romagna, 1499–1503",
+    hero_meta:    "Horror Narrativo · Prima Persona · Romagna, XII sec.",
     hero_tagline: "Dove muore la nebbia, ciò che la fede ha sepolto torna a respirare.",
     scroll_hint:  "Scorri",
 
     what_label: "Cos'è",
-    what_text:  "Un <strong>horror narrativo in prima persona</strong> ambientato nella <strong>Romagna rurale dei primi anni del Cinquecento</strong>. L'orrore nasce dal folklore reale della pianura padana — non da mostri generici: ogni creatura, simbolo e superstizione affonda in tradizioni storicamente documentate.",
+    what_text:  "Un <strong>horror narrativo in prima persona</strong> ambientato nella <strong>Romagna medievale del XII secolo</strong>. L'orrore nasce dal folklore reale della pianura padana — non da mostri generici: ogni creatura, simbolo e superstizione affonda in tradizioni storicamente documentate.",
 
     setting_label: "Setting",
-    setting_title: "Romagna, 1499–1503",
-    setting_text:  "Sono gli anni della campagna con cui Cesare Borgia riconquistò i territori romagnoli per il Papa. Un villaggio isolato avvolto dalla nebbia. Campi, cascine abbandonate, fossi, canneti. Una civiltà rurale sospesa tra fede cristiana e credenze pre-cristiane mai del tutto scomparse — dove la Borda, entità incappucciata che porta via i bambini, non è leggenda ma testimonianza orale documentata.",
+    setting_title: "Romagna, XII secolo",
+    setting_text:  "Sono gli anni della lotta tra i Comuni lombardi e l'Imperatore Federico Barbarossa — una Romagna medievale dove i signori feudali levavano uomini per guerre che non appartenevano a nessuno. Un villaggio isolato avvolto dalla nebbia. Campi, cascine abbandonate, fossi, canneti. Una civiltà rurale sospesa tra fede cristiana e credenze pre-cristiane mai del tutto scomparse — dove la Borda, entità incappucciata che porta via i bambini, non è leggenda ma testimonianza orale documentata.",
 
     protagonist_label: "Protagonista",
     protagonist_title: "Rinaldo",
-    protagonist_text:  "Medico ed erborista di fortuna — mani precise, nessuna forza nelle braccia. Levato per la guerra dei Borgia, torna al villaggio e trova la moglie morta sul rogo e i figli scomparsi. Non crede alla colpa di Beatrice: crede che la Borda abbia rapito i figli vivi. Parte per trovarli. La verità che scoprirà distruggerà tutto ciò che credeva di sapere.",
+    protagonist_text:  "Medico ed erborista di fortuna — mani precise, nessuna forza nelle braccia. Levato per la guerra del signore feudale locale, torna al villaggio e trova la moglie morta sul rogo e i figli scomparsi. Non crede alla colpa di Beatrice: crede che la Borda abbia rapito i figli vivi. Parte per trovarli. La verità che scoprirà distruggerà tutto ciò che credeva di sapere.",
 
     borda_label: "La minaccia",
     borda_title: "La Borda",
@@ -1514,6 +1524,8 @@ const T = {
     team5_name:   "3D Artist",      team5_roles: "Character Design · Asset 3D",
     team6_roles:  "Character · Creature Artist",
     team7_roles:  "3D Environment Artist",
+    team8_roles:  "Material Artist",
+    team9_roles:  "3D Artist · Props",
     badge_on:     "Confermato",
     badge_neg:    "In ingaggio",
     badge_seek:   "In ricerca",
@@ -1544,20 +1556,20 @@ const T = {
   },
 
   en: {
-    hero_meta:    "Narrative Horror · First Person · Romagna, 1499–1503",
+    hero_meta:    "Narrative Horror · First Person · Romagna, 12th Century",
     hero_tagline: "Where the fog dies, what faith buried comes back to breathe.",
     scroll_hint:  "Scroll",
 
     what_label: "What is it",
-    what_text:  "A <strong>first-person narrative horror</strong> set in the <strong>rural Romagna of the early sixteenth century</strong>. The horror emerges from the real folklore of the Po Valley — not from generic monsters: every creature, symbol and superstition is rooted in historically documented traditions.",
+    what_text:  "A <strong>first-person narrative horror</strong> set in the <strong>rural Romagna of the twelfth century</strong>. The horror emerges from the real folklore of the Po Valley — not from generic monsters: every creature, symbol and superstition is rooted in historically documented traditions.",
 
     setting_label: "Setting",
-    setting_title: "Romagna, 1499–1503",
-    setting_text:  "The years of Cesare Borgia's campaign to reclaim the Romagna territories for the Pope. An isolated village wrapped in fog. Fields, abandoned farmhouses, ditches, reeds. A rural civilization suspended between Christian faith and pre-Christian beliefs that never fully disappeared — where the Borda, a hooded entity that takes children away, is not legend but documented oral testimony.",
+    setting_title: "Romagna, 12th Century",
+    setting_text:  "The years of the struggle between the Lombard League and Emperor Frederick Barbarossa — a medieval Romagna where feudal lords conscripted men into wars that belonged to no one. An isolated village wrapped in fog. Fields, abandoned farmhouses, ditches, reeds. A rural civilization suspended between Christian faith and pre-Christian beliefs that never fully disappeared — where the Borda, a hooded entity that takes children away, is not legend but documented oral testimony.",
 
     protagonist_label: "Protagonist",
     protagonist_title: "Rinaldo",
-    protagonist_text:  "A physician and herbalist — precise hands, no strength in his arms. Conscripted into the Borgia war, he returns to find his wife burned at the stake and his children vanished. He does not believe Beatrice was guilty: he believes the Borda took the children alive. He sets out to find them. The truth he uncovers will destroy everything he thought he knew.",
+    protagonist_text:  "A physician and herbalist — precise hands, no strength in his arms. Conscripted into the local feudal lord's war, he returns to find his wife burned at the stake and his children vanished. He does not believe Beatrice was guilty: he believes the Borda took the children alive. He sets out to find them. The truth he uncovers will destroy everything he thought he knew.",
 
     borda_label: "The threat",
     borda_title: "The Borda",
@@ -1617,6 +1629,8 @@ const T = {
     team5_name:   "3D Artist",   team5_roles: "Character Design · 3D Assets",
     team6_roles:  "Character · Creature Artist",
     team7_roles:  "3D Environment Artist",
+    team8_roles:  "Material Artist",
+    team9_roles:  "3D Artist · Props",
     badge_on:     "Confirmed",
     badge_neg:    "In negotiation",
     badge_seek:   "In search",
