@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where the Fog Dies — Presentazione</title>
+  <!--
+    STRUTTURA CARTELLA RICHIESTA:
+    presentazione/
+    ├── WTFD_presentazione.html   ← questo file
+    └── assets/
+        ├── img-hero.jpg          ← paesaggio nebbia notturno, 1920×1080
+        ├── img-setting.jpg       ← cascina abbandonata, nebbia, 1200×900
+        ├── img-rinaldo.jpg       ← figura Rinaldo nella nebbia, 900×1200
+        └── img-borda.jpg         ← sagoma Borda nella nebbia, 900×1200
+        └── backgroundmusic.mp3   ← audio ambientale in loop
+
+    Richiede connessione internet per Google Fonts.
+    Se offline: fallback automatico su Georgia / sistema.
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   RESET & CUSTOM PROPERTIES
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:          #080705;
+  --bg2:         #0d0b09;
+  --surface:     #131109;
+  --surface2:    #1a1714;
+  --accent:      #7a3232;
+  --accent-dim:  rgba(122, 50, 50, 0.25);
+  --text:        #e0d7ca;
+  --text-mid:    #7d756c;
+  --text-low:    #3a3530;
+  --border:      rgba(120, 110, 98, 0.13);
+  --border-acc:  rgba(122, 50, 50, 0.35);
+  --serif:       'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  --sans:        'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --pad:         clamp(40px, 8vw, 120px);
+  --pad-sm:      clamp(24px, 5vw, 60px);
+  --max:         1100px;
+  --gap:         clamp(40px, 6vw, 80px);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.75;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(56px, 10vw, 120px);
+  font-weight: 300;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-family: var(--serif);
+  font-size: clamp(30px, 4.5vw, 52px);
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+h3 {
+  font-family: var(--serif);
+  font-size: clamp(19px, 2.2vw, 26px);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.divider {
+  width: 36px;
+  height: 1px;
+  background: var(--accent);
+  margin: 20px 0;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 48px;
+  background: linear-gradient(to bottom, rgba(8,7,5,0.95) 0%, transparent 100%);
+}
+
+.nav-brand {
+  font-family: var(--serif);
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: var(--text-mid);
+  text-decoration: none;
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#lang-btn, #audio-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-mid);
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: border-color 0.25s, color 0.25s;
+  line-height: 1;
+}
+#lang-btn:hover, #audio-btn:hover { border-color: var(--accent); color: var(--text); }
+
+#audio-btn {
+  font-size: 14px;
+  letter-spacing: 0;
+  padding: 6px 12px;
+}
+
+/* --- volume slider --- */
+.audio-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#vol-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 1px;
+  background: var(--border);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: width 0.3s ease, opacity 0.3s ease;
+  vertical-align: middle;
+}
+
+.audio-control:hover #vol-slider,
+.audio-control:focus-within #vol-slider {
+  width: 72px;
+  opacity: 1;
+}
+
+#vol-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--text-mid);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#vol-slider:hover::-webkit-slider-thumb { background: var(--text); }
+
+#vol-slider::-moz-range-thumb {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--text-mid);
+  border: none;
+  cursor: pointer;
+}
+
+#vol-slider::-webkit-slider-runnable-track { background: var(--border); height: 1px; }
+#vol-slider::-moz-range-track            { background: var(--border); height: 1px; }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+#hero {
+  position: relative;
+  height: 100vh;
+  min-height: 680px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 clamp(32px, 6vw, 80px) clamp(60px, 8vh, 100px);
+  overflow: hidden;
+}
+
+#hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/img-hero.png');
+  background-size: cover;
+  background-position: center 40%;
+  filter: brightness(0.28) saturate(0.7);
+  transition: opacity 0.5s;
+}
+
+#hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(8,7,5,0.2) 0%,
+    rgba(8,7,5,0) 35%,
+    rgba(8,7,5,0.65) 70%,
+    rgba(8,7,5,1) 100%
+  );
+}
+
+#fog-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-meta {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  margin-bottom: 20px;
+}
+
+.hero-content h1 { margin-bottom: 28px; }
+
+.hero-tagline {
+  font-family: var(--serif);
+  font-size: clamp(15px, 1.8vw, 21px);
+  font-style: italic;
+  color: var(--text-mid);
+  max-width: 520px;
+  line-height: 1.55;
+}
+
+.scroll-hint {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-low);
+}
+
+.scroll-hint::after {
+  content: '';
+  width: 1px;
+  height: 48px;
+  background: var(--text-low);
+  animation: pulse-line 2.2s ease-in-out infinite;
+}
+
+@keyframes pulse-line {
+  0%, 100% { opacity: 0.25; transform: scaleY(1); }
+  50%       { opacity: 0.7;  transform: scaleY(0.55); }
+}
+
+/* ============================================================
+   COMMON SECTION PATTERNS
+   ============================================================ */
+section { padding: var(--pad) clamp(32px, 6vw, 80px); }
+
+.inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+/* ============================================================
+   WHAT IS IT
+   ============================================================ */
+#what {
+  background: var(--bg2);
+  padding-top: clamp(60px, 10vh, 120px);
+  padding-bottom: clamp(60px, 10vh, 120px);
+}
+
+#what .inner {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.what-body {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2.2vw, 26px);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.what-body strong { font-weight: 500; }
+
+/* ============================================================
+   IMAGE + TEXT SECTIONS
+   ============================================================ */
+.img-text {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: var(--gap);
+  align-items: start;
+}
+
+.img-text.flip { direction: rtl; }
+.img-text.flip > * { direction: ltr; }
+
+.img-block {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+  align-self: start;
+}
+
+.img-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.8) saturate(0.85);
+  transition: transform 1s ease, filter 0.5s ease;
+}
+
+.img-block:hover img { transform: scale(1.04); filter: brightness(0.9) saturate(1); }
+
+.img-block .placeholder {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: var(--text-low);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  min-height: 300px;
+}
+
+.placeholder-icon { font-size: 36px; opacity: 0.25; }
+
+.text-block { padding: 8px 0; }
+.text-block h2 { margin-bottom: 20px; }
+.text-block p { color: var(--text-mid); font-size: 14px; line-height: 1.85; }
+
+/* ============================================================
+   CONCEPT AMBIENTAZIONE (Environment Concepts)
+   ============================================================ */
+#concept-env .inner > .label { margin-bottom: 0; }
+#concept-env h2 { margin: 18px 0; }
+#concept-env .env-intro { color: var(--text-mid); font-size: 14px; line-height: 1.85; max-width: 620px; margin-bottom: 48px; }
+
+.concept-cover {
+  position: relative;
+  max-width: 640px;
+  cursor: pointer;
+}
+.concept-cover .placeholder { cursor: default; }
+
+.concept-cover-hint {
+  margin-top: 14px;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-low);
+}
+
+/* ============================================================
+   LIGHTBOX CONCEPT (click per ingrandire, scorre tutta la galleria)
+   Niente hover: tutto guidato da click espliciti, nessuna zona morta.
+   ============================================================ */
+#concept-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(8,7,5,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 500;
+}
+#concept-lightbox.open { opacity: 1; pointer-events: auto; }
+
+.lightbox-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Viewport fisso, uguale per tutte le immagini (rapporto 3:2, via di mezzo
+     tra le concept più larghe 16:9-ish e quelle più "quadre" 5:4): le frecce
+     sono ancorate ai bordi di questo box, che non cambia mai dimensione da
+     una slide all'altra. Il min() rispetta sia il limite di larghezza (vw)
+     sia quello di altezza (vh, convertito in vw equivalenti via calc) sia un
+     tetto massimo in px sugli schermi grandi. */
+  width: min(90vw, calc(86vh * 1.5), 1300px);
+  aspect-ratio: 3 / 2;
+}
+
+#concept-lightbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.65);
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(8,7,5,0.78);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 24px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+.lightbox-arrow:hover    { border-color: var(--accent); background: rgba(8,7,5,0.95); }
+.lightbox-arrow.is-hidden { opacity: 0; pointer-events: none; }
+.lightbox-arrow-prev { left: 16px; }
+.lightbox-arrow-next { right: 16px; }
+
+.lightbox-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(8,7,5,0.78);
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+.lightbox-close:hover { border-color: var(--accent); background: rgba(8,7,5,0.95); }
+
+.lightbox-counter {
+  position: absolute;
+  bottom: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--text-low);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   THREE PILLARS
+   ============================================================ */
+#pillars { background: var(--bg); }
+
+#pillars .label { margin-bottom: 56px; }
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--border);
+  gap: 1px;
+  background: var(--border);
+}
+
+.pillar {
+  background: var(--bg);
+  padding: 48px 36px 52px;
+  transition: background 0.3s ease;
+}
+
+.pillar:hover { background: var(--surface); }
+
+.pillar-num {
+  font-family: var(--serif);
+  font-size: 72px;
+  font-weight: 300;
+  color: var(--text-low);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.pillar h3 { margin-bottom: 14px; }
+.pillar p { color: var(--text-mid); font-size: 13px; line-height: 1.85; }
+
+/* ============================================================
+   GAMEPLAY
+   ============================================================ */
+#gameplay { background: var(--bg2); }
+
+.gameplay-hd { margin-bottom: 64px; }
+.gameplay-hd h2 { margin-bottom: 16px; }
+.gameplay-hd .intro { color: var(--text-mid); font-size: 15px; max-width: 460px; }
+
+.gameplay-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--border);
+  gap: 1px;
+  background: var(--border);
+  margin-bottom: 32px;
+}
+
+.gcard {
+  background: var(--bg2);
+  padding: 36px 30px 40px;
+}
+
+.gcard h3 { margin-bottom: 12px; font-size: 20px; }
+.gcard p  { color: var(--text-mid); font-size: 13px; line-height: 1.85; }
+
+.bell-card {
+  border: 1px solid var(--border-acc);
+  background: var(--surface);
+  padding: 36px 40px;
+}
+
+.bell-card h3 { margin-bottom: 10px; font-size: 22px; }
+.bell-card p  { color: var(--text-mid); font-size: 13px; line-height: 1.85; }
+
+.bell-video-wrap {
+  margin-top: 0;
+  border: 1px solid var(--border-acc);
+  border-top: none;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.bell-video-wrap video {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.85);
+}
+
+/* ============================================================
+   ROADMAP
+   ============================================================ */
+#roadmap { background: var(--bg); }
+
+.roadmap-hd { margin-bottom: 64px; }
+.roadmap-hd h2 { margin-bottom: 10px; }
+.roadmap-note { color: var(--text-low); font-size: 12px; font-style: italic; }
+
+.phases {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--border);
+  gap: 1px;
+  background: var(--border);
+}
+
+.phase {
+  background: var(--bg);
+  padding: 40px 32px 48px;
+  position: relative;
+}
+
+.phase.current {
+  background: var(--surface);
+}
+
+.phase.current::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+}
+
+.phase-num { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-low); margin-bottom: 6px; }
+.phase-title { font-family: var(--serif); font-size: 20px; font-weight: 400; margin-bottom: 4px; }
+
+.phase-status {
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.phase-status.active { color: var(--accent); }
+.phase-status.future { color: var(--text-low); }
+
+.phase-items { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+
+.pi {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 13px;
+  color: var(--text-mid);
+}
+
+.pi-dot {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 8px;
+  font-weight: 500;
+}
+
+.dot-done    { background: rgba(60,100,55,0.25); border: 1px solid rgba(90,150,80,0.4); color: #6fa065; }
+.dot-wip     { background: rgba(100,80,25,0.25); border: 1px solid rgba(155,125,50,0.4); color: #9a7d38; }
+.dot-pending { background: rgba(40,36,32,0.5);   border: 1px solid rgba(70,62,55,0.35); color: var(--text-low); }
+.dot-future  { background: transparent;           border: 1px solid var(--text-low);     color: var(--text-low); opacity: 0.45; }
+
+/* ============================================================
+   TEAM
+   ============================================================ */
+#team { background: var(--bg2); }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--border);
+  gap: 1px;
+  background: var(--border);
+  margin-top: 48px;
+}
+
+.tcard { background: var(--bg2); padding: 36px 32px 40px; }
+
+.tcard-name { font-family: var(--serif); font-size: 22px; margin-bottom: 6px; }
+.tcard-roles { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-mid); margin-bottom: 16px; line-height: 1.7; }
+
+.tcard-badge {
+  display: inline-block;
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 4px 10px; border: 1px solid;
+}
+
+.badge-on   { border-color: rgba(90,150,80,0.4);  color: #6fa065; }
+.badge-neg  { border-color: rgba(155,125,50,0.4); color: #9a7d38; }
+.badge-seek { border-color: var(--border);         color: var(--text-low); }
+
+/* ============================================================
+   LOOKING FOR
+   ============================================================ */
+#looking { background: var(--surface); }
+
+.looking-intro {
+  font-family: var(--serif);
+  font-size: clamp(19px, 2.4vw, 28px);
+  font-weight: 300;
+  max-width: 660px;
+  line-height: 1.5;
+  margin-bottom: 56px;
+  color: var(--text);
+}
+
+.looking-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--border);
+  gap: 1px;
+  background: var(--border);
+}
+
+.lcard { background: var(--surface); padding: 44px 38px 48px; }
+.lcard h3 { margin-bottom: 14px; }
+.lcard p  { color: var(--text-mid); font-size: 13px; line-height: 1.9; }
+
+/* ============================================================
+   CONTACTS
+   ============================================================ */
+#contacts { background: var(--bg); padding-top: 80px; padding-bottom: 80px; }
+
+#contacts .inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  align-items: start;
+}
+
+.contact-people { display: flex; flex-direction: column; gap: 36px; margin-top: 28px; }
+
+.contact-name  { font-family: var(--serif); font-size: 22px; margin-bottom: 5px; }
+.contact-role  { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-mid); margin-bottom: 10px; line-height: 1.7; }
+.contact-email { font-size: 13px; color: var(--text-mid); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+.contact-email:hover { color: var(--text); border-color: var(--accent); }
+
+.contacts-aside { padding-top: 8px; }
+.contacts-aside .label { margin-bottom: 10px; }
+.contacts-aside p { color: var(--text-mid); font-size: 13px; line-height: 1.85; margin-bottom: 32px; }
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+.rv {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.rv.vis { opacity: 1; transform: translateY(0); }
+.d1 { transition-delay: 0.1s; }
+.d2 { transition-delay: 0.22s; }
+.d3 { transition-delay: 0.34s; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 860px) {
+  nav { padding: 18px 28px; }
+  #what .inner { grid-template-columns: 1fr; gap: 20px; }
+  .img-text, .img-text.flip { grid-template-columns: 1fr; direction: ltr; }
+  .pillars-grid { grid-template-columns: 1fr; }
+  .gameplay-grid { grid-template-columns: 1fr; }
+  .phases { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+  .looking-cards { grid-template-columns: 1fr; }
+  #contacts .inner { grid-template-columns: 1fr; }
+  .bell-card { grid-template-columns: 1fr; }
+  .lightbox-arrow { width: 32px; height: 32px; font-size: 16px; }
+  .lightbox-arrow-prev { left: 6px; }
+  .lightbox-arrow-next { right: 6px; }
+}
+
+/* ============================================================
+   PILLAR GALLERY (hover popup)
+   ============================================================ */
+#pillars-wrap { position: relative; }
+
+#pillar-gallery {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.55s ease, opacity 0.4s ease;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: none;
+}
+
+#pillar-gallery.open {
+  max-height: 480px;
+  opacity: 1;
+}
+
+.gallery-frame {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.gal-img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.gal-img.gal-active { opacity: 1; }
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 12px 24px;
+  background: linear-gradient(to top, rgba(8,7,5,0.85) 0%, transparent 100%);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gallery-dots {
+  display: flex;
+  gap: 7px;
+}
+
+.gdot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--text-low);
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.gdot.gd-active { background: var(--text-mid); }
+
+/* ============================================================
+   GAMEPLAY GALLERY
+   ============================================================ */
+#gameplay-wrap { position: relative; }
+
+#gameplay-gallery {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.55s ease, opacity 0.4s ease;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: none;
+}
+
+#gameplay-gallery.open {
+  max-height: 480px;
+  opacity: 1;
+}
+
+/* scrollbar */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--text-low); }
+
+/* selection */
+::selection { background: var(--accent-dim); }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav>
+  <span class="nav-brand">WHERE THE FOG DIES</span>
+  <div class="nav-controls">
+    <div class="audio-control">
+      <input id="vol-slider" type="range" min="0" max="1" step="0.01" value="0.05"
+             oninput="setVol(this.value)" title="Volume">
+      <button id="audio-btn" onclick="toggleAudio()" title="Musica on/off">🔕</button>
+    </div>
+    <button id="lang-btn" onclick="toggleLang()">EN</button>
+  </div>
+</nav>
+
+<!-- AUDIO -->
+<audio id="bg-audio" loop preload="auto">
+  <source src="assets/backgroundmusic.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero">
+  <div id="hero-bg"></div>
+  <div id="hero-overlay"></div>
+  <canvas id="fog-canvas"></canvas>
+  <div class="hero-content">
+    <p class="hero-meta" data-k="hero_meta"></p>
+    <h1>Where<br>the Fog<br>Dies</h1>
+    <p class="hero-tagline" data-k="hero_tagline"></p>
+  </div>
+  <div class="scroll-hint" data-k="scroll_hint"></div>
+</section>
+
+<!-- ============================================================
+     WHAT IS IT
+     ============================================================ -->
+<section id="what">
+  <div class="inner">
+    <span class="label" data-k="what_label"></span>
+    <p class="what-body rv" data-k="what_text"></p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SETTING
+     ============================================================ -->
+<section id="setting" style="background: var(--bg);">
+  <div class="inner rv">
+    <div class="img-text">
+      <div class="img-block">
+        <img src="assets/img-setting.png" alt="Setting"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="placeholder">
+          <div class="placeholder-icon">⬜</div>
+          <span>img-setting.png</span>
+        </div>
+      </div>
+      <div class="text-block">
+        <span class="label" data-k="setting_label"></span>
+        <div class="divider"></div>
+        <h2 data-k="setting_title"></h2>
+        <p data-k="setting_text"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROTAGONIST
+     ============================================================ -->
+<section id="protagonist" style="background: var(--bg2);">
+  <div class="inner rv">
+    <div class="img-text flip">
+      <div class="img-block">
+        <img src="assets/img-rinaldo.png" alt="Rinaldo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="placeholder">
+          <div class="placeholder-icon">⬜</div>
+          <span>img-rinaldo.png</span>
+        </div>
+      </div>
+      <div class="text-block">
+        <span class="label" data-k="protagonist_label"></span>
+        <div class="divider"></div>
+        <h2 data-k="protagonist_title"></h2>
+        <p data-k="protagonist_text"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BORDA
+     ============================================================ -->
+<section id="borda" style="background: var(--surface);">
+  <div class="inner rv">
+    <div class="img-text">
+      <div class="img-block">
+        <img src="assets/img-borda.png" alt="La Borda"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="placeholder">
+          <div class="placeholder-icon">⬜</div>
+          <span>img-borda.png</span>
+        </div>
+      </div>
+      <div class="text-block">
+        <span class="label" data-k="borda_label"></span>
+        <div class="divider"></div>
+        <h2 data-k="borda_title"></h2>
+        <p data-k="borda_text"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONCEPT AMBIENTAZIONE (Environment Concepts)
+     ============================================================ -->
+<section id="concept-env" style="background: var(--bg2);">
+  <div class="inner rv">
+    <span class="label" data-k="env_label"></span>
+    <h2 data-k="env_title"></h2>
+    <p class="env-intro" data-k="env_intro"></p>
+    <div class="concept-cover img-block" id="concept-cover">
+      <img src="assets/gallery/env1.png" alt="Concept ambientazione"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="placeholder">
+        <div class="placeholder-icon">⬜</div>
+        <span>env1.png</span>
+      </div>
+    </div>
+    <p class="concept-cover-hint" data-k="env_cover_hint"></p>
+  </div>
+</section>
+
+<!-- Lightbox concept ambientazione: click per ingrandire, frecce per scorrere tutte e 9
+     le immagini, chiusura solo con la × / Esc / click fuori dall'immagine. Niente hover. -->
+<div id="concept-lightbox">
+  <div class="lightbox-stage">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Chiudi" type="button">×</button>
+    <button class="lightbox-arrow lightbox-arrow-prev" id="lightbox-prev" aria-label="Precedente" type="button">‹</button>
+    <img id="lightbox-img" src="" alt="">
+    <button class="lightbox-arrow lightbox-arrow-next" id="lightbox-next" aria-label="Successivo" type="button">›</button>
+    <span class="lightbox-counter" id="lightbox-counter"></span>
+  </div>
+</div>
+
+<!-- ============================================================
+     THREE PILLARS
+     ============================================================ -->
+<section id="pillars">
+  <div class="inner">
+    <span class="label rv" data-k="pillars_label"></span>
+    <div id="pillars-wrap"
+         onmouseenter="clearTimeout(window._galTimer)"
+         onmouseleave="window._galTimer = setTimeout(closeGallery, 180)">
+      <div class="pillars-grid">
+        <div class="pillar rv d1" onmouseenter="openGallery('auth')">
+          <div class="pillar-num">I</div>
+          <h3 data-k="p1_title"></h3>
+          <p data-k="p1_text"></p>
+        </div>
+        <div class="pillar rv d2" onmouseenter="openGallery('cine')">
+          <div class="pillar-num">II</div>
+          <h3 data-k="p2_title"></h3>
+          <p data-k="p2_text"></p>
+        </div>
+        <div class="pillar rv d3" onmouseenter="openGallery('coer')">
+          <div class="pillar-num">III</div>
+          <h3 data-k="p3_title"></h3>
+          <p data-k="p3_text"></p>
+        </div>
+      </div>
+      <!-- GALLERY POPUP — appare sotto i pilastri all'hover -->
+      <div id="pillar-gallery">
+        <div class="gallery-frame">
+          <!-- immagini iniettate da JS -->
+        </div>
+        <div class="gallery-caption">
+          <span id="gal-label"></span>
+          <div class="gallery-dots" id="gal-dots"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GAMEPLAY
+     ============================================================ -->
+<section id="gameplay">
+  <div class="inner">
+    <div class="gameplay-hd rv">
+      <span class="label" data-k="gameplay_label"></span>
+      <div class="divider"></div>
+      <h2 data-k="gameplay_title"></h2>
+      <p class="intro" data-k="gameplay_intro"></p>
+    </div>
+    <div id="gameplay-wrap"
+         onmouseenter="clearTimeout(window._gplayTimer)"
+         onmouseleave="window._gplayTimer = setTimeout(closeGameplayGallery, 180)">
+      <div class="gameplay-grid">
+        <div class="gcard rv d1" onmouseenter="openGameplayGallery('expl')">
+          <h3 data-k="g1_title"></h3>
+          <p data-k="g1_text"></p>
+        </div>
+        <div class="gcard rv d2" onmouseenter="openGameplayGallery('inv')">
+          <h3 data-k="g2_title"></h3>
+          <p data-k="g2_text"></p>
+        </div>
+        <div class="gcard rv d3" onmouseenter="openGameplayGallery('combat')">
+          <h3 data-k="g3_title"></h3>
+          <p data-k="g3_text"></p>
+        </div>
+      </div>
+      <!-- GAMEPLAY GALLERY POPUP — appare sotto le card all'hover -->
+      <div id="gameplay-gallery">
+        <div class="gallery-frame">
+          <!-- immagini iniettate da JS -->
+        </div>
+        <div class="gallery-caption">
+          <span id="gplay-label"></span>
+          <div class="gallery-dots" id="gplay-dots"></div>
+        </div>
+      </div>
+    </div>
+    <div class="bell-card rv">
+      <h3 data-k="bell_title"></h3>
+      <p data-k="bell_text"></p>
+    </div>
+    <div class="bell-video-wrap rv">
+      <video src="assets/gallery/bell.mp4" autoplay muted loop playsinline></video>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ROADMAP / MILESTONE
+     ============================================================ -->
+<section id="roadmap">
+  <div class="inner">
+    <div class="roadmap-hd rv">
+      <span class="label" data-k="road_label"></span>
+      <div class="divider"></div>
+      <h2 data-k="road_title"></h2>
+      <p class="roadmap-note" data-k="road_note"></p>
+    </div>
+    <div class="phases">
+
+      <!-- PHASE 1 — CURRENT -->
+      <div class="phase current rv">
+        <div class="phase-num" data-k="ph1_num"></div>
+        <div class="phase-title" data-k="ph1_title"></div>
+        <div class="phase-status active" data-k="ph1_sub"></div>
+        <ul class="phase-items">
+          <li class="pi"><span class="pi-dot dot-done">✓</span><span data-k="ph1_i1"></span></li>
+          <li class="pi"><span class="pi-dot dot-wip">◐</span><span data-k="ph1_i2"></span></li>
+          <li class="pi"><span class="pi-dot dot-wip">◐</span><span data-k="ph1_i3"></span></li>
+          <li class="pi"><span class="pi-dot dot-wip">◐</span><span data-k="ph1_i4"></span></li>
+          <li class="pi"><span class="pi-dot dot-wip">◐</span><span data-k="ph1_i5"></span></li>
+          <li class="pi"><span class="pi-dot dot-wip">◐</span><span data-k="ph1_i6"></span></li>
+          <li class="pi"><span class="pi-dot dot-pending">○</span><span data-k="ph1_i7"></span></li>
+        </ul>
+      </div>
+
+      <!-- PHASE 2 -->
+      <div class="phase rv d1">
+        <div class="phase-num" data-k="ph2_num"></div>
+        <div class="phase-title" data-k="ph2_title"></div>
+        <div class="phase-status future" data-k="ph2_sub"></div>
+        <ul class="phase-items">
+          <li class="pi"><span class="pi-dot dot-future">○</span><span data-k="ph2_i1"></span></li>
+          <li class="pi"><span class="pi-dot dot-future">○</span><span data-k="ph2_i2"></span></li>
+          <li class="pi"><span class="pi-dot dot-future">○</span><span data-k="ph2_i3"></span></li>
+          <li class="pi"><span class="pi-dot dot-future">○</span><span data-k="ph2_i4"></span></li>
+          <li class="pi"><span class="pi-dot dot-future">○</span><span data-k="ph2_i5"></span></li>
+          <li class="pi"><span class="pi-dot dot-future">○</span><span data-k="ph2_i6"></span></li>
+          <li class="pi"><span class="pi-dot dot-future">○</span><span data-k="ph2_i7"></span></li>
+        </ul>
+      </div>
+
+      <!-- PHASE 3 -->
+      <div class="phase rv d2">
+        <div class="phase-num" data-k="ph3_num"></div>
+        <div class="phase-title" data-k="ph3_title"></div>
+        <div class="phase-status future" data-k="ph3_sub"></div>
+        <ul class="phase-items">
+          <li class="pi"><span class="pi-dot dot-future">○</span><span data-k="ph3_i1"></span></li>
+          <li class="pi"><span class="pi-dot dot-future">○</span><span data-k="ph3_i2"></span></li>
+          <li class="pi"><span class="pi-dot dot-future">○</span><span data-k="ph3_i3"></span></li>
+          <li class="pi"><span class="pi-dot dot-future">○</span><span data-k="ph3_i4"></span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TEAM
+     ============================================================ -->
+<section id="team">
+  <div class="inner">
+    <span class="label rv" data-k="team_label"></span>
+    <div class="team-grid">
+      <div class="tcard rv d1">
+        <div class="tcard-name">Roberto Tolomei</div>
+        <div class="tcard-roles" data-k="team1_roles"></div>
+        <span class="tcard-badge badge-on" data-k="badge_on"></span>
+      </div>
+      <div class="tcard rv d2">
+        <div class="tcard-name">Lorenzo Bove</div>
+        <div class="tcard-roles" data-k="team2_roles"></div>
+        <span class="tcard-badge badge-on" data-k="badge_on"></span>
+      </div>
+      <div class="tcard rv d1">
+        <div class="tcard-name">Tiziana Pirina</div>
+        <div class="tcard-roles" data-k="team6_roles"></div>
+        <span class="tcard-badge badge-on" data-k="badge_on"></span>
+      </div>
+      <div class="tcard rv d1">
+        <div class="tcard-name">Antonio Coppola</div>
+        <div class="tcard-roles" data-k="team4_roles"></div>
+        <span class="tcard-badge badge-on" data-k="badge_on"></span>
+      </div>
+	  <div class="tcard rv d2">
+        <div class="tcard-name">Arturo Arcidiacono</div>
+        <div class="tcard-roles" data-k="team3_roles"></div>
+        <span class="tcard-badge badge-on" data-k="badge_on"></span>
+      </div>
+      <div class="tcard rv d1">
+        <div class="tcard-name">Jessica Canales</div>
+        <div class="tcard-roles" data-k="team7_roles"></div>
+        <span class="tcard-badge badge-on" data-k="badge_on"></span>
+      </div>
+      <div class="tcard rv d2">
+        <div class="tcard-name">Francesco Braido</div>
+        <div class="tcard-roles" data-k="team8_roles"></div>
+        <span class="tcard-badge badge-on" data-k="badge_on"></span>
+      </div>
+      <div class="tcard rv d1">
+        <div class="tcard-name">Jacopo Arboit</div>
+        <div class="tcard-roles" data-k="team9_roles"></div>
+        <span class="tcard-badge badge-on" data-k="badge_on"></span>
+      </div>
+      <div class="tcard rv d2">
+        <div class="tcard-name" data-k="team5_name"></div>
+        <div class="tcard-roles" data-k="team5_roles"></div>
+        <span class="tcard-badge badge-seek" data-k="badge_seek"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LOOKING FOR
+     ============================================================ -->
+<section id="looking">
+  <div class="inner">
+    <span class="label rv" data-k="look_label"></span>
+    <p class="looking-intro rv" data-k="look_intro"></p>
+    <div class="looking-cards">
+      <div class="lcard rv d1">
+        <h3 data-k="look1_title"></h3>
+        <p data-k="look1_text"></p>
+      </div>
+      <div class="lcard rv d2">
+        <h3 data-k="look2_title"></h3>
+        <p data-k="look2_text"></p>
+      </div>
+      <div class="lcard rv d1">
+        <h3 data-k="look3_title"></h3>
+        <p data-k="look3_text"></p>
+      </div>
+      <div class="lcard rv d2">
+        <h3 data-k="look4_title"></h3>
+        <p data-k="look4_text"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACTS
+     ============================================================ -->
+<section id="contacts">
+  <div class="inner">
+    <div>
+      <span class="label rv" data-k="cont_label"></span>
+      <div class="contact-people rv">
+        <div>
+          <div class="contact-name">Roberto Tolomei</div>
+          <div class="contact-role" data-k="cont1_role"></div>
+          <a href="mailto:r.tolomei76@gmail.com" class="contact-email">r.tolomei76@gmail.com</a>
+        </div>
+        <div>
+          <div class="contact-name">Lorenzo Bove</div>
+          <div class="contact-role" data-k="cont2_role"></div>
+          <a href="mailto:lorenzo.bove.3dart@gmail.com" class="contact-email">lorenzo.bove.3dart@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="contacts-aside rv d1">
+      <span class="label" data-k="cont_status_label"></span>
+      <p data-k="cont_status_text"></p>
+      <span class="label" data-k="cont_seek_label"></span>
+      <p data-k="cont_seek_text"></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+/* ---------------------------------------------------------------
+   TRANSLATIONS
+--------------------------------------------------------------- */
+const T = {
+  it: {
+    hero_meta:    "Horror Narrativo · Prima Persona · Romagna, XII sec.",
+    hero_tagline: "Dove muore la nebbia, ciò che la fede ha sepolto torna a respirare.",
+    scroll_hint:  "Scorri",
+
+    what_label: "Cos'è",
+    what_text:  "Un <strong>horror narrativo in prima persona</strong> ambientato nella <strong>Romagna medievale del XII secolo</strong>. L'orrore nasce dal folklore reale della pianura padana — non da mostri generici: ogni creatura, simbolo e superstizione affonda in tradizioni storicamente documentate.",
+
+    setting_label: "Setting",
+    setting_title: "Romagna, XII secolo",
+    setting_text:  "Sono gli anni della lotta tra i Comuni lombardi e l'Imperatore Federico Barbarossa — una Romagna medievale dove i signori feudali levavano uomini per guerre che non appartenevano a nessuno. Un villaggio isolato avvolto dalla nebbia. Campi, cascine abbandonate, fossi, canneti. Una civiltà rurale sospesa tra fede cristiana e credenze pre-cristiane mai del tutto scomparse — dove la Borda, entità incappucciata che porta via i bambini, non è leggenda ma testimonianza orale documentata.",
+
+    protagonist_label: "Protagonista",
+    protagonist_title: "Rinaldo",
+    protagonist_text:  "Medico ed erborista di fortuna — mani precise, nessuna forza nelle braccia. Levato per la guerra del signore feudale locale, torna al villaggio e trova la moglie morta sul rogo e i figli scomparsi. Non crede alla colpa di Beatrice: crede che la Borda abbia rapito i figli vivi. Parte per trovarli. La verità che scoprirà distruggerà tutto ciò che credeva di sapere.",
+
+    borda_label: "La minaccia",
+    borda_title: "La Borda",
+    borda_text:  "Un'entità antica della pianura padana — incappucciata, informe, invisibile finché non vuole essere vista. Non è un'invenzione: è documentata nelle tradizioni orali romagnole. Nel gioco, il suo meccanismo e la sua natura sono più profondi e più tragici di quanto qualsiasi fonte folkloristica abbia mai descritto.",
+
+    env_label: "Ambientazione",
+    env_title: "Pianura Padana rurale — Concept Environment",
+    env_intro: "Riferimenti visivi per gli spazi di gioco: campi, fossi, canneti, cascine isolate nella nebbia. Registro dark fantasy radicato nel reale, non fantasy generico. Il gioco non è open world ma strutturato a livelli — ogni concept qui sotto rappresenta un possibile spazio contenuto, non una mappa continua.",
+    env_cover_hint: "Clicca sull'immagine per scorrere tutte le concept (9)",
+
+    pillars_label: "Il cuore del gioco",
+    p1_title: "Autenticità",
+    p1_text:  "Niente fantasy. Ogni figura ha base reale nella tradizione locale. Horror credibile perché affonda in superstizioni vere.",
+    p2_title: "Visione cinematografica",
+    p2_text:  "Prima il racconto come un lungometraggio completo; solo dopo l'esperienza interattiva. La storia regge come opera autonoma prima ancora di diventare gioco.",
+    p3_title: "Coerenza interna",
+    p3_text:  "Lore, narrativa, gameplay e produzione restano coerenti tra loro. Ogni nuova idea si misura contro ciò che esiste già.",
+
+    gameplay_label: "Gameplay",
+    gameplay_title: "Tre assi, un'unica tensione",
+    gameplay_intro: "Horror narrativo in prima persona. Rinaldo non è un eroe — è un uomo che cerca la verità su ciò che ha perso.",
+    g1_title: "Esplorazione",
+    g1_text:  "Il villaggio, la nebbia, le cascine abbandonate. L'ambiente racconta quanto i dialoghi.",
+    g2_title: "Investigazione",
+    g2_text:  "Oggetti, tracce, parole di Beatrice. Gli indizi non servono a risolvere un caso — servono a capire una persona. È lei a guidare Rinaldo lungo la storia, anche da morta.",
+    g3_title: "Combattimento",
+    g3_text:  "Raro, goffo, necessario. Rinaldo impara sul campo — non livelli, non statistiche: solo esperienza che cambia animazioni, postura e timing.",
+    bell_title: "Il campanellino",
+    bell_text:  "L'oggetto domestico di Beatrice. Strumento di navigazione, bussola emotiva e cuore narrativo del gioco. Non sa di essere ciò che guida Rinaldo verso la verità.",
+
+    road_label: "Struttura del progetto",
+    road_title: "Tre livelli, una direzione",
+    road_note:  "Le tempistiche sono in definizione. Questa è la struttura del lavoro, non un calendario.",
+
+    ph1_num: "Livello 1",   ph1_title: "Pre-produzione completa", ph1_sub: "Fase attuale",
+    ph1_i1: "Storia madre", ph1_i2: "Game Design Document",       ph1_i3: "Ricerca folkloristica",
+    ph1_i4: "Storyboard",   ph1_i5: "Concept art",               ph1_i6: "Brief collaboratori",
+    ph1_i7: "Documentazione tecnica",
+
+    ph2_num: "Livello 2",  ph2_title: "Prototipo giocabile",   ph2_sub: "Fase successiva",
+    ph2_i1: "Combat system",    ph2_i2: "Esplorazione",
+    ph2_i3: "Investigazione",   ph2_i4: "Sistema dialoghi",
+    ph2_i5: "Gestione nebbia",  ph2_i6: "Creature",
+    ph2_i7: "Ritmo narrativo",
+
+    ph3_num: "Livello 3",  ph3_title: "Valutazione produzione", ph3_sub: "Fase finale",
+    ph3_i1: "Ricerca publisher / investitori",
+    ph3_i2: "Crowdfunding",
+    ph3_i3: "Espansione del team",
+    ph3_i4: "Sviluppo indipendente",
+
+    team_label:   "Il team",
+    team1_roles:  "Producer · Game Designer · Narrative Designer · Additional Art Direction · Additional Programming",
+    team2_roles:  "Art Director · Artist · Environment",
+    team3_name:   "Animatore",      team3_roles: "Character Animation · Combat Animator",
+    team4_name:   "Programmatore",  team4_roles: "Unreal Engine · Lead Programmer",
+    team5_name:   "3D Artist",      team5_roles: "Character Design · Asset 3D",
+    team6_roles:  "Character · Creature Artist",
+    team7_roles:  "3D Environment Artist",
+    team8_roles:  "Material Artist",
+    team9_roles:  "3D Artist · Props",
+    badge_on:     "Confermato",
+    badge_neg:    "In ingaggio",
+    badge_seek:   "In ricerca",
+
+    look_label: "Cerchiamo",
+    look_intro: "Cerchiamo collaboratori che credano nel progetto prima ancora di lavorarci.",
+    look1_title: "Sound Designer",
+    look1_text:  "Esperienza in audio design per videogiochi, preferibilmente in ambito horror o narrativo. In WTFD il suono è parte integrante della narrazione: dall'atmosfera ambientale alle variazioni del campanellino, ogni suono costruisce tensione prima ancora che accada qualcosa.",
+    look2_title: "3D Artist / Character Designer",
+    look2_text:  "Competenze in character design e modellazione 3D. Capacità di lavorare su personaggi storicamente contestualizzati in un registro realistico — niente fantasy, niente stereotipi. Conoscenza delle pipeline di asset per Unreal Engine.",
+    look3_title: "Animatore",
+    look3_text:  "Esperienza in character animation e combat system. Capacità di tradurre l'evoluzione narrativa di Rinaldo in movimento — tre stadi distinti dello stesso corpo, tre diverse letture di chi è il personaggio in quel momento della storia.",
+    look4_title: "Programmatore Unreal",
+    look4_text:  "Interesse per il gameplay narrativo. Capacità di lavorare in un team piccolo dove le decisioni tecniche e creative sono strettamente connesse. Unreal 5.",
+
+    cont_label:        "Contatti",
+    cont1_role:        "Producer · Game Designer · Narrative Designer · Art Direction",
+    cont2_role:        "Art Director · Artist · Environment",
+    cont_status_label: "Stato del progetto",
+    cont_status_text:  "Pre-produzione avanzata. Storia madre completa (20 sezioni, 2 finali scritti). Game Design Document in avvio. Team parzialmente formato.",
+    cont_seek_label:   "Quello che cerchiamo",
+    cont_seek_text:    "Collaboratori con esperienza specifica e interesse genuino per un horror narrativo radicato nel folklore storico.",
+  },
+
+  en: {
+    hero_meta:    "Narrative Horror · First Person · Romagna, 12th Century",
+    hero_tagline: "Where the fog dies, what faith buried comes back to breathe.",
+    scroll_hint:  "Scroll",
+
+    what_label: "What is it",
+    what_text:  "A <strong>first-person narrative horror</strong> set in the <strong>rural Romagna of the twelfth century</strong>. The horror emerges from the real folklore of the Po Valley — not from generic monsters: every creature, symbol and superstition is rooted in historically documented traditions.",
+
+    setting_label: "Setting",
+    setting_title: "Romagna, 12th Century",
+    setting_text:  "The years of the struggle between the Lombard League and Emperor Frederick Barbarossa — a medieval Romagna where feudal lords conscripted men into wars that belonged to no one. An isolated village wrapped in fog. Fields, abandoned farmhouses, ditches, reeds. A rural civilization suspended between Christian faith and pre-Christian beliefs that never fully disappeared — where the Borda, a hooded entity that takes children away, is not legend but documented oral testimony.",
+
+    protagonist_label: "Protagonist",
+    protagonist_title: "Rinaldo",
+    protagonist_text:  "A physician and herbalist — precise hands, no strength in his arms. Conscripted into the local feudal lord's war, he returns to find his wife burned at the stake and his children vanished. He does not believe Beatrice was guilty: he believes the Borda took the children alive. He sets out to find them. The truth he uncovers will destroy everything he thought he knew.",
+
+    borda_label: "The threat",
+    borda_title: "The Borda",
+    borda_text:  "An ancient entity of the Po Valley plain — hooded, formless, invisible until it chooses to be seen. Not an invention: documented in Romagna oral tradition. In the game, its mechanism and nature run deeper and darker than any folkloric source has ever described.",
+
+    env_label: "Setting concepts",
+    env_title: "Rural Po Valley — Environment Concepts",
+    env_intro: "Visual references for the game's spaces: fields, ditches, reed beds, isolated farmhouses in the fog. Dark fantasy register rooted in reality, not generic fantasy. The game is not open world but level-based — each concept below represents one contained space, not a continuous map.",
+    env_cover_hint: "Click the image to browse all concepts (9)",
+
+    pillars_label: "The core",
+    p1_title: "Authenticity",
+    p1_text:  "No fantasy. Every figure has a real basis in local tradition. Credible horror because it runs through genuine superstition.",
+    p2_title: "Cinematic vision",
+    p2_text:  "The story is built as a complete feature film first; only then transformed into an interactive experience. The narrative holds as a standalone work before it becomes a game.",
+    p3_title: "Internal coherence",
+    p3_text:  "Lore, narrative, gameplay and production stay consistent. Every new idea is measured against what already exists.",
+
+    gameplay_label: "Gameplay",
+    gameplay_title: "Three axes, one tension",
+    gameplay_intro: "First-person narrative horror. Rinaldo is not a hero — he is a man searching for the truth about what he has lost.",
+    g1_title: "Exploration",
+    g1_text:  "The village, the fog, the abandoned farmhouses. The environment tells as much as dialogue.",
+    g2_title: "Investigation",
+    g2_text:  "Objects, traces, Beatrice's words. The clues don't solve a case — they illuminate a person. Even in death, it is Beatrice who guides Rinaldo through the story.",
+    g3_title: "Combat",
+    g3_text:  "Rare, clumsy, necessary. Rinaldo learns through experience — no levels, no stats: only survival that changes animation, posture and timing.",
+    bell_title: "The Bell",
+    bell_text:  "Beatrice's domestic object. Navigation tool, emotional compass, and the game's narrative heart. It does not know it is guiding Rinaldo toward the truth.",
+
+    road_label: "Project structure",
+    road_title: "Three levels, one direction",
+    road_note:  "Timelines are being defined. This shows the structure of the work, not a calendar.",
+
+    ph1_num: "Level 1",     ph1_title: "Full Pre-Production",      ph1_sub: "Current phase",
+    ph1_i1: "Narrative story", ph1_i2: "Game Design Document",     ph1_i3: "Folklore research",
+    ph1_i4: "Storyboard",      ph1_i5: "Concept art",              ph1_i6: "Collaborator briefs",
+    ph1_i7: "Technical documentation",
+
+    ph2_num: "Level 2",   ph2_title: "Playable Prototype",   ph2_sub: "Next phase",
+    ph2_i1: "Combat system",    ph2_i2: "Exploration",
+    ph2_i3: "Investigation",    ph2_i4: "Dialogue system",
+    ph2_i5: "Fog management",   ph2_i6: "Creatures",
+    ph2_i7: "Narrative pacing",
+
+    ph3_num: "Level 3",   ph3_title: "Production Evaluation", ph3_sub: "Final phase",
+    ph3_i1: "Publisher / investor search",
+    ph3_i2: "Crowdfunding",
+    ph3_i3: "Team expansion",
+    ph3_i4: "Independent development",
+
+    team_label:   "The team",
+    team1_roles:  "Producer · Game Designer · Narrative Designer · Additional Art Direction · Additional Programming",
+    team2_roles:  "Art Director · Artist · Environment",
+    team3_name:   "Animator",    team3_roles: "Character Animation · Combat Animator",
+    team4_name:   "Programmer",  team4_roles: "Unreal Engine · Lead Programmer",
+    team5_name:   "3D Artist",   team5_roles: "Character Design · 3D Assets",
+    team6_roles:  "Character · Creature Artist",
+    team7_roles:  "3D Environment Artist",
+    team8_roles:  "Material Artist",
+    team9_roles:  "3D Artist · Props",
+    badge_on:     "Confirmed",
+    badge_neg:    "In negotiation",
+    badge_seek:   "In search",
+
+    look_label: "We're looking for",
+    look_intro: "We're looking for collaborators who believe in the project before they work on it.",
+    look1_title: "Sound Designer",
+    look1_text:  "Experience in video game audio design, preferably in horror or narrative games. In WTFD sound is a core part of the narrative: from ambient atmosphere to the sonic variations of the bell, every sound builds tension before anything even happens.",
+    look2_title: "3D Artist / Character Designer",
+    look2_text:  "Skills in character design and 3D modelling. Ability to work on historically grounded characters in a realistic, non-fantasy register. Familiarity with Unreal Engine asset pipelines.",
+    look3_title: "Animator",
+    look3_text:  "Experience in character animation and combat systems. Ability to translate Rinaldo's narrative evolution into movement — three distinct stages of the same body, three different readings of who the character is at that point in the story.",
+    look4_title: "Unreal Programmer",
+    look4_text:  "Interest in narrative gameplay. Ability to work in a small team where technical and creative decisions are deeply connected. Unreal 5.",
+
+    cont_label:        "Contact",
+    cont1_role:        "Producer · Game Designer · Narrative Designer · Art Direction",
+    cont2_role:        "Art Director · Artist · Environment",
+    cont_status_label: "Project status",
+    cont_status_text:  "Advanced pre-production. Narrative story complete (20 sections, 2 written endings). Game Design Document in progress. Team partially formed.",
+    cont_seek_label:   "What we're looking for",
+    cont_seek_text:    "Collaborators with specific experience and genuine interest in a narrative horror project rooted in historical folklore.",
+  }
+};
+
+/* ---------------------------------------------------------------
+   LANGUAGE SYSTEM
+--------------------------------------------------------------- */
+let lang = 'it';
+
+function setLang(l) {
+  lang = l;
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-k]').forEach(el => {
+    const v = T[l][el.getAttribute('data-k')];
+    if (v !== undefined) {
+      el.innerHTML = v;
+      if (el.hasAttribute('data-hide-empty')) el.style.display = v ? '' : 'none';
+    }
+  });
+  document.getElementById('lang-btn').textContent = l === 'it' ? 'EN' : 'IT';
+}
+
+function toggleLang() { setLang(lang === 'it' ? 'en' : 'it'); }
+
+/* ---------------------------------------------------------------
+   SCROLL REVEAL
+--------------------------------------------------------------- */
+const ro = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('vis'); ro.unobserve(e.target); }
+  });
+}, { threshold: 0.07, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.rv').forEach(el => ro.observe(el));
+
+/* ---------------------------------------------------------------
+   FOG CANVAS
+--------------------------------------------------------------- */
+(function() {
+  const canvas = document.getElementById('fog-canvas');
+  const ctx    = canvas.getContext('2d');
+  let W, H, particles = [];
+  const N = 55;
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+
+  function mkP() {
+    return {
+      x:  Math.random() * W,
+      y:  Math.random() * H,
+      r:  Math.random() * 200 + 80,
+      op: Math.random() * 0.07 + 0.015,
+      vx: (Math.random() - 0.5) * 0.28,
+      vy: (Math.random() - 0.5) * 0.12,
+      age: Math.floor(Math.random() * 260),
+      life: Math.floor(Math.random() * 200 + 180),
+    };
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      p.age++; p.x += p.vx; p.y += p.vy;
+      const f = p.age / p.life;
+      let a = p.op;
+      if (f < 0.18) a *= f / 0.18;
+      if (f > 0.78) a *= (1 - f) / 0.22;
+      const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      g.addColorStop(0, `rgba(195,185,168,${a})`);
+      g.addColorStop(1, 'rgba(195,185,168,0)');
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = g;
+      ctx.fill();
+      if (p.age > p.life || p.x < -p.r || p.x > W + p.r || p.y < -p.r || p.y > H + p.r) {
+        particles[i] = mkP(); particles[i].age = 0;
+        particles[i].x = Math.random() < 0.5 ? -50 : W + 50;
+        particles[i].y = Math.random() * H;
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+  for (let i = 0; i < N; i++) particles.push(mkP());
+  draw();
+})();
+
+/* ---------------------------------------------------------------
+   AUDIO
+--------------------------------------------------------------- */
+(function() {
+  const audio = document.getElementById('bg-audio');
+  const btn   = document.getElementById('audio-btn');
+  audio.volume = 0.05;
+  let started = false;
+
+  function updateBtn() {
+    btn.textContent = audio.paused ? '🔕' : '🔔';
+  }
+
+  function startAudio() {
+    if (started) return;
+    started = true;
+    audio.play().then(updateBtn).catch(updateBtn);
+    document.removeEventListener('scroll', startAudio);
+    document.removeEventListener('click',  startAudio);
+  }
+
+  // Parte al primo scroll o al primo click ovunque sulla pagina
+  document.addEventListener('scroll', startAudio, { passive: true });
+  document.addEventListener('click',  startAudio);
+
+  window.toggleAudio = function() {
+    if (!started) { startAudio(); return; }
+    if (audio.paused) {
+      audio.play().then(updateBtn).catch(updateBtn);
+    } else {
+      audio.pause();
+      updateBtn();
+    }
+  };
+
+  audio.addEventListener('play',  updateBtn);
+  audio.addEventListener('pause', updateBtn);
+
+  window.setVol = function(v) { audio.volume = parseFloat(v); };
+
+  // Sincronizza slider col volume effettivo
+  document.getElementById('vol-slider').value = audio.volume;
+})();
+
+/* ---------------------------------------------------------------
+   PILLAR GALLERY
+   ---------------------------------------------------------------
+   ISTRUZIONI PER AGGIUNGERE IMMAGINI:
+   Metti i file in assets/gallery/ con questi nomi:
+
+   Autenticità  → auth_1.jpg, auth_2.jpg, auth_3.jpg  (max 8)
+   Cinematografica → cine_1.jpg, cine_2.jpg …
+   Coerenza     → coer_1.jpg, coer_2.jpg …
+
+   Poi aggiorna le liste qui sotto.
+--------------------------------------------------------------- */
+const GALLERIES = {
+  auth: {
+    label: { it: 'I — Autenticità', en: 'I — Authenticity' },
+    images: [
+      'assets/gallery/aut1.png',
+      'assets/gallery/aut2.png',
+      'assets/gallery/aut3.png',
+    ]
+  },
+  cine: {
+    label: { it: 'II — Visione Cinematografica', en: 'II — Cinematic Vision' },
+    video: 'assets/gallery/cinema.mp4',
+    images: []
+  },
+  coer: {
+    label: { it: 'III — Coerenza Interna', en: 'III — Internal Coherence' },
+    images: [
+      'assets/gallery/coer1.jpg',
+      'assets/gallery/coer2.jpg',
+      'assets/gallery/coer3.jpg',
+      'assets/gallery/coer4.jpg',
+      'assets/gallery/coer5.jpg',
+      'assets/gallery/coer6.png',
+    ]
+  }
+};
+
+/* ---------------------------------------------------------------
+   GAMEPLAY GALLERY
+--------------------------------------------------------------- */
+const GAMEPLAY_GALLERIES = {
+  expl: {
+    label: { it: 'Esplorazione', en: 'Exploration' },
+    images: [
+      'assets/gallery/expl1.jpg',
+      'assets/gallery/expl2.jpg',
+      'assets/gallery/expl3.jpg',
+      'assets/gallery/expl4.jpg',
+      'assets/gallery/expl5.jpg',
+    ]
+  },
+  inv: {
+    label: { it: 'Investigazione', en: 'Investigation' },
+    images: [
+      'assets/gallery/inv1.jpg',
+      'assets/gallery/inv2.jpg',
+      'assets/gallery/inv3.jpg',
+      'assets/gallery/inv4.jpg',
+    ]
+  },
+  combat: {
+    label: { it: 'Combattimento', en: 'Combat' },
+    images: [
+      'assets/gallery/combat1.png',
+      'assets/gallery/combat2.png',
+      'assets/gallery/combat3.png',
+    ]
+  }
+};
+
+(function() {
+  const panel2   = document.getElementById('gameplay-gallery');
+  const frame2   = panel2.querySelector('.gallery-frame');
+  const dotsEl2  = document.getElementById('gplay-dots');
+  const labelEl2 = document.getElementById('gplay-label');
+  let curId2 = null, loopTimer2 = null, slideIdx2 = 0, imgs2 = [];
+
+  function buildSlides2(id) {
+    frame2.innerHTML = ''; dotsEl2.innerHTML = ''; imgs2 = [];
+    const data = GAMEPLAY_GALLERIES[id];
+    if (!data) return false;
+
+    // CASO: array di video in sequenza
+    if (data.videos && data.videos.length) {
+      data.videos.forEach((src, i) => {
+        const vid = document.createElement('video');
+        vid.src = src; vid.muted = true; vid.playsInline = true;
+        vid.className = 'gal-img';
+        if (i === 0) { vid.classList.add('gal-active'); }
+        vid.addEventListener('ended', () => {
+          goTo2((i + 1) % data.videos.length);
+        });
+        frame2.appendChild(vid); imgs2.push(vid);
+        const dot = document.createElement('span');
+        dot.className = 'gdot' + (i === 0 ? ' gd-active' : '');
+        dot.onclick = () => goTo2(i); dotsEl2.appendChild(dot);
+      });
+      imgs2[0].play().catch(() => {});
+      return true;
+    }
+
+    // CASO: singolo video
+    if (data.video) {
+      const vid = document.createElement('video');
+      vid.src = data.video; vid.loop = true; vid.muted = true;
+      vid.autoplay = true; vid.playsInline = true;
+      vid.style.cssText = 'width:100%;height:100%;object-fit:contain;display:block;';
+      frame2.appendChild(vid); vid.play().catch(() => {}); return true;
+    }
+
+    // CASO: immagini
+    if (!data.images.length) return false;
+    data.images.forEach((src, i) => {
+      const el = document.createElement('img');
+      el.src = src; el.alt = ''; el.className = 'gal-img';
+      if (i === 0) el.classList.add('gal-active');
+      frame2.appendChild(el); imgs2.push(el);
+      const dot = document.createElement('span');
+      dot.className = 'gdot' + (i === 0 ? ' gd-active' : '');
+      dot.onclick = () => goTo2(i); dotsEl2.appendChild(dot);
+    });
+    return true;
+  }
+
+  function goTo2(idx) {
+    imgs2.forEach((el, i) => {
+      el.classList.toggle('gal-active', i === idx);
+      if (el.tagName === 'VIDEO') {
+        if (i === idx) { el.currentTime = 0; el.play().catch(() => {}); }
+        else { el.pause(); el.currentTime = 0; }
+      }
+    });
+    dotsEl2.querySelectorAll('.gdot').forEach((d, i) => d.classList.toggle('gd-active', i === idx));
+    slideIdx2 = idx;
+  }
+
+  function startLoop2() {
+    clearInterval(loopTimer2);
+    if (imgs2.length < 2) return;
+    loopTimer2 = setInterval(() => { goTo2((slideIdx2 + 1) % imgs2.length); }, 2800);
+  }
+
+  window.openGameplayGallery = function(id) {
+    const data = GAMEPLAY_GALLERIES[id];
+    if (!data || (!data.images.length && !data.video)) return;
+    labelEl2.textContent = data.label[lang] || data.label.it;
+    if (curId2 !== id) {
+      clearInterval(loopTimer2); slideIdx2 = 0;
+      if (!buildSlides2(id)) return;
+      curId2 = id; startLoop2();
+    }
+    panel2.classList.add('open');
+  };
+
+  window.closeGameplayGallery = function() {
+    panel2.classList.remove('open');
+    clearInterval(loopTimer2);
+    const vid = frame2.querySelector('video');
+    if (vid) { vid.pause(); vid.currentTime = 0; }
+    curId2 = null;
+  };
+})();
+
+/* ---------------------------------------------------------------
+   PILLAR GALLERY
+--------------------------------------------------------------- */
+(function() {
+  const panel   = document.getElementById('pillar-gallery');
+  const frame   = panel.querySelector('.gallery-frame');
+  const dotsEl  = document.getElementById('gal-dots');
+  const labelEl = document.getElementById('gal-label');
+  let currentId = null;
+  let loopTimer = null;
+  let slideIdx  = 0;
+  let imgs      = [];
+
+  function buildSlides(id) {
+    frame.innerHTML = '';
+    dotsEl.innerHTML = '';
+    imgs = [];
+    const data = GALLERIES[id];
+    if (!data) return false;
+
+    // CASO VIDEO
+    if (data.video) {
+      const vid = document.createElement('video');
+      vid.src = data.video;
+      vid.loop = true;
+      vid.muted = true;
+      vid.autoplay = true;
+      vid.playsInline = true;
+      vid.style.cssText = 'width:100%;height:100%;object-fit:contain;display:block;';
+      frame.appendChild(vid);
+      vid.play().catch(() => {});
+      return true;
+    }
+
+    // CASO IMMAGINI
+    if (!data.images.length) return false;
+    data.images.forEach((src, i) => {
+      const el = document.createElement('img');
+      el.src = src; el.alt = ''; el.className = 'gal-img';
+      if (i === 0) el.classList.add('gal-active');
+      frame.appendChild(el);
+      imgs.push(el);
+
+      const dot = document.createElement('span');
+      dot.className = 'gdot' + (i === 0 ? ' gd-active' : '');
+      dot.onclick = () => goTo(i);
+      dotsEl.appendChild(dot);
+    });
+    return true;
+  }
+
+  function goTo(idx) {
+    imgs.forEach((el, i) => {
+      el.classList.toggle('gal-active', i === idx);
+    });
+    dotsEl.querySelectorAll('.gdot').forEach((d, i) => {
+      d.classList.toggle('gd-active', i === idx);
+    });
+    slideIdx = idx;
+  }
+
+  function startLoop() {
+    clearInterval(loopTimer);
+    if (imgs.length < 2) return;
+    loopTimer = setInterval(() => {
+      goTo((slideIdx + 1) % imgs.length);
+    }, 2800);
+  }
+
+  window.openGallery = function(id) {
+    const data = GALLERIES[id];
+    if (!data) return;
+
+    // non aprire se non c'è né immagini né video
+    if (!data.images.length && !data.video) return;
+
+    labelEl.textContent = data.label[lang] || data.label.it;
+
+    if (currentId !== id) {
+      clearInterval(loopTimer);
+      slideIdx = 0;
+      if (!buildSlides(id)) return;
+      currentId = id;
+      startLoop();
+    }
+    panel.classList.add('open');
+  };
+
+  window.closeGallery = function() {
+    panel.classList.remove('open');
+    clearInterval(loopTimer);
+    // ferma eventuali video
+    const vid = frame.querySelector('video');
+    if (vid) { vid.pause(); vid.currentTime = 0; }
+    currentId = null;
+  };
+})();
+
+/* ---------------------------------------------------------------
+   CONCEPT AMBIENTAZIONE — lightbox a click (niente hover: zero
+   zone morte, zero interferenze con elementi sottostanti)
+--------------------------------------------------------------- */
+(function() {
+  const cover    = document.getElementById('concept-cover');
+  const lightbox = document.getElementById('concept-lightbox');
+  const img      = document.getElementById('lightbox-img');
+  const prevBtn  = document.getElementById('lightbox-prev');
+  const nextBtn  = document.getElementById('lightbox-next');
+  const closeBtn = document.getElementById('lightbox-close');
+  const counter  = document.getElementById('lightbox-counter');
+  if (!cover || !lightbox || !img) return;
+
+  // elenco completo delle 9 concept: non serve tenerle nel DOM, bastano i percorsi
+  const slides = Array.from({ length: 9 }, (_, i) => 'assets/gallery/env' + (i + 1) + '.png');
+
+  let activeIdx = 0;
+
+  function render() {
+    img.src = slides[activeIdx];
+    if (counter) counter.textContent = (activeIdx + 1) + ' / ' + slides.length;
+    if (prevBtn) prevBtn.classList.toggle('is-hidden', activeIdx <= 0);
+    if (nextBtn) nextBtn.classList.toggle('is-hidden', activeIdx >= slides.length - 1);
+  }
+
+  function open(idx) {
+    activeIdx = Math.max(0, Math.min(slides.length - 1, idx));
+    render();
+    lightbox.classList.add('open');
+  }
+
+  function close() { lightbox.classList.remove('open'); }
+
+  function go(delta) {
+    activeIdx = Math.max(0, Math.min(slides.length - 1, activeIdx + delta));
+    render();
+  }
+
+  cover.addEventListener('click', () => open(0));
+  if (closeBtn) closeBtn.addEventListener('click', close);
+  if (prevBtn) prevBtn.addEventListener('click', () => go(-1));
+  if (nextBtn) nextBtn.addEventListener('click', () => go(1));
+
+  // click sullo sfondo scuro (fuori dall'immagine/frecce) chiude la lightbox
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
+  });
+
+  // Esc chiude la lightbox
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) close();
+  });
+})();
+
+setLang('it');
+</script>
+</body>
+</html>
