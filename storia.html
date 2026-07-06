@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where the Fog Dies — Storia</title>
+<!--
+  USO INTERNO — non linkato da external.html.
+  Struttura dati scene: vedi array SCENES più in basso.
+  Per aggiungere una scena: copiare i pannelli (jpg, ~1600px lato lungo)
+  in assets/storia/scenaN/panel-01.jpg ecc., poi aggiungere un blocco
+  { id, title:{it,en}, panels:[{img, text:{it,en}}, ...] } all'array SCENES.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:          #080705;
+  --bg2:         #0d0b09;
+  --surface:     #131109;
+  --surface2:    #1a1714;
+  --accent:      #7a3232;
+  --accent-dim:  rgba(122, 50, 50, 0.25);
+  --text:        #e0d7ca;
+  --text-mid:    #7d756c;
+  --text-low:    #3a3530;
+  --border:      rgba(120, 110, 98, 0.13);
+  --border-acc:  rgba(122, 50, 50, 0.35);
+  --serif:       'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  --sans:        'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 300;
+  overflow: hidden;
+}
+
+/* ---------- Top bar ---------- */
+#topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  z-index: 20;
+  gap: 16px;
+}
+#topbar a { color: var(--text-mid); text-decoration: none; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
+#topbar a:hover { color: var(--text); }
+#scene-title { font-family: var(--serif); font-size: 18px; color: var(--text); letter-spacing: 0.02em; text-align: center; flex: 1; }
+#topbar-right { display: flex; align-items: center; gap: 18px; }
+#progress-label { font-size: 12px; color: var(--text-mid); letter-spacing: 0.06em; white-space: nowrap; }
+#lang-toggle {
+  background: transparent;
+  border: 1px solid var(--border-acc);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.2s, color 0.2s;
+}
+#lang-toggle:hover { background: var(--accent); color: #fff; }
+
+#chapters-toggle {
+  background: transparent;
+  border: 1px solid var(--border-acc);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+#chapters-toggle:hover { background: var(--accent); color: #fff; }
+
+/* ---------- Chapter menu ---------- */
+#chapters-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(4,3,2,0.75);
+  z-index: 40;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 90px;
+}
+#chapters-overlay.open { display: flex; }
+#chapters-panel {
+  background: var(--surface2);
+  border: 1px solid var(--border-acc);
+  width: min(480px, 90vw);
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+.chapter-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--serif);
+  font-size: 17px;
+  transition: background 0.15s;
+}
+.chapter-item:last-child { border-bottom: none; }
+.chapter-item:hover { background: var(--accent-dim); }
+.chapter-item .chip {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--text-mid);
+  letter-spacing: 0.06em;
+}
+
+/* ---------- Resume banner ---------- */
+#resume-banner {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface2);
+  border: 1px solid var(--border-acc);
+  padding: 10px 18px;
+  font-size: 12px;
+  color: var(--text-mid);
+  z-index: 30;
+  gap: 14px;
+  align-items: center;
+}
+#resume-banner.open { display: flex; }
+#resume-banner a { color: var(--text); text-decoration: underline; cursor: pointer; }
+
+/* ---------- Main stage ---------- */
+#stage { position: absolute; top: 56px; bottom: 84px; left: 0; right: 0; display: flex; }
+#panel-col { flex: 1.3; display: flex; align-items: center; justify-content: center; background: #000; position: relative; overflow: hidden; }
+#panel-col img { max-width: 100%; max-height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease; }
+#panel-col img.visible { opacity: 1; }
+
+#text-col { flex: 1; background: var(--surface); border-left: 1px solid var(--border); display: flex; align-items: center; padding: clamp(24px, 4vw, 64px); overflow-y: auto; }
+#text-inner { max-width: 560px; opacity: 0; transform: translateY(8px); transition: opacity 0.5s ease, transform 0.5s ease; }
+#text-inner.visible { opacity: 1; transform: translateY(0); }
+#panel-text { font-family: var(--serif); font-weight: 400; font-size: clamp(17px, 2vw, 22px); line-height: 1.8; color: var(--text); white-space: pre-line; }
+#panel-text em { color: #b98a6a; font-style: italic; }
+
+/* ---------- Controls ---------- */
+#controls {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: 84px;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  z-index: 20;
+}
+.ctrl-btn {
+  background: transparent;
+  border: 1px solid var(--border-acc);
+  color: var(--text);
+  font-family: var(--sans);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: background 0.2s, color 0.2s;
+}
+.ctrl-btn:hover { background: var(--accent); color: #fff; }
+#play-btn { width: 56px; height: 56px; font-size: 20px; }
+
+@media (max-width: 820px) {
+  #stage { flex-direction: column; top: 56px; bottom: 96px; }
+  #panel-col { flex: 1.1; }
+  #text-col { flex: 1; border-left: none; border-top: 1px solid var(--border); }
+  #panel-text { font-size: 16px; }
+  #scene-title { font-size: 14px; }
+}
+</style>
+</head>
+<body>
+
+<div id="topbar">
+  <a href="index.html">&larr; Indietro</a>
+  <div id="scene-title"></div>
+  <div id="topbar-right">
+    <div id="progress-label"></div>
+    <button id="chapters-toggle">&#9776; Capitoli</button>
+    <button id="lang-toggle">EN</button>
+  </div>
+</div>
+
+<div id="resume-banner">
+  <span id="resume-text"></span>
+  <a id="resume-restart">Ricomincia da capo</a>
+</div>
+
+<div id="chapters-overlay">
+  <div id="chapters-panel"></div>
+</div>
+
+<div id="stage">
+  <div id="panel-col"><img id="panel-img" src="" alt=""></div>
+  <div id="text-col"><div id="text-inner"><p id="panel-text"></p></div></div>
+</div>
+
+<div id="controls">
+  <button class="ctrl-btn" id="prev-btn" title="Pannello precedente">&#9664;</button>
+  <button class="ctrl-btn" id="play-btn" title="Play / Pausa">&#9654;</button>
+  <button class="ctrl-btn" id="next-btn" title="Pannello successivo">&#9654;&#9654;</button>
+</div>
+
+<script>
+/* ============================================================
+   DATI SCENE — aggiungere qui le scene successive
+   Traduzioni EN fatte a mano, non con MT grezza, per restare
+   coerenti col tono già usato nel resto del sito.
+   ============================================================ */
+const SCENES = [
+  {
+    id: 'S1',
+    title: { it: 'Scena 1 — Il Mercato', en: 'Scene 1 — The Market' },
+    panels: [
+      {
+        img: 'assets/storia/scena1/panel-01.jpg',
+        text: {
+          it: `Il mercato di un villaggio medievale romagnolo in un mattino d'autunno tardivo. Il terreno è fango indurito dal gelo della notte, segnato da solchi di carri. Le bancarelle sono poche — lana grezza, ortaggi avvizziti, un coltellino su un panno — e i colori sono quelli dell'inverno che arriva: ocra, marrone, grigio. L'aria odora di legna bruciata e di fieno bagnato.
+
+Beatrice cammina tra la gente. Ha ventisei, ventisette anni — il viso di chi lavora all'aperto, le mani segnate da anni di erbe, decotti, terra. Porta un cesto sul braccio.`,
+          en: `The market of a medieval Romagna village on a late autumn morning. The ground is mud hardened by the night's frost, rutted by cart wheels. The stalls are few — raw wool, wilted vegetables, a small knife laid on a cloth — and the colors are those of coming winter: ochre, brown, grey. The air smells of burnt wood and wet hay.
+
+Beatrice walks among the people. She is twenty-six, twenty-seven — the face of someone who works outdoors, hands marked by years of herbs, decoctions, soil. She carries a basket on her arm.`
+        }
+      },
+      {
+        img: 'assets/storia/scena1/panel-02.jpg',
+        text: {
+          it: `Alcuni la salutano con calore: la moglie del fabbro le tocca il braccio, una vecchia le sorride da lontano, due bambini le corrono incontro e lei si abbassa ad accarezzarli, ride. Lei conosce tutti e tutti la conoscono. Ma non tutti la salutano: il parroco la guarda passare senza gesti, con la faccia chiusa. Una donna si gira appena, mormora qualcosa alla vicina. Beatrice lo nota. Non lo mostra.
+
+Si ferma un momento dalla moglie del fabbro, che le racconta di una bambina con la febbre da tre giorni. Beatrice ascolta, fa domande precise. Alla fine dice cosa provare — non come se stesse prescrivendo, ma come se stesse ricordando a voce alta quello che sa. La moglie del fabbro la ringrazia con una stretta di mano che vale più delle parole.
+
+Poco più avanti la accoglie la vicina di casa, con affetto genuino — le chiede dei bambini, le offre un pezzo di formaggio stagionato avvolto in un panno. Vuole sapere se Ludovico ha ancora il ginocchio gonfio. Beatrice dice di no, che è passato. Le due donne parlano come parlano le donne che si conoscono da sempre.
+
+Il parroco, invece, non la cerca. Quando Beatrice gli si avvicina, lui risponde con la cortesia minima che la sua posizione impone — non di più. C'è qualcosa nella sua voce quando parla con lei. Non è ostilità aperta. È distanza. Come se notasse qualcosa che gli altri hanno imparato a non guardare.`,
+          en: `Some greet her warmly: the blacksmith's wife touches her arm, an old woman smiles at her from a distance, two children run up to her and she crouches down to stroke them, laughing. She knows everyone and everyone knows her. But not everyone greets her: the priest watches her pass without a gesture, his face closed. A woman turns slightly, murmurs something to her neighbour. Beatrice notices. She doesn't show it.
+
+She stops for a moment with the blacksmith's wife, who tells her about a little girl running a fever for three days. Beatrice listens, asks precise questions. In the end she says what to try — not as though prescribing, but as though remembering aloud what she already knows. The blacksmith's wife thanks her with a handshake worth more than words.
+
+A little further on, her neighbour greets her with real affection — asks after the children, offers her a piece of aged cheese wrapped in cloth. She wants to know if Ludovico's knee is still swollen. Beatrice says no, it's passed. The two women talk the way women talk when they've known each other all their lives.
+
+The priest, on the other hand, doesn't seek her out. When Beatrice approaches him, he answers with the minimum courtesy his position demands — no more. There's something in his voice when he speaks to her. Not open hostility. Distance. As if he notices something everyone else has learned not to look at.`
+        }
+      },
+      {
+        img: 'assets/storia/scena1/panel-03.jpg',
+        text: {
+          it: `Poi vede Rinaldo.
+
+Lui è dall'altra parte del mercato, sta discutendo con un venditore di erbe secche — indica qualcosa, scuote la testa, indica di nuovo. Fa il medico anche quando non è necessario. Il venditore alla fine cede, cambia qualcosa nel prezzo, lo chiama *maestro* quando si volta. Beatrice lo guarda un momento prima che lui si accorga di lei.`,
+          en: `Then she sees Rinaldo.
+
+He's on the other side of the market, arguing with a dried-herb seller — pointing at something, shaking his head, pointing again. He plays the physician even when it isn't necessary. The seller finally gives in, changes something in the price, calls him *master* as he turns. Beatrice watches him for a moment before he notices her.`
+        }
+      },
+      {
+        img: 'assets/storia/scena1/panel-04.jpg',
+        text: {
+          it: `Poi i loro sguardi si incrociano e Rinaldo si dimentica immediatamente del venditore.`,
+          en: `Then their eyes meet and Rinaldo forgets the seller instantly.`
+        }
+      },
+      {
+        img: 'assets/storia/scena1/panel-05.jpg',
+        text: {
+          it: `Si avvicinano. Non c'è niente di teatrale in questo momento — è la familiarità di due persone che si conoscono così bene da non aver bisogno di parole per dirsi che sono contenti di vedersi. Lui le prende il cesto dalla mano, lei glielo lascia fare. Camminano insieme tra le bancarelle.
+
+Si ritrovano fuori dal mercato, vicino al pozzo. Lui ha comprato qualcosa dal venditore di erbe — le mostra cosa. Lei lo corregge su una cosa, lui fa finta di essere offeso, lei ride. È la dinamica di sempre: lui è il medico ufficiale, lei sa più cose di lui sulle erbe. Non lo dicono mai ad alta voce.`,
+          en: `They come together. There's nothing theatrical about this moment — it's the familiarity of two people who know each other so well they need no words to say they're glad to see one another. He takes the basket from her hand, she lets him. They walk together among the stalls.
+
+They meet again outside the market, near the well. He's bought something from the herb seller — shows her what. She corrects him on something, he pretends to be offended, she laughs. It's the usual dynamic: he's the official physician, she knows more than him about herbs. They never say it out loud.`
+        }
+      },
+      {
+        img: 'assets/storia/scena1/panel-06.jpg',
+        text: {
+          it: `Un momento di pausa. Il mercato si muove intorno a loro ma loro sono fermi. Lui le prende la mano — e quando la manica di Beatrice scivola appena sul polso, si vede: sul lato interno, un segno di nascita scuro, piccolo, della forma inconfondibile di una foglia. Rinaldo la conosce da sempre. Non la guarda come se fosse una cosa strana — la guarda come si guarda qualcosa che si è amato così a lungo da non riuscire più a immaginarlo assente.
+
+Lei si accorge dello sguardo. Sa già dove sta guardando.`,
+          en: `A moment's pause. The market moves around them but they are still. He takes her hand — and when Beatrice's sleeve slips back a little on her wrist, it shows: on the inside, a dark birthmark, small, unmistakably shaped like a leaf. Rinaldo has known it forever. He doesn't look at it as if it were strange — he looks at it the way one looks at something loved for so long it's impossible to imagine it gone.
+
+She notices the look. She already knows where he's looking.`
+        }
+      },
+      {
+        img: 'assets/storia/scena1/panel-07.jpg',
+        text: {
+          it: `Poi lui alza gli occhi su di lei con un'espressione precisa — non dice niente, ma è un'espressione che Beatrice conosce benissimo. Lei impara a leggerla anni fa, quando erano ancora giovani e lui non sapeva ancora nasconderla. Adesso non prova nemmeno a nasconderla.`,
+          en: `Then he raises his eyes to her with a precise expression — he says nothing, but it's an expression Beatrice knows very well. She learned to read it years ago, when they were still young and he didn't yet know how to hide it. Now he doesn't even try.`
+        }
+      },
+      {
+        img: 'assets/storia/scena1/panel-08.jpg',
+        text: {
+          it: `Beatrice ride. Una risata breve, genuina, un po' sorpresa anche se non dovrebbe esserlo. Scuote la testa come per dire *adesso, qui?* — ma non è un no.`,
+          en: `Beatrice laughs. A short, genuine laugh, a little surprised even though it shouldn't be. She shakes her head as if to say *now, here?* — but it isn't a no.`
+        }
+      },
+      {
+        img: 'assets/storia/scena1/panel-09.jpg',
+        text: {
+          it: `Poi dal fondo del mercato arriva una voce che copre tutto il resto.
+
+Un uomo in livrea — i colori del signore locale — si è fermato al centro della piazza. Tira fuori un rotolo, aspetta che il rumore si abbassi. Il mercato non si ferma del tutto, ma rallenta. Le persone si voltano. Lui legge: uomini abili tra una certa età, il signore chiede leve per la campagna, chi è tenuto al servizio si presenti entro la prossima luna. Chi non si presenta risponde al signore. E poi, quasi di passaggio: chi esercita l'arte del medicare o della chirurgia è anch'egli chiamato a presentarsi.
+
+Il banditore riavvolge il rotolo. Il mercato riprende.`,
+          en: `Then a voice rises from the far end of the market, drowning out everything else.
+
+A man in livery — the local lord's colors — has stopped at the center of the square. He pulls out a scroll, waits for the noise to settle. The market doesn't stop entirely, but it slows. People turn. He reads: able-bodied men within a certain age, the lord calls for levies for the campaign, those bound to service must present themselves by the next moon. Those who don't answer to the lord himself. And then, almost in passing: those who practice the art of medicine or surgery are likewise called to present themselves.
+
+The herald rolls up the scroll. The market picks up again.`
+        }
+      },
+      {
+        img: 'assets/storia/scena1/panel-10.jpg',
+        text: {
+          it: `Beatrice non guarda il banditore. Guarda Rinaldo che ascolta.
+
+Lui sta fermo, il cesto di lei in mano, gli occhi sul banditore anche dopo che ha smesso di parlare. Non è sorpreso. È la faccia di chi aspettava questa voce da settimane e adesso l'ha sentita. Non è un soldato e lo sanno tutti e due — ma i medici in campo muoiono quasi quanto i combattenti.
+
+La risata di prima è finita da qualche parte mentre il banditore leggeva. Non è tornata.`,
+          en: `Beatrice isn't watching the herald. She's watching Rinaldo listen.
+
+He stands still, her basket in his hand, eyes on the herald even after he's stopped speaking. He isn't surprised. It's the face of someone who's been expecting this voice for weeks and has now heard it. He isn't a soldier and they both know it — but physicians in the field die almost as often as the fighters do.
+
+The laugh from before has gone somewhere while the herald read. It doesn't come back.`
+        }
+      },
+      {
+        img: 'assets/storia/scena1/panel-11.jpg',
+        text: {
+          it: `*"La guerra,"* dice Beatrice alla fine. Non è una domanda.
+
+Lui abbassa gli occhi sul cesto che tiene in mano. Poi: *"Non ancora."*
+
+Lei annuisce. Gli prende il cesto. Camminano.`,
+          en: `*"The war,"* Beatrice says finally. It isn't a question.
+
+He lowers his eyes to the basket in his hands. Then: *"Not yet."*
+
+She nods. Takes the basket from him. They walk.`
+        }
+      }
+    ]
+  }
+  // Scena 2, 3, ... si aggiungono qui con la stessa struttura bilingue.
+];
+
+/* ============================================================
+   MOTORE (non serve modificarlo per aggiungere scene)
+   ============================================================ */
+let flat = [];
+SCENES.forEach((scene, si) => {
+  scene.panels.forEach((p, pi) => {
+    flat.push({ sceneIdx: si, panelIdx: pi, sceneTitle: scene.title, img: p.img, text: p.text });
+  });
+});
+
+let cur = 0;
+let playing = false;
+let timer = null;
+let lang = localStorage.getItem('wtfd_storia_lang') || 'it';
+
+const imgEl = document.getElementById('panel-img');
+const textInner = document.getElementById('text-inner');
+const textEl = document.getElementById('panel-text');
+const sceneTitleEl = document.getElementById('scene-title');
+const progressEl = document.getElementById('progress-label');
+const playBtn = document.getElementById('play-btn');
+const langBtn = document.getElementById('lang-toggle');
+const chaptersBtn = document.getElementById('chapters-toggle');
+const chaptersOverlay = document.getElementById('chapters-overlay');
+const chaptersPanel = document.getElementById('chapters-panel');
+const resumeBanner = document.getElementById('resume-banner');
+const resumeText = document.getElementById('resume-text');
+const resumeRestart = document.getElementById('resume-restart');
+
+const UI = {
+  it: { back: '&larr; Indietro', panel: 'Pannello', of: '/', chapters: '&#9776; Capitoli', resume: 'Hai ripreso da: ', restart: 'Ricomincia da capo' },
+  en: { back: '&larr; Back', panel: 'Panel', of: '/', chapters: '&#9776; Chapters', resume: 'Resumed from: ', restart: 'Start over' }
+};
+
+const PROGRESS_KEY = 'wtfd_storia_progress';
+
+function readingDurationMs(text) {
+  const words = text.trim().split(/\s+/).length;
+  const secs = Math.max(5, Math.min(28, words / 2.6));
+  return secs * 1000;
+}
+
+function escapeHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function renderText(raw) {
+  return escapeHtml(raw).replace(/\*(.+?)\*/g, '<em>$1</em>').replace(/\n\n/g, '<br><br>');
+}
+
+function applyLangChrome() {
+  document.querySelector('#topbar a').innerHTML = UI[lang].back;
+  langBtn.textContent = lang === 'it' ? 'EN' : 'IT';
+  chaptersBtn.innerHTML = UI[lang].chapters;
+  document.documentElement.lang = lang;
+}
+
+function saveProgress() {
+  localStorage.setItem(PROGRESS_KEY, String(cur));
+}
+
+function loadProgress() {
+  const v = localStorage.getItem(PROGRESS_KEY);
+  const n = v === null ? NaN : parseInt(v, 10);
+  return (isNaN(n) || n < 0 || n >= flat.length) ? null : n;
+}
+
+function buildChaptersMenu() {
+  chaptersPanel.innerHTML = '';
+  SCENES.forEach((scene, si) => {
+    const item = document.createElement('div');
+    item.className = 'chapter-item';
+    const firstFlatIdx = flat.findIndex(f => f.sceneIdx === si);
+    item.innerHTML = '<span>' + scene.title[lang] + '</span><span class="chip">' + scene.panels.length + ' ' + (lang === 'it' ? 'pannelli' : 'panels') + '</span>';
+    item.addEventListener('click', () => {
+      closeChaptersMenu();
+      show(firstFlatIdx);
+      setPlaying(true);
+    });
+    chaptersPanel.appendChild(item);
+  });
+}
+
+function openChaptersMenu() { buildChaptersMenu(); chaptersOverlay.classList.add('open'); }
+function closeChaptersMenu() { chaptersOverlay.classList.remove('open'); }
+
+function show(index) {
+  if (index < 0) index = 0;
+  if (index >= flat.length) index = flat.length - 1;
+  cur = index;
+  const item = flat[cur];
+
+  imgEl.classList.remove('visible');
+  textInner.classList.remove('visible');
+
+  const img = new Image();
+  img.onload = () => { imgEl.src = item.img; imgEl.classList.add('visible'); };
+  img.src = item.img;
+
+  textEl.innerHTML = renderText(item.text[lang]);
+  sceneTitleEl.textContent = item.sceneTitle[lang];
+  progressEl.textContent = UI[lang].panel + ' ' + (item.panelIdx + 1) + UI[lang].of + SCENES[item.sceneIdx].panels.length;
+
+  requestAnimationFrame(() => textInner.classList.add('visible'));
+
+  if (cur + 1 < flat.length) { const pre = new Image(); pre.src = flat[cur + 1].img; }
+
+  saveProgress();
+  if (playing) scheduleNext();
+}
+
+function scheduleNext() {
+  clearTimeout(timer);
+  const duration = readingDurationMs(flat[cur].text[lang]);
+  timer = setTimeout(() => { if (playing) show(cur + 1); }, duration);
+}
+
+function setPlaying(val) {
+  playing = val;
+  playBtn.innerHTML = playing ? '&#10074;&#10074;' : '&#9654;';
+  if (playing) scheduleNext();
+  else clearTimeout(timer);
+}
+
+function setLang(l) {
+  lang = l;
+  localStorage.setItem('wtfd_storia_lang', l);
+  applyLangChrome();
+  // ridisegna il pannello corrente nella nuova lingua senza avanzare
+  const item = flat[cur];
+  textEl.innerHTML = renderText(item.text[lang]);
+  sceneTitleEl.textContent = item.sceneTitle[lang];
+  progressEl.textContent = UI[lang].panel + ' ' + (item.panelIdx + 1) + UI[lang].of + SCENES[item.sceneIdx].panels.length;
+  if (playing) scheduleNext();
+}
+
+document.getElementById('prev-btn').addEventListener('click', () => show(cur - 1));
+document.getElementById('next-btn').addEventListener('click', () => show(cur + 1));
+playBtn.addEventListener('click', () => setPlaying(!playing));
+langBtn.addEventListener('click', () => setLang(lang === 'it' ? 'en' : 'it'));
+chaptersBtn.addEventListener('click', () => { if (chaptersOverlay.classList.contains('open')) closeChaptersMenu(); else openChaptersMenu(); });
+chaptersOverlay.addEventListener('click', (e) => { if (e.target === chaptersOverlay) closeChaptersMenu(); });
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeChaptersMenu();
+  if (e.key === 'ArrowRight') show(cur + 1);
+  if (e.key === 'ArrowLeft') show(cur - 1);
+  if (e.key === ' ') { e.preventDefault(); setPlaying(!playing); }
+});
+resumeRestart.addEventListener('click', () => {
+  resumeBanner.classList.remove('open');
+  show(0);
+  setPlaying(true);
+});
+
+/* ---------- Avvio: riprende da dove eri rimasto, se possibile ---------- */
+applyLangChrome();
+const saved = loadProgress();
+if (saved !== null && saved > 0) {
+  show(saved);
+  setPlaying(false);
+  resumeText.textContent = UI[lang].resume + flat[saved].sceneTitle[lang] + ' · ' + UI[lang].panel + ' ' + (flat[saved].panelIdx + 1);
+  resumeRestart.textContent = UI[lang].restart;
+  resumeBanner.classList.add('open');
+} else {
+  show(0);
+  setPlaying(true);
+}
+</script>
+</body>
+</html>

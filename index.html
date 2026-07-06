@@ -1320,6 +1320,35 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
 </section>
 
 <!-- ============================================================
+     STORY READER CTA (SOLO INTERNO — non presente in external.html)
+     ============================================================ -->
+<section id="story-cta" style="background: var(--bg); padding-top: 80px; padding-bottom: 80px;">
+  <div class="inner" style="text-align: center;">
+    <span class="label rv" data-k="story_label" style="display:block; margin-bottom: 16px;"></span>
+    <h2 class="rv d1" data-k="story_title" style="margin-bottom: 20px; font-family: var(--serif);"></h2>
+    <p class="rv d2" data-k="story_desc" style="color: var(--text-mid); font-size: 14px; max-width: 540px; margin: 0 auto 40px; line-height: 1.85;"></p>
+    <a class="rv d3" href="storia.html" data-k="story_btn" style="
+      display: inline-block;
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.25s, color 0.25s;
+    "
+    onmouseover="this.style.background='var(--accent)'; this.style.color='#fff';"
+    onmouseout="this.style.background='transparent'; this.style.color='var(--text)';">
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
      VIDEO MODAL
      ============================================================ -->
 <div id="plan-modal" style="
@@ -1571,6 +1600,10 @@ const T = {
     plan_desc:         "Una panoramica completa di come stiamo costruendo Where the Fog Dies — milestone, team, revenue share e tempistiche.",
     plan_btn:          "▶ &nbsp; Guarda il Piano di Produzione",
     plan_modal_title:  "Piano di Produzione",
+    story_label:       "Anteprima narrativa — uso interno",
+    story_title:       "Leggi la storia",
+    story_desc:        "Versione a pannelli + testo narrato, scena per scena. Non è la previz finale — è un modo veloce per vedere la storia com'è adesso.",
+    story_btn:         "📖 &nbsp; Leggi la storia",
   },
 
   en: {
@@ -1679,6 +1712,10 @@ const T = {
     plan_desc:         "A complete walkthrough of how we're building Where the Fog Dies — milestones, team, revenue share, and timeline.",
     plan_btn:          "▶ &nbsp; Watch the Production Plan",
     plan_modal_title:  "Production Plan",
+    story_label:       "Narrative preview — internal use",
+    story_title:       "Read the story",
+    story_desc:        "Panel + narrated text version, scene by scene. Not the final previz — a quick way to see the story as it stands now.",
+    story_btn:         "📖 &nbsp; Read the story",
   }
 };
 
