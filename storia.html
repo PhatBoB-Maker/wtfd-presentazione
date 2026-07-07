@@ -160,6 +160,13 @@ html, body {
 #text-inner.visible { opacity: 1; transform: translateY(0); }
 #panel-text { font-family: var(--serif); font-weight: 400; font-size: clamp(17px, 2vw, 22px); line-height: 1.8; color: var(--text); white-space: pre-line; }
 #panel-text em { color: #b98a6a; font-style: italic; }
+#panel-text em.spk-R { color: #7fa3c9; }
+#panel-text em.spk-I { color: #d99a86; }
+#panel-text em.spk-L { color: #8fae8a; }
+#panel-text em.spk-F { color: #c17d4a; }
+#panel-text em.spk-P { color: #8a8fa3; }
+#panel-text em.spk-M { color: #a8a37a; }
+#panel-text em.spk-C { color: #9c8560; }
 
 /* ---------- Controls ---------- */
 #controls {
@@ -198,6 +205,21 @@ html, body {
   #text-col { flex: 1; border-left: none; border-top: 1px solid var(--border); }
   #panel-text { font-size: 16px; }
   #scene-title { font-size: 14px; }
+}
+
+/* ---------- Mobile portrait: il topbar (Indietro / titolo / Capitoli / lingua)
+   in una riga sola di 56px stringeva troppi elementi e il bottone lingua
+   usciva dai bordi senza modo di raggiungerlo (niente scroll, body overflow:hidden).
+   Si comprime tutto e si aggiunge uno scroll orizzontale di riserva solo sul
+   gruppo destro dei bottoni. ---------- */
+@media (max-width: 480px) {
+  #topbar { padding: 0 10px; gap: 8px; }
+  #topbar-right { gap: 8px; max-width: 55vw; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
+  #topbar-right::-webkit-scrollbar { display: none; }
+  #progress-label { display: none; }
+  #scene-title { font-size: 12px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #topbar a { font-size: 10px; }
+  #chapters-toggle, #lang-toggle { padding: 5px 8px; font-size: 10px; }
 }
 </style>
 </head>
@@ -277,10 +299,10 @@ The priest, on the other hand, doesn't seek her out. When Beatrice approaches hi
       {
         img: 'assets/storia/scena1/panel-03.jpg',
         text: {
-          it: `Poi vede Rinaldo.
+          it: `Poi vede Rinaldo, suo marito.
 
 Lui è dall'altra parte del mercato, sta discutendo con un venditore di erbe secche — indica qualcosa, scuote la testa, indica di nuovo. Fa il medico anche quando non è necessario. Il venditore alla fine cede, cambia qualcosa nel prezzo, lo chiama *maestro* quando si volta. Beatrice lo guarda un momento prima che lui si accorga di lei.`,
-          en: `Then she sees Rinaldo.
+          en: `Then she sees Rinaldo, her husband.
 
 He's on the other side of the market, arguing with a dried-herb seller — pointing at something, shaking his head, pointing again. He plays the physician even when it isn't necessary. The seller finally gives in, changes something in the price, calls him *master* as he turns. Beatrice watches him for a moment before he notices her.`
         }
@@ -295,21 +317,52 @@ He's on the other side of the market, arguing with a dried-herb seller — point
       {
         img: 'assets/storia/scena1/panel-05.jpg',
         text: {
-          it: `Si avvicinano. Non c'è niente di teatrale in questo momento — è la familiarità di due persone che si conoscono così bene da non aver bisogno di parole per dirsi che sono contenti di vedersi. Lui le prende il cesto dalla mano, lei glielo lascia fare. Camminano insieme tra le bancarelle.
+          it: `Si avvicinano. Non c'è niente di teatrale in questo momento — è la familiarità di due persone che si conoscono così bene da non aver bisogno di parole per dirsi che sono contenti di vedersi.
 
-Si ritrovano fuori dal mercato, vicino al pozzo. Lui ha comprato qualcosa dal venditore di erbe — le mostra cosa. Lei lo corregge su una cosa, lui fa finta di essere offeso, lei ride. È la dinamica di sempre: lui è il medico ufficiale, lei sa più cose di lui sulle erbe. Non lo dicono mai ad alta voce.`,
-          en: `They come together. There's nothing theatrical about this moment — it's the familiarity of two people who know each other so well they need no words to say they're glad to see one another. He takes the basket from her hand, she lets him. They walk together among the stalls.
+*"Non fare sempre così,"* gli dice lei non appena è abbastanza vicina, con un cenno verso il venditore che si allontana. *"Quelle erbe sono difficili da raccogliere, lo sai bene — specie le più rare. Se continui a tirare sul prezzo in quel modo, prima o poi smetterà di vendertele."*
 
-They meet again outside the market, near the well. He's bought something from the herb seller — shows her what. She corrects him on something, he pretends to be offended, she laughs. It's the usual dynamic: he's the official physician, she knows more than him about herbs. They never say it out loud.`
+Lui non risponde subito. La sta ancora ascoltando, ma con un'espressione che non c'entra niente con le erbe. *"Sei bella quando ti arrabbi per queste cose,"* dice, come se fosse la conclusione più logica del mondo.
+
+Beatrice si interrompe a metà frase. *"Non cambiare discorso."* Ma sta già sorridendo, e lo sa anche lui.
+
+*"Non lo cambio,"* replica lui, per niente pentito. Le prende il cesto dalla mano, lei glielo lascia fare. *"Un po' di sana contrattazione non ha mai fatto male a nessuno. E la gente sembra dimenticare con chi ha a che fare: sono il marito della migliore erborista che ci sia da qui a Bologna. Il minimo che posso fare è difendere il nome di famiglia."*
+
+Beatrice scuote la testa, ma sta già ridendo per davvero. *"Da qui a Bologna. Certo."*
+
+*"Cercano sempre di rifilarmi il prezzo pieno,"* continua lui, ignorandola allegramente. *"Ma a me non la fanno."*`,
+          en: `They come together. There's nothing theatrical about this moment — it's the familiarity of two people who know each other so well they need no words to say they're glad to see one another.
+
+*"Don't always do that,"* she says, close enough now, glancing at the vendor as he walks off. *"Those herbs are hard to gather, you know that well — especially the rare ones. Keep haggling like that and sooner or later he'll stop selling to you at all."*
+
+He doesn't answer right away. He's still listening, but with an expression that has nothing to do with herbs. *"You're beautiful when you get worked up about these things,"* he says, as if it were the most logical conclusion in the world.
+
+Beatrice stops mid-sentence. *"Don't change the subject."* But she's already smiling, and he knows it.
+
+*"I'm not changing it,"* he replies, not remotely sorry. He takes the basket from her hand, she lets him. *"A little honest bargaining never hurt anyone. Besides, people seem to forget who they're dealing with: I'm married to the best herbalist there is, all the way to Bologna. The least I can do is defend the family name."*
+
+Beatrice shakes her head, but she's really laughing now. *"All the way to Bologna. Of course."*
+
+*"They always try to charge me full price,"* he goes on, cheerfully ignoring her. *"But they never get away with it with me."*`
+        }
+      },
+      {
+        img: 'assets/storia/scena1/panel-05b.jpg',
+        text: {
+          it: `Camminano insieme tra le bancarelle, il cesto ora nella mano di lui. Salutano altre facce note lungo la strada — un cenno al mugnaio, una battuta veloce con il vecchio che vende ceste di vimini, che chiede a Rinaldo, ridacchiando, se ha ancora tutte le dita dopo l'ultima "trattativa". Nessuno si stupisce di vederli insieme: sono i due di sempre, il medico e l'erborista, la coppia che il villaggio conosce da prima che i loro figli imparassero a camminare.`,
+          en: `They walk together among the stalls, the basket now in his hand. They greet other familiar faces along the way — a nod to the miller, a quick joke with the old man who sells wicker baskets, who asks Rinaldo, chuckling, whether he still has all his fingers after that last "negotiation." No one is surprised to see them together: they're the usual two, the physician and the herbalist, the couple the village has known since before their children learned to walk.`
         }
       },
       {
         img: 'assets/storia/scena1/panel-06.jpg',
         text: {
-          it: `Un momento di pausa. Il mercato si muove intorno a loro ma loro sono fermi. Lui le prende la mano — e quando la manica di Beatrice scivola appena sul polso, si vede: sul lato interno, un segno di nascita scuro, piccolo, della forma inconfondibile di una foglia. Rinaldo la conosce da sempre. Non la guarda come se fosse una cosa strana — la guarda come si guarda qualcosa che si è amato così a lungo da non riuscire più a immaginarlo assente.
+          it: `Poi, in mezzo alla folla, senza che nessuno dei due lo decida davvero, il rumore del mercato comincia ad allontanarsi. Non smette — continua a muoversi intorno a loro, voci, carri, richiami dei venditori — ma per un momento loro smettono di sentirlo. Ci sono solo loro due, fermi in mezzo a tutto il resto.
+
+Lui le sistema una ciocca di capelli sfuggita dalla cuffia — un gesto meccanico, lo stesso di sempre — e per un attimo le dita si fermano su quella striscia di capelli bianchi che Beatrice porta da quando è nata, proprio sopra la tempia sinistra. Rinaldo ci ha posato gli occhi sopra centinaia di volte. Non la guarda come se fosse una cosa strana — la guarda come si guarda qualcosa che si è amato così a lungo da non riuscire più a immaginarlo assente.
 
 Lei si accorge dello sguardo. Sa già dove sta guardando.`,
-          en: `A moment's pause. The market moves around them but they are still. He takes her hand — and when Beatrice's sleeve slips back a little on her wrist, it shows: on the inside, a dark birthmark, small, unmistakably shaped like a leaf. Rinaldo has known it forever. He doesn't look at it as if it were strange — he looks at it the way one looks at something loved for so long it's impossible to imagine it gone.
+          en: `Then, in the middle of the crowd, without either of them really deciding it, the noise of the market begins to drift away. It doesn't stop — it keeps moving around them, voices, carts, vendors calling out — but for a moment they stop hearing it. There's only the two of them, standing still in the middle of everything else.
+
+He tucks back a lock of hair that's slipped loose from her headscarf — a mechanical gesture, the same as always — and for a moment his fingers linger on that streak of white hair Beatrice has carried since birth, just above her left temple. Rinaldo has laid eyes on it hundreds of times. He doesn't look at it as if it were strange — he looks at it the way one looks at something loved for so long it's impossible to imagine it gone.
 
 She notices the look. She already knows where he's looking.`
         }
@@ -324,19 +377,19 @@ She notices the look. She already knows where he's looking.`
       {
         img: 'assets/storia/scena1/panel-08.jpg',
         text: {
-          it: `Beatrice ride. Una risata breve, genuina, un po' sorpresa anche se non dovrebbe esserlo. Scuote la testa come per dire *adesso, qui?* — ma non è un no.`,
-          en: `Beatrice laughs. A short, genuine laugh, a little surprised even though it shouldn't be. She shakes her head as if to say *now, here?* — but it isn't a no.`
+          it: `Beatrice ride, nello stesso modo in cui ride ogni volta che lui le fa quella faccia — e gliela fa spesso, dopo tutti questi anni. Scuote la testa come per dire *adesso, qui?* — ma non è un no.`,
+          en: `Beatrice laughs, the same way she laughs every time he makes that face — and he makes it often, after all these years. She shakes her head as if to say *now, here?* — but it isn't a no.`
         }
       },
       {
         img: 'assets/storia/scena1/panel-09.jpg',
         text: {
-          it: `Poi dal fondo del mercato arriva una voce che copre tutto il resto.
+          it: `Poi una voce li raggiunge da dietro, dal fondo del mercato, e li sveglia da quella bolla come uno scossone. Il rumore del mondo torna tutto insieme, più forte di prima.
 
 Un uomo in livrea — i colori del signore locale — si è fermato al centro della piazza. Tira fuori un rotolo, aspetta che il rumore si abbassi. Il mercato non si ferma del tutto, ma rallenta. Le persone si voltano. Lui legge: uomini abili tra una certa età, il signore chiede leve per la campagna, chi è tenuto al servizio si presenti entro la prossima luna. Chi non si presenta risponde al signore. E poi, quasi di passaggio: chi esercita l'arte del medicare o della chirurgia è anch'egli chiamato a presentarsi.
 
 Il banditore riavvolge il rotolo. Il mercato riprende.`,
-          en: `Then a voice rises from the far end of the market, drowning out everything else.
+          en: `Then a voice reaches them from behind, from the far end of the market, and shakes them out of that bubble like a jolt. The noise of the world rushes back all at once, louder than before.
 
 A man in livery — the local lord's colors — has stopped at the center of the square. He pulls out a scroll, waits for the noise to settle. The market doesn't stop entirely, but it slows. People turn. He reads: able-bodied men within a certain age, the lord calls for levies for the campaign, those bound to service must present themselves by the next moon. Those who don't answer to the lord himself. And then, almost in passing: those who practice the art of medicine or surgery are likewise called to present themselves.
 
@@ -387,40 +440,40 @@ She nods. Takes the basket from him. They walk.`
       { img: 'assets/storia/scena2/panel-05.jpg', text: { it: `Suona il campanellino. Due volte. Il suono è breve, pulito, inconfondibile.`, en: `She rings the campanellino. Twice. The sound is short, clean, unmistakable.` } },
       { img: 'assets/storia/scena2/panel-06.jpg', text: { it: `Fuori le voci dei bambini cambiano tono di colpo. Poi i passi — veloci, sul terreno ghiacciato.
 
-Isabella entra per prima, come sempre. Ha sette anni e corre ancora come se il peso non esistesse. Si ferma appena dentro la porta, la faccia rossa per il freddo, guarda subito Beatrice. *"Cosa c'è?"* Poi annusa l'aria. *"Buono."* Si siede.`, en: `Outside, the children's voices change tone at once. Then footsteps — fast, on the frozen ground.
+Isabella entra per prima, come sempre. Ha sette anni e corre ancora come se il peso non esistesse. Si ferma appena dentro la porta, la faccia rossa per il freddo, guarda subito Beatrice. *[I]"Cosa c'è?"* Poi annusa l'aria. *[I]"Buono."* Si siede.`, en: `Outside, the children's voices change tone at once. Then footsteps — fast, on the frozen ground.
 
-Isabella enters first, as always. She is seven and still runs as if weight didn't exist. She stops just inside the door, face flushed from the cold, looks straight at Beatrice. *"What is it?"* Then sniffs the air. *"Good."* She sits down.` } },
-      { img: 'assets/storia/scena2/panel-07.jpg', text: { it: `Ludovico entra un passo dopo, più composto — nove anni e già qualcosa del padre nel modo di varcare le soglie. Si avvicina al tavolo. Vede le erbe rimaste dal mercato, ne prende una tra le dita. *"Questo cos'è?"*
+Isabella enters first, as always. She is seven and still runs as if weight didn't exist. She stops just inside the door, face flushed from the cold, looks straight at Beatrice. *[I]"What is it?"* Then sniffs the air. *[I]"Good."* She sits down.` } },
+      { img: 'assets/storia/scena2/panel-07.jpg', text: { it: `Ludovico entra un passo dopo, più composto — nove anni e già qualcosa del padre nel modo di varcare le soglie. Si avvicina al tavolo. Vede le erbe rimaste dal mercato, ne prende una tra le dita. *[L]"Questo cos'è?"*
 
-Beatrice glielo dice — è melissa, serve per calmare lo stomaco, la usano in molte case. Lui la annusa, annuisce come se stesse archiviando l'informazione.`, en: `Ludovico enters a step behind, more composed — nine years old and already something of his father in the way he crosses a threshold. He goes to the table. Sees the herbs left from the market, picks one up between his fingers. *"What's this?"*
+Beatrice glielo dice — è melissa, serve per calmare lo stomaco, la usano in molte case. Lui la annusa, annuisce come se stesse archiviando l'informazione.`, en: `Ludovico enters a step behind, more composed — nine years old and already something of his father in the way he crosses a threshold. He goes to the table. Sees the herbs left from the market, picks one up between his fingers. *[L]"What's this?"*
 
 Beatrice tells him — it's lemon balm, good for settling the stomach, used in many houses. He smells it, nods as if filing the information away.` } },
       { img: 'assets/storia/scena2/panel-08.jpg', text: { it: `Nel frattempo Beatrice torna al fuoco. Stacca dal muro il mazzo nell'angolo più in ombra — quello che prima aveva solo sistemato senza toccare. Lo sbricola tra le dita con attenzione e lo aggiunge alla pentola.
 
-Ludovico la guarda. *"E quello cos'è?"*
+Ludovico la guarda. *[L]"E quello cos'è?"*
 
 *"Dipende da quanto ne usi e come."* Beatrice non si gira. *"Poca, aiuta a dormire. Tanta, non ti svegli più."*
 
 Ludovico non risponde. Guarda le mani di sua madre sulla pentola con un rispetto nuovo — non verso l'erba, verso lei.`, en: `Meanwhile Beatrice returns to the fire. She takes down the bunch from the darkest corner of the wall — the one she'd only adjusted without touching before. She crumbles it carefully between her fingers and adds it to the pot.
 
-Ludovico watches her. *"And that one?"*
+Ludovico watches her. *[L]"And that one?"*
 
 *"Depends how much you use, and how."* Beatrice doesn't turn around. *"A little helps you sleep. Too much, you don't wake up."*
 
 Ludovico doesn't answer. He watches his mother's hands on the pot with a new respect — not for the herb, for her.` } },
-      { img: 'assets/storia/scena2/panel-09.jpg', text: { it: `Isabella nel frattempo ha preso il campanellino dal posto dove Beatrice lo ha rimesso e lo sta esaminando. *"Era della nonna?"*
+      { img: 'assets/storia/scena2/panel-09.jpg', text: { it: `Isabella nel frattempo ha preso il campanellino dal posto dove Beatrice lo ha rimesso e lo sta esaminando. *[I]"Era della nonna?"*
 
 *"Sì."*
 
-*"E prima della nonna?"*
+*[I]"E prima della nonna?"*
 
 *"Prima ancora."* Beatrice sorride. *"Viene da lontano."*
 
-Isabella lo suona una volta, piano. Ascolta il suono fino in fondo. Poi lo rimette a posto come se avesse capito che non è un giocattolo.`, en: `Meanwhile Isabella has picked up the campanellino from where Beatrice set it down and is examining it. *"Was it grandmother's?"*
+Isabella lo suona una volta, piano. Ascolta il suono fino in fondo. Poi lo rimette a posto come se avesse capito che non è un giocattolo.`, en: `Meanwhile Isabella has picked up the campanellino from where Beatrice set it down and is examining it. *[I]"Was it grandmother's?"*
 
 *"Yes."*
 
-*"And before grandmother?"*
+*[I]"And before grandmother?"*
 
 *"Before that too."* Beatrice smiles. *"It comes from far away."*
 
@@ -430,17 +483,17 @@ Isabella rings it once, softly. Listens to the sound until it fades. Then puts i
 La cena è viva. Isabella parla senza fermarsi, racconta qualcosa che è successo fuori che diventa sempre più elaborato a ogni frase. Ludovico la corregge su un dettaglio, lei lo ignora e continua. Rinaldo ascolta con la faccia di chi sta davvero ascoltando, non di chi aspetta il turno per parlare. Ride quando Isabella arriva alla parte finale, che si è chiaramente inventata.`, en: `Rinaldo comes in when the soup is already in the bowls. His coat is dirty with mud — he's been out, something to do with the proclamation. He doesn't mention it. Washes his hands, sits down.
 
 Dinner is lively. Isabella talks without stopping, telling a story about something that happened outside, growing more elaborate with every sentence. Ludovico corrects her on a detail, she ignores him and carries on. Rinaldo listens with the face of someone truly listening, not waiting for his turn to speak. He laughs when Isabella reaches the ending, which she has clearly invented.` } },
-      { img: 'assets/storia/scena2/panel-11.jpg', text: { it: `Poi Isabella si ferma, come se le fosse venuto in mente qualcosa. Guarda Rinaldo. *"Papà, quando parti?"*
+      { img: 'assets/storia/scena2/panel-11.jpg', text: { it: `Poi Isabella si ferma, come se le fosse venuto in mente qualcosa. Guarda Rinaldo. *[I]"Papà, quando parti?"*
 
 La tavola non si ferma — ma rallenta impercettibilmente.
 
-Rinaldo sorride. Non è un sorriso forzato: è il sorriso di un uomo che ha deciso, in questo momento, di non far pesare niente. *"Non ancora."* Poi, come se fosse la cosa più naturale del mondo: *"Finisci la storia."*
+Rinaldo sorride. Non è un sorriso forzato: è il sorriso di un uomo che ha deciso, in questo momento, di non far pesare niente. *[R]"Non ancora."* Poi, come se fosse la cosa più naturale del mondo: *[R]"Finisci la storia."*
 
-Isabella ci pensa sopra un secondo, poi accetta e riprende. Ludovico non ha detto niente. Ma ha guardato il padre per un momento — non con paura, con qualcosa di più preciso, come se stesse memorizzando qualcosa senza sapere ancora perché.`, en: `Then Isabella stops, as if something has just occurred to her. She looks at Rinaldo. *"Papa, when are you leaving?"*
+Isabella ci pensa sopra un secondo, poi accetta e riprende. Ludovico non ha detto niente. Ma ha guardato il padre per un momento — non con paura, con qualcosa di più preciso, come se stesse memorizzando qualcosa senza sapere ancora perché.`, en: `Then Isabella stops, as if something has just occurred to her. She looks at Rinaldo. *[I]"Papa, when are you leaving?"*
 
 The table doesn't stop — but it slows, almost imperceptibly.
 
-Rinaldo smiles. It isn't a forced smile: it's the smile of a man who has decided, in this moment, not to let anything weigh on the table. *"Not yet."* Then, as if it were the most natural thing in the world: *"Finish the story."*
+Rinaldo smiles. It isn't a forced smile: it's the smile of a man who has decided, in this moment, not to let anything weigh on the table. *[R]"Not yet."* Then, as if it were the most natural thing in the world: *[R]"Finish the story."*
 
 Isabella thinks it over for a second, then accepts and picks up again. Ludovico hasn't said anything. But he looked at his father for a moment — not with fear, with something more precise, as if he were memorizing something without knowing yet why.` } },
       { img: 'assets/storia/scena2/panel-12.jpg', text: { it: `Beatrice non ha alzato gli occhi durante lo scambio. Li alza adesso, quando Isabella è già tornata alla sua storia. Incontra quelli di Rinaldo per un secondo. Lui non dice niente. Lei nemmeno.
@@ -480,34 +533,34 @@ Rimette la lettera sul tavolo. Rimane lì dov'era, con le stesse pieghe.`, en: `
 She sets the letter back on the table. It stays where it was, with the same folds.` } },
       { img: 'assets/storia/scena3/panel-03.jpg', text: { it: `Poi dal fondo della stanza — dai pagliericci nell'angolo — un movimento.
 
-*"Non riesco a dormire."*
+*[I]"Non riesco a dormire."*
 
 Isabella. Voce sveglia, non assonnata — è sveglia da un pezzo.
 
 Beatrice si avvicina. Ludovico è sveglio anche lui, seduto, le ginocchia al petto. Non ha detto niente ma è lì.`, en: `Then from the far end of the room — from the pallets in the corner — movement.
 
-*"I can't sleep."*
+*[I]"I can't sleep."*
 
 Isabella. Her voice awake, not drowsy — she's been awake for a while.
 
 Beatrice comes closer. Ludovico is awake too, sitting up, knees to his chest. He hasn't said anything, but he's there.` } },
-      { img: 'assets/storia/scena3/panel-04.jpg', text: { it: `Isabella vuole sapere quando torna il padre. Beatrice risponde che non lo sa — presto, spera. Isabella non si accontenta: *"Ma ha detto qualcosa?"* Beatrice dice che ha scritto. Isabella chiede cosa ha scritto. Beatrice dice: *"Che va bene."*
+      { img: 'assets/storia/scena3/panel-04.jpg', text: { it: `Isabella vuole sapere quando torna il padre. Beatrice risponde che non lo sa — presto, spera. Isabella non si accontenta: *[I]"Ma ha detto qualcosa?"* Beatrice dice che ha scritto. Isabella chiede cosa ha scritto. Beatrice dice: *"Che va bene."*
 
 Un momento di silenzio.
 
-Poi Ludovico, piano, senza alzare gli occhi dal fuoco: *"Non è vero."*
+Poi Ludovico, piano, senza alzare gli occhi dal fuoco: *[L]"Non è vero."*
 
 Beatrice lo guarda.
 
-*"Non ha detto che va bene. L'hai già letta così tante volte che sai cosa dice e cosa non dice."*`, en: `Isabella wants to know when their father is coming back. Beatrice says she doesn't know — soon, she hopes. Isabella isn't satisfied: *"But did he say something?"* Beatrice says he wrote. Isabella asks what he wrote. Beatrice says: *"That things are fine."*
+*[L]"Non ha detto che va bene. L'hai già letta così tante volte che sai cosa dice e cosa non dice."*`, en: `Isabella wants to know when their father is coming back. Beatrice says she doesn't know — soon, she hopes. Isabella isn't satisfied: *[I]"But did he say something?"* Beatrice says he wrote. Isabella asks what he wrote. Beatrice says: *"That things are fine."*
 
 A moment of silence.
 
-Then Ludovico, quietly, without raising his eyes from the fire: *"That's not true."*
+Then Ludovico, quietly, without raising his eyes from the fire: *[L]"That's not true."*
 
 Beatrice looks at him.
 
-*"He didn't say things are fine. You've read it so many times already, you know what it says and what it doesn't."*` } },
+*[L]"He didn't say things are fine. You've read it so many times already, you know what it says and what it doesn't."*` } },
       { img: 'assets/storia/scena3/panel-05.jpg', text: { it: `Beatrice non risponde. È vero, e lui lo sa, e lei sa che lui lo sa.
 
 Isabella li guarda tutti e due. Poi si sdraia, tira la coperta. Non chiede altro.`, en: `Beatrice doesn't answer. It's true, and he knows it, and she knows that he knows.
@@ -650,19 +703,19 @@ She doesn't finish the sentence.
 
 The village headman looks at the empty pallets, then looks at Beatrice, in silence, not knowing what to say.` } },
       { img: 'assets/storia/scena4/panel-08.jpg', text: { it: `Il medico non guarda i pagliericci. Guarda il tavolo della cucina — il mazzo di erbe rinsecchito appeso al chiodo più alto, e accanto, sul piano, qualche fogliolina caduta che lui riconosce a colpo d'occhio, per mestiere. Cicuta.`, en: `The doctor isn't looking at the pallets. He's looking at the kitchen table — the withered bunch of herbs hanging from the highest nail, and beside it, on the counter, a few fallen leaves he recognizes at a glance, by trade. Hemlock.` } },
-      { img: 'assets/storia/scena4/panel-09.jpg', text: { it: `*"Cos'hai dato ai tuoi figli?"*
+      { img: 'assets/storia/scena4/panel-09.jpg', text: { it: `*[M]"Cos'hai dato ai tuoi figli?"*
 
 Beatrice lo guarda, senza capire subito la domanda dietro la domanda.
 
-*"Cosa gli hai dato, stanotte?"*
+*[M]"Cosa gli hai dato, stanotte?"*
 
 *"Solo... solo la tisana di sempre. Per farli dormire—"*
 
-Il medico non dice altro. Non deve. La sua espressione è già un verdetto.`, en: `*"What did you give your children?"*
+Il medico non dice altro. Non deve. La sua espressione è già un verdetto.`, en: `*[M]"What did you give your children?"*
 
 Beatrice looks at him, not immediately understanding the question behind the question.
 
-*"What did you give them, tonight?"*
+*[M]"What did you give them, tonight?"*
 
 *"Just... just the usual tisane. To help them sleep—"*
 
@@ -680,7 +733,7 @@ Neither of them answers right away.
 The village headman is the first to recover.
 
 He looks once more at the empty pallets, then at the bunch of hemlock on the table, then at Beatrice. When he speaks, his voice is low and firm — the voice of someone who has already decided something and is only announcing it.` } },
-      { img: 'assets/storia/scena4/panel-11.jpg', text: { it: `*"Portatela via."*
+      { img: 'assets/storia/scena4/panel-11.jpg', text: { it: `*[C]"Portatela via."*
 
 Non lo dice a Beatrice. Lo dice a due uomini rimasti sulla soglia, dietro di lui, che fino a quel momento nessuno aveva notato.
 
@@ -690,7 +743,7 @@ Beatrice indietreggia di un passo, poi si ferma — non c'è dove andare.
 
 Gli uomini la prendono per le braccia. Non con violenza — con la fermezza pratica di chi ha già fatto questo lavoro altre volte e sa esattamente quanta forza serve, non una di più.
 
-Beatrice non si divincola. Per un istante sembra che voglia farlo, poi qualcosa in lei cede — non è resa, è il corpo che smette di credere che valga la pena lottare in quella stanza, in quel momento, contro quelle due mani.`, en: `*"Take her away."*
+Beatrice non si divincola. Per un istante sembra che voglia farlo, poi qualcosa in lei cede — non è resa, è il corpo che smette di credere che valga la pena lottare in quella stanza, in quel momento, contro quelle due mani.`, en: `*[C]"Take her away."*
 
 He doesn't say it to Beatrice. He says it to two men left in the doorway, behind him, whom no one had noticed until that moment.
 
@@ -768,27 +821,27 @@ He tries the latch. It doesn't give. He walks around the house — the garden is
 
 L'uomo lo guarda per un momento lungo, poi dice quello che c'è da dire, senza girarci intorno, perché è fatto così.
 
-*"I tuoi figli sono spariti in gennaio. Nessuno li ha più trovati."*`, en: `The blacksmith finds him before he can go looking — or maybe it's the other way around. Rinaldo won't remember clearly.
+*[F]"I tuoi figli sono spariti in gennaio. Nessuno li ha più trovati."*`, en: `The blacksmith finds him before he can go looking — or maybe it's the other way around. Rinaldo won't remember clearly.
 
 The man looks at him for a long moment, then says what needs saying, without dancing around it, because that's how he's made.
 
-*"Your children disappeared in January. No one has found them since."*` } },
+*[F]"Your children disappeared in January. No one has found them since."*` } },
       { img: 'assets/storia/scena5/panel-09.jpg', text: { it: `Per un istante Rinaldo non capisce — o capisce, ma il corpo rifiuta di crederci prima della testa. Poi si muove, un passo verso il fabbro, gli afferra il braccio, la voce che sale, spezzata:
 
-*"Dove sono? Dove sono i miei figli — e Beatrice, dov'è Beatrice, dov'è—"*
+*[R]"Dove sono? Dove sono i miei figli — e Beatrice, dov'è Beatrice, dov'è—"*
 
 Non aspetta la risposta prima della domanda successiva.
 
-*"Parla. Parla!"*`, en: `For an instant Rinaldo doesn't understand — or he understands, but his body refuses to believe it before his mind does. Then he moves, a step toward the blacksmith, grips his arm, his voice rising, breaking:
+*[R]"Parla. Parla!"*`, en: `For an instant Rinaldo doesn't understand — or he understands, but his body refuses to believe it before his mind does. Then he moves, a step toward the blacksmith, grips his arm, his voice rising, breaking:
 
-*"Where are they? Where are my children — and Beatrice, where's Beatrice, where—"*
+*[R]"Where are they? Where are my children — and Beatrice, where's Beatrice, where—"*
 
 He doesn't wait for an answer before the next question.
 
-*"Talk. Talk!"*` } },
+*[R]"Talk. Talk!"*` } },
       { img: 'assets/storia/scena5/panel-10.jpg', text: { it: `Il fabbro non si scosta, non gli toglie il braccio di dosso. Aspetta solo che finisca, poi dice il resto — perché a quel punto non può più fermarsi a metà:
 
-*"Beatrice è stata giudicata colpevole. L'hanno bruciata ad aprile."*
+*[F]"Beatrice è stata giudicata colpevole. L'hanno bruciata ad aprile."*
 
 Rinaldo si ferma di colpo, come se qualcosa gli avesse tagliato il fiato a metà di un respiro.
 
@@ -796,7 +849,7 @@ La presa sul braccio del fabbro si allenta da sola.
 
 Non risponde. Non subito. Non per molto tempo.`, en: `The blacksmith doesn't pull away, doesn't shake off his arm. He only waits for him to finish, then says the rest — because at this point he can't stop halfway:
 
-*"Beatrice was found guilty. They burned her in April."*
+*[F]"Beatrice was found guilty. They burned her in April."*
 
 Rinaldo stops dead, as if something had cut his breath in half.
 
@@ -814,72 +867,72 @@ He doesn't answer. Not right away. Not for a long time.` } }
 
 Le domande arrivano una dietro l'altra, più calme di come sarebbe lecito aspettarsi da un uomo che ha appena smesso di urlare — come se una parte di lui avesse già deciso che urlare non serve a niente, e l'altra parte non sapesse ancora cos'altro fare.
 
-*"Cosa è successo, quella notte?"*
+*[R]"Cosa è successo, quella notte?"*
 
-Il fabbro scuote la testa. *"Quello che sappiamo lo sappiamo tutti allo stesso modo — niente di diretto. Spariti dai pagliericci. Nessun segno di lotta, nessuna traccia fuori."* Una pausa. *"Hanno cercato nei campi, lungo i canali, per giorni. Con questa nebbia..."* Non finisce la frase. Non serve.
+Il fabbro scuote la testa. *[F]"Quello che sappiamo lo sappiamo tutti allo stesso modo — niente di diretto. Spariti dai pagliericci. Nessun segno di lotta, nessuna traccia fuori."* Una pausa. *[F]"Hanno cercato nei campi, lungo i canali, per giorni. Con questa nebbia..."* Non finisce la frase. Non serve.
 
-*"Perché l'hanno condannata?"*
+*[R]"Perché l'hanno condannata?"*
 
-*"Il medico ha trovato la cicuta sul tavolo."* Il fabbro abbassa la voce, come se la domanda gli costasse qualcosa. *"Qualcuno doveva rispondere — la gente aveva paura da mesi, e la paura vuole un nome, non una spiegazione."* Poi, più piano ancora: *"Io non ero convinto come gli altri. Ma non è bastato."*
+*[F]"Il medico ha trovato la cicuta sul tavolo."* Il fabbro abbassa la voce, come se la domanda gli costasse qualcosa. *[F]"Qualcuno doveva rispondere — la gente aveva paura da mesi, e la paura vuole un nome, non una spiegazione."* Poi, più piano ancora: *[F]"Io non ero convinto come gli altri. Ma non è bastato."*
 
-Rinaldo lo guarda un momento. *"Secondo te è stata lei?"*
+Rinaldo lo guarda un momento. *[R]"Secondo te è stata lei?"*
 
-Il fabbro non risponde subito. *"Non lo so."* Poi, più duro: *"E nemmeno loro lo sapevano, per come la vedo io — avevano solo bisogno che qualcuno pagasse."* Una pausa più lunga. *"Beatrice ha guarito metà di questo villaggio. Non riesco a mettere quella donna vicino a quello che dicono abbia fatto."* Distoglie lo sguardo. *"Ma non ero nella stanza, quella notte. Nessuno di noi c'era."*`, en: `Rinaldo doesn't let go of the blacksmith's arm until he realizes he's still gripping it. He releases it. He doesn't apologize.
+Il fabbro non risponde subito. *[F]"Non lo so."* Poi, più duro: *[F]"E nemmeno loro lo sapevano, per come la vedo io — avevano solo bisogno che qualcuno pagasse."* Una pausa più lunga. *[F]"Beatrice ha guarito metà di questo villaggio. Non riesco a mettere quella donna vicino a quello che dicono abbia fatto."* Distoglie lo sguardo. *[F]"Ma non ero nella stanza, quella notte. Nessuno di noi c'era."*`, en: `Rinaldo doesn't let go of the blacksmith's arm until he realizes he's still gripping it. He releases it. He doesn't apologize.
 
 The questions come one after another, calmer than you'd expect from a man who has just stopped shouting — as if part of him has already decided that shouting is useless, and the other part doesn't yet know what else to do.
 
-*"What happened, that night?"*
+*[R]"What happened, that night?"*
 
-The blacksmith shakes his head. *"What we know, we all know the same way — nothing direct. Gone from their pallets. No sign of a struggle, no trace outside."* A pause. *"They searched the fields, along the canals, for days. With this fog..."* He doesn't finish the sentence. He doesn't need to.
+The blacksmith shakes his head. *[F]"What we know, we all know the same way — nothing direct. Gone from their pallets. No sign of a struggle, no trace outside."* A pause. *[F]"They searched the fields, along the canals, for days. With this fog..."* He doesn't finish the sentence. He doesn't need to.
 
-*"Why did they condemn her?"*
+*[R]"Why did they condemn her?"*
 
-*"The doctor found the hemlock on the table."* The blacksmith lowers his voice, as if the question costs him something. *"Someone had to answer for it — people had been afraid for months, and fear wants a name, not an explanation."* Then, even quieter: *"I wasn't as convinced as the others. But it wasn't enough."*
+*[F]"The doctor found the hemlock on the table."* The blacksmith lowers his voice, as if the question costs him something. *[F]"Someone had to answer for it — people had been afraid for months, and fear wants a name, not an explanation."* Then, even quieter: *[F]"I wasn't as convinced as the others. But it wasn't enough."*
 
-Rinaldo looks at him a moment. *"Do you think it was her?"*
+Rinaldo looks at him a moment. *[R]"Do you think it was her?"*
 
-The blacksmith doesn't answer right away. *"I don't know."* Then, harder: *"And neither did they, the way I see it — they just needed someone to pay."* A longer pause. *"Beatrice healed half this village. I can't put that woman next to what they say she did."* He looks away. *"But I wasn't in the room, that night. None of us were."*` } },
-      { img: 'assets/storia/scena6/panel-02.jpg', text: { it: `Qualcosa in Rinaldo si tende. *"Come hai potuto lasciare che accadesse?"*
+The blacksmith doesn't answer right away. *[F]"I don't know."* Then, harder: *[F]"And neither did they, the way I see it — they just needed someone to pay."* A longer pause. *[F]"Beatrice healed half this village. I can't put that woman next to what they say she did."* He looks away. *[F]"But I wasn't in the room, that night. None of us were."*` } },
+      { img: 'assets/storia/scena6/panel-02.jpg', text: { it: `Qualcosa in Rinaldo si tende. *[R]"Come hai potuto lasciare che accadesse?"*
 
-Il fabbro incassa il colpo senza muoversi. *"Lasciare?"* La voce scende ancora. *"Tu non c'eri. Io c'ero."* Un silenzio che pesa più delle parole che non dice. *"Non è stato facile per nessuno guardare, Rinaldo. Non per tutti, almeno."*
+Il fabbro incassa il colpo senza muoversi. *[F]"Lasciare?"* La voce scende ancora. *[F]"Tu non c'eri. Io c'ero."* Un silenzio che pesa più delle parole che non dice. *[F]"Non è stato facile per nessuno guardare, Rinaldo. Non per tutti, almeno."*
 
 Rinaldo non insiste. C'è un limite a quanto può ancora reggere in una sola mattina, e lo ha già superato due volte.
 
-*"E la casa? Posso entrarci?"*
+*[R]"E la casa? Posso entrarci?"*
 
-*"Sigillata, dal giorno della condanna."* Il fabbro guarda verso la fine della strada. *"Cera e ordine del capovillaggio — solo lui ha la chiave, solo lui può romperlo."*
+*[F]"Sigillata, dal giorno della condanna."* Il fabbro guarda verso la fine della strada. *[F]"Cera e ordine del capovillaggio — solo lui ha la chiave, solo lui può romperlo."*
 
-*"Dove lo trovo?"*
+*[R]"Dove lo trovo?"*
 
-*"Fine strada, la casa col portico."* Il fabbro gli posa una mano sulla spalla — breve, pesante. *"Vai. Io gli dico che sei arrivato."*
+*[F]"Fine strada, la casa col portico."* Il fabbro gli posa una mano sulla spalla — breve, pesante. *[F]"Vai. Io gli dico che sei arrivato."*
 
 Rinaldo fa per andare. Si ferma.
 
-*"Perché sei stato tu a dirmelo?"*
+*[R]"Perché sei stato tu a dirmelo?"*
 
-Il fabbro ci pensa un momento, come se non si fosse mai fatto la domanda fino a ora. *"Perché qualcuno doveva, e nessun altro si è fatto avanti."* Una pausa. *"Voi due eravate... non lo so come dirlo."* Guarda la propria mano, la apre e la richiude. *"Beatrice mi ha aggiustato questa, due inverni fa, quando il medico diceva di tagliarla. Non l'ho dimenticato."*
+Il fabbro ci pensa un momento, come se non si fosse mai fatto la domanda fino a ora. *[F]"Perché qualcuno doveva, e nessun altro si è fatto avanti."* Una pausa. *[F]"Voi due eravate... non lo so come dirlo."* Guarda la propria mano, la apre e la richiude. *[F]"Beatrice mi ha aggiustato questa, due inverni fa, quando il medico diceva di tagliarla. Non l'ho dimenticato."*
 
 Non aggiunge altro. Non serve.
 
-Rinaldo annuisce — un gesto piccolo, quasi automatico — e si incammina verso la fine della strada.`, en: `Something in Rinaldo tightens. *"How could you let it happen?"*
+Rinaldo annuisce — un gesto piccolo, quasi automatico — e si incammina verso la fine della strada.`, en: `Something in Rinaldo tightens. *[R]"How could you let it happen?"*
 
-The blacksmith takes the blow without moving. *"Let it?"* His voice drops further. *"You weren't there. I was."* A silence that weighs more than the words he doesn't say. *"It wasn't easy for anyone to watch, Rinaldo. Not for everyone, at least."*
+The blacksmith takes the blow without moving. *[F]"Let it?"* His voice drops further. *[F]"You weren't there. I was."* A silence that weighs more than the words he doesn't say. *[F]"It wasn't easy for anyone to watch, Rinaldo. Not for everyone, at least."*
 
 Rinaldo doesn't push further. There's a limit to how much he can still take in a single morning, and he's already crossed it twice.
 
-*"And the house? Can I go in?"*
+*[R]"And the house? Can I go in?"*
 
-*"Sealed, since the day of the sentence."* The blacksmith looks toward the end of the street. *"Wax and the headman's order — only he has the key, only he can break it."*
+*[F]"Sealed, since the day of the sentence."* The blacksmith looks toward the end of the street. *[F]"Wax and the headman's order — only he has the key, only he can break it."*
 
-*"Where do I find him?"*
+*[R]"Where do I find him?"*
 
-*"End of the street, the house with the porch."* The blacksmith rests a hand on his shoulder — brief, heavy. *"Go. I'll tell him you've arrived."*
+*[F]"End of the street, the house with the porch."* The blacksmith rests a hand on his shoulder — brief, heavy. *[F]"Go. I'll tell him you've arrived."*
 
 Rinaldo turns to go. Stops.
 
-*"Why were you the one to tell me?"*
+*[R]"Why were you the one to tell me?"*
 
-The blacksmith thinks about it a moment, as if he'd never asked himself the question until now. *"Because someone had to, and no one else stepped forward."* A pause. *"You two were... I don't know how to put it."* He looks at his own hand, opens and closes it. *"Beatrice fixed this for me, two winters ago, when the doctor said to cut it off. I haven't forgotten."*
+The blacksmith thinks about it a moment, as if he'd never asked himself the question until now. *[F]"Because someone had to, and no one else stepped forward."* A pause. *[F]"You two were... I don't know how to put it."* He looks at his own hand, opens and closes it. *[F]"Beatrice fixed this for me, two winters ago, when the doctor said to cut it off. I haven't forgotten."*
 
 He doesn't add anything else. He doesn't need to.
 
@@ -892,74 +945,74 @@ Rinaldo nods — a small gesture, almost automatic — and sets off toward the e
     panels: [
       { img: 'assets/storia/scena7/panel-01.jpg', text: { it: `Il sagrato della chiesa — piccola, di pietra, al centro del villaggio. Rinaldo trova il parroco fuori, intento a sistemare qualcosa vicino alla soglia. Non sembra sorpreso di vederlo.
 
-*"Cosa puoi dirmi, padre?"*
+*[R]"Cosa puoi dirmi, padre?"*
 
-*"Quello che ho visto, se è quello che cerchi. Non di più."* Il parroco lo guarda un momento prima di continuare, come se stesse decidendo quanto della verità gli servisse davvero. *"So che la gente in guerra sente solo la metà delle cose, e quasi sempre la metà sbagliata."*
+*[P]"Quello che ho visto, se è quello che cerchi. Non di più."* Il parroco lo guarda un momento prima di continuare, come se stesse decidendo quanto della verità gli servisse davvero. *[P]"So che la gente in guerra sente solo la metà delle cose, e quasi sempre la metà sbagliata."*
 
-*"Perché sei venuto a interrogarla?"*
+*[R]"Perché sei venuto a interrogarla?"*
 
-*"Perché era mio dovere, non mia scelta."* Una pausa, le mani giunte davanti a sé, un gesto abituale più che devoto. *"Le ho chiesto cos'era successo. Me l'ha detto senza nascondere niente — la notte, i bambini, il preparato."* Esita. *"E la Borda."*
+*[P]"Perché era mio dovere, non mia scelta."* Una pausa, le mani giunte davanti a sé, un gesto abituale più che devoto. *[P]"Le ho chiesto cos'era successo. Me l'ha detto senza nascondere niente — la notte, i bambini, il preparato."* Esita. *[P]"E la Borda."*
 
-*"Perché ha parlato della Borda?"*
+*[R]"Perché ha parlato della Borda?"*
 
-*"Ha detto che la sentiva. Che per settimane, prima di quella notte, c'era stato qualcosa fuori — movimenti, presenze che non sapeva nominare meglio. Che la nebbia, quell'inverno, non era come le altre nebbie."* Il parroco scuote la testa, piano. *"Non l'ho creduta superstiziosa, Rinaldo. L'ho creduta spaventata. Ma agli occhi degli altri, quelle parole sono bastate da sole."*
+*[P]"Ha detto che la sentiva. Che per settimane, prima di quella notte, c'era stato qualcosa fuori — movimenti, presenze che non sapeva nominare meglio. Che la nebbia, quell'inverno, non era come le altre nebbie."* Il parroco scuote la testa, piano. *[P]"Non l'ho creduta superstiziosa, Rinaldo. L'ho creduta spaventata. Ma agli occhi degli altri, quelle parole sono bastate da sole."*
 
-*"Cosa pensi tu delle superstizioni? Della Borda?"*
+*[R]"Cosa pensi tu delle superstizioni? Della Borda?"*
 
-*"La Chiesa le condanna. Tutte, senza distinzioni — è la posizione ufficiale, ed è quella che insegno."* Una pausa più lunga di quanto servirebbe. *"Ma sono cresciuto in questi campi prima di indossare quest'abito. Ho sentito le stesse storie di tutti gli altri, alla stessa età, dalla stessa nonna che le raccontava a tutti."* Guarda altrove. *"Dire a un contadino che la Borda non esiste non gli toglie la paura. Gli toglie solo un nome da dare a quella paura. E una paura senza nome è peggio, non meglio."*
+*[P]"La Chiesa le condanna. Tutte, senza distinzioni — è la posizione ufficiale, ed è quella che insegno."* Una pausa più lunga di quanto servirebbe. *[P]"Ma sono cresciuto in questi campi prima di indossare quest'abito. Ho sentito le stesse storie di tutti gli altri, alla stessa età, dalla stessa nonna che le raccontava a tutti."* Guarda altrove. *[P]"Dire a un contadino che la Borda non esiste non gli toglie la paura. Gli toglie solo un nome da dare a quella paura. E una paura senza nome è peggio, non meglio."*
 
-*"Perché tutti hanno avuto così tanta paura, così in fretta?"*
+*[R]"Perché tutti hanno avuto così tanta paura, così in fretta?"*
 
-*"Non è cominciata con lei."* Il parroco guarda verso i campi, oltre la spalla di Rinaldo. *"Da mesi arrivavano voci — sparizioni in altri villaggi, lungo la strada verso sud. Rumori nella notte che nessuno sapeva spiegare bene. Il villaggio aspettava che succedesse qualcosa qui, prima ancora che succedesse."* Una pausa. *"Quando è successo, la paura aveva già un nome pronto. Le è bastato dargli un volto."*
+*[P]"Non è cominciata con lei."* Il parroco guarda verso i campi, oltre la spalla di Rinaldo. *[P]"Da mesi arrivavano voci — sparizioni in altri villaggi, lungo la strada verso sud. Rumori nella notte che nessuno sapeva spiegare bene. Il villaggio aspettava che succedesse qualcosa qui, prima ancora che succedesse."* Una pausa. *[P]"Quando è successo, la paura aveva già un nome pronto. Le è bastato dargli un volto."*
 
-*"Secondo te è stata lei?"*
+*[R]"Secondo te è stata lei?"*
 
-*"Il tribunale ha deciso sulla base di quello che c'era da vedere. Io non sono un giudice, Rinaldo — non spettava a me deciderlo."* Una pausa lunga, più lunga delle altre. *"Ma se mi chiedi cosa penso io, in coscienza... non lo so. E mi turba non saperlo, più di quanto vorrei ammettere davanti a te."*`, en: `The church courtyard — small, stone, at the village center. Rinaldo finds the priest outside, busy fixing something near the threshold. He doesn't seem surprised to see him.
+*[P]"Il tribunale ha deciso sulla base di quello che c'era da vedere. Io non sono un giudice, Rinaldo — non spettava a me deciderlo."* Una pausa lunga, più lunga delle altre. *[P]"Ma se mi chiedi cosa penso io, in coscienza... non lo so. E mi turba non saperlo, più di quanto vorrei ammettere davanti a te."*`, en: `The church courtyard — small, stone, at the village center. Rinaldo finds the priest outside, busy fixing something near the threshold. He doesn't seem surprised to see him.
 
-*"What can you tell me, father?"*
+*[R]"What can you tell me, father?"*
 
-*"What I saw, if that's what you're after. No more."* The priest looks at him a moment before continuing, as if deciding how much of the truth he really needed. *"I know that men at war hear only half of things, and almost always the wrong half."*
+*[P]"What I saw, if that's what you're after. No more."* The priest looks at him a moment before continuing, as if deciding how much of the truth he really needed. *[P]"I know that men at war hear only half of things, and almost always the wrong half."*
 
-*"Why did you come to question her?"*
+*[R]"Why did you come to question her?"*
 
-*"Because it was my duty, not my choice."* A pause, hands clasped in front of him, a habitual gesture more than a devout one. *"I asked her what had happened. She told me without hiding anything — the night, the children, the preparation."* He hesitates. *"And the Borda."*
+*[P]"Because it was my duty, not my choice."* A pause, hands clasped in front of him, a habitual gesture more than a devout one. *[P]"I asked her what had happened. She told me without hiding anything — the night, the children, the preparation."* He hesitates. *[P]"And the Borda."*
 
-*"Why did she speak of the Borda?"*
+*[R]"Why did she speak of the Borda?"*
 
-*"She said she'd felt it. That for weeks, before that night, there had been something outside — movements, presences she couldn't name any better. That the fog, that winter, wasn't like other fogs."* The priest shakes his head, slowly. *"I didn't think her superstitious, Rinaldo. I thought her frightened. But to everyone else's eyes, those words were enough on their own."*
+*[P]"She said she'd felt it. That for weeks, before that night, there had been something outside — movements, presences she couldn't name any better. That the fog, that winter, wasn't like other fogs."* The priest shakes his head, slowly. *[P]"I didn't think her superstitious, Rinaldo. I thought her frightened. But to everyone else's eyes, those words were enough on their own."*
 
-*"What do you think of the superstitions? Of the Borda?"*
+*[R]"What do you think of the superstitions? Of the Borda?"*
 
-*"The Church condemns them. All of them, without distinction — that's the official position, and it's what I teach."* A pause longer than it needs to be. *"But I grew up in these fields before I wore this robe. I heard the same stories as everyone else, at the same age, from the same grandmother who told them to all of us."* He looks away. *"Telling a farmer the Borda doesn't exist doesn't take away his fear. It only takes away a name to give that fear. And a fear without a name is worse, not better."*
+*[P]"The Church condemns them. All of them, without distinction — that's the official position, and it's what I teach."* A pause longer than it needs to be. *[P]"But I grew up in these fields before I wore this robe. I heard the same stories as everyone else, at the same age, from the same grandmother who told them to all of us."* He looks away. *[P]"Telling a farmer the Borda doesn't exist doesn't take away his fear. It only takes away a name to give that fear. And a fear without a name is worse, not better."*
 
-*"Why did everyone become so afraid, so quickly?"*
+*[R]"Why did everyone become so afraid, so quickly?"*
 
-*"It didn't start with her."* The priest looks toward the fields, past Rinaldo's shoulder. *"For months there had been word — disappearances in other villages, along the road south. Noises in the night no one could quite explain. The village was waiting for something to happen here, even before it happened."* A pause. *"By the time it did, the fear already had a name ready. It only had to give it a face."*
+*[P]"It didn't start with her."* The priest looks toward the fields, past Rinaldo's shoulder. *[P]"For months there had been word — disappearances in other villages, along the road south. Noises in the night no one could quite explain. The village was waiting for something to happen here, even before it happened."* A pause. *[P]"By the time it did, the fear already had a name ready. It only had to give it a face."*
 
-*"Do you think it was her?"*
+*[R]"Do you think it was her?"*
 
-*"The tribunal decided based on what there was to see. I'm not a judge, Rinaldo — it wasn't mine to decide."* A long pause, longer than the others. *"But if you ask what I think, in conscience... I don't know. And it troubles me not to know, more than I'd like to admit in front of you."*` } },
-      { img: 'assets/storia/scena7/panel-02.jpg', text: { it: `*"Perché non hai fatto niente per fermarlo?"*
+*[P]"The tribunal decided based on what there was to see. I'm not a judge, Rinaldo — it wasn't mine to decide."* A long pause, longer than the others. *[P]"But if you ask what I think, in conscience... I don't know. And it troubles me not to know, more than I'd like to admit in front of you."*` } },
+      { img: 'assets/storia/scena7/panel-02.jpg', text: { it: `*[R]"Perché non hai fatto niente per fermarlo?"*
 
-Il parroco non risponde subito. Quando lo fa, la voce ha perso la sicurezza istituzionale di poco prima. *"Ho pregato che si trovasse un'altra spiegazione. Non ne è arrivata."* Una pausa. *"Il consiglio ha deciso, Rinaldo. Io ho benedetto la sentenza. Non l'ho scritta io."* Esita, poi aggiunge, quasi a scusarsi per la sottrazione: *"Il capovillaggio la sa più lunga di me su come si è arrivati fin lì. Vai da lui, se vuoi il resto."*
+Il parroco non risponde subito. Quando lo fa, la voce ha perso la sicurezza istituzionale di poco prima. *[P]"Ho pregato che si trovasse un'altra spiegazione. Non ne è arrivata."* Una pausa. *[P]"Il consiglio ha deciso, Rinaldo. Io ho benedetto la sentenza. Non l'ho scritta io."* Esita, poi aggiunge, quasi a scusarsi per la sottrazione: *[P]"Il capovillaggio la sa più lunga di me su come si è arrivati fin lì. Vai da lui, se vuoi il resto."*
 
 Rinaldo lo osserva un momento, poi fa per andare. Il parroco lo ferma con una domanda propria, non richiesta:
 
-*"Ci credi anche tu, alla Borda?"* Rinaldo non risponde subito, e il parroco non aspetta oltre. *"Credo che ci sia del male nel mondo che non sappiamo nominare meglio."* Una pausa. *"Se questo significhi che la Borda esiste esattamente come la raccontano le vecchie, o che è solo il nome che diamo alla paura... non spetta a me deciderlo. Spetta a Dio, alla fine."*
+*[P]"Ci credi anche tu, alla Borda?"* Rinaldo non risponde subito, e il parroco non aspetta oltre. *[P]"Credo che ci sia del male nel mondo che non sappiamo nominare meglio."* Una pausa. *[P]"Se questo significhi che la Borda esiste esattamente come la raccontano le vecchie, o che è solo il nome che diamo alla paura... non spetta a me deciderlo. Spetta a Dio, alla fine."*
 
-Prima di lasciarlo andare, Rinaldo si volta un'ultima volta. *"Perché tu, con lei, sei sempre stato... distante?"*
+Prima di lasciarlo andare, Rinaldo si volta un'ultima volta. *[R]"Perché tu, con lei, sei sempre stato... distante?"*
 
-Una pausa lunga — la prima vera esitazione di tutto il dialogo. *"Beatrice sapeva cose che non le aveva insegnate nessun libro che io abbia mai letto."* Una pausa. *"Questo non fa di qualcuno una strega, e non l'ho mai pensato con quella parola. Ma mi ha sempre messo a disagio. Non è una colpa che le do, Rinaldo. È solo la verità, e te la devo."*`, en: `*"Why didn't you do anything to stop it?"*
+Una pausa lunga — la prima vera esitazione di tutto il dialogo. *[P]"Beatrice sapeva cose che non le aveva insegnate nessun libro che io abbia mai letto."* Una pausa. *[P]"Questo non fa di qualcuno una strega, e non l'ho mai pensato con quella parola. Ma mi ha sempre messo a disagio. Non è una colpa che le do, Rinaldo. È solo la verità, e te la devo."*`, en: `*[R]"Why didn't you do anything to stop it?"*
 
-The priest doesn't answer right away. When he does, his voice has lost the institutional certainty of before. *"I prayed another explanation would be found. None came."* A pause. *"The council decided, Rinaldo. I blessed the sentence. I didn't write it."* He hesitates, then adds, almost apologizing for the omission: *"The headman knows more than I do about how it got that far. Go to him, if you want the rest."*
+The priest doesn't answer right away. When he does, his voice has lost the institutional certainty of before. *[P]"I prayed another explanation would be found. None came."* A pause. *[P]"The council decided, Rinaldo. I blessed the sentence. I didn't write it."* He hesitates, then adds, almost apologizing for the omission: *[P]"The headman knows more than I do about how it got that far. Go to him, if you want the rest."*
 
 Rinaldo studies him a moment, then turns to go. The priest stops him with a question of his own, unasked for:
 
-*"Do you believe in the Borda too?"* Rinaldo doesn't answer right away, and the priest doesn't wait any longer. *"I believe there is evil in the world we don't know how to name any better."* A pause. *"Whether that means the Borda exists exactly as the old women tell it, or that it's just the name we give to fear... it isn't mine to decide. That's for God, in the end."*
+*[P]"Do you believe in the Borda too?"* Rinaldo doesn't answer right away, and the priest doesn't wait any longer. *[P]"I believe there is evil in the world we don't know how to name any better."* A pause. *[P]"Whether that means the Borda exists exactly as the old women tell it, or that it's just the name we give to fear... it isn't mine to decide. That's for God, in the end."*
 
-Before letting him go, Rinaldo turns one last time. *"Why were you always... distant with her?"*
+Before letting him go, Rinaldo turns one last time. *[R]"Why were you always... distant with her?"*
 
-A long pause — the first real hesitation of the whole conversation. *"Beatrice knew things no book I've ever read taught her."* A pause. *"That doesn't make someone a witch, and I never thought that word of her. But she always made me uneasy. It isn't a fault I lay on her, Rinaldo. It's just the truth, and I owe it to you."*` } }
+A long pause — the first real hesitation of the whole conversation. *[P]"Beatrice knew things no book I've ever read taught her."* A pause. *[P]"That doesn't make someone a witch, and I never thought that word of her. But she always made me uneasy. It isn't a fault I lay on her, Rinaldo. It's just the truth, and I owe it to you."*` } }
     ]
   },
   {
@@ -968,50 +1021,50 @@ A long pause — the first real hesitation of the whole conversation. *"Beatrice
     panels: [
       { img: 'assets/storia/scena8/panel-01.jpg', text: { it: `La casa del medico, poco distante dalla piazza — la porta è aperta, un tavolo ingombro di vasetti e strumenti visibile dall'ingresso. Il medico alza lo sguardo quando Rinaldo entra, e per un istante, prima che il resto arrivi, c'è qualcosa che assomiglia a un vecchio riflesso professionale: due colleghi che si riconoscono.
 
-*"Cosa hai visto, quella notte?"*
+*[R]"Cosa hai visto, quella notte?"*
 
-*"Quello che ti hanno già detto è vero: sono venuto, ho guardato i pagliericci vuoti, e ho visto le foglie sul tavolo."* Una pausa, le mani che si muovono quasi da sole, il gesto di chi maneggia erbe da una vita. *"Non ho dovuto indovinare, Rinaldo. Le conosco fin troppo bene, quelle foglie."*
+*[M]"Quello che ti hanno già detto è vero: sono venuto, ho guardato i pagliericci vuoti, e ho visto le foglie sul tavolo."* Una pausa, le mani che si muovono quasi da sole, il gesto di chi maneggia erbe da una vita. *[M]"Non ho dovuto indovinare, Rinaldo. Le conosco fin troppo bene, quelle foglie."*
 
-*"Come fai a esserne così sicuro?"*
+*[R]"Come fai a esserne così sicuro?"*
 
-*"Conium maculatum. Cicuta comune."* La voce è quella professionale, quasi da lezione — un rifugio. *"Foglia diversa dal sedano selvatico, se sai cosa cercare: il bordo, l'odore anche da secco."* Una pausa. *"Beatrice lo sapeva meglio di chiunque altro in questo villaggio. Meglio di me, se vogliamo essere onesti."*
+*[M]"Conium maculatum. Cicuta comune."* La voce è quella professionale, quasi da lezione — un rifugio. *[M]"Foglia diversa dal sedano selvatico, se sai cosa cercare: il bordo, l'odore anche da secco."* Una pausa. *[M]"Beatrice lo sapeva meglio di chiunque altro in questo villaggio. Meglio di me, se vogliamo essere onesti."*
 
-*"Che rapporto avevi con lei?"*
+*[R]"Che rapporto avevi con lei?"*
 
-*"Professionale."* Lo dice troppo in fretta, forse. Poi, con uno sforzo visibile per restare misurato: *"Curava a modo suo. Io al mio. Il villaggio sceglieva."* Una pausa, la voce si indurisce appena. *"Sceglieva lei, più spesso che no. Non che questo conti qualcosa, per la cicuta sul tavolo."* Distoglie lo sguardo un istante di troppo.`, en: `The doctor's house, not far from the square — the door is open, a table cluttered with jars and instruments visible from the entrance. The doctor looks up when Rinaldo enters, and for an instant, before the rest arrives, there's something like an old professional reflex: two colleagues recognizing each other.
+*[M]"Professionale."* Lo dice troppo in fretta, forse. Poi, con uno sforzo visibile per restare misurato: *[M]"Curava a modo suo. Io al mio. Il villaggio sceglieva."* Una pausa, la voce si indurisce appena. *[M]"Sceglieva lei, più spesso che no. Non che questo conti qualcosa, per la cicuta sul tavolo."* Distoglie lo sguardo un istante di troppo.`, en: `The doctor's house, not far from the square — the door is open, a table cluttered with jars and instruments visible from the entrance. The doctor looks up when Rinaldo enters, and for an instant, before the rest arrives, there's something like an old professional reflex: two colleagues recognizing each other.
 
-*"What did you see, that night?"*
+*[R]"What did you see, that night?"*
 
-*"What they've already told you is true: I came, I looked at the empty pallets, and I saw the leaves on the table."* A pause, his hands moving almost on their own, the gesture of someone who's handled herbs his whole life. *"I didn't have to guess, Rinaldo. I know those leaves all too well."*
+*[M]"What they've already told you is true: I came, I looked at the empty pallets, and I saw the leaves on the table."* A pause, his hands moving almost on their own, the gesture of someone who's handled herbs his whole life. *[M]"I didn't have to guess, Rinaldo. I know those leaves all too well."*
 
-*"How can you be so sure?"*
+*[R]"How can you be so sure?"*
 
-*"Conium maculatum. Common hemlock."* His voice turns professional, almost a lecture — a refuge. *"A different leaf from wild celery, if you know what to look for: the edge, the smell even dried."* A pause. *"Beatrice knew it better than anyone else in this village. Better than me, if we're being honest."*
+*[M]"Conium maculatum. Common hemlock."* His voice turns professional, almost a lecture — a refuge. *[M]"A different leaf from wild celery, if you know what to look for: the edge, the smell even dried."* A pause. *[M]"Beatrice knew it better than anyone else in this village. Better than me, if we're being honest."*
 
-*"What was your relationship with her?"*
+*[R]"What was your relationship with her?"*
 
-*"Professional."* He says it too quickly, perhaps. Then, with a visible effort to stay measured: *"She treated her way. I treated mine. The village chose."* A pause, his voice hardening slightly. *"They chose her, more often than not. Not that it counts for anything, with the hemlock on the table."* He looks away a moment too long.` } },
-      { img: 'assets/storia/scena8/panel-02.jpg', text: { it: `*"Secondo te è stata lei?"*
+*[M]"Professional."* He says it too quickly, perhaps. Then, with a visible effort to stay measured: *[M]"She treated her way. I treated mine. The village chose."* A pause, his voice hardening slightly. *[M]"They chose her, more often than not. Not that it counts for anything, with the hemlock on the table."* He looks away a moment too long.` } },
+      { img: 'assets/storia/scena8/panel-02.jpg', text: { it: `*[R]"Secondo te è stata lei?"*
 
-*"Ho visto la cicuta. Ho visto i pagliericci vuoti."* Una pausa, più lunga. *"Il resto — se l'ha fatto sapendo quello che faceva, se non lo sapeva, se c'entra la Borda come dice la gente — quello non lo so, e ti mentirei se dicessi che m'interessa saperlo. Io guardo quello che c'è sul tavolo. È l'unica cosa di cui posso rispondere."*
+*[M]"Ho visto la cicuta. Ho visto i pagliericci vuoti."* Una pausa, più lunga. *[M]"Il resto — se l'ha fatto sapendo quello che faceva, se non lo sapeva, se c'entra la Borda come dice la gente — quello non lo so, e ti mentirei se dicessi che m'interessa saperlo. Io guardo quello che c'è sul tavolo. È l'unica cosa di cui posso rispondere."*
 
-*"Perché non hai fatto niente per fermarlo?"*
+*[R]"Perché non hai fatto niente per fermarlo?"*
 
-Il medico si volta di scatto, quasi offeso. *"Fermarlo?"* Un attimo, poi la difesa si abbassa quanto basta per lasciar passare qualcosa di più vero. *"Non decidevo io da solo, Rinaldo. Non sono stato l'unico a dire la mia."* Una pausa, più lunga delle altre. *"Come sia andata davvero, come si sia arrivati alla sentenza — quello chiedilo al capovillaggio. È lui che ha tenuto tutti i fili in mano. Io ho detto la mia parte, come tutti gli altri."* La voce quasi si spezza sul controllo che si sta imponendo. *"Non voglio che tu creda sia stata colpa mia sola, Rinaldo. Non lo è stata."*
+Il medico si volta di scatto, quasi offeso. *[M]"Fermarlo?"* Un attimo, poi la difesa si abbassa quanto basta per lasciar passare qualcosa di più vero. *[M]"Non decidevo io da solo, Rinaldo. Non sono stato l'unico a dire la mia."* Una pausa, più lunga delle altre. *[M]"Come sia andata davvero, come si sia arrivati alla sentenza — quello chiedilo al capovillaggio. È lui che ha tenuto tutti i fili in mano. Io ho detto la mia parte, come tutti gli altri."* La voce quasi si spezza sul controllo che si sta imponendo. *[M]"Non voglio che tu creda sia stata colpa mia sola, Rinaldo. Non lo è stata."*
 
-Rinaldo lo guarda a lungo prima di chiedere l'ultima cosa. *"Ti sei mai chiesto se aveva ragione lei, sulla Borda?"*
+Rinaldo lo guarda a lungo prima di chiedere l'ultima cosa. *[R]"Ti sei mai chiesto se aveva ragione lei, sulla Borda?"*
 
-Il medico quasi ride — non un riso allegro, il riso di chi si aggrappa a qualcosa di solido. *"Alla Borda?"* Scuote la testa. *"Ci credi tu, Rinaldo? Un uomo che ha studiato quanto te?"* Una pausa, la voce che torna a farsi professionale, quasi didattica. *"Sono storie che le vecchie raccontano ai bambini per farli stare buoni la sera. Utili, forse — tengono i piccoli vicino al fuoco invece che nei canali al buio. Ma non sono scienza."* Distoglie lo sguardo un istante di troppo, come se la propria sicurezza gli servisse più a convincere se stesso che Rinaldo. *"Io guardo quello che si può vedere e misurare. Il resto è superstizione. E la superstizione non ha mai salvato nessun bambino."*`, en: `*"Do you think it was her?"*
+Il medico quasi ride — non un riso allegro, il riso di chi si aggrappa a qualcosa di solido. *[M]"Alla Borda?"* Scuote la testa. *[M]"Ci credi tu, Rinaldo? Un uomo che ha studiato quanto te?"* Una pausa, la voce che torna a farsi professionale, quasi didattica. *[M]"Sono storie che le vecchie raccontano ai bambini per farli stare buoni la sera. Utili, forse — tengono i piccoli vicino al fuoco invece che nei canali al buio. Ma non sono scienza."* Distoglie lo sguardo un istante di troppo, come se la propria sicurezza gli servisse più a convincere se stesso che Rinaldo. *[M]"Io guardo quello che si può vedere e misurare. Il resto è superstizione. E la superstizione non ha mai salvato nessun bambino."*`, en: `*[R]"Do you think it was her?"*
 
-*"I saw the hemlock. I saw the empty pallets."* A pause, longer. *"The rest — whether she did it knowing what she was doing, whether she didn't know, whether the Borda has anything to do with it like people say — that I don't know, and I'd be lying if I said I cared to know. I look at what's on the table. It's the only thing I can answer for."*
+*[M]"I saw the hemlock. I saw the empty pallets."* A pause, longer. *[M]"The rest — whether she did it knowing what she was doing, whether she didn't know, whether the Borda has anything to do with it like people say — that I don't know, and I'd be lying if I said I cared to know. I look at what's on the table. It's the only thing I can answer for."*
 
-*"Why didn't you do anything to stop it?"*
+*[R]"Why didn't you do anything to stop it?"*
 
-The doctor turns sharply, almost offended. *"Stop it?"* A moment, then the defensiveness drops just enough to let something truer through. *"I wasn't the one deciding alone, Rinaldo. I wasn't the only one who spoke his mind."* A pause, longer than the others. *"How it really went, how the sentence came about — ask the headman that. He's the one who held all the threads. I said my part, like everyone else."* His voice nearly breaks under the control he's forcing on himself. *"I don't want you to think it was my fault alone, Rinaldo. It wasn't."*
+The doctor turns sharply, almost offended. *[M]"Stop it?"* A moment, then the defensiveness drops just enough to let something truer through. *[M]"I wasn't the one deciding alone, Rinaldo. I wasn't the only one who spoke his mind."* A pause, longer than the others. *[M]"How it really went, how the sentence came about — ask the headman that. He's the one who held all the threads. I said my part, like everyone else."* His voice nearly breaks under the control he's forcing on himself. *[M]"I don't want you to think it was my fault alone, Rinaldo. It wasn't."*
 
-Rinaldo watches him a long while before asking the last thing. *"Did you ever wonder if she was right, about the Borda?"*
+Rinaldo watches him a long while before asking the last thing. *[R]"Did you ever wonder if she was right, about the Borda?"*
 
-The doctor almost laughs — not a cheerful laugh, the laugh of someone grasping for something solid. *"The Borda?"* He shakes his head. *"Do you believe it, Rinaldo? A man as educated as you?"* A pause, his voice turning professional again, almost instructive. *"They're stories old women tell children to keep them well-behaved at night. Useful, maybe — they keep little ones by the fire instead of in the canals in the dark. But they aren't science."* He looks away a moment too long, as if his own certainty were meant to convince himself more than Rinaldo. *"I look at what can be seen and measured. The rest is superstition. And superstition has never saved a single child."*` } }
+The doctor almost laughs — not a cheerful laugh, the laugh of someone grasping for something solid. *[M]"The Borda?"* He shakes his head. *[M]"Do you believe it, Rinaldo? A man as educated as you?"* A pause, his voice turning professional again, almost instructive. *[M]"They're stories old women tell children to keep them well-behaved at night. Useful, maybe — they keep little ones by the fire instead of in the canals in the dark. But they aren't science."* He looks away a moment too long, as if his own certainty were meant to convince himself more than Rinaldo. *[M]"I look at what can be seen and measured. The rest is superstition. And superstition has never saved a single child."*` } }
     ]
   }
   ,
@@ -1021,67 +1074,67 @@ The doctor almost laughs — not a cheerful laugh, the laugh of someone grasping
     panels: [
       { img: 'assets/storia/scena9/panel-01.jpg', text: { it: `La casa del capovillaggio, portico di legno, fine della strada. Il capovillaggio è già sulla soglia quando Rinaldo arriva: lo aspettava.
 
-*"Ho fatto come mi hai chiesto."* Rinaldo non lo saluta. *"Ho sentito il fabbro. Il parroco. Il medico."*
+*[R]"Ho fatto come mi hai chiesto."* Rinaldo non lo saluta. *[R]"Ho sentito il fabbro. Il parroco. Il medico."*
 
-*"E allora?"*
+*[C]"E allora?"*
 
-Qualcosa nella voce piana di Rinaldo si incrina, ma non nel modo in cui si incrina il pianto. È più duro. *"Il fabbro non era convinto — mai stato, dice. Il parroco pregava per un'altra spiegazione, e non gliel'avete data. Il medico ha visto la cicuta sul tavolo e ha guardato da un'altra parte quando è stato il momento di scegliere da che parte stare."* Una pausa. *"Pochi l'hanno difesa, in questo villaggio. Una donna che ha curato ognuno di voi almeno una volta, che non ha mai chiesto niente in cambio a chi non poteva permetterselo."* La voce sale appena, la prima vera crepa. *"E quando non avete saputo come spiegarvi le sparizioni, ve la siete presa con lei."*
+Qualcosa nella voce piana di Rinaldo si incrina, ma non nel modo in cui si incrina il pianto. È più duro. *[R]"Il fabbro non era convinto — mai stato, dice. Il parroco pregava per un'altra spiegazione, e non gliel'avete data. Il medico ha visto la cicuta sul tavolo e ha guardato da un'altra parte quando è stato il momento di scegliere da che parte stare."* Una pausa. *[R]"Pochi l'hanno difesa, in questo villaggio. Una donna che ha curato ognuno di voi almeno una volta, che non ha mai chiesto niente in cambio a chi non poteva permetterselo."* La voce sale appena, la prima vera crepa. *[R]"E quando non avete saputo come spiegarvi le sparizioni, ve la siete presa con lei."*
 
-Il capovillaggio non nega. Non abbassa nemmeno lo sguardo. *"Ti ho mandato dagli altri prima di parlare con me per un motivo, Rinaldo."* Una pausa, come se stesse scegliendo le parole con cura, non per proteggersi ma perché gli costano davvero. *"Volevo che tu sentissi tutta la storia, non solo la mia versione. E volevo che arrivassi qui sapendo già che non sono stato solo io a deciderlo. Se fossi venuto prima da me, avresti sentito solo la voce di chi porta il peso più grande. Non era giusto che fosse l'unica che sentivi."*`, en: `The headman's house, wooden porch, end of the street. The headman is already on the threshold when Rinaldo arrives: he was waiting for him.
+Il capovillaggio non nega. Non abbassa nemmeno lo sguardo. *[C]"Ti ho mandato dagli altri prima di parlare con me per un motivo, Rinaldo."* Una pausa, come se stesse scegliendo le parole con cura, non per proteggersi ma perché gli costano davvero. *[C]"Volevo che tu sentissi tutta la storia, non solo la mia versione. E volevo che arrivassi qui sapendo già che non sono stato solo io a deciderlo. Se fossi venuto prima da me, avresti sentito solo la voce di chi porta il peso più grande. Non era giusto che fosse l'unica che sentivi."*`, en: `The headman's house, wooden porch, end of the street. The headman is already on the threshold when Rinaldo arrives: he was waiting for him.
 
-*"I did as you asked."* Rinaldo doesn't greet him. *"I heard the blacksmith. The priest. The doctor."*
+*[R]"I did as you asked."* Rinaldo doesn't greet him. *[R]"I heard the blacksmith. The priest. The doctor."*
 
-*"And?"*
+*[C]"And?"*
 
-Something in Rinaldo's level voice cracks, but not the way weeping cracks it. It's harder. *"The blacksmith wasn't convinced — never was, he says. The priest prayed for another explanation, and you didn't give him one. The doctor saw the hemlock on the table and looked the other way when it came time to choose a side."* A pause. *"Few defended her, in this village. A woman who healed every one of you at least once, who never asked anything in return from those who couldn't afford it."* His voice rises slightly, the first real crack. *"And when you couldn't explain the disappearances, you turned on her."*
+Something in Rinaldo's level voice cracks, but not the way weeping cracks it. It's harder. *[R]"The blacksmith wasn't convinced — never was, he says. The priest prayed for another explanation, and you didn't give him one. The doctor saw the hemlock on the table and looked the other way when it came time to choose a side."* A pause. *[R]"Few defended her, in this village. A woman who healed every one of you at least once, who never asked anything in return from those who couldn't afford it."* His voice rises slightly, the first real crack. *[R]"And when you couldn't explain the disappearances, you turned on her."*
 
-The headman doesn't deny it. He doesn't even lower his eyes. *"I sent you to the others before speaking to me for a reason, Rinaldo."* A pause, as if choosing his words carefully, not to protect himself but because they truly cost him something. *"I wanted you to hear the whole story, not just my version of it. And I wanted you to arrive here already knowing I wasn't the only one who decided it. If you'd come to me first, you'd have heard only the voice of the one who carries the heaviest weight. It wasn't right that his should be the only one you heard."*` } },
-      { img: 'assets/storia/scena9/panel-02.jpg', text: { it: `*"Perché l'hai condannata?"*
+The headman doesn't deny it. He doesn't even lower his eyes. *[C]"I sent you to the others before speaking to me for a reason, Rinaldo."* A pause, as if choosing his words carefully, not to protect himself but because they truly cost him something. *[C]"I wanted you to hear the whole story, not just my version of it. And I wanted you to arrive here already knowing I wasn't the only one who decided it. If you'd come to me first, you'd have heard only the voice of the one who carries the heaviest weight. It wasn't right that his should be the only one you heard."*` } },
+      { img: 'assets/storia/scena9/panel-02.jpg', text: { it: `*[R]"Perché l'hai condannata?"*
 
-*"Perché il villaggio aveva bisogno che qualcuno pagasse, e io ho il compito di dare al villaggio quello di cui ha bisogno per restare un villaggio, e non qualcos'altro."* Una pausa. *"Non sono orgoglioso di questa frase. Ma è vera."*
+*[C]"Perché il villaggio aveva bisogno che qualcuno pagasse, e io ho il compito di dare al villaggio quello di cui ha bisogno per restare un villaggio, e non qualcos'altro."* Una pausa. *[C]"Non sono orgoglioso di questa frase. Ma è vera."*
 
-*"Cosa intendi, 'qualcos'altro'?"*
+*[R]"Cosa intendi, 'qualcos'altro'?"*
 
-*"Un villaggio che non trova un colpevole quando i suoi bambini spariscono non resta un villaggio a lungo."* Una pausa più lunga. *"Diventa una massa di gente spaventata che si guarda intorno e comincia a chiedersi chi è stato — il vicino, il forestiero, io stesso, magari. Un uomo del villaggio accanto mi ha raccontato di una casa data alle fiamme dalla folla stessa, senza nessun processo, senza nessuna decisione presa insieme. Solo paura che trova una direzione da sola."* Pausa più lunga ancora. *"Io non volevo quello. Ho preferito decidere io, con ordine, piuttosto che lasciare che decidesse la paura."*
+*[C]"Un villaggio che non trova un colpevole quando i suoi bambini spariscono non resta un villaggio a lungo."* Una pausa più lunga. *[C]"Diventa una massa di gente spaventata che si guarda intorno e comincia a chiedersi chi è stato — il vicino, il forestiero, io stesso, magari. Un uomo del villaggio accanto mi ha raccontato di una casa data alle fiamme dalla folla stessa, senza nessun processo, senza nessuna decisione presa insieme. Solo paura che trova una direzione da sola."* Pausa più lunga ancora. *[C]"Io non volevo quello. Ho preferito decidere io, con ordine, piuttosto che lasciare che decidesse la paura."*
 
-*"Come hai deciso, allora?"*
+*[R]"Come hai deciso, allora?"*
 
-*"Ho chiamato ogni capofamiglia, uno alla volta — non tutti insieme in piazza."* Una pausa. *"Meglio uno alla volta: in piazza la gente si guarda, si convince a vicenda, urla più forte di quanto pensi davvero. Da solo, ognuno mi ha detto quello che pensava per davvero."* Distoglie lo sguardo un istante. *"Quasi tutti pensavano che dovesse pagare. Non tutti. Il fabbro no, per esempio. Ma quasi tutti."*
+*[C]"Ho chiamato ogni capofamiglia, uno alla volta — non tutti insieme in piazza."* Una pausa. *[C]"Meglio uno alla volta: in piazza la gente si guarda, si convince a vicenda, urla più forte di quanto pensi davvero. Da solo, ognuno mi ha detto quello che pensava per davvero."* Distoglie lo sguardo un istante. *[C]"Quasi tutti pensavano che dovesse pagare. Non tutti. Il fabbro no, per esempio. Ma quasi tutti."*
 
-*"Tu cosa pensavi, davvero?"*
+*[R]"Tu cosa pensavi, davvero?"*
 
-Il capovillaggio non risponde subito. Quando parla, la voce ha perso ogni traccia dell'autorità di poco prima. *"Che forse non era stata lei a scegliere quella cicuta, sapendo cosa fosse."* Una pausa. *"Ma un villaggio non può vivere di 'forse', Rinaldo. Vive di risposte, anche quando sono sbagliate. Io ho dato una risposta."*`, en: `*"Why did you condemn her?"*
+Il capovillaggio non risponde subito. Quando parla, la voce ha perso ogni traccia dell'autorità di poco prima. *[C]"Che forse non era stata lei a scegliere quella cicuta, sapendo cosa fosse."* Una pausa. *[C]"Ma un villaggio non può vivere di 'forse', Rinaldo. Vive di risposte, anche quando sono sbagliate. Io ho dato una risposta."*`, en: `*[R]"Why did you condemn her?"*
 
-*"Because the village needed someone to pay, and my task is to give the village what it needs to remain a village, and not something else."* A pause. *"I'm not proud of that sentence. But it's true."*
+*[C]"Because the village needed someone to pay, and my task is to give the village what it needs to remain a village, and not something else."* A pause. *[C]"I'm not proud of that sentence. But it's true."*
 
-*"What do you mean, 'something else'?"*
+*[R]"What do you mean, 'something else'?"*
 
-*"A village that finds no one guilty when its children disappear doesn't stay a village for long."* A longer pause. *"It becomes a mass of frightened people looking around, starting to wonder who did it — the neighbor, the stranger, myself, maybe. A man from the next village told me about a house burned down by the crowd itself, with no trial, no decision made together. Just fear finding its own direction."* An even longer pause. *"I didn't want that. I preferred to decide it myself, with order, rather than let fear decide."*
+*[C]"A village that finds no one guilty when its children disappear doesn't stay a village for long."* A longer pause. *[C]"It becomes a mass of frightened people looking around, starting to wonder who did it — the neighbor, the stranger, myself, maybe. A man from the next village told me about a house burned down by the crowd itself, with no trial, no decision made together. Just fear finding its own direction."* An even longer pause. *[C]"I didn't want that. I preferred to decide it myself, with order, rather than let fear decide."*
 
-*"How did you decide, then?"*
+*[R]"How did you decide, then?"*
 
-*"I called in every head of household, one at a time — not all together in the square."* A pause. *"Better one at a time: in the square people watch each other, talk each other into things, shout louder than they really mean. Alone, each one told me what he truly thought."* He looks away for a moment. *"Almost everyone thought she should pay. Not everyone. The blacksmith didn't, for one. But almost everyone."*
+*[C]"I called in every head of household, one at a time — not all together in the square."* A pause. *[C]"Better one at a time: in the square people watch each other, talk each other into things, shout louder than they really mean. Alone, each one told me what he truly thought."* He looks away for a moment. *[C]"Almost everyone thought she should pay. Not everyone. The blacksmith didn't, for one. But almost everyone."*
 
-*"What did you think, really?"*
+*[R]"What did you think, really?"*
 
-The headman doesn't answer right away. When he speaks, his voice has lost every trace of the authority from before. *"That maybe it wasn't her who chose that hemlock, knowing what it was."* A pause. *"But a village can't live on 'maybe,' Rinaldo. It lives on answers, even wrong ones. I gave an answer."*` } },
-      { img: 'assets/storia/scena9/panel-03.jpg', text: { it: `Si volta, stacca una chiave di ferro dal chiodo alla parete. Non gliela porge subito — la tiene un momento in mano, come se pesasse più del metallo. *"Questa è tua. La casa è tua. Vai a vedere cosa è rimasto — forse è l'unica risposta vera che troverai oggi."*
+The headman doesn't answer right away. When he speaks, his voice has lost every trace of the authority from before. *[C]"That maybe it wasn't her who chose that hemlock, knowing what it was."* A pause. *[C]"But a village can't live on 'maybe,' Rinaldo. It lives on answers, even wrong ones. I gave an answer."*` } },
+      { img: 'assets/storia/scena9/panel-03.jpg', text: { it: `Si volta, stacca una chiave di ferro dal chiodo alla parete. Non gliela porge subito — la tiene un momento in mano, come se pesasse più del metallo. *[C]"Questa è tua. La casa è tua. Vai a vedere cosa è rimasto — forse è l'unica risposta vera che troverai oggi."*
 
-Rinaldo gli chiede se ha figli lui. *"Due. Vivi."* Il capovillaggio si concede una pausa più lunga di quanto la domanda giustificherebbe. *"Ogni notte da allora ringrazio qualcosa che non so nemmeno nominare, che non sono stati loro."*
+Rinaldo gli chiede se ha figli lui. *[C]"Due. Vivi."* Il capovillaggio si concede una pausa più lunga di quanto la domanda giustificherebbe. *[C]"Ogni notte da allora ringrazio qualcosa che non so nemmeno nominare, che non sono stati loro."*
 
 Rinaldo prende la chiave. Non ringrazia.
 
-*"Hai fatto quello che pensavi fosse giusto per il villaggio."* La voce è piatta, quasi gentile — ed è proprio per questo che fa più male. *"Non ti biasimo per aver avuto paura. Ti biasimo per non aver protetto lei, quando bastava che una persona con la tua autorità dicesse una parola diversa."* Si ferma sulla soglia, la chiave stretta in pugno. *"Per questo non ti perdonerò mai."*
+*[R]"Hai fatto quello che pensavi fosse giusto per il villaggio."* La voce è piatta, quasi gentile — ed è proprio per questo che fa più male. *[R]"Non ti biasimo per aver avuto paura. Ti biasimo per non aver protetto lei, quando bastava che una persona con la tua autorità dicesse una parola diversa."* Si ferma sulla soglia, la chiave stretta in pugno. *[R]"Per questo non ti perdonerò mai."*
 
 Il capovillaggio non risponde. Non c'è niente da rispondere a una cosa vera.
 
-Rinaldo si volta e si incammina verso casa sua, per la prima volta in otto mesi con la chiave in mano.`, en: `He turns, takes an iron key down from the hook on the wall. He doesn't hand it over right away — he holds it a moment, as if it weighed more than the metal. *"This is yours. The house is yours. Go see what's left — maybe it's the only true answer you'll find today."*
+Rinaldo si volta e si incammina verso casa sua, per la prima volta in otto mesi con la chiave in mano.`, en: `He turns, takes an iron key down from the hook on the wall. He doesn't hand it over right away — he holds it a moment, as if it weighed more than the metal. *[C]"This is yours. The house is yours. Go see what's left — maybe it's the only true answer you'll find today."*
 
-Rinaldo asks if he has children of his own. *"Two. Alive."* The headman allows himself a pause longer than the question warrants. *"Every night since, I thank something I can't even name, that it wasn't them."*
+Rinaldo asks if he has children of his own. *[C]"Two. Alive."* The headman allows himself a pause longer than the question warrants. *[C]"Every night since, I thank something I can't even name, that it wasn't them."*
 
 Rinaldo takes the key. He doesn't thank him.
 
-*"You did what you thought was right for the village."* His voice is flat, almost gentle — and that's exactly why it hurts more. *"I don't blame you for being afraid. I blame you for not protecting her, when all it would have taken was one person with your authority saying something different."* He stops in the doorway, the key clenched in his fist. *"For that, I will never forgive you."*
+*[R]"You did what you thought was right for the village."* His voice is flat, almost gentle — and that's exactly why it hurts more. *[R]"I don't blame you for being afraid. I blame you for not protecting her, when all it would have taken was one person with your authority saying something different."* He stops in the doorway, the key clenched in his fist. *[R]"For that, I will never forgive you."*
 
 The headman doesn't answer. There's nothing to answer to something true.
 
@@ -1221,11 +1274,11 @@ He stands. Takes the diary and puts it in the sack with the campanellino. Looks 
     panels: [
       { img: 'assets/storia/scena11/panel-01.jpg', text: { it: `Il fabbro è nella bottega quando Rinaldo ci passa davanti. Non sta lavorando — è seduto sulla panca all'ingresso, le mani in grembo, fermo nel modo in cui stanno ferme le persone che aspettano qualcosa senza sapere cosa. Lo vede arrivare con il sacco in spalla. Non dice niente per un momento.
 
-Poi: *"Verso la nebbia."*
+Poi: *[F]"Verso la nebbia."*
 
 Non è una domanda.
 
-Rinaldo si ferma. *"Sì."*
+Rinaldo si ferma. *[R]"Sì."*
 
 Il fabbro annuisce lentamente — non approvazione, riconoscimento. Si alza dalla panca senza aggiungere altro e rientra nella bottega. Rinaldo aspetta fuori, senza capire bene cosa stia aspettando.
 
@@ -1233,21 +1286,21 @@ Quando il fabbro torna ha in mano un fagotto di cuoio legato con una cinghia. Lo
 
 Una spada corta — vecchia, la guardia consumata, ma buona nell'acciaio. Un coltello da lato. Un giaco di cuoio indurito, leggero da portare, spesso abbastanza da servire a qualcosa. Un paio di guanti da lavoro pesante.
 
-*"Erano miei,"* dice il fabbro. *"Prima di questo."*
+*[F]"Erano miei,"* dice il fabbro. *[F]"Prima di questo."*
 
 Non spiega altro. Non serve — c'è nel modo in cui li ha posati, la precisione di chi conosce ogni oggetto come si conoscono le cose che hanno fatto parte di un'altra vita.
 
 Rinaldo guarda le armi. Guarda le proprie mani.
 
-*"Non so usarla,"* dice, indicando la spada.
+*[R]"Non so usarla,"* dice, indicando la spada.
 
-*"Lo so."* Il fabbro piega il giaco e lo rimette nel fagotto con la stessa cura con cui lo aveva tolto. *"Ma fa differenza lo stesso, tenerla in mano quando incontri qualcosa."*`, en: `The blacksmith is in his shop when Rinaldo passes by. He isn't working — he's sitting on the bench by the entrance, hands in his lap, still in the way people are still when they're waiting for something without knowing what. He sees him coming with the sack on his shoulder. He says nothing for a moment.
+*[F]"Lo so."* Il fabbro piega il giaco e lo rimette nel fagotto con la stessa cura con cui lo aveva tolto. *[F]"Ma fa differenza lo stesso, tenerla in mano quando incontri qualcosa."*`, en: `The blacksmith is in his shop when Rinaldo passes by. He isn't working — he's sitting on the bench by the entrance, hands in his lap, still in the way people are still when they're waiting for something without knowing what. He sees him coming with the sack on his shoulder. He says nothing for a moment.
 
-Then: *"Toward the fog."*
+Then: *[F]"Toward the fog."*
 
 It isn't a question.
 
-Rinaldo stops. *"Yes."*
+Rinaldo stops. *[R]"Yes."*
 
 The blacksmith nods slowly — not approval, recognition. He gets up from the bench without adding anything and goes back into the shop. Rinaldo waits outside, not quite understanding what he's waiting for.
 
@@ -1255,18 +1308,18 @@ When the blacksmith returns he's carrying a leather bundle tied with a strap. He
 
 A short sword — old, the guard worn, but good steel. A side knife. A hardened leather jerkin, light to wear, thick enough to be of some use. A pair of heavy work gloves.
 
-*"They were mine,"* the blacksmith says. *"Before this."*
+*[F]"They were mine,"* the blacksmith says. *[F]"Before this."*
 
 He explains nothing else. He doesn't need to — it's in the way he set them down, the precision of someone who knows every object the way you know things that belonged to another life.
 
 Rinaldo looks at the weapons. Looks at his own hands.
 
-*"I don't know how to use it,"* he says, pointing at the sword.
+*[R]"I don't know how to use it,"* he says, pointing at the sword.
 
-*"I know."* The blacksmith folds the jerkin and puts it back in the bundle with the same care he took it out with. *"But it still makes a difference, holding it in your hand when you meet something."*` } },
+*[F]"I know."* The blacksmith folds the jerkin and puts it back in the bundle with the same care he took it out with. *[F]"But it still makes a difference, holding it in your hand when you meet something."*` } },
       { img: 'assets/storia/scena11/panel-02.jpg', text: { it: `Rinaldo tira fuori quello che gli resta nella borsa — pochi soldi — e li posa sulla panca. Il fabbro li guarda. Non li prende.
 
-*"Era una brava donna,"* dice. *"Non ho fatto niente."*
+*[F]"Era una brava donna,"* dice. *[F]"Non ho fatto niente."*
 
 Resta in silenzio un momento, come se aspettasse che Rinaldo gli dica qualcosa — che lo assolva, o che lo accusi, una delle due. Rinaldo non dice niente. Non ha niente da dire su quello, non oggi, non a lui — il fabbro è l'unico, tra tutti, che ha già dato quello che poteva dare.
 
@@ -1274,7 +1327,7 @@ Prende il fagotto.
 
 Il fabbro resta sulla panca mentre si allontana. Rinaldo non si volta, ma sente che non è rientrato nella bottega. È ancora lì, fermo, a guardare.`, en: `Rinaldo takes out what's left in his purse — a few coins — and sets them on the bench. The blacksmith looks at them. Doesn't take them.
 
-*"She was a good woman,"* he says. *"I didn't do anything."*
+*[F]"She was a good woman,"* he says. *[F]"I didn't do anything."*
 
 He stays silent a moment, as if waiting for Rinaldo to say something to him — to absolve him, or to accuse him, one or the other. Rinaldo says nothing. He has nothing to say about that, not today, not to him — the blacksmith is the only one, of all of them, who has already given what he could give.
 
@@ -1605,7 +1658,10 @@ function escapeHtml(s) {
 }
 
 function renderText(raw) {
-  return escapeHtml(raw).replace(/\*(.+?)\*/g, '<em>$1</em>').replace(/\n\n/g, '<br><br>');
+  return escapeHtml(raw)
+    .replace(/\*\[(\w{1,2})\](.+?)\*/g, '<em class="spk-$1">$2</em>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/\n\n/g, '<br><br>');
 }
 
 function applyLangChrome() {
