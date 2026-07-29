@@ -1306,6 +1306,11 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
         <div class="tcard-roles" data-k="team30_roles"></div>
         <span class="tcard-badge badge-on" data-k="badge_on"></span>
       </div>
+      <div class="tcard rv d1">
+        <div class="tcard-name">Marco Amarelli</div>
+        <div class="tcard-roles" data-k="team31_roles"></div>
+        <span class="tcard-badge badge-on" data-k="badge_on"></span>
+      </div>
     </div>
   </div>
 </section>
@@ -1469,21 +1474,6 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
       </video>
     </div>
 
-    <!-- Volume control -->
-    <div style="padding: 16px 32px 24px; display: flex; align-items: center; gap: 14px;">
-      <span style="font-size: 11px; color: var(--text-mid); letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap;">Volume</span>
-      <input type="range" id="plan-vol-slider" min="0" max="1" step="0.02" value="0.8"
-        style="
-          flex: 1;
-          -webkit-appearance: none;
-          height: 2px;
-          background: var(--border-acc);
-          outline: none;
-          cursor: pointer;
-          accent-color: var(--accent);
-        ">
-      <span id="plan-vol-pct" style="font-size: 11px; color: var(--text-mid); width: 34px; text-align: right;">80%</span>
-    </div>
   </div>
 </div>
 
@@ -1516,8 +1506,6 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
       v.load();
     }
 
-    // Imposta volume video
-    v.volume = parseFloat(document.getElementById('plan-vol-slider').value);
   };
 
   window.closePlanModal = function() {
@@ -1542,12 +1530,6 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
   // Assicura che i click sul video non chiudano il modale
   document.getElementById('plan-video').addEventListener('click', function(e) {
     e.stopPropagation();
-  });
-
-  // Slider volume video
-  document.getElementById('plan-vol-slider').addEventListener('input', function() {
-    document.getElementById('plan-video').volume = parseFloat(this.value);
-    document.getElementById('plan-vol-pct').textContent = Math.round(this.value * 100) + '%';
   });
 
   // ESC
@@ -1659,6 +1641,7 @@ const T = {
     team28_roles: "Sound Designer · Compositore",
     team29_roles: "3D Environment Artist",
     team30_roles: "Sound FX · Compositore",
+    team31_roles: "Sound FX · Compositore",
     badge_on:     "Confermato",
     badge_neg:    "In ingaggio",
 
@@ -1783,6 +1766,7 @@ const T = {
     team28_roles: "Sound Designer · Composer",
     team29_roles: "3D Environment Artist",
     team30_roles: "Sound FX · Composer",
+    team31_roles: "Sound FX · Composer",
     badge_on:     "Confirmed",
     badge_neg:    "In negotiation",
 
