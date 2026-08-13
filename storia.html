@@ -172,6 +172,10 @@ html, body {
 #panel-text em.spk-BA { color: #c9ab52; }
 #panel-text em.spk-BO { color: #5a6b5a; }
 #panel-text em.spk-END { color: #d4af6a; font-weight: 700; font-style: normal; letter-spacing: 0.02em; }
+#panel-text .voice-overlap { position: relative; display: block; min-height: 2.7em; margin: 0.5em 0; }
+#panel-text .voice-overlap .ov-a, #panel-text .voice-overlap .ov-b { font-weight: 700; white-space: nowrap; text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000, 0 0 6px #000; }
+#panel-text .voice-overlap .ov-a { position: absolute; left: 0; top: 0; z-index: 1; }
+#panel-text .voice-overlap .ov-b { position: absolute; left: 0.35em; top: 0.3em; z-index: 2; }
 
 /* ---------- Controls ---------- */
 #controls {
@@ -2751,17 +2755,27 @@ They aren't alive in the ordinary way. They aren't dead.
 *[R]"How long?"* The words come out with effort.
 
 *"Since that night,"* says Beatrice. *"The bond has kept them like this ever since. I didn't know. I believed the Borda had taken them somewhere, alive — it's the same thing I believed until the moment I died, and the same thing that part of me went on believing the whole time I was guiding you without knowing it."*` } },
-      { img: 'assets/storia/scena19/panel-20.jpg', text: { it: `*"Adesso puoi scegliere,"* dice Beatrice, e la Borda, ferma nel bianco più in là, non la contraddice.
+      { img: 'assets/storia/scena19/panel-19b.jpg', text: { it: `*"Adesso puoi scegliere,"* dice Beatrice, e la Borda, ferma nel bianco più in là, non la contraddice.
 
 *"Se mi uccidi,"* continua, *"il legame che li tiene qui si spezza con me. Non li libera, Rinaldo. Li finisce. Quello che sono adesso, in quella nebbia, smette di essere anche quello. Non tornano da nessuna parte. Semplicemente, non ci sono più."*
 
 *[R]"E se non lo faccio?"*
 
-*[BO]"Se mi risparmi,"* dice la Borda, e la voce, per un istante, perde tutta la crudeltà di poco prima — si fa quasi calda, quasi ragionevole, come chi sa esattamente cosa offrire e a chi. *[BO]"Te li do indietro. La corda cade. Loro tornano — vivi, interi, senza ricordo di niente di tutto questo. Potrai riaverli tra le tue braccia, Rinaldo. I loro sorrisi. I loro abbracci. Li vedrai crescere, diventare quello che diventeranno — e saranno al sicuro da me per sempre. Questo te lo prometto: non toccherò mai un capello dei nostri figli, non da qui in avanti, non in nessuna vita che mi resta."* Una pausa, quasi tenera. *[BO]"E io rimarrò in vita. Una parte di me che hai amato sarà sempre reale, non scomparirà mai — non sono morta quella notte sul rogo, non del tutto. Vivrò nella nebbia, e potrai vedermi, sentirmi, ogni notte che vorrai."*
+*[BO]"Se mi risparmi,"* dice la Borda — e per la prima volta da quando ha ripreso a parlare, qualcosa cambia: non il tono, la sostanza. Sotto il ringhio che la accompagna da sempre, per un istante, c'è la voce di Beatrice, intera, riconoscibile in ogni sfumatura, come se fosse rimasta lì per tutto questo tempo sotto uno strato che solo ora si assottiglia abbastanza da lasciarla passare. Il viso resta lo stesso — la pelle troppo tesa, gli occhi sbagliati, le dita che finiscono in artigli — ma per un istante, sentendola parlare così, Rinaldo fatica a guardare quella bocca deforme e non vedere quella di sua moglie. *[BO]"Te li do indietro. La corda cade. Loro tornano — vivi, interi, senza ricordo di niente di tutto questo. Potrai riaverli tra le tue braccia, Rinaldo. I loro sorrisi. I loro abbracci. Li vedrai crescere, diventare quello che diventeranno."*`, en: `*"Now you can choose,"* says Beatrice, and the Borda, standing in the white further off, doesn't contradict her.
 
-Non è una bugia — ed è proprio per questo che funziona. Mette sulla bilancia l'unica cosa capace di pesare più della propria fine: i figli che porta ancora dentro di sé, offerti in cambio dalla stessa voce che li ha presi, insieme alla promessa di una Beatrice che non smette mai del tutto di esistere. Non sono due volontà in conflitto su questo. Sono la stessa persona — e quella persona vuole continuare a esistere, e userà chiunque Rinaldo ami pur di ottenerlo, i suoi stessi figli compresi.
+*"If you kill me,"* she goes on, *"the bond keeping them here breaks with me. It doesn't free them, Rinaldo. It ends them. Whatever they are now, in that fog, stops being even that. They don't go anywhere. They simply aren't, anymore."*
 
-*[BO]"E resto,"* continua, la voce che torna piatta, più simile a quella con cui ha parlato per tutto il gioco, prima di oggi. *[BO]"Senza quello che è rimasto nel campanellino. Senza quello che di lei c'era ancora qui, ad ancorarla a te. Solo la Borda."*
+*[R]"And if I don't?"*
+
+*[BO]"If you spare me,"* says the Borda — and for the first time since she began speaking again, something changes: not the tone, the substance. Beneath the growl that has followed her all along, for an instant, there is Beatrice's voice, whole, recognizable in every nuance, as if it had stayed there the whole time under a layer only now thin enough to let it through. The face stays the same — the skin stretched too tight, the eyes wrong, fingers ending in claws — but for an instant, hearing her speak like this, Rinaldo struggles to look at that misshapen mouth and not see his wife's. *[BO]"I'll give them back to you. The cord falls. They return — alive, whole, with no memory of any of this. You could hold them in your arms again, Rinaldo. Their smiles. Their embraces. You'll watch them grow, become whatever they'll become."*` } },
+      { img: 'assets/storia/scena19/panel-19c.jpg', text: { it: `Le dita si muovono verso di lui — un gesto che comincia come una carezza dimenticata, prima di fermarsi a mezz'aria, come se qualcosa, all'ultimo istante, le impedisse di finirlo. *[BO]"E saranno al sicuro da me. Questo te lo prometto: non toccherò mai più un capello dei nostri figli. Né il tuo."*
+
+*[BO]"Ma non sparirò del tutto, nemmeno io,"* continua, la voce che si fa più bassa, più simile a un segreto condiviso che a una minaccia. *[BO]"Fra una notte e l'altra — fra una madre e l'altra a cui prenderò quello che devo prendere, perché quello non smetterà, qualunque cosa tu scelga adesso — verrò a trovarvi. Nella nebbia, ai margini del campo, dove nessun altro guarderà mai. E resterò abbastanza vicina perché tu possa ancora chiamarmi come mi chiamavi. Nessun altro, in nessun luogo di questo mondo, dirà mai più il mio nome e lo intenderà per davvero. Solo tu, Rinaldo. Solo per te sarò ancora Beatrice, quando lo vorrai."*`, en: `Her fingers move toward him — a gesture that begins like a forgotten caress, before stopping mid-air, as if something, at the last instant, keeps her from finishing it. *[BO]"And they'll be safe from me. This I promise you: I will never touch a hair on our children's heads again. Nor yours."*
+
+*[BO]"But I won't disappear completely either,"* she goes on, her voice dropping lower, closer to a shared secret than a threat. *[BO]"Between one night and the next — between one mother and the next from whom I'll take what I must take, because that won't stop, whatever you choose now — I'll come to see you both. In the fog, at the edge of the field, where no one else will ever look. And I'll stay close enough that you can still call me what you used to call me. No one else, anywhere in this world, will ever say my name again and mean it. Only you, Rinaldo. Only for you will I still be Beatrice, whenever you want."*` } },
+      { img: 'assets/storia/scena19/panel-19d.jpg', text: { it: `Rinaldo si scosta, d'istinto — un passo indietro, non deciso, solo il corpo che rifiuta quello che gli hanno appena offerto. E per un solo istante, negli occhi di lui, la Borda vede quello che è diventata: riflessa, piccola, capovolta, nello sguardo dell'unico che l'ha amata per intero. Qualcosa, in quel riflesso, le fa male in un modo che il resto della scena non le ha fatto — un dolore vero, non recitato. Il viso le si contrae in una smorfia che non è più solo rabbia — e quando si ricompone, non c'è più traccia della voce di prima.
+
+*[BO]"E resto,"* dice, la voce che torna piatta, la stessa di sempre. *[BO]"Senza quello che è rimasto nel campanellino. Senza quello che di lei c'era ancora qui, ad ancorarla a te. Solo la Borda."*
 
 Non è una domanda, e nessuno dei due la tratta come tale.
 
@@ -2775,21 +2789,13 @@ Non è una domanda, e nessuno dei due la tratta come tale.
 
 *"Non posso smettere. Non ho altro tempo, ed è l'unica cosa che conta davvero."* *"Non ti sto chiedendo di uccidere i nostri figli. Quella notte è già successa — non posso disfarla, tu non puoi disfarla, nessuno può. Ti sto chiedendo che non succeda mai più a nessun altro. Ci sono altre madri, Rinaldo. Ci sono altri bambini che ogni sera aspettano il rumore di passi che tornano a casa."* Si ferma un istante, come se dovesse convincersene lei stessa prima di poterlo dire ad alta voce. *"So che fermandomi, tutto questo finisce con me. Deve finire con me. È l'unica cosa a cui posso aggrapparmi in questo momento, ed è più di quanto avessi ieri."* *"Ogni bambino che sparirà da qui in avanti, se mi risparmi, sarà un bambino che avresti potuto salvare fermandomi adesso, con le tue stesse mani. Lo saprai. Ogni volta."* Le mani le tremano, come qualcosa che sta per perdere la presa su una forma appena ritrovata. *"So meglio di chiunque altro cosa ti sto chiedendo di sacrificare. E te lo chiedo lo stesso. Fermami, Rinaldo. Fermaci. Non lasciare che l'amore ti offuschi la mente. Ferma questa follia. Non mi condannare a questo."*
 
-*[BO]"Ah, davvero?"* La voce della Borda arriva da dove è rimasta ferma, e non ha più niente della piattezza di poco prima — è di nuovo lei, di nuovo crudele, di nuovo viva del gusto di infierire. *[BO]"Guardali bene. Potrebbero essere di nuovo tra le tue braccia tra pochissimo. Vuoi davvero che smettano di esistere? È l'unica cosa che ti resta di lei, Rinaldo. Lasciami vivere, e rivedrai la sua luce negli occhi di Isabella. I suoi capelli corvini in quelli di Ludovico. Da' un senso a questo viaggio — se mi risparmi, tutto quello che hai amato in me resterà vivo, in loro, ogni giorno per il resto della tua vita."*
+*[BO]"Ah, davvero?"* La voce della Borda arriva da dove è rimasta ferma, e non ha più niente della piattezza di poco prima — è di nuovo lei, di nuovo crudele, di nuovo viva del gusto di infierire. *[BO]"Guardali bene. Potrebbero essere di nuovo tra le tue braccia tra pochissimo. Vuoi davvero che smettano di esistere? È l'unica cosa che ti resta di me, Rinaldo. Lasciami vivere, e rivedrai la mia luce negli occhi di Isabella. I miei capelli corvini in quelli di Ludovico. Da' un senso a questo viaggio — se mi risparmi, tutto quello che hai amato in me resterà vivo, in loro, ogni giorno per il resto della tua vita."*
 
-Nel bianco, i suoi figli aspettano. Non chiamano. Non si muovono verso di lui. Aspettano nel modo in cui aspettano le cose che non hanno ancora deciso se sono vive o no.
+*[BO]"E pensaci bene,"* continua, la voce che si stringe attorno a lui come una mano. *[BO]"Vuoi davvero passare il resto dei tuoi giorni sapendo che potevi salvarli, e hai scelto di non farlo? Che la possibilità era lì, nelle tue mani, e tu l'hai buttata via? A nessun altro sarà mai data questa scelta, Rinaldo. Solo a te. E se la rifiuti, lo saprai per sempre — non un dubbio che sfuma col tempo. Una certezza che ti porterai a letto ogni notte, per il resto della tua vita."*
 
-Rinaldo li guarda. Poi guarda lei — le due metà di lei, una accanto all'altra per la prima e ultima volta.`, en: `*"Now you can choose,"* says Beatrice, and the Borda, standing in the white further off, doesn't contradict her.
+Nel bianco, i suoi figli aspettano. Non chiamano. Non si muovono verso di lui. Aspettano nel modo in cui aspettano le cose che non hanno ancora deciso se sono vive o no.`, en: `Rinaldo pulls back, on instinct — a step backward, not decided, just his body refusing what has just been offered to him. And for one single instant, in his eyes, the Borda sees what she has become: reflected, small, inverted, in the gaze of the only one who ever loved her completely. Something in that reflection hurts her in a way the rest of the scene hasn't — real pain, not performed. Her face contracts into a grimace that is no longer only rage — and when it settles again, there is no trace left of the voice from before.
 
-*"If you kill me,"* she goes on, *"the bond keeping them here breaks with me. It doesn't free them, Rinaldo. It ends them. Whatever they are now, in that fog, stops being even that. They don't go anywhere. They simply aren't, anymore."*
-
-*[R]"And if I don't?"*
-
-*[BO]"If you spare me,"* says the Borda, and her voice, for an instant, loses all the cruelty from before — it turns almost warm, almost reasonable, like someone who knows exactly what to offer and to whom. *[BO]"I'll give them back to you. The cord falls. They return — alive, whole, with no memory of any of this. You could hold them in your arms again, Rinaldo. Their smiles. Their embraces. You'll watch them grow, become whatever they'll become — and they'll be safe from me forever. This I promise you: I will never touch a hair on our children's heads, not from now on, not in whatever life is left to me."* A pause, almost tender. *[BO]"And I will remain alive. A part of me that you loved will always be real, will never vanish — I didn't die that night at the stake, not completely. I'll live in the fog, and you'll be able to see me, feel me, every night you want."*
-
-It isn't a lie — and that's exactly why it works. It puts on the scale the one thing capable of outweighing her own end: the children she still carries within her, offered back by the very voice that took them, together with the promise of a Beatrice who never entirely stops existing. These aren't two wills in conflict here. They are the same person — and that person wants to go on existing, and will use anyone Rinaldo loves to get it, her own children included.
-
-*[BO]"And I remain,"* she goes on, her voice turning flat again, closer to the one she's spoken with for the whole game, before today. *[BO]"Without what's left in the campanellino. Without whatever of her was still here, anchoring her to you. Only the Borda."*
+*[BO]"And I remain,"* she says, her voice turning flat again, the same as always. *[BO]"Without what's left in the campanellino. Without whatever of her was still here, anchoring her to you. Only the Borda."*
 
 It isn't a question, and neither of them treats it as one.
 
@@ -2803,11 +2809,42 @@ It isn't a question, and neither of them treats it as one.
 
 *"I can't stop. I don't have any more time, and this is the only thing that truly matters."* *"I'm not asking you to kill our children. That night already happened — I can't undo it, you can't undo it, no one can. I'm asking that it never happens to anyone else again. There are other mothers, Rinaldo. There are other children who wait every evening for the sound of footsteps coming home."* She pauses for a moment, as if she needed to convince herself before she could say it aloud. *"I know that by stopping me, all of this ends with me. It has to end with me. It's the only thing I can hold onto right now, and it's more than I had yesterday."* *"Every child who disappears from now on, if you spare me, will be a child you could have saved by stopping me now, with your own hands. You'll know it. Every time."* Her hands tremble, like something about to lose its grip on a shape only just found again. *"I know better than anyone what I'm asking you to sacrifice. And I'm asking it anyway. Stop me, Rinaldo. Stop us. Don't let love cloud your mind. Stop this madness. Don't condemn me to this."*
 
-*[BO]"Oh, really?"* The Borda's voice comes from where she has remained still, and it no longer carries any of the flatness from before — she's herself again, cruel again, alive again with the taste of cruelty. *[BO]"Look at them closely. They could be in your arms again very soon. Do you really want them to stop existing? It's the only thing you have left of her, Rinaldo. Let me live, and you'll see her light again in Isabella's eyes. Her raven hair in Ludovico's. Give this whole journey meaning — spare me, and everything you loved in me will stay alive, in them, every day for the rest of your life."*
+*[BO]"Oh, really?"* The Borda's voice comes from where she has remained still, and it no longer carries any of the flatness from before — she's herself again, cruel again, alive again with the taste of cruelty. *[BO]"Look at them closely. They could be in your arms again very soon. Do you really want them to stop existing? It's the only thing you have left of me, Rinaldo. Let me live, and you'll see my light again in Isabella's eyes. My raven hair in Ludovico's. Give this whole journey meaning — spare me, and everything you loved in me will stay alive, in them, every day for the rest of your life."*
 
-In the white, his children wait. They don't call out. They don't move toward him. They wait the way things wait when they haven't yet decided whether they're alive or not.
+*[BO]"And think about it,"* she goes on, her voice tightening around him like a hand. *[BO]"Do you really want to spend the rest of your days knowing you could have saved them, and chose not to? That the chance was right there, in your hands, and you threw it away? No one else will ever be given this choice, Rinaldo. Only you. And if you refuse it, you'll know it forever — not a doubt that fades with time. A certainty you'll carry to bed with you, every night, for the rest of your life."*
 
-Rinaldo looks at them. Then he looks at her — the two halves of her, side by side for the first and last time.` } }
+In the white, his children wait. They don't call out. They don't move toward him. They wait the way things wait when they haven't yet decided whether they're alive or not.` } },
+      { img: 'assets/storia/scena19/panel-19e.jpg', text: { it: `Poi, all'improvviso, non ci sono più due voci distinte.
+
+Beatrice e la Borda — le due metà di lei, una accanto all'altra fino a un istante prima — cominciano a tremare ai bordi, a perdere il contorno netto che le ha tenute separate per tutta la scena. Si sovrappongono. Non si fondono del tutto, non ancora, ma per un battito, poi un altro, Rinaldo non riesce più a dire dove finisce il corpo reale di sua moglie e dove comincia la sagoma incappucciata — sono la stessa immagine, sdoppiata e ributtata contro se stessa, come uno specchio rotto che mostra due volte la stessa cosa.
+
+[[OV:Uccidimi—|—risparmiami—]]
+
+[[OV:Fermami—|—resta con me—]]
+
+Le voci si accavallano, si spezzano, tornano — non più un dialogo, non più due persone che parlano a turno, ma un unico suono che si contraddice da solo, in loop, sempre più vicino, finché Rinaldo non riesce più a isolare una singola parola dal resto.`, en: `Then, suddenly, there are no longer two distinct voices.
+
+Beatrice and the Borda — the two halves of her, side by side until a moment before — begin to tremble at the edges, losing the sharp outline that has kept them separate through the whole scene. They overlap. They don't fully merge, not yet, but for one beat, then another, Rinaldo can no longer say where his wife's real body ends and the hooded shape begins — they are the same image, doubled and thrown back against itself, like a broken mirror showing the same thing twice.
+
+[[OV:Kill me—|—spare me—]]
+
+[[OV:Stop me—|—stay with me—]]
+
+The voices overlap, break apart, come back — no longer a dialogue, no longer two people speaking in turn, but a single sound contradicting itself, looping, closer and closer, until Rinaldo can no longer isolate a single word from the rest.` } },
+      { img: 'assets/storia/scena19/panel-19f.jpg', text: { it: `Cade in ginocchio. Le mani gli salgono alla testa, premono, come se potessero fisicamente tenere dentro qualcosa che sta per rompersi.
+
+*[R]"Basta,"* grida — non più una parola, un suono strappato. *[R]"Basta! Non capisco più. Non capisco più niente. Lasciatemi... lasciatemi in pace!"*
+
+Per un istante, tutto tace.
+
+Poi le due immagini si separano di nuovo, lentamente — Beatrice, intera, ferma; la Borda, immobile, più in là.`, en: `He falls to his knees. His hands rise to his head, pressing, as if they could physically hold in something about to break.
+
+*[R]"Enough,"* he screams — no longer a word, a torn sound. *[R]"Enough! I don't understand anymore. I don't understand anything anymore. Leave me... leave me alone!"*
+
+For an instant, everything falls silent.
+
+Then the two images separate again, slowly — Beatrice, whole, still; the Borda, motionless, further off.` } },
+      { img: 'assets/storia/scena19/panel-20.jpg', text: { it: `Nel silenzio che segue, Rinaldo capisce che qualunque cosa deciderà adesso, la deciderà così: sfinito, spezzato, senza più la lucidità con cui ha affrontato ogni altra scelta di questo viaggio. Si rialza, o ci prova — le gambe che tremano più per quell'ultimo istante che per la stanchezza del combattimento. Guarda i suoi figli. Poi guarda lei — le due metà di lei, una accanto all'altra per la prima e ultima volta.`, en: `In the silence that follows, Rinaldo understands that whatever he decides now, he will decide it like this: exhausted, broken, without the clarity he's brought to every other choice on this journey. He gets up, or tries to — his legs trembling more from that last instant than from the fatigue of the fight. He looks at his children. Then he looks at her — the two halves of her, side by side for the first and only time.` } }
     ]
   },
   {
@@ -3127,6 +3164,7 @@ function escapeHtml(s) {
 
 function renderText(raw) {
   return escapeHtml(raw)
+    .replace(/\[\[OV:(.+?)\|(.+?)\]\]/g, '<span class="voice-overlap"><em class="ov-a">$1</em><em class="spk-BO ov-b">$2</em></span>')
     .replace(/\*\[(\w{1,2})\](.+?)\*/g, '<em class="spk-$1">$2</em>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
     .replace(/\n\n/g, '<br><br>');
