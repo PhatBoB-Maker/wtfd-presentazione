@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Argini e canali — Where the Fog Dies</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #141411;
+      --panel: #1d1d18;
+      --panel-2: #23231d;
+      --line: #3c3b30;
+      --line-soft: #2d2d25;
+      --text: #eee9dc;
+      --muted: #aaa492;
+      --faint: #797566;
+      --ochre: #c79a4a;
+      --green: #78856a;
+      --water: #657b7b;
+      --fog: #a5a89f;
+      --warning: #d5aa65;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 85% 8%, rgba(110, 123, 112, .08), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+    }
+
+    p { margin: 0; }
+    strong { color: var(--text); }
+    .page { width: min(1380px, 100%); margin: 0 auto; padding: 58px 64px 76px; }
+    .rule { height: 1px; margin: 50px 0; background: linear-gradient(90deg, var(--line), transparent); }
+    .eyebrow { color: var(--ochre); font-size: 12px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    .cite { color: var(--faint); font-size: 12px; font-style: italic; }
+    .section-kicker { color: var(--faint); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .section-head { display: grid; gap: 5px; margin-bottom: 22px; }
+    .section-head h2 { font-size: 30px; }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      color: var(--muted);
+      background: var(--panel);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .tag.safe { border-color: #48533f; color: #aebd9f; }
+    .tag.open { border-color: #604c2d; color: var(--warning); }
+
+    header { display: grid; gap: 14px; padding-bottom: 34px; border-bottom: 1px solid var(--line); }
+    .title-row { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+    h1 { font-size: clamp(38px, 5vw, 58px); line-height: 1.03; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .hero { padding-top: 38px; }
+    .map-frame { position: relative; overflow: hidden; border: 1px solid var(--line-soft); background: var(--panel); }
+    .map-frame img { display: block; width: 100%; height: auto; }
+    .map-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      padding: 7px 10px;
+      border: 1px solid rgba(238,233,220,.18);
+      background: rgba(20,20,17,.82);
+      color: var(--text);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(7px);
+    }
+    .caption { padding-top: 11px; color: var(--faint); font-size: 12px; font-style: italic; }
+
+    .visual-overview { margin-top: 24px; }
+    .visual-overview .map-frame img { aspect-ratio: 16 / 9; object-fit: cover; }
+
+    .reference-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 24px; }
+    .reference-card { overflow: hidden; border: 1px solid var(--line-soft); background: var(--panel); }
+    .reference-card figure { position: relative; margin: 0; }
+    .reference-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .reference-grid.wide .reference-card img { aspect-ratio: 16 / 9; }
+    .reference-card-copy { padding: 18px; }
+    .reference-card h3 { margin-bottom: 7px; font-size: 20px; }
+    .reference-card p { color: var(--muted); font-size: 13px; }
+
+    .mission-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; }
+    .lead { color: var(--muted); font-size: 17px; line-height: 1.65; max-width: 760px; }
+    .principles { display: grid; gap: 1px; border: 1px solid var(--line-soft); background: var(--line-soft); }
+    .principle { display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 15px; background: var(--panel); }
+    .num { color: var(--ochre); font-family: Georgia, serif; font-size: 22px; }
+    .principle b { display: block; margin-bottom: 2px; font-size: 14px; }
+    .principle span:last-child { color: var(--muted); font-size: 13px; }
+
+    .flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line-soft); }
+    .phase { position: relative; min-height: 210px; padding: 24px 26px 26px; background: var(--panel); }
+    .phase + .phase { border-left: 1px solid var(--line-soft); }
+    .phase::after {
+      content: "";
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 38%;
+      pointer-events: none;
+      background: linear-gradient(90deg, transparent, rgba(154,163,155,.05));
+    }
+    .phase h3 { margin: 13px 0 8px; font-size: 22px; }
+    .phase p { color: var(--muted); font-size: 13.5px; }
+    .density { display: flex; gap: 5px; margin-top: 20px; }
+    .density i { width: 28px; height: 4px; background: var(--line); }
+    .density i.on { background: var(--fog); }
+
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+    .card { min-height: 235px; padding: 21px; border: 1px solid var(--line-soft); background: var(--panel); }
+    .card-icon { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 24px; border: 1px solid var(--line); color: var(--ochre); font-family: Georgia, serif; font-size: 21px; }
+    .card h3 { margin-bottom: 8px; font-size: 21px; }
+    .card p { color: var(--muted); font-size: 13.5px; }
+    .card .cite { display: block; margin-top: 14px; }
+
+    .lore-feature { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(320px, .65fr); gap: 24px; margin-top: 24px; }
+    .lore-feature figure { position: relative; overflow: hidden; margin: 0; border: 1px solid var(--line-soft); background: var(--panel); }
+    .lore-feature img { display: block; width: 100%; height: 100%; min-height: 390px; object-fit: cover; }
+    .lore-copy { display: flex; flex-direction: column; justify-content: center; padding: 28px; border: 1px solid var(--line-soft); background: var(--panel-2); }
+    .lore-copy h3 { margin: 14px 0 12px; font-size: 25px; }
+    .lore-copy p { color: var(--muted); font-size: 14px; }
+    .lore-copy .cite { display: block; margin-top: 18px; }
+
+    .systems { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .system-panel { padding: 24px; border: 1px solid var(--line-soft); background: var(--panel); }
+    .system-panel h3 { margin-bottom: 18px; font-size: 23px; }
+    .rows { display: grid; gap: 0; }
+    .row { display: grid; grid-template-columns: 138px 1fr; gap: 16px; padding: 13px 0; border-top: 1px solid var(--line-soft); }
+    .row b { color: var(--text); font-size: 13px; }
+    .row span { color: var(--muted); font-size: 13px; }
+
+    .palette { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; }
+    .swatch { display: grid; gap: 8px; }
+    .swatch div { height: 58px; border: 1px solid rgba(255,255,255,.05); }
+    .swatch span { color: var(--muted); font-size: 12px; }
+
+    .note {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 14px;
+      padding: 18px;
+      border-left: 3px solid var(--ochre);
+      background: var(--panel-2);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+
+    footer { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); }
+
+    @media (max-width: 900px) {
+      .page { padding: 34px 22px 50px; }
+      .mission-grid, .systems { grid-template-columns: 1fr; }
+      .lore-feature { grid-template-columns: 1fr; }
+      .lore-feature img { min-height: 0; height: auto; }
+      .flow, .cards { grid-template-columns: 1fr; }
+      .reference-grid { grid-template-columns: 1fr; }
+      .phase + .phase { border-left: 0; border-top: 1px solid var(--line-soft); }
+      .palette { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="eyebrow">Where the Fog Dies — Struttura del livello</div>
+      <div class="title-row">
+        <h1>Tavola 02 · Argini e canali</h1>
+        <span class="tag">Zona B — transizione</span>
+      </div>
+      <div class="meta">
+        <span class="cite">Bozza di level design · non canone finale</span>
+        <span class="cite">·</span>
+        <span class="cite">27/08/2026 — rif. MAPPA_LIVELLO_BOZZA.md §4, Zona B</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="section-head">
+        <span class="section-kicker">01 — Planimetria generale</span>
+      </div>
+      <div class="map-frame">
+        <img src="../cartella%20temporanea%20level%20design/P-02.png" alt="Planimetria quasi verticale della Zona B, con campi, canale, argini, cascina e vegetazione ripariale">
+        <span class="map-badge">P-02 · vista quasi verticale</span>
+      </div>
+      <p class="caption">La strada lascia la Zona A lungo il canale. Il paesaggio passa gradualmente da coltivi drenati a vegetazione ripariale più fitta e terreno umido, fino al limite della Zona C.</p>
+      <div class="visual-overview">
+        <div class="map-frame">
+          <img src="../cartella%20temporanea%20level%20design/V-02.png" alt="Vista ambientale ampia della pianura romagnola attraversata dal canale, con campi, argini, vegetazione e cascina isolata">
+          <span class="map-badge">V-02 · morfologia ambientale</span>
+        </div>
+        <p class="caption">Riferimento d’insieme: pianura bassa e lavorata, acqua regimentata, filari e vegetazione più densa lungo i margini. La cascina resta una deviazione leggibile ma marginale rispetto all’asse del canale.</p>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section>
+      <div class="section-head">
+        <span class="section-kicker">02 — Funzione della zona</span>
+        <h2>La sicurezza comincia a incrinarsi</h2>
+      </div>
+      <div class="mission-grid">
+        <p class="lead">Zona B è un tratto di transizione, non ancora un territorio apertamente ostile. Introduce il giocatore ai <strong>cippi</strong>, offre la prima narrazione ambientale opzionale e prepara il cambio di ritmo verso il bosco palustre. L’inquietudine nasce dall’isolamento e dalla cascina abbandonata, non da una minaccia attiva.</p>
+        <div class="principles">
+          <div class="principle"><span class="num">1</span><span><b>Nessun combattimento</b>La lettura dello spazio viene prima della pressione.</span></div>
+          <div class="principle"><span class="num">2</span><span><b>Primo cippo</b>Tutorial a basso rischio, ancora fuori dalla nebbia vera.</span></div>
+          <div class="principle"><span class="num">3</span><span><b>Prima deviazione opzionale</b>La cascina premia chi abbandona per poco il percorso principale.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section>
+      <div class="section-head">
+        <span class="section-kicker">03 — Progressione spaziale</span>
+        <h2>Tre letture in un unico attraversamento</h2>
+      </div>
+      <div class="flow">
+        <article class="phase">
+          <span class="tag safe">Ingresso · Zona A</span>
+          <h3>Campi e orientamento</h3>
+          <p>Suolo ancora compatto, campi coltivati, fossi ordinati e percorso facilmente leggibile. Il villaggio resta concettualmente vicino.</p>
+          <div class="density" aria-label="Nebbia assente"><i class="on"></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="phase">
+          <span class="tag">Centro · scoperta</span>
+          <h3>Cippo e cascina</h3>
+          <p>Il percorso si apre a una deviazione. Siepi, erbe alte e acqua stagnante iniziano a sottrarre controllo visivo al giocatore.</p>
+          <div class="density" aria-label="Nebbia leggera"><i class="on"></i><i class="on"></i><i></i><i></i></div>
+        </article>
+        <article class="phase">
+          <span class="tag open">Uscita · Zona C</span>
+          <h3>Il margine si chiude</h3>
+          <p>Salici, pioppi, ontani, canneti e boscaglia ripariale diventano più densi. La foschia nasconde gradualmente il territorio lasciato alle spalle.</p>
+          <div class="density" aria-label="Nebbia in crescita"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section>
+      <div class="section-head">
+        <span class="section-kicker">04 — Landmark e contenuti fissi</span>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">I</div>
+          <h3>Il primo cippo</h3>
+          <p>Piccolo segno verticale accanto alla strada, collocato in terreno aperto. Deve risultare riconoscibile e raggiungibile senza sembrare un monumento o una tomba.</p>
+          <span class="cite">Scena 11B · tutorial dei cippi</span>
+        </article>
+        <article class="card">
+          <div class="card-icon">II</div>
+          <h3>La cascina abbandonata</h3>
+          <p>Deviazione breve dal percorso principale: edificio basso e rurale, tettoia parzialmente crollata, recinto e orto ripresi dalla vegetazione.</p>
+          <span class="cite">Scena 12 · “La Bussola”</span>
+        </article>
+        <article class="card">
+          <div class="card-icon">III</div>
+          <h3>Pozzo, bambola, segno</h3>
+          <p>Tre dettagli ravvicinati costruiscono la narrazione ambientale: il pozzo nel cortile, la bambola di pezza nel fango e il segno apotropaico sulla soglia.</p>
+          <span class="cite">Contenuto già fissato · nessun effetto soprannaturale esplicito</span>
+        </article>
+      </div>
+      <div class="reference-grid">
+        <article class="reference-card">
+          <figure>
+            <img src="../cartella%20temporanea%20level%20design/S-06.png" alt="POV del giocatore lungo l’argine con il primo cippo vicino al sentiero e il canale sulla destra">
+            <span class="map-badge">S-06 · POV cippo</span>
+          </figure>
+          <div class="reference-card-copy">
+            <h3>Il primo cippo</h3>
+            <p>Il landmark interrompe appena il margine del percorso: visibile durante l’avanzamento, raggiungibile senza deviazioni e abbastanza modesto da non sembrare un monumento.</p>
+          </div>
+        </article>
+        <article class="reference-card">
+          <figure>
+            <img src="../cartella%20temporanea%20level%20design/S-07.png" alt="Vista d’ingresso della cascina abbandonata oltre un varco nel recinto, tra fango, rovi e vegetazione umida">
+            <span class="map-badge">S-07 · cascina</span>
+          </figure>
+          <div class="reference-card-copy">
+            <h3>Deviazione verso la cascina</h3>
+            <p>Il varco nel recinto e il sentiero invaso dall’erba invitano all’esplorazione. L’edificio è isolato, povero e già riconquistato dalla vegetazione.</p>
+          </div>
+        </article>
+        <article class="reference-card">
+          <figure>
+            <img src="../cartella%20temporanea%20level%20design/S-08.png" alt="Cortile fangoso della cascina con pozzo e bambola di pezza abbandonata in primo piano">
+            <span class="map-badge">S-08 · cortile</span>
+          </figure>
+          <div class="reference-card-copy">
+            <h3>Pozzo e bambola</h3>
+            <p>Nel cortile il pozzo ancora leggibile e la bambola nel fango trasformano uno spazio rurale ordinario nella prima vera traccia della famiglia scomparsa.</p>
+          </div>
+        </article>
+      </div>
+      <div class="lore-feature">
+        <figure>
+          <img src="../cartella%20temporanea%20level%20design/S-09.png" alt="Segno apotropaico inciso a coltello sullo stipite ligneo della cascina abbandonata">
+          <span class="map-badge">S-09 · dettaglio ambientale</span>
+        </figure>
+        <aside class="lore-copy">
+          <span class="tag open">Lore ambientale</span>
+          <h3>Un tentativo di protezione</h3>
+          <p>Inciso sullo stipite da uno degli abitanti della cascina come gesto di protezione contro ciò che temeva potesse entrare. Non produce effetti soprannaturali visibili e non appartiene specificamente alla Borda: racconta la paura della famiglia e il tentativo, inutile, di difendere la casa.</p>
+          <span class="cite">La forma è una ricostruzione narrativa storicamente plausibile, non un simbolo romagnolo del XII secolo documentato con certezza.</span>
+        </aside>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section>
+      <div class="section-head">
+        <span class="section-kicker">05 — Materiali e atmosfera</span>
+        <h2>Come costruire il paesaggio</h2>
+      </div>
+      <div class="reference-grid wide">
+        <article class="reference-card">
+          <figure>
+            <img src="../cartella%20temporanea%20level%20design/M-05.png" alt="Vegetazione ripariale della pianura romagnola lungo il canale e il percorso sull’argine">
+            <span class="map-badge">M-05 · vegetazione</span>
+          </figure>
+          <div class="reference-card-copy">
+            <h3>Vegetazione ripariale</h3>
+            <p>La crescita si concentra lungo acqua, fossi e confini abbandonati: salici, pioppi, ontani, siepi, rovi, canne, carici e giunchi. Il percorso resta leggibile e la zona non è ancora un bosco.</p>
+          </div>
+        </article>
+        <article class="reference-card">
+          <figure>
+            <img src="../cartella%20temporanea%20level%20design/M-06.png" alt="Terreno alluvionale fangoso con solchi, pozzanghere, fosso di scolo e canale principale">
+            <span class="map-badge">M-06 · suolo</span>
+          </figure>
+          <div class="reference-card-copy">
+            <h3>Suolo e drenaggio</h3>
+            <p>Limo e argilla scuri, solchi pieni d’acqua e depressioni sature rendono percepibile l’umidità. Fossi superficiali convogliano l’acqua verso il canale senza trasformare il terreno in una palude impraticabile.</p>
+          </div>
+        </article>
+        <article class="reference-card">
+          <figure>
+            <img src="../cartella%20temporanea%20level%20design/M-07.png" alt="Progressione naturale della foschia lungo campi, sentiero e canale verso la Zona C">
+            <span class="map-badge">M-07 · nebbia</span>
+          </figure>
+          <div class="reference-card-copy">
+            <h3>Progressione della nebbia</h3>
+            <p>La visibilità diminuisce per profondità: aria più chiara in primo piano, veli bassi sull’acqua e foschia moderata sul fondo. Nessun muro artificiale separa le due zone.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section>
+      <div class="section-head">
+        <span class="section-kicker">06 — POV di navigazione</span>
+        <h2>Ciò che legge il giocatore</h2>
+      </div>
+      <div class="reference-grid wide">
+        <article class="reference-card">
+          <figure>
+            <img src="../cartella%20temporanea%20level%20design/POV-01.png" alt="Esplorazione in prima persona lungo il percorso principale accanto al canale">
+            <span class="map-badge">POV-01 · canale</span>
+          </figure>
+          <div class="reference-card-copy">
+            <h3>Esplorazione lungo il canale</h3>
+            <p>Il canale è l’ancora di orientamento costante. Il sentiero curva e si restringe localmente, ma continua a guidare il giocatore senza frecce, segnaletica o HUD.</p>
+          </div>
+        </article>
+        <article class="reference-card">
+          <figure>
+            <img src="../cartella%20temporanea%20level%20design/POV-02.png" alt="Bivio fra il percorso principale lungo il canale e la breve deviazione verso la cascina coerente con S-07">
+            <span class="map-badge">POV-02 · deviazione</span>
+          </figure>
+          <div class="reference-card-copy">
+            <h3>Deviazione verso la cascina</h3>
+            <p>Il percorso principale resta dominante; il ponte sul fosso, il varco nella siepe e la vista parziale della stessa cascina mostrata in S-07 rendono leggibile la deviazione opzionale.</p>
+          </div>
+        </article>
+        <article class="reference-card">
+          <figure>
+            <img src="../cartella%20temporanea%20level%20design/POV-03.png" alt="Sentiero che si restringe fra canale e vegetazione mentre si avvicina alla Zona C">
+            <span class="map-badge">POV-03 · uscita</span>
+          </figure>
+          <div class="reference-card-copy">
+            <h3>Uscita verso Zona C</h3>
+            <p>Vegetazione, umidità e occlusione aumentano gradualmente. È una soglia ambientale senza incontro o combattimento: il primo vero scontro appartiene alla Zona C.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section>
+      <div class="section-head">
+        <span class="section-kicker">07 — Sistemi ambientali</span>
+      </div>
+      <div class="systems">
+        <div class="system-panel">
+          <h3>Terreno e vegetazione</h3>
+          <div class="rows">
+            <div class="row"><b>Suolo</b><span>Limo e argilla alluvionale, scuri e umidi; solchi di carri, pozzanghere stagionali e depressioni sature.</span></div>
+            <div class="row"><b>Argini</b><span>Rialzi erbosi percorribili, abbastanza chiari da guidare senza frecce o HUD.</span></div>
+            <div class="row"><b>Acqua</b><span>Canale principale continuo, fossi secondari e acqua grigio-verde quasi ferma.</span></div>
+            <div class="row"><b>Vegetazione</b><span>Salici, pioppi, ontani, olmi, siepi native, rovi, canne, carici e giunchi.</span></div>
+          </div>
+        </div>
+        <div class="system-panel">
+          <h3>Regole di navigazione</h3>
+          <div class="rows">
+            <div class="row"><b>Asse principale</b><span>Strada leggibile da sud-ovest a nord-est, sempre in relazione visiva con il canale.</span></div>
+            <div class="row"><b>Deviazione</b><span>Un breve ramo conduce alla cascina e torna sul percorso senza creare un secondo itinerario concorrente.</span></div>
+            <div class="row"><b>Occlusione</b><span>Crescente ma controllata: prima siepi e filari, poi boscaglia umida e foschia.</span></div>
+            <div class="row"><b>Uscita</b><span>La soglia verso Zona C si riconosce dal cambio di suolo e densità, non da un portale artificiale.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section>
+      <div class="section-head">
+        <span class="section-kicker">08 — Palette della zona</span>
+      </div>
+      <div class="palette">
+        <div class="swatch"><div style="background:#3a3123"></div><span>Terra alluvionale</span></div>
+        <div class="swatch"><div style="background:#6d6748"></div><span>Erbe d’autunno</span></div>
+        <div class="swatch"><div style="background:#4f5b42"></div><span>Vegetazione ripariale</span></div>
+        <div class="swatch"><div style="background:#52696a"></div><span>Acqua ferma</span></div>
+        <div class="swatch"><div style="background:#92968c"></div><span>Foschia fredda</span></div>
+      </div>
+      <div class="note" style="margin-top:24px;">
+        <span class="tag open">Vincolo</span>
+        <span>Zona B deve apparire <strong>fertile, bassa e umida</strong>, non arida o stepposa. La vegetazione cresce soprattutto lungo canali, fossi, siepi e terreni abbandonati, ma non deve ancora raggiungere l’opacità della Zona C.</span>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section>
+      <div class="section-head">
+        <span class="section-kicker">09 — Da definire nel Level Design Document</span>
+      </div>
+      <div class="note">
+        <span class="tag open">Aperto</span>
+        <span>Dimensioni reali, durata dell’attraversamento, posizione esatta del cippo, ampiezza della deviazione per la cascina e numero definitivo dei passaggi sui fossi. Questa tavola fissa <strong>gerarchia, atmosfera e relazioni spaziali</strong>, non le misure di produzione.</span>
+      </div>
+    </section>
+
+    <footer>
+      <span class="cite">Tavola 2 di 4 · Zona B — Argini e canali</span>
+      <span class="cite">Rif. MAPPA_LIVELLO_BOZZA.md · set visivo completo approvato: P-02, V-02, S-06—S-09, M-05—M-07, POV-01—POV-03</span>
+    </footer>
+  </main>
+</body>
+</html>
