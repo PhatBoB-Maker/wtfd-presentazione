@@ -1328,11 +1328,6 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
         <div class="tcard-roles" data-k="team37_roles"></div>
         <span class="tcard-badge badge-on" data-k="badge_on"></span>
       </div>
-      <div class="tcard rv d2">
-        <div class="tcard-name">Emmanuel Sierra</div>
-        <div class="tcard-roles" data-k="team38_roles"></div>
-        <span class="tcard-badge badge-on" data-k="badge_on"></span>
-      </div>
     </div>
   </div>
 </section>
@@ -1386,6 +1381,176 @@ section { padding: var(--pad) clamp(32px, 6vw, 80px); }
   </div>
 </section>
 
+<!-- ============================================================
+     PRODUCTION PLAN CTA
+     ============================================================ -->
+<section id="production-plan" style="background: var(--bg2); padding-top: 80px; padding-bottom: 80px;">
+  <div class="inner" style="text-align: center;">
+    <span class="label rv" data-k="plan_label" style="display:block; margin-bottom: 16px;"></span>
+    <h2 class="rv d1" data-k="plan_title" style="margin-bottom: 20px; font-family: var(--serif);"></h2>
+    <p class="rv d2" data-k="plan_desc" style="color: var(--text-mid); font-size: 14px; max-width: 540px; margin: 0 auto 40px; line-height: 1.85;"></p>
+    <button class="rv d3" id="open-plan-btn" data-k="plan_btn" onclick="openPlanModal()" style="
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s;
+    "
+    onmouseover="this.style.background='var(--accent)'; this.style.color='#fff';"
+    onmouseout="this.style.background='transparent'; this.style.color='var(--text)';">
+    </button>
+  </div>
+</section>
+
+<!-- ============================================================
+     STORY READER CTA (SOLO INTERNO — non presente in external.html)
+     ============================================================ -->
+<section id="story-cta" style="background: var(--bg); padding-top: 80px; padding-bottom: 80px;">
+  <div class="inner" style="text-align: center;">
+    <span class="label rv" data-k="story_label" style="display:block; margin-bottom: 16px;"></span>
+    <h2 class="rv d1" data-k="story_title" style="margin-bottom: 20px; font-family: var(--serif);"></h2>
+    <p class="rv d2" data-k="story_desc" style="color: var(--text-mid); font-size: 14px; max-width: 540px; margin: 0 auto 40px; line-height: 1.85;"></p>
+    <a class="rv d3" href="storia-pubblica.html" data-k="story_btn" style="
+      display: inline-block;
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.25s, color 0.25s;
+    "
+    onmouseover="this.style.background='var(--accent)'; this.style.color='#fff';"
+    onmouseout="this.style.background='transparent'; this.style.color='var(--text)';">
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
+     VIDEO MODAL
+     ============================================================ -->
+<div id="plan-modal" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(4,3,2,0.92);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+">
+  <div style="
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+  ">
+    <!-- Close button -->
+    <button onclick="closePlanModal()" style="
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      width: 36px;
+      height: 36px;
+      background: var(--accent);
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 1;
+      line-height: 1;
+    ">×</button>
+
+    <!-- Header -->
+    <div style="padding: 28px 32px 20px; border-bottom: 1px solid var(--border);">
+      <span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mid);">Where the Fog Dies</span>
+      <div data-k="plan_modal_title" style="font-family: var(--serif); font-size: 22px; margin-top: 4px;"></div>
+    </div>
+
+    <!-- Video -->
+    <div style="background: #000; position: relative; z-index: 1;">
+      <video id="plan-video" style="width: 100%; display: block; max-height: 70vh; cursor: pointer; position: relative; z-index: 2;" controls preload="metadata">
+        <source src="assets/production_plan.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function() {
+  var bgWasPlaying = false;
+
+  // Traccia video per lingua: IT e EN sono due file separati in assets/
+  var PLAN_VIDEO = {
+    it: 'assets/production_plan_it.mp4',
+    en: 'assets/production_plan.mp4'
+  };
+
+  window.openPlanModal = function() {
+    var m = document.getElementById('plan-modal');
+    m.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+
+    // Pausa musica di sfondo
+    var bg = document.getElementById('bg-audio');
+    bgWasPlaying = bg && !bg.paused;
+    if (bg && !bg.paused) bg.pause();
+
+    // Scegli la traccia video in base alla lingua corrente del sito
+    var v = document.getElementById('plan-video');
+    var curLang = (typeof lang !== 'undefined') ? lang : 'it';
+    var wantedSrc = (curLang === 'en') ? PLAN_VIDEO.en : PLAN_VIDEO.it;
+    if (v.getAttribute('src') !== wantedSrc) {
+      v.setAttribute('src', wantedSrc);
+      v.load();
+    }
+
+  };
+
+  window.closePlanModal = function() {
+    var m = document.getElementById('plan-modal');
+    m.style.display = 'none';
+    document.body.style.overflow = '';
+
+    // Ferma video
+    var v = document.getElementById('plan-video');
+    v.pause();
+
+    // Riprendi musica di sfondo se era attiva
+    var bg = document.getElementById('bg-audio');
+    if (bg && bgWasPlaying) bg.play().catch(function(){});
+  };
+
+  // Chiudi cliccando sul backdrop (non sul contenuto)
+  document.getElementById('plan-modal').addEventListener('click', function(e) {
+    if (e.target === document.getElementById('plan-modal')) window.closePlanModal();
+  });
+
+  // Assicura che i click sul video non chiudano il modale
+  document.getElementById('plan-video').addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+
+  // ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') window.closePlanModal();
+  });
+})();
+</script>
 
 <!-- ============================================================
      JAVASCRIPT
@@ -1494,7 +1659,6 @@ const T = {
     team35_roles: "Concept Artist",
     team36_roles: "Material Artist",
     team37_roles: "Concept Artist",
-    team38_roles: "Animatore",
     badge_on:     "Confermato",
     badge_neg:    "In ingaggio",
 
@@ -1512,6 +1676,15 @@ const T = {
     cont_status_text:  "Pre-produzione avanzata. Storia madre completa (20 sezioni, 2 finali scritti). Game Design Document in avvio. Team parzialmente formato.",
     cont_seek_label:   "Quello che cerchiamo",
     cont_seek_text:    "Collaboratori con esperienza specifica e interesse genuino per un horror narrativo radicato nel folklore storico.",
+    plan_label:        "Piano di Produzione",
+    plan_title:        "Cos'è il Piano di Produzione?",
+    plan_desc:         "Una panoramica completa di come stiamo costruendo Where the Fog Dies — milestone, team, revenue share e tempistiche.",
+    plan_btn:          "▶ &nbsp; Guarda il Piano di Produzione",
+    plan_modal_title:  "Piano di Produzione",
+    story_label:       "Anteprima narrativa — uso interno",
+    story_title:       "Leggi la storia",
+    story_desc:        "Versione a pannelli + testo narrato, scena per scena. Non è la previz finale — è un modo veloce per vedere la storia com'è adesso.",
+    story_btn:         "📖 &nbsp; Leggi la storia",
   },
 
   en: {
@@ -1613,7 +1786,6 @@ const T = {
     team35_roles: "Concept Artist",
     team36_roles: "Material Artist",
     team37_roles: "Concept Artist",
-    team38_roles: "Animator",
     badge_on:     "Confirmed",
     badge_neg:    "In negotiation",
 
@@ -1631,6 +1803,15 @@ const T = {
     cont_status_text:  "Advanced pre-production. Narrative story complete (20 sections, 2 written endings). Game Design Document in progress. Team partially formed.",
     cont_seek_label:   "What we're looking for",
     cont_seek_text:    "Collaborators with specific experience and genuine interest in a narrative horror project rooted in historical folklore.",
+    plan_label:        "Production Plan",
+    plan_title:        "What's the Production Plan?",
+    plan_desc:         "A complete walkthrough of how we're building Where the Fog Dies — milestones, team, revenue share, and timeline.",
+    plan_btn:          "▶ &nbsp; Watch the Production Plan",
+    plan_modal_title:  "Production Plan",
+    story_label:       "Narrative preview — internal use",
+    story_title:       "Read the story",
+    story_desc:        "Panel + narrated text version, scene by scene. Not the final previz — a quick way to see the story as it stands now.",
+    story_btn:         "📖 &nbsp; Read the story",
   }
 };
 
