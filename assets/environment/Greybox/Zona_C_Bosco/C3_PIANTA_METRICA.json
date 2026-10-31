@@ -1,0 +1,1072 @@
+{
+  "title": "23/10/2026 [GPT] — C3, finestra della Borda e cippo successivo",
+  "status": "GREYBOX_APPROVATO_CONSOLIDATO",
+  "authority": {
+    "planning_authorized": true,
+    "metric_dimensions_approved": true,
+    "construction_authorized": true,
+    "B_C1_C2_approved": true,
+    "C2_approval": "APPROVAZIONE_C2.json",
+    "direction": "D-397 e ZONA_C_DOSSIER_GBX_LD01.md",
+    "scope": "Uscita Eremo, avvistamento distante, deviazione, tasca botanica e riserva cippo; strettoia, miniboss e post-scontro nel lotto seguente.",
+    "next_gate": "Prossimo lotto previsto C4: pianta metrica della strettoia e del primo miniboss della Scena 15, da valutare prima di costruire. Nessuna costruzione o avvio automatico C4.",
+    "approval_record": "APPROVAZIONE_C3.json",
+    "C3_built": true,
+    "C3_Play_approved": true,
+    "native_receipt": "Costruzione_C3/VERIFY.json"
+  },
+  "coordinates": {
+    "units": "metri locali Fossalta; X est, Y nord, Z alto",
+    "eye_height_m": 1.65,
+    "ue_native_cm": "(locale_m + [57.376,254.7,-98.961])*100",
+    "built_source": "Costruzione_C2/GROUND.json",
+    "built_source_sha256": "464ce26a01449950b5aab6dedbd95a5acaab2fccb91e318e36840ac160306dfd",
+    "proposed_Z_note": "H0/Q1/Q2/G0 interpolati sulla sorgente C2 salvata; le altre quote sono nuove proposte."
+  },
+  "nodes": {
+    "H0": {
+      "xyz_m": [
+        162,
+        460,
+        1.72
+      ],
+      "role": "Uscita esterna Eremo; raccordo C2 costruito",
+      "built_support": true
+    },
+    "Q1": {
+      "xyz_m": [
+        162,
+        475,
+        1.7169769553823822
+      ],
+      "role": "Riserva sul fianco ovest Eremo; suolo C2 salvato",
+      "built_support": true
+    },
+    "Q2": {
+      "xyz_m": [
+        154,
+        488,
+        1.75
+      ],
+      "role": "Ultima riserva C2; suolo salvato",
+      "built_support": true
+    },
+    "G0": {
+      "xyz_m": [
+        147,
+        504.42424242424244,
+        1.715184497291835
+      ],
+      "role": "Cucitura sul bordo obliquo C2, 33 × 4 m",
+      "built_support": true
+    },
+    "V0": {
+      "xyz_m": [
+        143,
+        512,
+        1.62
+      ],
+      "role": "Prima della finestra, visuale schermata",
+      "built_support": false
+    },
+    "V1": {
+      "xyz_m": [
+        137,
+        520,
+        1.58
+      ],
+      "role": "Finestra di avvistamento: tratto di osservazione",
+      "built_support": false
+    },
+    "F1": {
+      "xyz_m": [
+        123,
+        530,
+        1.65
+      ],
+      "role": "Scelta della deviazione e richiusura della visuale",
+      "built_support": false
+    },
+    "F2": {
+      "xyz_m": [
+        115,
+        545,
+        1.83
+      ],
+      "role": "Percorso sotto la siepe, Borda nuovamente schermata",
+      "built_support": false
+    },
+    "CP3": {
+      "xyz_m": [
+        122,
+        567,
+        2.08
+      ],
+      "role": "Riserva cippo successivo: funzione da definire",
+      "built_support": false
+    },
+    "N3": {
+      "xyz_m": [
+        116,
+        585,
+        1.93
+      ],
+      "role": "Fine C3, riserva verso strettoia del lotto successivo",
+      "built_support": false
+    },
+    "D1": {
+      "xyz_m": [
+        154,
+        534,
+        1.63
+      ],
+      "role": "Deviazione nel chiaro orientale",
+      "built_support": false
+    },
+    "D2": {
+      "xyz_m": [
+        159,
+        553,
+        1.78
+      ],
+      "role": "Raccordo della tasca e del percorso laterale",
+      "built_support": false
+    },
+    "D3": {
+      "xyz_m": [
+        147,
+        572,
+        1.98
+      ],
+      "role": "Rientro verso il cippo",
+      "built_support": false
+    },
+    "P3": {
+      "xyz_m": [
+        174,
+        566,
+        1.88
+      ],
+      "role": "Tasca botanica facoltativa, ritorno dalla stessa apertura",
+      "built_support": false
+    },
+    "K3": {
+      "xyz_m": [
+        120,
+        569,
+        2.08
+      ],
+      "role": "Raccordo dei sentieri a nord-ovest del cippo; correzione tecnica da capsula nativa, CP3 rimane fisso",
+      "built_support": false
+    }
+  },
+  "terrain": {
+    "polygon_xy_m": [
+      [
+        127,
+        502
+      ],
+      [
+        160,
+        506
+      ],
+      [
+        181,
+        525
+      ],
+      [
+        185,
+        552
+      ],
+      [
+        169,
+        580
+      ],
+      [
+        139,
+        597
+      ],
+      [
+        111.5,
+        597
+      ],
+      [
+        111.5,
+        540
+      ],
+      [
+        113,
+        522
+      ]
+    ],
+    "seam_xy_m": [
+      [
+        127,
+        502
+      ],
+      [
+        160,
+        506
+      ]
+    ],
+    "explorable": "Supporto continuo nella nuova impronta, eccetto acqua e masse vegetali; il tracciato orienta e lascia spalle. Nessun salto o guado necessario.",
+    "shoulder_target_m": [
+      5,
+      8
+    ],
+    "local_compression": "Lungo O8: cammino 3,2 m, almeno 1,4 m fra bordo del cammino e siepe sui campioni; spalla ovest ridotta, ampia apertura verso est. Nessuna promessa di spalle 5–8 m continue.",
+    "crossfall_target_percent": [
+      2,
+      4
+    ],
+    "preservation": "Nessuna modifica B/C1/C2 ora. Per costruire, aprire soltanto il varco nei margini C2 sul bordo obliquo e raccordare il nuovo sentiero nella riserva H0–Q1–Q2; non cambiare terreno, Eremo o popolamento C2.",
+    "before_build": "Query del fondale e dei margini realmente presenti; ritaglio della sola nuova impronta. Riusare il terreno C2 senza sovrapporre una lastra. Collaudo capsule e raccolte in fresh-load, Play a Roberto."
+  },
+  "routes": [
+    {
+      "id": "MAIN",
+      "name": "Eremo → finestra → cippo → fine C3",
+      "nodes": [
+        "H0",
+        "Q1",
+        "Q2",
+        "G0",
+        "V0",
+        "V1",
+        "F1",
+        "F2",
+        "K3",
+        "N3"
+      ],
+      "width_m": 3.2,
+      "curve_radius_target_min_m": 4,
+      "color": "#e2be78"
+    },
+    {
+      "id": "SIDE",
+      "name": "Deviazione e riconnessione",
+      "nodes": [
+        "F1",
+        "D1",
+        "D2",
+        "D3",
+        "K3"
+      ],
+      "width_m": 2.8,
+      "curve_radius_target_min_m": 4,
+      "color": "#79c6c6"
+    },
+    {
+      "id": "POCKET",
+      "name": "Tasca botanica laterale",
+      "nodes": [
+        "D2",
+        "P3"
+      ],
+      "width_m": 2.8,
+      "curve_radius_target_min_m": 4,
+      "color": "#afc483"
+    }
+  ],
+  "occluders": [
+    {
+      "id": "O7",
+      "name": "Siepe prima della finestra",
+      "polygon_xy_m": [
+        [
+          109,
+          510
+        ],
+        [
+          112,
+          510
+        ],
+        [
+          112,
+          531.25
+        ],
+        [
+          109,
+          531.25
+        ]
+      ],
+      "base_z_m": 1.5,
+      "height_m": 3.2
+    },
+    {
+      "id": "O8",
+      "name": "Siepe che richiude la visuale",
+      "polygon_xy_m": [
+        [
+          109,
+          536.25
+        ],
+        [
+          112,
+          536.25
+        ],
+        [
+          112,
+          600
+        ],
+        [
+          109,
+          600
+        ]
+      ],
+      "base_z_m": 1.5,
+      "height_m": 3.4
+    }
+  ],
+  "water": {
+    "polygon_xy_m": [
+      [
+        79,
+        532
+      ],
+      [
+        97,
+        520
+      ],
+      [
+        106,
+        522
+      ],
+      [
+        107,
+        552
+      ],
+      [
+        99,
+        569
+      ],
+      [
+        79,
+        566
+      ],
+      [
+        76,
+        546
+      ]
+    ],
+    "surface_z_m": 1.06,
+    "role": "Riserva palustre scenografica fra riva vicina e riva lontana; nessun attraversamento progettato, nessuna regola di morte inventata."
+  },
+  "damp_hollow": {
+    "center_xy_m": [
+      174,
+      548
+    ],
+    "radii_m": [
+      4,
+      6
+    ],
+    "bottom_z_m": 1.15,
+    "role": "Conca umida laterale per Animi, non asse di passaggio; bordo asciutto continuo."
+  },
+  "far_bank": {
+    "polygon_xy_m": [
+      [
+        59,
+        540
+      ],
+      [
+        78,
+        536
+      ],
+      [
+        81,
+        559
+      ],
+      [
+        67,
+        571
+      ],
+      [
+        57,
+        562
+      ]
+    ],
+    "z_m": 1.2,
+    "target_xyz_m": [
+      69,
+      553,
+      2.1
+    ],
+    "proxy_height_reference_m": 1.8,
+    "role": "Supporto scenografico distante, esterno al suolo percorribile C3; posizione e silhouette solo staging da approvare, non spawn di incontro né miniboss."
+  },
+  "views": [
+    {
+      "id": "V-A",
+      "from": "Q2",
+      "expect": "blocked"
+    },
+    {
+      "id": "V-B",
+      "from": "V0",
+      "expect": "blocked"
+    },
+    {
+      "id": "V-C",
+      "from": "V1",
+      "expect": "clear"
+    },
+    {
+      "id": "V-D",
+      "from": "F1",
+      "expect": "clear"
+    },
+    {
+      "id": "V-E",
+      "from": "F2",
+      "expect": "blocked"
+    }
+  ],
+  "staging": {
+    "distance_note": "Circa cento passi nel riferimento; 70–80 m come interpretazione metrica proposta, non conversione canonica.",
+    "window_width_m": 5.0,
+    "observation_nodes": [
+      "V0",
+      "V1",
+      "F1"
+    ],
+    "no_ordinary_encounters_near_window_m": 12,
+    "cippo_center_xy_m": [
+      122,
+      567
+    ],
+    "cippo_clear_radius_m": 18,
+    "cippo_reference_footprint_m": [
+      1,
+      1
+    ],
+    "cippo_height_reference_m": 1.4,
+    "cippo_function": "Solo riserva di posizionamento: recupero, respawn, interazione e regole non definiti qui.",
+    "fog_note": "Distanza e taglio della siepe non garantiscono il risultato percettivo. Borda distante, laterale, mai nitida; nebbia, luce, silhouette e trigger da approvare/provare più avanti."
+  },
+  "population": {
+    "plants": [
+      {
+        "id": "R01",
+        "species": "Piantaggine",
+        "xy_m": [
+          147.17,
+          510.25
+        ],
+        "habitat": "Margine erboso asciutto, presso alberi radi o bordo del passaggio"
+      },
+      {
+        "id": "R02",
+        "species": "Piantaggine",
+        "xy_m": [
+          154,
+          517
+        ],
+        "habitat": "Margine erboso asciutto, presso alberi radi o bordo del passaggio"
+      },
+      {
+        "id": "R03",
+        "species": "Piantaggine",
+        "xy_m": [
+          163,
+          522
+        ],
+        "habitat": "Margine erboso asciutto, presso alberi radi o bordo del passaggio"
+      },
+      {
+        "id": "R04",
+        "species": "Piantaggine",
+        "xy_m": [
+          176,
+          533
+        ],
+        "habitat": "Margine erboso asciutto, presso alberi radi o bordo del passaggio"
+      },
+      {
+        "id": "R05",
+        "species": "Piantaggine",
+        "xy_m": [
+          166,
+          541
+        ],
+        "habitat": "Margine erboso asciutto, presso alberi radi o bordo del passaggio"
+      },
+      {
+        "id": "R06",
+        "species": "Piantaggine",
+        "xy_m": [
+          145,
+          545
+        ],
+        "habitat": "Margine erboso asciutto, presso alberi radi o bordo del passaggio"
+      },
+      {
+        "id": "R07",
+        "species": "Piantaggine",
+        "xy_m": [
+          133,
+          552
+        ],
+        "habitat": "Margine erboso asciutto, presso alberi radi o bordo del passaggio"
+      },
+      {
+        "id": "R08",
+        "species": "Piantaggine",
+        "xy_m": [
+          165,
+          563
+        ],
+        "habitat": "Margine erboso asciutto, presso alberi radi o bordo del passaggio"
+      },
+      {
+        "id": "R09",
+        "species": "Piantaggine",
+        "xy_m": [
+          141,
+          581
+        ],
+        "habitat": "Margine erboso asciutto, presso alberi radi o bordo del passaggio"
+      },
+      {
+        "id": "R10",
+        "species": "Piantaggine",
+        "xy_m": [
+          129,
+          590
+        ],
+        "habitat": "Margine erboso asciutto, presso alberi radi o bordo del passaggio"
+      },
+      {
+        "id": "R11",
+        "species": "Piantaggine",
+        "xy_m": [
+          122,
+          591
+        ],
+        "habitat": "Margine erboso asciutto, presso alberi radi o bordo del passaggio"
+      },
+      {
+        "id": "R12",
+        "species": "Piantaggine",
+        "xy_m": [
+          120.9,
+          579.38
+        ],
+        "habitat": "Margine erboso asciutto, presso alberi radi o bordo del passaggio"
+      },
+      {
+        "id": "R13",
+        "species": "Achillea",
+        "xy_m": [
+          165,
+          513
+        ],
+        "habitat": "Piccolo chiaro asciutto e soleggiato, esterno alla conca umida"
+      },
+      {
+        "id": "R14",
+        "species": "Achillea",
+        "xy_m": [
+          177,
+          523
+        ],
+        "habitat": "Piccolo chiaro asciutto e soleggiato, esterno alla conca umida"
+      },
+      {
+        "id": "R15",
+        "species": "Achillea",
+        "xy_m": [
+          162,
+          537
+        ],
+        "habitat": "Piccolo chiaro asciutto e soleggiato, esterno alla conca umida"
+      },
+      {
+        "id": "R16",
+        "species": "Achillea",
+        "xy_m": [
+          138,
+          539
+        ],
+        "habitat": "Piccolo chiaro asciutto e soleggiato, esterno alla conca umida"
+      },
+      {
+        "id": "R17",
+        "species": "Achillea",
+        "xy_m": [
+          173,
+          559
+        ],
+        "habitat": "Piccolo chiaro asciutto e soleggiato, esterno alla conca umida"
+      },
+      {
+        "id": "R18",
+        "species": "Achillea",
+        "xy_m": [
+          151,
+          587
+        ],
+        "habitat": "Piccolo chiaro asciutto e soleggiato, esterno alla conca umida"
+      },
+      {
+        "id": "R19",
+        "species": "Achillea",
+        "xy_m": [
+          116.5,
+          590.02
+        ],
+        "habitat": "Piccolo chiaro asciutto e soleggiato, esterno alla conca umida"
+      },
+      {
+        "id": "R20",
+        "species": "Achillea",
+        "xy_m": [
+          133,
+          560
+        ],
+        "habitat": "Piccolo chiaro asciutto e soleggiato, esterno alla conca umida"
+      },
+      {
+        "id": "R21",
+        "species": "RovoBluastro",
+        "xy_m": [
+          128,
+          540
+        ],
+        "habitat": "Bordo di siepe o arbusto, esterno al cammino"
+      },
+      {
+        "id": "R22",
+        "species": "RovoBluastro",
+        "xy_m": [
+          148,
+          526
+        ],
+        "habitat": "Bordo di siepe o arbusto, esterno al cammino"
+      },
+      {
+        "id": "R23",
+        "species": "RovoBluastro",
+        "xy_m": [
+          180,
+          547
+        ],
+        "habitat": "Bordo di siepe o arbusto, esterno al cammino"
+      },
+      {
+        "id": "R24",
+        "species": "RovoBluastro",
+        "xy_m": [
+          160,
+          574
+        ],
+        "habitat": "Bordo di siepe o arbusto, esterno al cammino"
+      },
+      {
+        "id": "R25",
+        "species": "RovoBluastro",
+        "xy_m": [
+          133.78,
+          593.28
+        ],
+        "habitat": "Bordo di siepe o arbusto, esterno al cammino"
+      },
+      {
+        "id": "R26",
+        "species": "RosaCanina",
+        "xy_m": [
+          167,
+          532
+        ],
+        "habitat": "Margine arbustivo aperto; rami e foglie persistono dopo raccolta"
+      },
+      {
+        "id": "R27",
+        "species": "RosaCanina",
+        "xy_m": [
+          171,
+          571
+        ],
+        "habitat": "Margine arbustivo aperto; rami e foglie persistono dopo raccolta"
+      },
+      {
+        "id": "R28",
+        "species": "RosaCanina",
+        "xy_m": [
+          126.48,
+          579.77
+        ],
+        "habitat": "Margine arbustivo aperto; rami e foglie persistono dopo raccolta"
+      }
+    ],
+    "species_counts": {
+      "Piantaggine": 12,
+      "Achillea": 8,
+      "RovoBluastro": 5,
+      "RosaCanina": 3
+    },
+    "encounters": [
+      {
+        "id": "E1",
+        "xy_m": [
+          166,
+          528
+        ],
+        "space_m": [
+          10,
+          10
+        ],
+        "members": {
+          "STRAGOULE": 2
+        },
+        "pack": "P03",
+        "class_proposal": "medio",
+        "why": "Chiaro orientale: due pressioni frontali con uscita aperta verso la deviazione.",
+        "mandatory": false
+      },
+      {
+        "id": "E2",
+        "xy_m": [
+          174,
+          548
+        ],
+        "space_m": [
+          10,
+          14
+        ],
+        "members": {
+          "ANIMI": 1
+        },
+        "pack": "P02",
+        "class_proposal": "facile condizionale",
+        "why": "Conca umida laterale, senza guado richiesto; si può mantenere distanza sul percorso asciutto.",
+        "mandatory": false
+      },
+      {
+        "id": "E3",
+        "xy_m": [
+          143,
+          588
+        ],
+        "space_m": [
+          9,
+          9
+        ],
+        "members": {
+          "MAZAPEGULE": 1
+        },
+        "pack": "P08",
+        "class_proposal": "medio provvisorio",
+        "why": "Piccola variante ordinaria nel margine nord-est; possibilità di ritirarsi nel chiaro.",
+        "mandatory": false
+      },
+      {
+        "id": "E4",
+        "xy_m": [
+          170,
+          566
+        ],
+        "space_m": [
+          8,
+          8
+        ],
+        "members": {
+          "STRAGOULE": 1,
+          "BINN": 1
+        },
+        "pack": "P07",
+        "class_proposal": "difficile facoltativo",
+        "why": "Tasca orientale: pressione frontale e fianco combinati, lontano dal cippo e dal passaggio principale; si aggira restando sul ramo interno.",
+        "mandatory": false
+      },
+      {
+        "id": "E5",
+        "xy_m": [
+          137,
+          548
+        ],
+        "space_m": [
+          8,
+          10
+        ],
+        "members": {
+          "STRAGOULE": 1
+        },
+        "pack": "P01",
+        "class_proposal": "facile",
+        "why": "Singolo Stragoulè nella radura centrale indicata da Roberto, fra principale e deviazione. Posizione scostata dal punto botanico R07; si aggira da entrambi i lati sul suolo asciutto.",
+        "mandatory": false
+      }
+    ],
+    "weights_source": "../Incontri/CATALOGO_E_PROPOSTA_C1.json",
+    "weights_approved": false,
+    "encounter_activation_logic": "Ordinari aggirabili per distanza aggro. Le ellissi sono spazi di attività proposti, non raggi di aggro; copertura, leash e pattuglie da definire. Nessun blocco a uccisioni."
+  },
+  "trees": [
+    {
+      "id": "T1",
+      "xy_m": [
+        143,
+        547
+      ],
+      "trunk_radius_m": 0.4,
+      "height_m": 9
+    },
+    {
+      "id": "T2",
+      "xy_m": [
+        158,
+        519
+      ],
+      "trunk_radius_m": 0.4,
+      "height_m": 10
+    },
+    {
+      "id": "T3",
+      "xy_m": [
+        178,
+        540
+      ],
+      "trunk_radius_m": 0.4,
+      "height_m": 8
+    },
+    {
+      "id": "T4",
+      "xy_m": [
+        166,
+        570
+      ],
+      "trunk_radius_m": 0.4,
+      "height_m": 9
+    },
+    {
+      "id": "T5",
+      "xy_m": [
+        136,
+        583
+      ],
+      "trunk_radius_m": 0.4,
+      "height_m": 10
+    }
+  ],
+  "later": [
+    "strettoia fra argini e arena del miniboss",
+    "post-scontro Beatrice e Lampo",
+    "interno e dialogo Eremo",
+    "trigger avvistamento, AI, combat e aggro"
+  ],
+  "near_bank": {
+    "polygon_xy_m": [
+      [
+        107,
+        506
+      ],
+      [
+        122,
+        506
+      ],
+      [
+        114,
+        522
+      ],
+      [
+        113,
+        540
+      ],
+      [
+        113,
+        600
+      ],
+      [
+        107,
+        600
+      ]
+    ],
+    "role": "Supporto scenografico continuo per siepi O7/O8, raccordato al suolo vicino. Nel futuro terreno usare una sola superficie unita al bordo C3, senza lastre sovrapposte. Fuori dal cammino; contenimento naturale da verificare in costruzione.",
+    "base_z_m": 1.5
+  },
+  "story_correspondence": {
+    "macro_zone": "Zona C — Tavola 03: Bosco palustre ed Eremo",
+    "lot_numbering": "C1/C2/C3/C4 sono lotti interni di costruzione; la numerazione delle scene e quella delle tavole sono distinte.",
+    "current_C3_scene": "Scena 14 — L’oggetto della rabbia: primo avvistamento, dopo l’Eremo della Scena 13.",
+    "next_lot": "C4 previsto: strettoia, primo miniboss della Scena 15 — La Creatura e spazio post-scontro. Metriche e costruzione da progettare.",
+    "later_zone": "Zona D — Tavola 04: Sacello/Scena 16 e secondo avvistamento; Bastiano/Scena 17; Camposanto/Scena 18 e terzo avvistamento.",
+    "reference_codes": "Le sigle visive S-12/S-13 nell’atlante sono tenute distinte dal riferimento esplicito alle Scene 14/15 della storia.",
+    "ordinary_encounters_note": "I pack disegnati restano proposte di gameplay aggirabili. E1–E5 non rappresentano il miniboss narrativo della Scena 15.",
+    "alignment_record": "C3_ALLINEAMENTO_STORIA.json"
+  },
+  "construction_adjustments": [
+    {
+      "source": "Costruzione_C3/APPLY_1_STOP.json",
+      "reason": "La capsula collide con il cippo quando il percorso attraversa il suo centro.",
+      "fixed_cippo_xyz_m": [
+        122,
+        567,
+        2.08
+      ],
+      "new_path_node": "K3",
+      "new_path_xyz_m": [
+        120,
+        569,
+        2.08
+      ],
+      "C2_unchanged": true,
+      "scope": "Raccordo locale del principale e della deviazione attorno al volume fisico; nessuna nuova zona, specie o evento."
+    }
+  ],
+  "sightline_cover_revision": {
+    "title": "23/10/2026 [GPT] — Scorcio ampliato e riparo naturale",
+    "plan": "C3_Scorcio_01/PLAN.json",
+    "native_receipt": "C3_Scorcio_01/VERIFY.json",
+    "window_width_m": 5.0,
+    "exposed_height_range_m": [
+      1.16,
+      1.4500000000000002
+    ],
+    "rocks": [
+      {
+        "id": "Affioramento 00",
+        "mesh": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/bel_rock_00",
+        "xy_m": [
+          112.15,
+          522.9
+        ],
+        "dims_m": [
+          2.5,
+          3.2,
+          1.7
+        ],
+        "base_z_m": 1.280122024287242,
+        "yaw": -17,
+        "exposed_height_m": 1.3199999999999998,
+        "material": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/Materials/M_Rock"
+      },
+      {
+        "id": "Affioramento 01",
+        "mesh": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/bel_rock_00",
+        "xy_m": [
+          112.5,
+          525.2
+        ],
+        "dims_m": [
+          2.2,
+          3.6,
+          1.8
+        ],
+        "base_z_m": 1.3123522608188467,
+        "yaw": 19,
+        "exposed_height_m": 1.4500000000000002,
+        "material": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/Materials/M_Rock"
+      },
+      {
+        "id": "Affioramento 02",
+        "mesh": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/bel_rock_00",
+        "xy_m": [
+          111.8,
+          527.7
+        ],
+        "dims_m": [
+          2.7,
+          3.2,
+          1.65
+        ],
+        "base_z_m": 1.3694290491769388,
+        "yaw": -31,
+        "exposed_height_m": 1.3499999999999999,
+        "material": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/Materials/M_Rock"
+      },
+      {
+        "id": "Affioramento 03",
+        "mesh": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/bel_rock_00",
+        "xy_m": [
+          112.1,
+          530.0
+        ],
+        "dims_m": [
+          2.3,
+          3.2,
+          1.6
+        ],
+        "base_z_m": 1.3817531474786493,
+        "yaw": 11,
+        "exposed_height_m": 1.3,
+        "material": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/Materials/M_Rock"
+      },
+      {
+        "id": "Affioramento 04",
+        "mesh": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/bel_rock_00",
+        "xy_m": [
+          111.2,
+          532.2
+        ],
+        "dims_m": [
+          2.4,
+          3.2,
+          1.5
+        ],
+        "base_z_m": 1.2429678559764803,
+        "yaw": -24,
+        "exposed_height_m": 1.16,
+        "material": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/Materials/M_Rock"
+      },
+      {
+        "id": "Affioramento 05",
+        "mesh": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/bel_rock_00",
+        "xy_m": [
+          111.6,
+          534.4
+        ],
+        "dims_m": [
+          2.6,
+          3.1,
+          1.5
+        ],
+        "base_z_m": 1.40771229114667,
+        "yaw": 26,
+        "exposed_height_m": 1.18,
+        "material": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/Materials/M_Rock"
+      },
+      {
+        "id": "Affioramento 06",
+        "mesh": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/bel_rock_00",
+        "xy_m": [
+          110.8,
+          536.7
+        ],
+        "dims_m": [
+          2.8,
+          3.5,
+          1.8
+        ],
+        "base_z_m": 1.15,
+        "yaw": -12,
+        "exposed_height_m": 1.4500000000000002,
+        "material": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/Materials/M_Rock"
+      },
+      {
+        "id": "Affioramento 07",
+        "mesh": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/bel_rock_00",
+        "xy_m": [
+          111.2,
+          539.0
+        ],
+        "dims_m": [
+          2.5,
+          3.4,
+          1.7
+        ],
+        "base_z_m": 1.3136798086846133,
+        "yaw": 33,
+        "exposed_height_m": 1.4,
+        "material": "/Game/Developers/Roberto/Greybox_WTFD/Belvedere_GateB01/Materials/M_Rock"
+      }
+    ],
+    "environment_note": "Riparo naturale irregolare: riva erosa, radici e affioramenti integrati con un cespuglio spoglio come nella Scena 14. Forma, geologia, vegetazione e materiali definitivi da concordare con Environment; queste sono masse greybox.",
+    "view_change": "L’apertura ampliata mantiene la visuale anche da F1; a F2 torna schermata. Posizione della Borda invariata.",
+    "no_crouch_stealth_AI_added": true,
+    "Play_pending_Roberto": false,
+    "approved_by_Roberto": true,
+    "approval_record": "APPROVAZIONE_C3.json"
+  }
+}

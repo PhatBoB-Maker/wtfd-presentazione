@@ -1,0 +1,629 @@
+{
+  "title": "23/10/2026 [GPT] — C1, pianta metrica proposta",
+  "status": "METRIC_PLAN_APPROVED_BUILD_AUTHORIZED",
+  "authority": {
+    "scope_approved": true,
+    "direction_approved": "D-397: due bordi esplorabili attorno a una depressione, riconnessione e successivo approccio occultato all'Eremo",
+    "metric_dimensions_approved": true,
+    "construction_authorized": true,
+    "next_gate": "Costruzione background nella Master; Play unitario dal cippo affidato a Roberto",
+    "approval_date": "2026-10-23"
+  },
+  "coordinates": {
+    "units": "metri locali Fossalta; X est, Y nord, Z alto",
+    "north_up": true,
+    "ue_native_cm": "(locale_m + [57.376,254.7,-98.961]) * 100",
+    "datum_ground_local_z_m": 0.322935,
+    "datum_role": "Quota B al punto A0, ricostruita offline da sorgente mesh e confrontata con query native salvate; non nuova misura Unreal",
+    "proposed_route_z": "datum_ground_local_z_m + dz_m; tutti i dz sono nuove quote di progetto da approvare"
+  },
+  "anchor": {
+    "id": "A0",
+    "xyz_local_m": [
+      163,
+      230,
+      0.322935
+    ],
+    "existing_trail_width_m": 3,
+    "last_existing_segment_xy_m": [
+      [
+        154,
+        210
+      ],
+      [
+        163,
+        230
+      ]
+    ],
+    "heading_degrees_east_of_north": 24.227745,
+    "cap_local_y_m": 238,
+    "projected_crossing_xy_m": [
+      166.6,
+      238
+    ],
+    "projected_crossing_ground_z_m": 0.318502,
+    "evidence": "C1_RACCORDO_EVIDENZE.json"
+  },
+  "terrain": {
+    "new_support_envelope_xy_m": [
+      [
+        154,
+        238
+      ],
+      [
+        182,
+        238
+      ],
+      [
+        194,
+        245
+      ],
+      [
+        222,
+        259
+      ],
+      [
+        239,
+        283
+      ],
+      [
+        243,
+        316
+      ],
+      [
+        235,
+        348
+      ],
+      [
+        214,
+        366
+      ],
+      [
+        198,
+        380
+      ],
+      [
+        155,
+        380
+      ],
+      [
+        127,
+        366
+      ],
+      [
+        106,
+        343
+      ],
+      [
+        99,
+        315
+      ],
+      [
+        103,
+        282
+      ],
+      [
+        124,
+        252
+      ],
+      [
+        150,
+        243
+      ]
+    ],
+    "overall_reference_bounds_m": {
+      "x": [
+        99,
+        243
+      ],
+      "y": [
+        230,
+        380
+      ]
+    },
+    "new_support_bounds_m": {
+      "x": [
+        99,
+        243
+      ],
+      "y": [
+        238,
+        380
+      ]
+    },
+    "surface_rule": "Supporto continuo su tutto il poligono, incluse spalle esplorabili e fondo della depressione. I sentieri non sono strisce sospese separate.",
+    "preserve_existing": "Congelare la Zona B approvata fino al cap Y238 incluso e tutti gli asset storici originali; raccordo verificabile lungo il solo confine futuro C.",
+    "existing_tail": {
+      "current_support_ends_at_local_y_m": 261.3,
+      "native_samples_reconstructed_offline": [
+        {
+          "xy_m": [
+            172,
+            250
+          ],
+          "ground_z_m": 0.3382
+        },
+        {
+          "y_m": 252,
+          "ground_z_m": 1.3075
+        },
+        {
+          "y_m": 260,
+          "ground_z_m": 3.1682
+        }
+      ],
+      "intervention_required": "Raccordare o sostituire soltanto la coda tecnica oltre Y238 con terreno di progetto C, preservando il bordo e la geometria B; niente lastra bassa sovrapposta sotto la rampa esistente.",
+      "implementation_not_yet_selected": "Prima di costruire scegliere il metodo su asset privato nuovo/derivato e verificare che la modifica resti nella coda C; non riscrivere l'asset originale condiviso. Nessuna modifica eseguita ora."
+    },
+    "walking_crossfall_target_percent": [
+      2,
+      4
+    ],
+    "explorable_shoulder_slope_target_max_percent": 18,
+    "no_required_jumps": true,
+    "outer_limits": "Margini a masse vegetali, ristagni e dossi leggibili. Cap provvisorio solo al limite del lotto, lontano dai sentieri; nessun recinto attorno al chiaro o ai singoli rami."
+  },
+  "nodes": {
+    "A0": {
+      "xy_m": [
+        163,
+        230
+      ],
+      "dz_m": 0,
+      "role": "Raccordo B esistente, geometria da conservare"
+    },
+    "A_CAP": {
+      "xy_m": [
+        166.6,
+        238
+      ],
+      "dz_m": -0.004433,
+      "role": "Bordo tecnico esistente, quota di contatto da conservare; nessun gradino al nuovo terreno C"
+    },
+    "A1": {
+      "xy_m": [
+        167.5,
+        240
+      ],
+      "dz_m": 0.05,
+      "role": "Ingresso C oltre il cap"
+    },
+    "A2": {
+      "xy_m": [
+        171,
+        250
+      ],
+      "dz_m": 0.15,
+      "role": "Curva di avvicinamento"
+    },
+    "S": {
+      "xy_m": [
+        168,
+        263
+      ],
+      "dz_m": 0.3,
+      "role": "Apertura e scelta dei due bordi"
+    },
+    "W1": {
+      "xy_m": [
+        150,
+        270
+      ],
+      "dz_m": 0.55,
+      "role": "Bordo asciutto"
+    },
+    "W2": {
+      "xy_m": [
+        128,
+        285
+      ],
+      "dz_m": 1.15,
+      "role": "Spalla esplorabile asciutta"
+    },
+    "W3": {
+      "xy_m": [
+        123,
+        310
+      ],
+      "dz_m": 1.6,
+      "role": "Dosso e punto più alto del tracciato"
+    },
+    "W4": {
+      "xy_m": [
+        133,
+        335
+      ],
+      "dz_m": 1.4,
+      "role": "Uscita dal dosso"
+    },
+    "W5": {
+      "xy_m": [
+        150,
+        351
+      ],
+      "dz_m": 1.0,
+      "role": "Ritorno verso la riconnessione"
+    },
+    "M1": {
+      "xy_m": [
+        187,
+        270
+      ],
+      "dz_m": 0.25,
+      "role": "Bordo umido"
+    },
+    "M2": {
+      "xy_m": [
+        208,
+        287
+      ],
+      "dz_m": 0.2,
+      "role": "Affaccio breve sull'acqua"
+    },
+    "M3": {
+      "xy_m": [
+        216,
+        309
+      ],
+      "dz_m": 0.25,
+      "role": "Spalla palustre percorribile"
+    },
+    "M4": {
+      "xy_m": [
+        207,
+        333
+      ],
+      "dz_m": 0.4,
+      "role": "Risalita dal margine umido"
+    },
+    "M5": {
+      "xy_m": [
+        190,
+        348
+      ],
+      "dz_m": 0.55,
+      "role": "Convergenza dei bordi"
+    },
+    "R": {
+      "xy_m": [
+        174,
+        354
+      ],
+      "dz_m": 0.65,
+      "role": "Riconnessione in spazio aperto"
+    },
+    "N1": {
+      "xy_m": [
+        173,
+        365
+      ],
+      "dz_m": 0.85,
+      "role": "Curva verso l'approccio successivo"
+    },
+    "N2": {
+      "xy_m": [
+        164,
+        374
+      ],
+      "dz_m": 0.9,
+      "role": "Fine C1; continuità futura da sviluppare"
+    }
+  },
+  "routes": [
+    {
+      "id": "INGRESSO",
+      "name": "Raccordo e soglia",
+      "nodes": [
+        "A0",
+        "A_CAP",
+        "A1",
+        "A2",
+        "S"
+      ],
+      "width_m": 3,
+      "color": "#e1bc70",
+      "surface": "terra continua, raccordata al sentiero B; tratto A0–A_CAP esistente conservato, nuovo terreno solo oltre il cap",
+      "minimum_final_curve_radius_m": 6
+    },
+    {
+      "id": "ASCIUTTO",
+      "name": "Bordo asciutto ovest",
+      "nodes": [
+        "S",
+        "W1",
+        "W2",
+        "W3",
+        "W4",
+        "W5",
+        "R"
+      ],
+      "width_m": 3.5,
+      "color": "#d7b775",
+      "surface": "terra battuta e dosso erboso",
+      "explorable_shoulders_target_m": [
+        6,
+        10
+      ],
+      "minimum_final_curve_radius_m": 6
+    },
+    {
+      "id": "UMIDO",
+      "name": "Bordo umido est",
+      "nodes": [
+        "S",
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5",
+        "R"
+      ],
+      "width_m": 3,
+      "color": "#7bbfc0",
+      "surface": "suolo umido portante; niente tratto obbligatorio in acqua",
+      "explorable_shoulders_target_m": [
+        5,
+        8
+      ],
+      "minimum_final_curve_radius_m": 6
+    },
+    {
+      "id": "USCITA",
+      "name": "Riconnessione e curva finale",
+      "nodes": [
+        "R",
+        "N1",
+        "N2"
+      ],
+      "width_m": 3,
+      "color": "#e1bc70",
+      "surface": "terra continua, spalle libere e riserva per il lotto successivo",
+      "minimum_final_curve_radius_m": 6
+    }
+  ],
+  "basin": {
+    "id": "CHIARO_01",
+    "shoreline_xy_m": [
+      [
+        153,
+        280
+      ],
+      [
+        172,
+        277
+      ],
+      [
+        190,
+        286
+      ],
+      [
+        196,
+        302
+      ],
+      [
+        191,
+        322
+      ],
+      [
+        181,
+        335
+      ],
+      [
+        161,
+        334
+      ],
+      [
+        147,
+        325
+      ],
+      [
+        144,
+        307
+      ],
+      [
+        148,
+        290
+      ]
+    ],
+    "water_dz_m": -0.1,
+    "bottom_dz_m": -0.4,
+    "shore_ground_dz_m": 0.05,
+    "maximum_proposed_water_depth_m": 0.3,
+    "visual_only_water": true,
+    "interpretation": "Depressione con fondo solido continuo e acqua greybox; non introduce nuoto, danno, fango rallentante o altre meccaniche. I rami obbligatori rimangono fuori acqua.",
+    "vegetated_islands": "Le masse O1 e O2 hanno appoggio emergente proprio e interrompono la superficie d'acqua, senza sovrapporre acqua ai loro dossi."
+  },
+  "occluders": [
+    {
+      "id": "O1",
+      "name": "Massa all'ingresso del chiaro",
+      "polygon_xy_m": [
+        [
+          152,
+          279
+        ],
+        [
+          178,
+          279
+        ],
+        [
+          179,
+          288
+        ],
+        [
+          157,
+          290
+        ]
+      ],
+      "base_dz_m": 0.3,
+      "height_m": 2.8,
+      "type": "arbusti/canne su dosso, chioma irregolare; arretrata per lasciare almeno 6m di spalla interna al ramo asciutto presso W1"
+    },
+    {
+      "id": "O2",
+      "name": "Massa sul bordo interno ovest",
+      "polygon_xy_m": [
+        [
+          146,
+          319
+        ],
+        [
+          162,
+          319
+        ],
+        [
+          162,
+          331
+        ],
+        [
+          148,
+          333
+        ]
+      ],
+      "base_dz_m": 0.35,
+      "height_m": 2.8,
+      "type": "isola vegetata di margine"
+    },
+    {
+      "id": "O3",
+      "name": "Schermo finale con uscita a ovest",
+      "polygon_xy_m": [
+        [
+          168,
+          374
+        ],
+        [
+          193,
+          374
+        ],
+        [
+          193,
+          379
+        ],
+        [
+          168,
+          379
+        ]
+      ],
+      "base_dz_m": 0.8,
+      "height_m": 3.2,
+      "type": "bosco e sottobosco sul margine del lotto"
+    }
+  ],
+  "sightlines": {
+    "eye_height_assumption_m": 1.65,
+    "assumption": "Altezza convenzionale per il progetto; non misura della camera BP_Hero. Linee geometriche su volumi pieni di progetto, non verifica in Unreal o della resa della vegetazione.",
+    "lines": [
+      {
+        "id": "V1",
+        "from_node": "A1",
+        "to_node": "S",
+        "from_height_m": 1.65,
+        "to_height_m": 1.65,
+        "desired": "CLEAR",
+        "purpose": "Vedere l'apertura e il punto di scelta, senza leggere subito tutto il chiaro"
+      },
+      {
+        "id": "V2",
+        "from_node": "W2",
+        "to_node": "R",
+        "from_height_m": 1.65,
+        "to_height_m": 1.65,
+        "desired": "OCCLUDED",
+        "purpose": "La massa O2 interrompe la diagonale lunga verso la riconnessione; il bordo ovest resta da esplorare"
+      },
+      {
+        "id": "V3",
+        "from_node": "M2",
+        "to_xy_m": [
+          194,
+          312
+        ],
+        "to_ground_dz_m": 0.1,
+        "from_height_m": 1.65,
+        "to_height_m": 2.6,
+        "desired": "CLEAR",
+        "purpose": "Landmark naturale vicino, tronco biforcuto sul margine dell'acqua, orientamento senza waypoint"
+      },
+      {
+        "id": "V4",
+        "from_node": "R",
+        "to_xy_m": [
+          190,
+          405
+        ],
+        "to_ground_dz_m": 0.9,
+        "from_height_m": 1.65,
+        "to_height_m": 1.65,
+        "desired": "OCCLUDED",
+        "purpose": "Controllare la diagonale diretta oltre lotto con O3. Il punto test non assegna la posizione dell'Eremo"
+      }
+    ],
+    "fog": "Mantenere la prova nebbia esistente, con N disattivabile. Le visuali si controllano geometricamente senza affidarsi alla nebbia per nascondere Eremo o bordi; attenuazione e atmosfera da verificare poi con Roberto.",
+    "eremo": "Edificio e luce dell'Eremo non collocati in C1; conservare la curva finale e una riserva per un approccio occultato nel lotto successivo."
+  },
+  "cross_section": {
+    "id": "SEZIONE_A_A",
+    "local_y_m": 307,
+    "xz_relative_m": [
+      [
+        100,
+        0.7
+      ],
+      [
+        112,
+        1.0
+      ],
+      [
+        123,
+        1.6
+      ],
+      [
+        134,
+        1.4
+      ],
+      [
+        144,
+        0.05
+      ],
+      [
+        152,
+        -0.4
+      ],
+      [
+        188,
+        -0.4
+      ],
+      [
+        196,
+        0.05
+      ],
+      [
+        207,
+        0.25
+      ],
+      [
+        216,
+        0.25
+      ],
+      [
+        228,
+        0.5
+      ],
+      [
+        242,
+        0.75
+      ]
+    ],
+    "interpretation": "Profilo trasversale indicativo del terreno da modellare a Y307; non campionamento della mappa esistente. I dossi O1/O2 sono in altre sezioni."
+  },
+  "verification_scope": {
+    "planar_geometry_only": true,
+    "route_lengths": "Polilinee di progetto; arrotondamenti e raccordi finali possono modificarle leggermente",
+    "walk_time": "Eventuali tempi aritmetici sono solo cammino ideale; nessun tempo giocato o durata di combattimento certificati",
+    "unreal_started": false,
+    "new_play_or_capture": false,
+    "existing_map_mutated": false,
+    "enemy_resource_story_assignment": "Nessuna nuova quantità/specie, indizio, dialogo o interazione assegnata da questa pianta"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "title": "23/10/2026 [GPT] — Provenienza riferimenti Zona B",
+  "files": [
+    {
+      "file": "media/LAYOUT_ORIGINALE.png",
+      "source": "Sviluppo/Greybox/Zona_B_Argini/G1_PIANTA_ZONA_B.png",
+      "operation": "copia originale senza modifica",
+      "role": "Pianta originale del layout; i contenuti successivi e le misure costruite sono nel manuale e nei CSV correnti."
+    },
+    {
+      "file": "media/CONTESTO_ORIGINALE.png",
+      "source": "Sviluppo/Greybox/Zona_B_Argini/G1_CONTESTO_LIVELLO.png",
+      "operation": "copia originale senza modifica",
+      "role": "Contesto di Belvedere, discesa e Fossalta; quote non rappresentate in pianta."
+    },
+    {
+      "file": "riferimenti/T02_01.jpg",
+      "source": "Sviluppo/Greybox/Reference_Atlante_LD/T02_01.jpg",
+      "operation": "copia originale senza modifica",
+      "role": "Relazioni spaziali tra canale, ponte, percorso e cascina; non scala da trasferire alla mappa."
+    },
+    {
+      "file": "riferimenti/T02_02.jpg",
+      "source": "Sviluppo/Greybox/Reference_Atlante_LD/T02_02.jpg",
+      "operation": "copia originale senza modifica",
+      "role": "Atmosfera di pianura umida, vegetazione ripariale e cascina appartata."
+    }
+  ],
+  "data_sources": [
+    "Sviluppo/Greybox/Zona_B_Argini/G1_PIANTA_DATI.json",
+    "Sviluppo/Greybox/Zona_B_Argini/G2_Tutorial/APPLY.json",
+    "Sviluppo/Greybox/Zona_B_Argini/G4_Ponte_Tutorial/APPLY.json",
+    "Sviluppo/Greybox/Zona_B_Argini/G11_Completamento/APPLY.json",
+    "Sviluppo/Greybox/Zona_B_Argini/G12_Correzioni/APPLY.json",
+    "Sviluppo/Greybox/Zona_B_Argini/G13_Popolamento/APPLY.json",
+    "Sviluppo/Greybox/Zona_B_Argini/G15_E03_Misto/APPLY.json"
+  ],
+  "source_roles": "G1 conserva il layout; dati costruiti e override derivano dai successivi file locali. Le due falde primitive G11 e i Mazapégul ordinari G13 sono superati, non esportati nel dato corrente."
+}

@@ -1,0 +1,22 @@
+﻿ID;Destinazione;Centro_X_m;Centro_Y_m;Pareti_W_m;Pareti_D_m;Altezza_totale_m;Accesso;Note_costruzione
+CHURCH;CHIESA;-18;42;12;8;7;Interno percorribile;
+CHIEF_HOME;CASA CAPOVILLAGGIO;38;-31;9;7;4;Interno percorribile;Il portico fa parte della casa del capovillaggio: 9 x 2 x 3 m.
+FORGE;FUCINA DEL FABBRO;-58;6;8;6;3.5;Tettoia aperta;"Forgia con braci statiche e luce calda locale; nessuna simulazione."
+HOME_RINALDO;CASA RINALDO E BEATRICE;48;35;7;5;3.5;Interno percorribile;
+BARN_W;FIENILE OVEST;-77.5;-23.5;10;7;4;"Edificio chiuso; accesso esterno";
+BARN_N;FIENILE NORD;12;47.5;10;7;4;"Edificio chiuso; accesso esterno";
+H1;CASA 01;-31;-24.5;6;4;3.5;"Edificio chiuso; accesso esterno";
+H2;CASA DEL VENDITORE DI CESTE;-9;-32;6;4;3.5;"Edificio chiuso; accesso esterno";"Vendita di ceste; non laboratorio di produzione attestato."
+H3;CASA DEL MEDICO;15.5;-26.5;6;4;3.5;Interno percorribile;"Casa del medico; distinta da Rinaldo e Beatrice."
+H4;CASA DEL FORNAIO;22;28;6;4;3.5;"Edificio chiuso; accesso esterno";"Casa chiusa; forno accessibile nella corte, sotto annesso est."
+H5;CASA DEL PARROCO;-1;43.5;6;4;3.5;"Edificio chiuso; accesso esterno";"Abitazione del parroco; distinta dalla chiesa."
+H6;CASA 06;-69;20;6;4;3.5;"Edificio chiuso; accesso esterno";
+H7;CASA 07;-85.5;0;6;4;3.5;"Edificio chiuso; accesso esterno";
+H8;CASA 08;-70;38;6;4;3.5;"Edificio chiuso; accesso esterno";
+H9;CASA 09;-45.5;42;6;4;3.5;"Edificio chiuso; accesso esterno";
+H10;CASA 10;-43;-48;6;4;3.5;"Edificio chiuso; accesso esterno";
+H11;CASA 11;-8;-49;6;4;3.5;"Edificio chiuso; accesso esterno";
+H12;CASA 12;26.5;-44.5;6;4;3.5;"Edificio chiuso; accesso esterno";
+H13;CASA E BOTTEGA DEL VASAIO;64.5;7.5;6;4;3.5;"Edificio chiuso; accesso esterno";"Casa chiusa; banco, tettoia e fornace nella corte esterna."
+H14;CASA DEL MUGNAIO;64;33;6;4;3.5;"Edificio chiuso; accesso esterno";"Abitazione del mugnaio; distinta dal mulino tecnico sul canale."
+MILL;MULINO TECNICO;117.1;20;6;4;3.5;"Corpo chiuso; ruota e argine esterni";"Ruota diametro 3 m; fondazione 6 x 4 m, profonda 2.2 m sotto la base."

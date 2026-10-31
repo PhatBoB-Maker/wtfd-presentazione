@@ -1,0 +1,1063 @@
+{
+  "title": "23/10/2026 [GPT] — Zona B, dati Environment consolidati",
+  "units": "metri locali Fossalta; +X est, +Y nord, +Z alto",
+  "ue_cm_conversion": {
+    "formula": "(locale_m + offset_m) * 100",
+    "offset_m": [
+      57.376,
+      254.7,
+      -98.961
+    ]
+  },
+  "working_map": "/Game/Developers/Roberto/Greybox_WTFD/Maps/L_Greybox_Master",
+  "authority": "La mappa salvata conserva trasformazioni, quote e collisioni puntuali. I CSV distinguono asse LD e segmenti costruiti.",
+  "routes": {
+    "main_axis_local_m": [
+      [
+        108,
+        -2
+      ],
+      [
+        111.93335527903955,
+        -2
+      ],
+      [
+        111.69940793393347,
+        6
+      ],
+      [
+        112.08412751346297,
+        18
+      ],
+      [
+        112.14493454529253,
+        20
+      ],
+      [
+        112.2044678420303,
+        22
+      ],
+      [
+        112.47901398918249,
+        32
+      ],
+      [
+        112.76220647721185,
+        45
+      ],
+      [
+        112.92082728901691,
+        56
+      ],
+      [
+        112.97817459498269,
+        63
+      ],
+      [
+        112.99311193662764,
+        75
+      ],
+      [
+        114.99311193662764,
+        75
+      ],
+      [
+        129.99311193662766,
+        75
+      ],
+      [
+        131.99311193662766,
+        75
+      ],
+      [
+        131.8639461402385,
+        90
+      ],
+      [
+        131.5846288226075,
+        105
+      ],
+      [
+        130.87503414444504,
+        130
+      ],
+      [
+        130.2141480556868,
+        150
+      ],
+      [
+        129.60880318873737,
+        170
+      ],
+      [
+        140,
+        190
+      ],
+      [
+        154,
+        210
+      ],
+      [
+        163,
+        230
+      ]
+    ],
+    "main_axis_xy_length_m": 263.8694588850653,
+    "farm_branch_local_m": [
+      [
+        131.5846288226075,
+        105
+      ],
+      [
+        143,
+        105
+      ],
+      [
+        154,
+        110
+      ],
+      [
+        163,
+        117
+      ],
+      [
+        168,
+        120
+      ],
+      [
+        172,
+        125
+      ]
+    ],
+    "farm_branch_length_m": 47.1342475342566,
+    "surface_widths_m": {
+      "cippo": 2.5,
+      "post_bridge": 2.4,
+      "north_main": 3.0,
+      "farm_branch": 2.8
+    },
+    "surface_strips": "ZONA_B_SEGMENTI_COSTRUITI.csv"
+  },
+  "bridge": {
+    "center_xy_local_m": [
+      122.49311193662764,
+      75
+    ],
+    "deck_length_m": 15,
+    "deck_clear_width_m": 3,
+    "deck_top_z_local_m": 0.55,
+    "deck_thickness_m": 0.24,
+    "railing_height_from_deck_m": 1.1,
+    "abutments_size_xy_m": [
+      1.8,
+      3
+    ]
+  },
+  "farm": {
+    "court_xy_bounds_m": [
+      [
+        156,
+        109
+      ],
+      [
+        184,
+        133
+      ]
+    ],
+    "house_center_xy_m": [
+      172,
+      130
+    ],
+    "nominal_wall_axes_size_xy_m": [
+      9,
+      6
+    ],
+    "wall_thickness_m": 0.22,
+    "wall_height_m": 2.2,
+    "door_clear_width_m": 1.6,
+    "door_approx_clear_height_m": 2.0,
+    "roof_envelope_xyz_m": [
+      9.8,
+      6.8,
+      1.35
+    ],
+    "roof_top_above_floor_reference_m": 3.52,
+    "roof_source_asset": "/Game/Developers/Roberto/Greybox_WTFD/Village_A_Attempt2_R2/G3/Meshes/SM_VA3_HOME_RINALDO_roof.SM_VA3_HOME_RINALDO_roof",
+    "canopy_nominal_xy_m": [
+      5,
+      4
+    ],
+    "canopy_surviving_roof_xy_m": [
+      3,
+      4
+    ],
+    "well_xy_m": [
+      163,
+      114
+    ],
+    "well_body_xyz_m": [
+      1.5,
+      1.5,
+      0.85
+    ]
+  },
+  "rest_stone": {
+    "xy_local_m": [
+      114.77817459498269,
+      63
+    ],
+    "height_m": 0.9,
+    "model": "C approvato",
+    "implementation": "statico"
+  },
+  "wetland": {
+    "water_center_xy_m": [
+      175,
+      193
+    ],
+    "visual_water_size_xy_m": [
+      16,
+      10
+    ],
+    "support": "terreno solido continuo",
+    "reed_silhouettes": 75
+  },
+  "vegetation_added": {
+    "trees": 58,
+    "low_bushes": 99,
+    "low_bush_collision": "nessuna",
+    "temporary_boundaries": "masse al bordo lotto; chiusura nord circa Y238 da sviluppare con C"
+  },
+  "resource_nodes": [
+    {
+      "id": "R01",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        110.8,
+        34.0
+      ]
+    },
+    {
+      "id": "R02",
+      "species": "Achillea",
+      "xy_local_m": [
+        110.5,
+        43.0
+      ]
+    },
+    {
+      "id": "R03",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        141.0,
+        107.0
+      ]
+    },
+    {
+      "id": "R04",
+      "species": "Achillea",
+      "xy_local_m": [
+        147.0,
+        111.0
+      ]
+    },
+    {
+      "id": "R05",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        170.0,
+        123.0
+      ]
+    },
+    {
+      "id": "R06",
+      "species": "Achillea",
+      "xy_local_m": [
+        174.0,
+        123.0
+      ]
+    },
+    {
+      "id": "R07",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        109.5,
+        61
+      ]
+    },
+    {
+      "id": "R08",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        133.92066830949344,
+        98.82297828430188
+      ]
+    },
+    {
+      "id": "R09",
+      "species": "Achillea",
+      "xy_local_m": [
+        144.95338343684173,
+        97.82773867256364
+      ]
+    },
+    {
+      "id": "R10",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        153.02654644841613,
+        97.50841198649184
+      ]
+    },
+    {
+      "id": "R11",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        163.28492539648684,
+        98.50696706708693
+      ]
+    },
+    {
+      "id": "R12",
+      "species": "Achillea",
+      "xy_local_m": [
+        172.84325601267108,
+        98.23757463928172
+      ]
+    },
+    {
+      "id": "R13",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        183.25743820120286,
+        98.76670233309854
+      ]
+    },
+    {
+      "id": "R14",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        194.47910220485522,
+        97.63195975328715
+      ]
+    },
+    {
+      "id": "R15",
+      "species": "Achillea",
+      "xy_local_m": [
+        134.7048393237665,
+        108.86784537735895
+      ]
+    },
+    {
+      "id": "R16",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        153.3899179502776,
+        109.28458200583052
+      ]
+    },
+    {
+      "id": "R17",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        193.80380842930498,
+        110.77800716477886
+      ]
+    },
+    {
+      "id": "R18",
+      "species": "Achillea",
+      "xy_local_m": [
+        134.24943732810442,
+        122.7605873538549
+      ]
+    },
+    {
+      "id": "R19",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        142.80839399661895,
+        122.72367153276174
+      ]
+    },
+    {
+      "id": "R20",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        154.16826989076574,
+        123.0245510247128
+      ]
+    },
+    {
+      "id": "R21",
+      "species": "Achillea",
+      "xy_local_m": [
+        194.76263638060595,
+        121.87924954451933
+      ]
+    },
+    {
+      "id": "R22",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        134.9473069655345,
+        134.58972504032656
+      ]
+    },
+    {
+      "id": "R23",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        144.61612425342844,
+        133.54726333181097
+      ]
+    },
+    {
+      "id": "R24",
+      "species": "Achillea",
+      "xy_local_m": [
+        153.05206620487914,
+        133.02216377079384
+      ]
+    },
+    {
+      "id": "R25",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        194.04726195846558,
+        133.81235195019676
+      ]
+    },
+    {
+      "id": "R26",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        133.8593368724015,
+        145.21013983319924
+      ]
+    },
+    {
+      "id": "R27",
+      "species": "Achillea",
+      "xy_local_m": [
+        143.69668259172548,
+        145.41552229728026
+      ]
+    },
+    {
+      "id": "R28",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        153.96723397929307,
+        145.41811065979144
+      ]
+    },
+    {
+      "id": "R29",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        163.2551211471339,
+        145.6062043697233
+      ]
+    },
+    {
+      "id": "R30",
+      "species": "Achillea",
+      "xy_local_m": [
+        174.77290794820146,
+        146.7800971919149
+      ]
+    },
+    {
+      "id": "R31",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        184.57323302189764,
+        146.35842308932388
+      ]
+    },
+    {
+      "id": "R32",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        193.4349429600327,
+        145.7914256827994
+      ]
+    },
+    {
+      "id": "R33",
+      "species": "Achillea",
+      "xy_local_m": [
+        135.26260678473233,
+        157.94339701782917
+      ]
+    },
+    {
+      "id": "R34",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        144.3529310034328,
+        156.9310565828578
+      ]
+    },
+    {
+      "id": "R35",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        153.0730614871843,
+        156.80501096634453
+      ]
+    },
+    {
+      "id": "R36",
+      "species": "Achillea",
+      "xy_local_m": [
+        164.60493114852892,
+        156.74202007173827
+      ]
+    },
+    {
+      "id": "R37",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        174.95773900013867,
+        157.02220212086678
+      ]
+    },
+    {
+      "id": "R38",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        183.5648053218573,
+        156.70840100743385
+      ]
+    },
+    {
+      "id": "R39",
+      "species": "Achillea",
+      "xy_local_m": [
+        134.49839178565853,
+        170.10231946523209
+      ]
+    },
+    {
+      "id": "R40",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        143.8344093860229,
+        170.93203269552762
+      ]
+    },
+    {
+      "id": "R41",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        154.39067637546785,
+        169.75049632512963
+      ]
+    },
+    {
+      "id": "R42",
+      "species": "Achillea",
+      "xy_local_m": [
+        163.06519083389173,
+        169.22404029916734
+      ]
+    },
+    {
+      "id": "R43",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        173.77524596051776,
+        169.7499471476576
+      ]
+    },
+    {
+      "id": "R44",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        183.99844852847642,
+        169.9732309503341
+      ]
+    },
+    {
+      "id": "R45",
+      "species": "Achillea",
+      "xy_local_m": [
+        193.42820984961548,
+        169.0725038912962
+      ]
+    },
+    {
+      "id": "R46",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        133.28674143250328,
+        181.07653742162836
+      ]
+    },
+    {
+      "id": "R47",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        153.31679502115503,
+        181.46405285460602
+      ]
+    },
+    {
+      "id": "R48",
+      "species": "Achillea",
+      "xy_local_m": [
+        162.7576598714366,
+        182.46995748168584
+      ]
+    },
+    {
+      "id": "R49",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        174.5666791498763,
+        182.18434947475725
+      ]
+    },
+    {
+      "id": "R50",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        184.55969662816406,
+        183.19399481834392
+      ]
+    },
+    {
+      "id": "R51",
+      "species": "Achillea",
+      "xy_local_m": [
+        193.86387013525555,
+        181.32689243991425
+      ]
+    },
+    {
+      "id": "R52",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        133.97921027955454,
+        192.9444732519482
+      ]
+    },
+    {
+      "id": "R53",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        145.06700416479603,
+        194.78049482703977
+      ]
+    },
+    {
+      "id": "R54",
+      "species": "Achillea",
+      "xy_local_m": [
+        153.2033809919082,
+        193.42756354515902
+      ]
+    },
+    {
+      "id": "R55",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        194.51579076651487,
+        194.99278638961366
+      ]
+    },
+    {
+      "id": "R56",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        134.67256006888906,
+        206.57823301855063
+      ]
+    },
+    {
+      "id": "R57",
+      "species": "Achillea",
+      "xy_local_m": [
+        144.32163361858628,
+        206.5623860424608
+      ]
+    },
+    {
+      "id": "R58",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        154.6184830978642,
+        207.20656187627054
+      ]
+    },
+    {
+      "id": "R59",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        164.3247967283383,
+        204.80711080853146
+      ]
+    },
+    {
+      "id": "R60",
+      "species": "Achillea",
+      "xy_local_m": [
+        172.87957018088267,
+        205.91270653337668
+      ]
+    },
+    {
+      "id": "R61",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        182.9447937206244,
+        206.0911627039406
+      ]
+    },
+    {
+      "id": "R62",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        194.33674157361548,
+        205.1984605324026
+      ]
+    },
+    {
+      "id": "R63",
+      "species": "Achillea",
+      "xy_local_m": [
+        135.13938463277526,
+        216.80990484104058
+      ]
+    },
+    {
+      "id": "R64",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        144.8700590702441,
+        216.87043188980002
+      ]
+    },
+    {
+      "id": "R65",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        152.87509383724083,
+        218.15775466583636
+      ]
+    },
+    {
+      "id": "R66",
+      "species": "Achillea",
+      "xy_local_m": [
+        164.64717919525123,
+        217.58683074985808
+      ]
+    },
+    {
+      "id": "R67",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        172.9047699062588,
+        217.8427313452265
+      ]
+    },
+    {
+      "id": "R68",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        183.0993551886465,
+        218.27676333002555
+      ]
+    },
+    {
+      "id": "R69",
+      "species": "Achillea",
+      "xy_local_m": [
+        192.85974911252876,
+        219.1631106330414
+      ]
+    },
+    {
+      "id": "R70",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        132.73816106919867,
+        229.45476786505122
+      ]
+    },
+    {
+      "id": "R71",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        144.00216329327682,
+        230.4210691066813
+      ]
+    },
+    {
+      "id": "R72",
+      "species": "Achillea",
+      "xy_local_m": [
+        152.74967357573448,
+        228.958690517904
+      ]
+    },
+    {
+      "id": "R73",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        163.41887090877083,
+        230.47446600399266
+      ]
+    },
+    {
+      "id": "R74",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        173.1474570049667,
+        230.9300870749651
+      ]
+    },
+    {
+      "id": "R75",
+      "species": "Achillea",
+      "xy_local_m": [
+        182.77433125194966,
+        228.99813494434343
+      ]
+    },
+    {
+      "id": "R76",
+      "species": "Piantaggine",
+      "xy_local_m": [
+        193.52039398605257,
+        230.493843359649
+      ]
+    }
+  ],
+  "encounter_spaces": [
+    {
+      "id": "E01",
+      "members": [
+        {
+          "species": "Stragoulè",
+          "start_local_m": [
+            136,
+            86
+          ],
+          "end_local_m": [
+            142,
+            86
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "members": [
+        {
+          "species": "Stragoulè",
+          "start_local_m": [
+            142,
+            144
+          ],
+          "end_local_m": [
+            146,
+            144
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "members": [
+        {
+          "species": "Stragoulè",
+          "start_local_m": [
+            181,
+            140
+          ],
+          "end_local_m": [
+            185,
+            140
+          ],
+          "reference_height_m": 1.72
+        },
+        {
+          "species": "Bìnn d’la Borda",
+          "start_local_m": [
+            185,
+            142
+          ],
+          "end_local_m": [
+            189,
+            142
+          ],
+          "reference_height_m": 1.65
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "members": [
+        {
+          "species": "Animi d’la Paluda",
+          "start_local_m": [
+            173,
+            193
+          ],
+          "end_local_m": [
+            177,
+            193
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "members": [
+        {
+          "species": "Bìnn d’la Borda",
+          "start_local_m": [
+            168,
+            220
+          ],
+          "end_local_m": [
+            172,
+            220
+          ]
+        }
+      ]
+    }
+  ],
+  "miniboss_only": [
+    "Mazapégul",
+    "Lécora"
+  ],
+  "scope": "Predisposizione spaziale, proxy e raccolte; combat/AI, dialoghi ed indizi interattivi non sono sistemi implementati da questa consegna.",
+  "assets": [
+    {
+      "id": "B-01",
+      "elemento": "Argine e percorso principale",
+      "misure": "Circa 264 m di asse LD; fasce locali 2,5 / 2,4 / 3 m",
+      "posizione": "Uscita est → cippo → ponte → raccordo C",
+      "vincoli": "Suolo continuo, margini percorribili e movimento laterale; conservare mulino e canale esistenti.",
+      "liberta": "Terra battuta, fango e transizioni variate; il sentiero orienta senza chiudere l’esplorazione."
+    },
+    {
+      "id": "B-02",
+      "elemento": "Ponte ligneo e sbarchi",
+      "misure": "Piano 15 × 3 m; top locale +0,55 m; spessore 0,24 m",
+      "posizione": "Centro (122,4931; 75)",
+      "vincoli": "Due sbarchi 1,8 × 3 m; parapetti alti 1,10 m sul piano; continuità del cammino.",
+      "liberta": "Pali, correnti, tavolato e sostegni credibili; conservare luce di passaggio e quote."
+    },
+    {
+      "id": "B-03",
+      "elemento": "Cippo e tasca di riposo",
+      "misure": "Cippo alto 0,90 m; tasca circa 10 × 12 m",
+      "posizione": "Cippo (114,7782; 63), prima del ponte",
+      "vincoli": "Usare il modello C approvato; spazio senza mostri prima del ponte. Il cippo resta un elemento statico nella mappa attuale.",
+      "liberta": "Usura e materiali coerenti con la reference approvata; nessun simbolo nuovo."
+    },
+    {
+      "id": "B-04",
+      "elemento": "Radura tutorial",
+      "misure": "Riserva libera circa 12 × 14 m",
+      "posizione": "Centro (140; 91), oltre il ponte",
+      "vincoli": "Conservare spazio per E01 e alternative laterali; evitare una recinzione intorno all’incontro.",
+      "liberta": "Margini di vegetazione e fango senza ostacoli che impongano un solo passaggio."
+    },
+    {
+      "id": "B-05",
+      "elemento": "Deviazione cascina",
+      "misure": "47,13 m di asse, 2,80 m di fascia costruita",
+      "posizione": "Da (131,5846; 105) a (172; 125)",
+      "vincoli": "Un ramo facoltativo con ritorno allo stesso bivio; accesso alla corte riconoscibile.",
+      "liberta": "Raccordare il fondo al terreno, evitando scalini o detriti sulla via d’accesso."
+    },
+    {
+      "id": "B-06",
+      "elemento": "Corte",
+      "misure": "28 × 24 m",
+      "posizione": "X 156–184 / Y 109–133",
+      "vincoli": "Conservare accessi a casa, pozzo e tettoia; nessuna barriera nel centro della corte.",
+      "liberta": "Disordine rurale locale, suolo e vegetazione variati senza riempire gli spazi di manovra."
+    },
+    {
+      "id": "B-07",
+      "elemento": "Cascina aperta",
+      "misure": "Corpo nominale 9 × 6 m; pareti 0,22 m; altezza pareti 2,20 m",
+      "posizione": "Centro (172; 130), ingresso sud",
+      "vincoli": "Varco 1,60 m, luce verticale circa 2 m. Tetto riusato 9,80 × 6,80 × 1,35 m, sommità circa 3,52 m dal riferimento del pavimento.",
+      "liberta": "Conservare impronta, falde e soglia; differenziare superfici e usura mantenendo l’interno accessibile."
+    },
+    {
+      "id": "B-08",
+      "elemento": "Tettoia parzialmente crollata",
+      "misure": "Inviluppo nominale 5 × 4 m; copertura superstite 3 × 4 m; pali alti 2,25 m",
+      "posizione": "Centro indicativo (179; 128)",
+      "vincoli": "Tre pali, trave e elemento caduto laterale; passaggio sotto/accanto libero.",
+      "liberta": "Rendere leggibile il crollo con pezzi limitati; conservare il vuoto utile."
+    },
+    {
+      "id": "B-09",
+      "elemento": "Pozzo",
+      "misure": "Anello 1,50 × 1,50 × 0,85 m; supporti alti 1,85 m",
+      "posizione": "(163; 114)",
+      "vincoli": "Anello e sostegni solidi, spazio pedonale continuo attorno; traversa 1,90 m.",
+      "liberta": "Muratura e carpenteria rurali; componenti minuti compatibili con l’ingombro."
+    },
+    {
+      "id": "B-10",
+      "elemento": "Props della cascina e riserve S12",
+      "misure": "Tre casse circa 0,80 × 0,70 × 0,65 m; paglia 1,80 × 1,40 × 0,50 m",
+      "posizione": "Bambola (165; 115); segno presso la soglia sud",
+      "vincoli": "Bambola e segno sono riserve statiche. La grafica del segno deve derivare dalle indicazioni narrative definitive.",
+      "liberta": "Materiali e usura liberi entro ingombri e percorsi; evitare di attribuire nuovi significati narrativi."
+    },
+    {
+      "id": "B-11",
+      "elemento": "Soglia umida e acqua bassa",
+      "misure": "Superficie d’acqua 16 × 10 m; 75 sagome di giunchi",
+      "posizione": "Acqua centrata (175; 193)",
+      "vincoli": "Acqua visiva su terreno continuo, senza scavo; fascia asciutta e alternative attorno ad Animi.",
+      "liberta": "Margini organici, giunchi variati e transizioni fango/erba; conservare le aperture."
+    },
+    {
+      "id": "B-12",
+      "elemento": "Alberi e sottobosco",
+      "misure": "58 alberi/pioppi e 99 arbusti bassi aggiunti alla zona",
+      "posizione": "Distribuzione dalla mappa",
+      "vincoli": "Tronchi fuori dai passaggi; sottobosco basso senza collisione. I cap vegetali ai margini sono temporanei.",
+      "liberta": "Diversificare chiome e volumi mantenendo visibilità di cascina, bivio e accessi."
+    },
+    {
+      "id": "B-13",
+      "elemento": "Erbe raccoglibili",
+      "misure": "76 nodi: 50 Piantaggine, 26 Achillea",
+      "posizione": "Coordinate stabili nel CSV raccolte",
+      "vincoli": "Ogni nodo accessibile da terra; niente acqua aperta, carreggiate, muri o edifici. Non confonderle con arbusti decorativi.",
+      "liberta": "Riutilizzare i modelli approvati, rispettando habitat e leggibilità: piantaggine bruno/avorio, achillea gialla."
+    },
+    {
+      "id": "B-14",
+      "elemento": "Riserve incontri",
+      "misure": "5 spazi, 6 proxy: 3 Stragoulè, 2 Bìnn, 1 Animi",
+      "posizione": "E01–E05 come in pianta e CSV",
+      "vincoli": "Conservare spazi e linee di pattuglia; solo Animi può restare sospeso sull’acqua. Mazapégul e Lécora sono riservati ai miniboss.",
+      "liberta": "Vegetazione e nebbia devono lasciare riconoscibili minacce e vie di risposta."
+    },
+    {
+      "id": "B-15",
+      "elemento": "Raccordo nord",
+      "misure": "Asse fino a (163; 230), margine temporaneo a Y circa 238",
+      "posizione": "Verso il futuro bosco palustre C",
+      "vincoli": "Conservare quota e direzione del collegamento; le siepi di chiusura non sono un ostacolo definitivo.",
+      "liberta": "Preparare una transizione progressiva verso vegetazione palustre più fitta."
+    }
+  ]
+}

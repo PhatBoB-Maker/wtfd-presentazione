@@ -1,0 +1,1038 @@
+{
+  "title": "23/10/2026 [GPT] — C2, approccio occultato e bolla dell'Eremo",
+  "status": "APPROVATA_IN_PLAY_CONSOLIDATA",
+  "authority": {
+    "C1_approved": true,
+    "C1_approval": "APPROVAZIONE_C1.json",
+    "direction": "D-397, ibrido B+C",
+    "C2_metric_dimensions_approved": true,
+    "C2_construction_authorized": true,
+    "next_gate": "C2 approvata in Play da Roberto e consolidata insieme a B e C1. Prossimo passo: definire la pianta del lotto successivo; nessuna costruzione C3 autorizzata da questa approvazione.",
+    "approval_record": "APPROVAZIONE_C2.json",
+    "C2_built": true,
+    "C2_Play_approved": true,
+    "native_receipt": "Costruzione_C2/VERIFY.json"
+  },
+  "coordinates": {
+    "units": "metri locali Fossalta, X est, Y nord, Z alto",
+    "ue_native_cm": "(locale_m + [57.376,254.7,-98.961])*100",
+    "eye_height_m": 1.65,
+    "Z_note": "Quote di progetto C2; N2 e bordo Y380 ricavati dalla sorgente geometrica C1 salvata, non da nuove sonde Unreal"
+  },
+  "scope": {
+    "included": [
+      "raccordo da N2 e nuovo terreno continuo oltre Y380",
+      "approccio con una deviazione locale riconnessa",
+      "volume esterno Eremo, soglia e spazio interno libero di blockout",
+      "luce calda fra fessure come richiamo visivo",
+      "piante e incontri proposti sulla pianta"
+    ],
+    "later": [
+      "allestimento interno e dialogo Eremo",
+      "avvistamento Borda e sua finestra a distanza",
+      "cippo successivo, strettoia, miniboss e post-scontro",
+      "audio/campanellino, AI e combattimento"
+    ],
+    "preserve": "B e C1 conservate salvo apertura dei12margini terminali e rimozione della vecchia label fineC1; solo fondale globale ritagliato dentroC2. Fonti originali intatte."
+  },
+  "terrain": {
+    "polygon_xy_m": [
+      [
+        155,
+        380
+      ],
+      [
+        198,
+        380
+      ],
+      [
+        214,
+        394
+      ],
+      [
+        222,
+        418
+      ],
+      [
+        216,
+        446
+      ],
+      [
+        199,
+        467
+      ],
+      [
+        191,
+        494
+      ],
+      [
+        160,
+        506
+      ],
+      [
+        127,
+        502
+      ],
+      [
+        105,
+        482
+      ],
+      [
+        93,
+        453
+      ],
+      [
+        96,
+        423
+      ],
+      [
+        118,
+        395
+      ],
+      [
+        145,
+        384
+      ]
+    ],
+    "seam": {
+      "y_m": 380,
+      "x_range_m": [
+        155,
+        198
+      ],
+      "rule": "C2 copia le quote della cucitura C1, senza sovrapporre un secondo piano e senza cambiare il terreno approvato. Nuovo supporto solo oltre Y380."
+    },
+    "explorable": "Tutto il poligono offre terreno continuo: i tracciati orientano, non delimitano il movimento. Eccezioni dichiarate: piccolo ristagno, masse vegetali e argine di fondo.",
+    "shoulder_target_m": [
+      5,
+      8
+    ],
+    "local_compressions": "Cucitura e camera compressa: spalle localmente ridotte. Fra A4 e H0 lo schermo O5 lascia circa3,2m oltre il bordo del percorso; non promettere5–8m continui.",
+    "crossfall_target_percent": [
+      2,
+      4
+    ],
+    "shoulder_slope_target_max_percent": 18,
+    "boundary": "Dossi e masse vegetali irregolari; nessun recinto dei singoli incontri. Cap tecnico solo al confine C3 futuro, oltre la bolla Eremo.",
+    "mandatory_before_build": "Query nativa del fondale e dei proxy preesistenti nella nuova impronta. Ritagliare il fondale elevato solo entro C2, conservando C1 e asset originali; nessuna nuova lastra sotto superfici sovrapposte. Le verifiche di costruzione dovranno includere terreno visibile e collisione alla stessa quota."
+  },
+  "nodes": {
+    "N2": {
+      "xyz_m": [
+        164,
+        374,
+        1.209731220255857
+      ],
+      "C1_metric_reference_z_m": 1.222935,
+      "role": "Ultimo nodo C1 approvato; quota del suolo interpolato salvato (1,32 cm sotto il riferimento metrico), senza modificare C1"
+    },
+    "C0": {
+      "xy_m": [
+        158,
+        380
+      ],
+      "z_from_C1_source": true,
+      "role": "Cucitura: continuazione nord-ovest dalla tangente N1–N2"
+    },
+    "A1": {
+      "xyz_m": [
+        149,
+        391,
+        1.3
+      ],
+      "role": "Ingresso nel nuovo lotto"
+    },
+    "A2": {
+      "xyz_m": [
+        139,
+        405,
+        1.42
+      ],
+      "role": "Scelta della deviazione; Eremo ancora nascosto"
+    },
+    "A3": {
+      "xyz_m": [
+        139,
+        423,
+        1.57
+      ],
+      "role": "Camera compressa, con spalle esplorabili"
+    },
+    "L": {
+      "xyz_m": [
+        139,
+        442,
+        1.67
+      ],
+      "role": "Primo richiamo caldo, edificio ancora parzialmente schermato"
+    },
+    "A4": {
+      "xyz_m": [
+        151,
+        455,
+        1.72
+      ],
+      "role": "Riconnessione e curva verso la soglia"
+    },
+    "H0": {
+      "xyz_m": [
+        162,
+        460,
+        1.72
+      ],
+      "role": "Bolla di arrivo e vista ravvicinata dell'Eremo"
+    },
+    "H1": {
+      "xyz_m": [
+        176,
+        462,
+        1.72
+      ],
+      "role": "Soglia Eremo, ingresso da sud"
+    },
+    "D1": {
+      "xyz_m": [
+        118,
+        419,
+        1.25
+      ],
+      "role": "Deviazione fra gli alberi"
+    },
+    "D2": {
+      "xyz_m": [
+        120,
+        442,
+        1.12
+      ],
+      "role": "Riva asciutta del piccolo ristagno"
+    },
+    "D2a": {
+      "xyz_m": [
+        118,
+        454,
+        1.2
+      ],
+      "role": "Curva sul bordo asciutto, esterna allo schermo O6"
+    },
+    "D3": {
+      "xyz_m": [
+        130,
+        462,
+        1.3
+      ],
+      "role": "Tasca aperta, richiamo visibile e ritorno verso A4"
+    },
+    "P1": {
+      "xyz_m": [
+        130,
+        468,
+        1.42
+      ],
+      "role": "Accesso facoltativo alla tasca laterale"
+    },
+    "P2": {
+      "xyz_m": [
+        128,
+        481,
+        1.55
+      ],
+      "role": "Tasca facoltativa, doppia ritirata sul terreno libero"
+    },
+    "Q1": {
+      "xyz_m": [
+        162,
+        475,
+        1.72
+      ],
+      "role": "Riserva esterna sul fianco ovest dell'Eremo"
+    },
+    "Q2": {
+      "xyz_m": [
+        154,
+        488,
+        1.75
+      ],
+      "role": "Orientamento futuro nord-ovest; avvistamento non posizionato"
+    },
+    "H0a": {
+      "xyz_m": [
+        176,
+        460,
+        1.72
+      ],
+      "role": "Allineamento tecnico alla porta: ultimo gomito locale raggio1m, necessario per non intercettare la parete con la capsula"
+    }
+  },
+  "routes": [
+    {
+      "id": "PRINCIPALE",
+      "name": "Approccio Eremo",
+      "nodes": [
+        "N2",
+        "C0",
+        "A1",
+        "A2",
+        "A3",
+        "L",
+        "A4",
+        "H0",
+        "H0a",
+        "H1"
+      ],
+      "width_m": 3.0,
+      "color": "#e2be78",
+      "curve_radius_target_min_m": 6,
+      "corner_radius_override_m": {
+        "H0a": 1.0
+      }
+    },
+    {
+      "id": "DEVIAZIONE",
+      "name": "Riva e ritorno",
+      "nodes": [
+        "A2",
+        "D1",
+        "D2",
+        "D2a",
+        "D3",
+        "A4"
+      ],
+      "width_m": 2.8,
+      "color": "#79c6c6",
+      "curve_radius_target_min_m": 6
+    },
+    {
+      "id": "TASCA",
+      "name": "Esplorazione facoltativa",
+      "nodes": [
+        "D3",
+        "P1",
+        "P2"
+      ],
+      "width_m": 2.8,
+      "color": "#afc483",
+      "curve_radius_target_min_m": 6
+    },
+    {
+      "id": "RISERVA_C3",
+      "name": "Riserva verso il lotto seguente",
+      "nodes": [
+        "H0",
+        "Q1",
+        "Q2"
+      ],
+      "width_m": 3.0,
+      "color": "#b2ada1",
+      "proposed_reserve_only": true
+    }
+  ],
+  "hermitage": {
+    "polygon_xy_m": [
+      [
+        172,
+        462
+      ],
+      [
+        184,
+        462
+      ],
+      [
+        184,
+        470
+      ],
+      [
+        172,
+        470
+      ]
+    ],
+    "dimensions_m": [
+      12,
+      8
+    ],
+    "floor_z_m": 1.74,
+    "eaves_height_m": 2.6,
+    "ridge_height_m": 3.8,
+    "door": {
+      "xy_m": [
+        176,
+        462
+      ],
+      "width_m": 1.4,
+      "height_m": 2.2,
+      "threshold_step_m": 0.02
+    },
+    "inner_free_reference_m": [
+      10.8,
+      6.8
+    ],
+    "light_target_xyz_m": [
+      173,
+      462,
+      2.95
+    ],
+    "note": "Dimensioni greybox approvate e costruite, in attesa di Play. Edificio basso in pietra, addossato all'argine nord. Interno libero per futura verifica; niente arredi, personaggi o dialoghi nuovi. Luce calda da fessure, non waypoint. La lettura percettiva del primo richiamo richiederà Play."
+  },
+  "occluders": [
+    {
+      "id": "O4",
+      "name": "Massa che chiude la diagonale lunga",
+      "polygon_xy_m": [
+        [
+          153,
+          400
+        ],
+        [
+          178,
+          400
+        ],
+        [
+          178,
+          411
+        ],
+        [
+          153,
+          411
+        ]
+      ],
+      "base_z_m": 1.42,
+      "height_m": 3.2
+    },
+    {
+      "id": "O5",
+      "name": "Schermo a gomito prima dell'Eremo",
+      "polygon_xy_m": [
+        [
+          148,
+          430
+        ],
+        [
+          184,
+          430
+        ],
+        [
+          190,
+          440
+        ],
+        [
+          190,
+          453
+        ],
+        [
+          158,
+          453
+        ],
+        [
+          148,
+          441
+        ]
+      ],
+      "base_z_m": 1.65,
+      "height_m": 3.4
+    },
+    {
+      "id": "O6",
+      "name": "Schermo sul margine del ristagno",
+      "polygon_xy_m": [
+        [
+          127,
+          438
+        ],
+        [
+          132,
+          438
+        ],
+        [
+          132,
+          454
+        ],
+        [
+          127,
+          454
+        ]
+      ],
+      "base_z_m": 1.3,
+      "height_m": 3.2
+    },
+    {
+      "id": "ARGINE",
+      "name": "Rialzo addossato al retro Eremo",
+      "polygon_xy_m": [
+        [
+          169,
+          470
+        ],
+        [
+          187,
+          470
+        ],
+        [
+          199,
+          477
+        ],
+        [
+          193,
+          486
+        ],
+        [
+          174,
+          484
+        ]
+      ],
+      "base_z_m": 1.72,
+      "height_m": 2.4
+    }
+  ],
+  "wetland": {
+    "center_xy_m": [
+      109,
+      438
+    ],
+    "radii_m": [
+      6,
+      11
+    ],
+    "water_z_m": 0.82,
+    "bottom_z_m": 0.62,
+    "note": "Ristagno laterale, mai attraversamento obbligatorio. Bordo asciutto e accesso alle raccolte esterno all'acqua."
+  },
+  "views": [
+    {
+      "id": "V1",
+      "from": "N2",
+      "target_xyz_m": [
+        178,
+        466,
+        3.0
+      ],
+      "expect": "blocked",
+      "why": "La diagonale da C1 non rivela la facciata"
+    },
+    {
+      "id": "V2",
+      "from": "A3",
+      "target_xyz_m": [
+        173,
+        462,
+        2.95
+      ],
+      "expect": "blocked",
+      "why": "Il richiamo rimane occultato prima della curva"
+    },
+    {
+      "id": "V3",
+      "from": "L",
+      "target_xyz_m": [
+        173,
+        462,
+        2.95
+      ],
+      "expect": "clear",
+      "why": "La fessura calda è visibile a circa quaranta metri"
+    },
+    {
+      "id": "V4",
+      "from": "L",
+      "target_xyz_m": [
+        184,
+        466,
+        3.0
+      ],
+      "expect": "blocked",
+      "why": "La parte est dell'edificio rimane schermata al primo richiamo"
+    },
+    {
+      "id": "V5",
+      "from": "H0",
+      "target_xyz_m": [
+        178,
+        466,
+        3.0
+      ],
+      "expect": "clear",
+      "why": "La facciata si legge nella bolla ravvicinata"
+    },
+    {
+      "id": "V6",
+      "from": "D2",
+      "target_xyz_m": [
+        173,
+        462,
+        2.95
+      ],
+      "expect": "blocked",
+      "why": "Anche dalla riva il richiamo è nascosto prima della curva"
+    },
+    {
+      "id": "V7",
+      "from": "D3",
+      "target_xyz_m": [
+        173,
+        462,
+        2.95
+      ],
+      "expect": "clear",
+      "why": "Il richiamo si apre anche arrivando dalla deviazione"
+    },
+    {
+      "id": "V8",
+      "from": "D2",
+      "target_xyz_m": [
+        178,
+        466,
+        5.54
+      ],
+      "expect": "blocked",
+      "why": "Il colmo resta coperto dal margine vegetale della riva"
+    },
+    {
+      "id": "V9",
+      "from": "A3",
+      "target_xyz_m": [
+        178,
+        466,
+        5.54
+      ],
+      "expect": "blocked",
+      "why": "Il colmo non anticipa l'edificio dal punto A3"
+    }
+  ],
+  "population": {
+    "status": "GREYBOX_COSTRUITO:34RACCOLTE/5INCONTRI7PROXY;AI_E_COMBAT_NON_IMPLEMENTATI",
+    "formal_area_difficulty": "Da definire con Roberto; nessuna riclassificazione automatica della zona",
+    "protected_arrival_radius_m": 22,
+    "protected_arrival_center_xy_m": [
+      178,
+      466
+    ],
+    "species_counts": {
+      "Piantaggine": 15,
+      "Achillea": 10,
+      "RovoBluastro": 5,
+      "RosaCanina": 4
+    },
+    "harvest": "Riutilizzare le classi C1 corrette: rovo/rosa perdono more/fiori e conservano rami e foglie. Nessun vecchio collector senza collegamento al cespuglio.",
+    "plants": [
+      {
+        "id": "R01",
+        "species": "Piantaggine",
+        "xy_m": [
+          160,
+          390
+        ],
+        "habitat": "margine asciutto d'ingresso"
+      },
+      {
+        "id": "R02",
+        "species": "Piantaggine",
+        "xy_m": [
+          140,
+          393
+        ],
+        "habitat": "tasca erbosa presso la curva"
+      },
+      {
+        "id": "R03",
+        "species": "Piantaggine",
+        "xy_m": [
+          135,
+          413
+        ],
+        "habitat": "spalla asciutta alla biforcazione"
+      },
+      {
+        "id": "R04",
+        "species": "Piantaggine",
+        "xy_m": [
+          130,
+          428
+        ],
+        "habitat": "apertura fra gli alberi"
+      },
+      {
+        "id": "R05",
+        "species": "Piantaggine",
+        "xy_m": [
+          151,
+          421
+        ],
+        "habitat": "margine erboso fuori dallo schermo"
+      },
+      {
+        "id": "R06",
+        "species": "Piantaggine",
+        "xy_m": [
+          136,
+          445
+        ],
+        "habitat": "spalla della curva del richiamo"
+      },
+      {
+        "id": "R07",
+        "species": "Piantaggine",
+        "xy_m": [
+          151,
+          463
+        ],
+        "habitat": "margine asciutto della riconnessione"
+      },
+      {
+        "id": "R08",
+        "species": "Piantaggine",
+        "xy_m": [
+          142,
+          433
+        ],
+        "habitat": "spalla erbosa fra i tronchi"
+      },
+      {
+        "id": "R09",
+        "species": "Piantaggine",
+        "xy_m": [
+          160,
+          494
+        ],
+        "habitat": "apertura sul margine nord"
+      },
+      {
+        "id": "R10",
+        "species": "Piantaggine",
+        "xy_m": [
+          144,
+          480
+        ],
+        "habitat": "tasca laterale asciutta"
+      },
+      {
+        "id": "R11",
+        "species": "Piantaggine",
+        "xy_m": [
+          137,
+          490
+        ],
+        "habitat": "margine di bosco della tasca"
+      },
+      {
+        "id": "R12",
+        "species": "Piantaggine",
+        "xy_m": [
+          178,
+          491
+        ],
+        "habitat": "spalla asciutta oltre il rialzo"
+      },
+      {
+        "id": "R13",
+        "species": "Achillea",
+        "xy_m": [
+          170,
+          387
+        ],
+        "habitat": "apertura asciutta presso la cucitura"
+      },
+      {
+        "id": "R14",
+        "species": "Achillea",
+        "xy_m": [
+          132,
+          396
+        ],
+        "habitat": "spalla aperta a ovest"
+      },
+      {
+        "id": "R15",
+        "species": "Achillea",
+        "xy_m": [
+          124,
+          411
+        ],
+        "habitat": "margine erboso della deviazione"
+      },
+      {
+        "id": "R16",
+        "species": "Achillea",
+        "xy_m": [
+          145,
+          414
+        ],
+        "habitat": "dosso asciutto prima dello schermo"
+      },
+      {
+        "id": "R17",
+        "species": "Achillea",
+        "xy_m": [
+          133,
+          468
+        ],
+        "habitat": "apertura asciutta della tasca"
+      },
+      {
+        "id": "R18",
+        "species": "Achillea",
+        "xy_m": [
+          143,
+          466
+        ],
+        "habitat": "margine soleggiato della riconnessione"
+      },
+      {
+        "id": "R19",
+        "species": "Achillea",
+        "xy_m": [
+          149,
+          498
+        ],
+        "habitat": "apertura asciutta nord-ovest"
+      },
+      {
+        "id": "R20",
+        "species": "Achillea",
+        "xy_m": [
+          187,
+          491
+        ],
+        "habitat": "margine asciutto nord-est"
+      },
+      {
+        "id": "R21",
+        "species": "RovoBluastro",
+        "xy_m": [
+          115,
+          427
+        ],
+        "habitat": "margine umido esterno al ristagno"
+      },
+      {
+        "id": "R22",
+        "species": "RovoBluastro",
+        "xy_m": [
+          114,
+          452
+        ],
+        "habitat": "riva nord-est asciutta"
+      },
+      {
+        "id": "R23",
+        "species": "RovoBluastro",
+        "xy_m": [
+          106,
+          453
+        ],
+        "habitat": "riva nord, fuori acqua"
+      },
+      {
+        "id": "R24",
+        "species": "RovoBluastro",
+        "xy_m": [
+          102,
+          425
+        ],
+        "habitat": "tasca umida fra i salici"
+      },
+      {
+        "id": "R25",
+        "species": "RovoBluastro",
+        "xy_m": [
+          112,
+          461
+        ],
+        "habitat": "margine umido della tasca laterale"
+      },
+      {
+        "id": "R26",
+        "species": "RosaCanina",
+        "xy_m": [
+          108,
+          469
+        ],
+        "habitat": "siepe esterna con accesso dal prato"
+      },
+      {
+        "id": "R27",
+        "species": "RosaCanina",
+        "xy_m": [
+          187,
+          403
+        ],
+        "habitat": "siepe sul margine orientale"
+      },
+      {
+        "id": "R28",
+        "species": "RosaCanina",
+        "xy_m": [
+          189,
+          457
+        ],
+        "habitat": "siepe sul margine est dell'arrivo, dentro la bolla senza mostri"
+      },
+      {
+        "id": "R29",
+        "species": "Piantaggine",
+        "xy_m": [
+          181,
+          388
+        ],
+        "habitat": "Margine erboso asciutto dell'ingresso orientale"
+      },
+      {
+        "id": "R30",
+        "species": "Achillea",
+        "xy_m": [
+          209,
+          403
+        ],
+        "habitat": "Apertura asciutta sul fianco est, fuori dagli schermi"
+      },
+      {
+        "id": "R31",
+        "species": "Achillea",
+        "xy_m": [
+          190,
+          418
+        ],
+        "habitat": "Raduretta asciutta fra il margine di O4 e O5"
+      },
+      {
+        "id": "R32",
+        "species": "Piantaggine",
+        "xy_m": [
+          213,
+          431
+        ],
+        "habitat": "Spalla erbosa sul margine orientale del bosco"
+      },
+      {
+        "id": "R33",
+        "species": "RosaCanina",
+        "xy_m": [
+          204,
+          447
+        ],
+        "habitat": "Siepe del margine orientale, prima della pausa Eremo"
+      },
+      {
+        "id": "R34",
+        "species": "Piantaggine",
+        "xy_m": [
+          182,
+          425
+        ],
+        "habitat": "Bordo erboso sul lato sud di O5, accessibile dal prato"
+      }
+    ],
+    "encounters": [
+      {
+        "id": "E1",
+        "xy_m": [
+          128,
+          399
+        ],
+        "members": {
+          "Stragoule": 1
+        },
+        "base_weight": 2,
+        "class_proposal": "facile",
+        "mandatory": false,
+        "space_m": [
+          14,
+          12
+        ],
+        "why": "Un singolo leggibile sul lato aperto della biforcazione; rotta principale aggirabile a est",
+        "retreat": "Ritorno verso A1 o prato fra A2 e D1; nessuna acqua obbligatoria"
+      },
+      {
+        "id": "E2",
+        "xy_m": [
+          105,
+          441
+        ],
+        "members": {
+          "Animi": 1
+        },
+        "base_weight": 2,
+        "class_proposal": "facile condizionale",
+        "mandatory": false,
+        "space_m": [
+          14,
+          18
+        ],
+        "why": "Un Animi sopra il ristagno laterale, osservabile dalla riva; sale di rischio se avvicinato",
+        "retreat": "Riva asciutta D1–D2–D3, lasciando libera la via est"
+      },
+      {
+        "id": "E3",
+        "xy_m": [
+          128,
+          481
+        ],
+        "members": {
+          "Stragoule": 1,
+          "Mazapegule": 1
+        },
+        "base_weight": 4,
+        "class_proposal": "medio provvisorio, facoltativo",
+        "mandatory": false,
+        "space_m": [
+          26,
+          20
+        ],
+        "why": "Pack misto nella tasca laterale ampia: pressione frontale e movimento della variante piccola; niente abilità ereditate automaticamente",
+        "retreat": "Ritorno verso D3 e seconda uscita nel prato verso Q2; non una gabbia"
+      },
+      {
+        "id": "E4",
+        "xy_m": [
+          195,
+          391
+        ],
+        "members": {
+          "Mazapegule": 1
+        },
+        "base_weight": 2,
+        "class_proposal": "medio provvisorio, variante da definire",
+        "mandatory": false,
+        "space_m": [
+          14,
+          12
+        ],
+        "why": "Un Mazapegulè piccolo ordinario sul prato orientale d'ingresso, leggibile e raggiungibile passando a sud di O4. P08 del catalogo; due punti provvisori, nessuna abilità del miniboss ereditata automaticamente.",
+        "retreat": "Prato verso A1 e fianco sud di O4; possibile proseguire senza entrare nel suo futuro aggro"
+      },
+      {
+        "id": "E5",
+        "xy_m": [
+          203,
+          424
+        ],
+        "members": {
+          "Stragoule": 2
+        },
+        "base_weight": 4,
+        "class_proposal": "medio proposto",
+        "mandatory": false,
+        "space_m": [
+          16,
+          14
+        ],
+        "why": "Due Stragoulè nello spazio asciutto a est di O5: presenza frontale distribuita, senza stringere il giocatore in un corridoio. Pack P03 del catalogo; il percorso principale resta esterno.",
+        "retreat": "Varco aperto fra O4 e O5 verso A3 oppure prato orientale verso sud; separazione effettiva degli aggro da verificare"
+      }
+    ],
+    "limits": "Cinque incontri proposti, sette nemici. Ora tutti gli incontri ordinari sono aggirabili restando fuori aggro; nessun blocco evento. Nessun mostro nella bolla Eremo di raggio22m. Due nuovi incontri e sei raccolte riequilibrano il sud-est. Spazi arancioni di attività non sono raggi aggro; pesi, aggro, leash e moveset da validare. Nessun pack difficile assegnato automaticamente.",
+    "encounter_activation_logic": {
+      "source": "Chiarimento esplicito Roberto, 23/10/2026, nella chat corrente",
+      "current": "Gli incontri ordinari sono attualmente aggirabili tenendosi fuori dal raggio di aggro. Nessun blocco evento o vittoria richiesta per proseguire.",
+      "future": "Patrol, sentinelle e disposizione dei nemici potranno coprire i passaggi e rendere necessario affrontare un incontro tramite la situazione spaziale, senza dedurre un encounter-lock.",
+      "miniboss": "I miniboss sono eccezioni obbligatorie; nessun miniboss aggiunto a C2.",
+      "not_defined": "Valori e forma dei raggi aggro, leash, copertura delle pattuglie e sovrapposizione degli ingaggi restano da definire e provare."
+    }
+  },
+  "construction_adjustments": [
+    {
+      "date": "2026-10-23",
+      "reason": "Sweep nativo capsula su H0–H1 intercetta Eremo Fronte sinistro prima della porta, prima di salvare",
+      "preserve": "H0/H1 ed edificio restano alle coordinate approvate, porta1.4m invariata",
+      "change": "Nodo di allineamento H0a(176,460) e gomito finale1m; raggio6m resta sugli altri angoli. Lunghezza costruita da ricalcolare.",
+      "evidence": "Costruzione_C2/APPLY_2_STOP.json"
+    }
+  ]
+}

@@ -1,0 +1,2764 @@
+{
+  "title": "24/10/2026 [GPT] — D3, pianta unica tana Lécora Fase 2 poi camposanto",
+  "status": "METRIC_PROPOSAL_NOT_APPROVED_NOT_BUILT",
+  "authority": {
+    "user_statement": "Ok, prepara una pianta unica: prima la tana della Lecora Fase 2 e poi il camposanto. Mi raccomando il raccordo verso uno spazio libero, senza sovrapporsi al resto del livello.",
+    "order_approved": true,
+    "metric_approved": false,
+    "construction_authorized": false,
+    "latest_direction": "Bivio prima della tana: strada diretta in superficie al camposanto; ramo grotta in discesa, incontri consecutivi, Lecora Fase 2, risalita alla medesima uscita. Popolare e rendere leggibile l’area esplorabile attorno al camposanto.",
+    "layout_positive_feedback": true,
+    "layout_preserved_except_requested_changes": true,
+    "surface_bypass_explicitly_requested": true
+  },
+  "coordinates": {
+    "units": "Metri locali Fossalta nel riferimento corrente Master; X est, Y nord, Z alto",
+    "unreal_cm": "(locale_m + [57.376,254.7,-98.961])*100"
+  },
+  "nodes": {
+    "END_D2": [
+      429,
+      548,
+      3.6
+    ],
+    "SEAM": [
+      429,
+      540.5142857142857,
+      3.4684459458068795
+    ],
+    "A1": [
+      452,
+      523,
+      3.6
+    ],
+    "A2": [
+      480,
+      514,
+      4.2
+    ],
+    "A3": [
+      494,
+      496,
+      5.0
+    ],
+    "IN": [
+      500,
+      484,
+      5.2
+    ],
+    "C1": [
+      514,
+      472,
+      -2.5
+    ],
+    "C2": [
+      506,
+      455,
+      -2.5
+    ],
+    "C3": [
+      522,
+      440,
+      -3.0
+    ],
+    "ARENA_IN": [
+      539,
+      448,
+      -3.0
+    ],
+    "BOSS": [
+      552,
+      460,
+      -3.0
+    ],
+    "ARENA_OUT": [
+      567,
+      468,
+      -3.0
+    ],
+    "C4": [
+      575,
+      478,
+      4.4
+    ],
+    "OUT": [
+      586,
+      492,
+      5.199999999999999
+    ],
+    "E1": [
+      605,
+      490,
+      4.6
+    ],
+    "E2": [
+      618,
+      510,
+      4.6
+    ],
+    "GATE": [
+      645.2,
+      500,
+      4.8
+    ],
+    "STONE": [
+      665,
+      500,
+      4.8
+    ],
+    "WALL": [
+      676,
+      504,
+      4.8
+    ],
+    "EXIT": [
+      676,
+      513.6363636364,
+      4.8
+    ],
+    "V0": [
+      684,
+      530,
+      4.7
+    ],
+    "SIGHT": [
+      705,
+      553,
+      4.6
+    ],
+    "END": [
+      722,
+      565,
+      4.9
+    ],
+    "BR_A": [
+      466,
+      501,
+      3.9
+    ],
+    "BR_B": [
+      488,
+      529,
+      4.0
+    ],
+    "BR_C": [
+      495,
+      451,
+      -2.5
+    ],
+    "BR_D": [
+      529,
+      425,
+      -3.0
+    ],
+    "BR_E": [
+      605,
+      472,
+      4.3
+    ],
+    "BR_F": [
+      628,
+      523,
+      4.5
+    ],
+    "SUR1": [
+      504,
+      520,
+      4.3
+    ],
+    "SUR2": [
+      527,
+      512,
+      4.4
+    ],
+    "SUR3": [
+      552,
+      500,
+      4.5
+    ],
+    "SUR4": [
+      572,
+      503,
+      4.6
+    ],
+    "SUR5": [
+      590,
+      507,
+      4.7
+    ],
+    "DOWN0": [
+      506,
+      489,
+      4.2947183434537095
+    ],
+    "DOWN1": [
+      521,
+      490,
+      2.303288690882098
+    ],
+    "DOWN2": [
+      535,
+      483,
+      0.30388944047791977
+    ],
+    "DEEP": [
+      529,
+      425,
+      -3.0
+    ],
+    "C6": [
+      542,
+      433,
+      -3.0
+    ],
+    "UP_STUB": [
+      571,
+      468,
+      -3.0
+    ],
+    "UP1": [
+      571,
+      450,
+      -0.6033833265003938
+    ],
+    "UP2": [
+      577,
+      460,
+      0.4715825606965578
+    ],
+    "UP3": [
+      570,
+      479,
+      3.2221455008128395
+    ],
+    "UP4": [
+      578,
+      487,
+      4.004298070844985
+    ],
+    "L1": [
+      627,
+      475,
+      4.4
+    ],
+    "L2": [
+      650,
+      464,
+      4.3
+    ],
+    "L3": [
+      680,
+      455,
+      4.2
+    ],
+    "L4": [
+      710,
+      468,
+      4.3
+    ],
+    "L5": [
+      723,
+      493,
+      4.4
+    ],
+    "L6": [
+      718,
+      515,
+      4.5
+    ],
+    "L7": [
+      700,
+      524,
+      4.6
+    ],
+    "L8": [
+      675,
+      524,
+      4.6
+    ],
+    "L9": [
+      652,
+      524,
+      4.6
+    ],
+    "RUIN_GATE": [
+      651,
+      453.5,
+      4.3
+    ],
+    "SHED_GATE": [
+      725,
+      477,
+      4.3
+    ]
+  },
+  "routes": [
+    {
+      "id": "D3-A",
+      "name": "Bastiano → bivio",
+      "nodes": [
+        "END_D2",
+        "SEAM",
+        "A1",
+        "A2"
+      ],
+      "xyz_m": [
+        [
+          429,
+          548,
+          3.6
+        ],
+        [
+          429,
+          540.5142857142857,
+          3.4684459458068795
+        ],
+        [
+          452,
+          523,
+          3.6
+        ],
+        [
+          480,
+          514,
+          4.2
+        ]
+      ],
+      "width_m": 3.2,
+      "kind": "main",
+      "layer": "surface",
+      "axis_polyline_length_m": 65.8059412060503
+    },
+    {
+      "id": "D3-SUP",
+      "name": "Strada diretta in superficie → camposanto",
+      "nodes": [
+        "A2",
+        "SUR1",
+        "SUR2",
+        "SUR3",
+        "SUR4",
+        "SUR5",
+        "E1"
+      ],
+      "xyz_m": [
+        [
+          480,
+          514,
+          4.2
+        ],
+        [
+          504,
+          520,
+          4.3
+        ],
+        [
+          527,
+          512,
+          4.4
+        ],
+        [
+          552,
+          500,
+          4.5
+        ],
+        [
+          572,
+          503,
+          4.6
+        ],
+        [
+          590,
+          507,
+          4.7
+        ],
+        [
+          605,
+          490,
+          4.6
+        ]
+      ],
+      "width_m": 3.2,
+      "kind": "main",
+      "layer": "surface",
+      "axis_polyline_length_m": 138.15547975345362
+    },
+    {
+      "id": "D3-BIVIO",
+      "name": "Ramo per l’ingresso della grotta",
+      "nodes": [
+        "A2",
+        "A3",
+        "IN"
+      ],
+      "xyz_m": [
+        [
+          480,
+          514,
+          4.2
+        ],
+        [
+          494,
+          496,
+          5.0
+        ],
+        [
+          500,
+          484,
+          5.2
+        ]
+      ],
+      "width_m": 3.2,
+      "kind": "branch",
+      "layer": "surface",
+      "axis_polyline_length_m": 36.219916366981494
+    },
+    {
+      "id": "D3-C",
+      "name": "Discesa, quattro camere e Lecora Fase 2",
+      "nodes": [
+        "IN",
+        "DOWN0",
+        "DOWN1",
+        "DOWN2",
+        "C1",
+        "C2",
+        "C3",
+        "DEEP",
+        "C6",
+        "ARENA_IN",
+        "BOSS",
+        "ARENA_OUT"
+      ],
+      "xyz_m": [
+        [
+          500,
+          484,
+          5.2
+        ],
+        [
+          506,
+          489,
+          4.2947183434537095
+        ],
+        [
+          521,
+          490,
+          2.303288690882098
+        ],
+        [
+          535,
+          483,
+          0.30388944047791977
+        ],
+        [
+          514,
+          472,
+          -2.5
+        ],
+        [
+          506,
+          455,
+          -2.5
+        ],
+        [
+          522,
+          440,
+          -3.0
+        ],
+        [
+          529,
+          425,
+          -3.0
+        ],
+        [
+          542,
+          433,
+          -3.0
+        ],
+        [
+          539,
+          448,
+          -3.0
+        ],
+        [
+          552,
+          460,
+          -3.0
+        ],
+        [
+          567,
+          468,
+          -3.0
+        ]
+      ],
+      "width_m": 3.5,
+      "kind": "cave",
+      "layer": "underground",
+      "axis_polyline_length_m": 184.72871494000782
+    },
+    {
+      "id": "D3-RIS",
+      "name": "Risalita con tornanti → uscita esistente",
+      "nodes": [
+        "ARENA_OUT",
+        "UP_STUB",
+        "UP1",
+        "UP2",
+        "UP3",
+        "UP4",
+        "OUT"
+      ],
+      "xyz_m": [
+        [
+          567,
+          468,
+          -3.0
+        ],
+        [
+          571,
+          468,
+          -3.0
+        ],
+        [
+          571,
+          450,
+          -0.6033833265003938
+        ],
+        [
+          577,
+          460,
+          0.4715825606965578
+        ],
+        [
+          570,
+          479,
+          3.2221455008128395
+        ],
+        [
+          578,
+          487,
+          4.004298070844985
+        ],
+        [
+          586,
+          492,
+          5.199999999999999
+        ]
+      ],
+      "width_m": 3.5,
+      "kind": "cave",
+      "layer": "underground",
+      "axis_polyline_length_m": 74.65805015204856
+    },
+    {
+      "id": "D3-E",
+      "name": "Ricongiungimento → camposanto",
+      "nodes": [
+        "OUT",
+        "E1",
+        "E2",
+        "GATE"
+      ],
+      "xyz_m": [
+        [
+          586,
+          492,
+          5.199999999999999
+        ],
+        [
+          605,
+          490,
+          4.6
+        ],
+        [
+          618,
+          510,
+          4.6
+        ],
+        [
+          645.2,
+          500,
+          4.8
+        ]
+      ],
+      "width_m": 3.2,
+      "kind": "main",
+      "layer": "surface",
+      "axis_polyline_length_m": 71.93868715698389
+    },
+    {
+      "id": "D3-G",
+      "name": "Cammino fra tombe e muretto",
+      "nodes": [
+        "GATE",
+        "STONE",
+        "WALL",
+        "EXIT"
+      ],
+      "xyz_m": [
+        [
+          645.2,
+          500,
+          4.8
+        ],
+        [
+          665,
+          500,
+          4.8
+        ],
+        [
+          676,
+          504,
+          4.8
+        ],
+        [
+          676,
+          513.6363636364,
+          4.8
+        ]
+      ],
+      "width_m": 2.5,
+      "kind": "quiet",
+      "layer": "surface",
+      "axis_polyline_length_m": 41.141063547119586
+    },
+    {
+      "id": "D3-V",
+      "name": "Uscita e riserva terzo avvistamento",
+      "nodes": [
+        "EXIT",
+        "V0",
+        "SIGHT",
+        "END"
+      ],
+      "xyz_m": [
+        [
+          676,
+          513.6363636364,
+          4.8
+        ],
+        [
+          684,
+          530,
+          4.7
+        ],
+        [
+          705,
+          553,
+          4.6
+        ],
+        [
+          722,
+          565,
+          4.9
+        ]
+      ],
+      "width_m": 3.0,
+      "kind": "narrative",
+      "layer": "surface",
+      "axis_polyline_length_m": 70.1679911043462
+    },
+    {
+      "id": "D3-O1",
+      "name": "Deviazione esterna umida",
+      "nodes": [
+        "A1",
+        "BR_A",
+        "A2"
+      ],
+      "xyz_m": [
+        [
+          452,
+          523,
+          3.6
+        ],
+        [
+          466,
+          501,
+          3.9
+        ],
+        [
+          480,
+          514,
+          4.2
+        ]
+      ],
+      "width_m": 2.8,
+      "kind": "optional",
+      "layer": "surface",
+      "axis_polyline_length_m": 45.1817827953534
+    },
+    {
+      "id": "D3-O2",
+      "name": "Tasca sul margine asciutto",
+      "nodes": [
+        "A2",
+        "BR_B"
+      ],
+      "xyz_m": [
+        [
+          480,
+          514,
+          4.2
+        ],
+        [
+          488,
+          529,
+          4.0
+        ]
+      ],
+      "width_m": 2.8,
+      "kind": "optional",
+      "layer": "surface",
+      "axis_polyline_length_m": 17.0
+    },
+    {
+      "id": "D3-O3",
+      "name": "Anfratto laterale nella tana",
+      "nodes": [
+        "C2",
+        "BR_C"
+      ],
+      "xyz_m": [
+        [
+          506,
+          455,
+          -2.5
+        ],
+        [
+          495,
+          451,
+          -2.5
+        ]
+      ],
+      "width_m": 3.0,
+      "kind": "cave_optional",
+      "layer": "underground",
+      "axis_polyline_length_m": 11.704699910719626
+    },
+    {
+      "id": "D3-O5",
+      "name": "Riva dopo la tana",
+      "nodes": [
+        "E1",
+        "BR_E"
+      ],
+      "xyz_m": [
+        [
+          605,
+          490,
+          4.6
+        ],
+        [
+          605,
+          472,
+          4.3
+        ]
+      ],
+      "width_m": 2.8,
+      "kind": "optional",
+      "layer": "surface",
+      "axis_polyline_length_m": 18.0
+    },
+    {
+      "id": "D3-O6",
+      "name": "Dosso prima del camposanto",
+      "nodes": [
+        "E2",
+        "BR_F"
+      ],
+      "xyz_m": [
+        [
+          618,
+          510,
+          4.6
+        ],
+        [
+          628,
+          523,
+          4.5
+        ]
+      ],
+      "width_m": 2.8,
+      "kind": "optional",
+      "layer": "surface",
+      "axis_polyline_length_m": 16.401219466856727
+    },
+    {
+      "id": "D3-ANELLO",
+      "name": "Anello esplorabile attorno al camposanto",
+      "nodes": [
+        "E1",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8",
+        "L9",
+        "E2"
+      ],
+      "xyz_m": [
+        [
+          605,
+          490,
+          4.6
+        ],
+        [
+          627,
+          475,
+          4.4
+        ],
+        [
+          650,
+          464,
+          4.3
+        ],
+        [
+          680,
+          455,
+          4.2
+        ],
+        [
+          710,
+          468,
+          4.3
+        ],
+        [
+          723,
+          493,
+          4.4
+        ],
+        [
+          718,
+          515,
+          4.5
+        ],
+        [
+          700,
+          524,
+          4.6
+        ],
+        [
+          675,
+          524,
+          4.6
+        ],
+        [
+          652,
+          524,
+          4.6
+        ],
+        [
+          618,
+          510,
+          4.6
+        ]
+      ],
+      "width_m": 2.8,
+      "kind": "optional",
+      "layer": "surface",
+      "axis_polyline_length_m": 271.7718348263942
+    },
+    {
+      "id": "D3-RUDERE",
+      "name": "Stradina verso il rudere",
+      "nodes": [
+        "L2",
+        "RUIN_GATE"
+      ],
+      "xyz_m": [
+        [
+          650,
+          464,
+          4.3
+        ],
+        [
+          651,
+          453.5,
+          4.3
+        ]
+      ],
+      "width_m": 2.5,
+      "kind": "optional",
+      "layer": "surface",
+      "axis_polyline_length_m": 10.547511554864494,
+      "taper_final_m": 2.0,
+      "taper_end_width_m": 1.5
+    },
+    {
+      "id": "D3-FIENILE",
+      "name": "Deviazione verso il fienile crollato",
+      "nodes": [
+        "L4",
+        "SHED_GATE"
+      ],
+      "xyz_m": [
+        [
+          710,
+          468,
+          4.3
+        ],
+        [
+          725,
+          477,
+          4.3
+        ]
+      ],
+      "width_m": 2.5,
+      "kind": "optional",
+      "layer": "surface",
+      "axis_polyline_length_m": 17.4928556845359,
+      "taper_final_m": 2.0,
+      "taper_end_width_m": 2.0
+    }
+  ],
+  "terrain": {
+    "polygon_xy_m": [
+      [
+        422,
+        540.1142857142858
+      ],
+      [
+        438,
+        541.0285714285715
+      ],
+      [
+        437.5,
+        537
+      ],
+      [
+        475,
+        536
+      ],
+      [
+        505,
+        544
+      ],
+      [
+        558,
+        505
+      ],
+      [
+        610,
+        535
+      ],
+      [
+        682,
+        540
+      ],
+      [
+        698,
+        567
+      ],
+      [
+        727,
+        583
+      ],
+      [
+        747,
+        564
+      ],
+      [
+        754,
+        535
+      ],
+      [
+        726,
+        525
+      ],
+      [
+        750,
+        490
+      ],
+      [
+        744,
+        450
+      ],
+      [
+        710,
+        418
+      ],
+      [
+        680,
+        394
+      ],
+      [
+        617,
+        380
+      ],
+      [
+        580,
+        391
+      ],
+      [
+        548,
+        407
+      ],
+      [
+        502,
+        413
+      ],
+      [
+        468,
+        438
+      ],
+      [
+        442,
+        468
+      ],
+      [
+        417,
+        503
+      ],
+      [
+        423,
+        537
+      ]
+    ],
+    "area_m2": 40594.828571428574,
+    "seam_D2_xyz_m": [
+      [
+        422,
+        540.1142857142858,
+        3.497874037600475
+      ],
+      [
+        429,
+        540.5142857142857,
+        3.4684459458068795
+      ],
+      [
+        438,
+        541.0285714285715,
+        3.4472045303617724
+      ]
+    ],
+    "only_permitted_contact": "Exact D2 southern boundary segment between X422 and438; no ground overlap",
+    "support": "Superficie di supporto continua, incluse zone umide non percorribili; non isolotti o sole strisce sotto i sentieri.",
+    "max_main_grade_target_percent": 6.0,
+    "surface_legend": "Verde chiaro: terreno asciutto esplorabile anche fuori strada; blu: ristagno profondo/limite; tratteggio viola: impronta del dungeon SOTTO il suolo, non recinto superficiale."
+  },
+  "cave": {
+    "id": "TANA",
+    "name": "Mini dungeon · Lecora Fase 2",
+    "envelope_xy_m": [
+      [
+        496.75,
+        480.21
+      ],
+      [
+        503.25,
+        487.79
+      ],
+      [
+        500,
+        499
+      ],
+      [
+        523,
+        499
+      ],
+      [
+        544,
+        491
+      ],
+      [
+        565,
+        491
+      ],
+      [
+        584.4,
+        496.8
+      ],
+      [
+        587.6,
+        487.2
+      ],
+      [
+        584,
+        474
+      ],
+      [
+        578,
+        445
+      ],
+      [
+        548,
+        422
+      ],
+      [
+        515,
+        416
+      ],
+      [
+        486,
+        433
+      ],
+      [
+        482,
+        459
+      ]
+    ],
+    "entry_node": "IN",
+    "exit_node": "OUT",
+    "passage_width_m": 3.5,
+    "passage_clear_height_m": 3.2,
+    "turning_pockets_min_m": [
+      7,
+      7
+    ],
+    "rooms": [
+      {
+        "id": "S1",
+        "center_xy_m": [
+          514,
+          472
+        ],
+        "size_m": [
+          12,
+          12
+        ],
+        "name": "Slargo ordinari",
+        "floor_z_m": -2.5
+      },
+      {
+        "id": "S2",
+        "center_xy_m": [
+          506,
+          455
+        ],
+        "size_m": [
+          12,
+          12
+        ],
+        "name": "Svolta ampia",
+        "floor_z_m": -2.5
+      },
+      {
+        "id": "S3",
+        "center_xy_m": [
+          522,
+          440
+        ],
+        "size_m": [
+          16,
+          14
+        ],
+        "name": "Slargo prima della camera",
+        "floor_z_m": -3.0
+      },
+      {
+        "id": "S4",
+        "center_xy_m": [
+          495,
+          451
+        ],
+        "size_m": [
+          8,
+          7
+        ],
+        "name": "Anfratto laterale",
+        "floor_z_m": -2.5
+      },
+      {
+        "id": "S5",
+        "center_xy_m": [
+          529,
+          425
+        ],
+        "size_m": [
+          12,
+          10
+        ],
+        "name": "Quarta camera prima della tana",
+        "floor_z_m": -3.0
+      },
+      {
+        "id": "S6",
+        "center_xy_m": [
+          570,
+          479
+        ],
+        "size_m": [
+          5,
+          5
+        ],
+        "name": "Pianerottolo della risalita",
+        "floor_z_m": 3.2221455008128395
+      },
+      {
+        "id": "DOWN0-LAND",
+        "center_xy_m": [
+          506,
+          489
+        ],
+        "size_m": [
+          5,
+          5
+        ],
+        "name": "Pianerottolo discesa",
+        "floor_z_m": 4.2947183434537095
+      },
+      {
+        "id": "DOWN1-LAND",
+        "center_xy_m": [
+          521,
+          490
+        ],
+        "size_m": [
+          5,
+          5
+        ],
+        "name": "Pianerottolo discesa",
+        "floor_z_m": 2.303288690882098
+      },
+      {
+        "id": "DOWN2-LAND",
+        "center_xy_m": [
+          535,
+          483
+        ],
+        "size_m": [
+          5,
+          5
+        ],
+        "name": "Pianerottolo discesa",
+        "floor_z_m": 0.30388944047791977
+      },
+      {
+        "id": "UP_STUB-LAND",
+        "center_xy_m": [
+          571,
+          468
+        ],
+        "size_m": [
+          5,
+          5
+        ],
+        "name": "Pianerottolo risalita",
+        "floor_z_m": -3.0
+      },
+      {
+        "id": "UP1-LAND",
+        "center_xy_m": [
+          571,
+          450
+        ],
+        "size_m": [
+          5,
+          5
+        ],
+        "name": "Pianerottolo risalita",
+        "floor_z_m": -0.6033833265003938
+      },
+      {
+        "id": "UP2-LAND",
+        "center_xy_m": [
+          577,
+          460
+        ],
+        "size_m": [
+          5,
+          5
+        ],
+        "name": "Pianerottolo risalita",
+        "floor_z_m": 0.4715825606965578
+      },
+      {
+        "id": "UP4-LAND",
+        "center_xy_m": [
+          578,
+          487
+        ],
+        "size_m": [
+          5,
+          5
+        ],
+        "name": "Pianerottolo risalita",
+        "floor_z_m": 4.004298070844985
+      }
+    ],
+    "arena": {
+      "center_xy_m": [
+        552,
+        460
+      ],
+      "size_m": [
+        30,
+        24
+      ],
+      "polygon_xy_m": [
+        [
+          537.0,
+          448.0
+        ],
+        [
+          567.0,
+          448.0
+        ],
+        [
+          567.0,
+          472.0
+        ],
+        [
+          537.0,
+          472.0
+        ]
+      ],
+      "floor_z_m": -3.0,
+      "clear_height_m": 5.5,
+      "central_clear_size_m": [
+        22,
+        18
+      ],
+      "entry_node": "ARENA_IN",
+      "exit_node": "ARENA_OUT"
+    },
+    "section": {
+      "entry_floor_m": 5.2,
+      "lowest_floor_m": -3.0,
+      "exit_floor_m": 5.2,
+      "descent_m": 8.2,
+      "passage_clear_height_m": 3.2,
+      "arena_ceiling_m": 2.5,
+      "surface_over_arena_min_m": 5.0,
+      "minimum_rock_cover_over_arena_m": 2.5,
+      "hill_top_m": 9.0,
+      "note": "Vero piano sotterraneo: arena a−3m locali sotto terreno a+5m. Portali negli affioramenti locali fino a+9m, sufficienti alla volta sopra ingresso/uscita a+5,2m. Cunicoli separati dalla strada in superficie; quote da provare nel greybox."
+    },
+    "miniboss": {
+      "name": "Lecora Fase 2",
+      "count": 1,
+      "sequence_number": 2,
+      "center_xy_m": [
+        552,
+        460
+      ],
+      "native_mesh": "/Game/Developers/Roberto/Greybox_WTFD/Creature_Proxy/Lecora_Fase_2/StaticMeshes/SM_Lecora_Fase_2",
+      "native_size_m": [
+        1.15208,
+        1.89973,
+        1.03151
+      ],
+      "design_reserve_m": [
+        6,
+        5,
+        3.5
+      ],
+      "artistic_scale_approved": false,
+      "new_abilities_or_stats": false
+    },
+    "progression": "Dal bivio si può proseguire in superficie al camposanto. Il ramo della grotta scende di8,2m, attraversa quattro camere con incontri successivi, raggiunge la Lecora Fase2 e risale all’uscita già proposta. Nessun blocco evento o obbligo narrativo dedotto dal tracciato.",
+    "underground": true,
+    "separate_surface_route": true,
+    "max_ramp_grade_target_percent": 20.0,
+    "encounter_sequence": [
+      "ED3-03",
+      "ED3-08",
+      "ED3-09",
+      "ED3-10",
+      "LECORA-FASE-2"
+    ],
+    "descent_nodes": [
+      "IN",
+      "DOWN0",
+      "DOWN1",
+      "DOWN2",
+      "C1"
+    ],
+    "ascent_nodes": [
+      "ARENA_OUT",
+      "UP_STUB",
+      "UP1",
+      "UP2",
+      "UP3",
+      "UP4",
+      "OUT"
+    ]
+  },
+  "cemetery": {
+    "id": "CAMPOSANTO",
+    "name": "Camposanto · Scena 18",
+    "center_xy_m": [
+      665,
+      500
+    ],
+    "enclosure_xy_m": [
+      [
+        646,
+        488
+      ],
+      [
+        656,
+        486
+      ],
+      [
+        678,
+        488
+      ],
+      [
+        685,
+        497
+      ],
+      [
+        682,
+        512
+      ],
+      [
+        671,
+        515
+      ],
+      [
+        651,
+        512
+      ],
+      [
+        645,
+        503
+      ]
+    ],
+    "nominal_size_m": [
+      40,
+      29
+    ],
+    "dry_mound_size_m": [
+      54,
+      44
+    ],
+    "gate_node": "GATE",
+    "exit_node": "EXIT",
+    "openings_width_m": 3.0,
+    "wall_height_m": 1.1,
+    "wall_thickness_m": 0.5,
+    "main_path_width_m": 2.5,
+    "grave_count": 20,
+    "grave_size_range_m": [
+      [
+        0.6,
+        1.2
+      ],
+      [
+        1.0,
+        1.9
+      ]
+    ],
+    "central_stone_node": "STONE",
+    "connection_wall_node": "WALL",
+    "floor_z_m": 4.8,
+    "no_ordinary_encounters": true,
+    "no_collectibles_inside": true,
+    "note": "Recinto irregolare, varchi reali; circa venti piccole tombe, pietra centrale e muretto da testo S18. Nessuna nuova iscrizione o battuta.",
+    "graves": [
+      {
+        "id": "T01",
+        "xy_m": [
+          650,
+          491
+        ],
+        "size_m": [
+          0.7,
+          1.2
+        ],
+        "yaw_deg": -12
+      },
+      {
+        "id": "T02",
+        "xy_m": [
+          654,
+          490
+        ],
+        "size_m": [
+          0.7999999999999999,
+          1.3499999999999999
+        ],
+        "yaw_deg": 8
+      },
+      {
+        "id": "T03",
+        "xy_m": [
+          658,
+          491
+        ],
+        "size_m": [
+          0.8999999999999999,
+          1.5
+        ],
+        "yaw_deg": 18
+      },
+      {
+        "id": "T04",
+        "xy_m": [
+          662,
+          490
+        ],
+        "size_m": [
+          0.7,
+          1.65
+        ],
+        "yaw_deg": -5
+      },
+      {
+        "id": "T05",
+        "xy_m": [
+          667,
+          491
+        ],
+        "size_m": [
+          0.7999999999999999,
+          1.2
+        ],
+        "yaw_deg": -12
+      },
+      {
+        "id": "T06",
+        "xy_m": [
+          672,
+          491
+        ],
+        "size_m": [
+          0.8999999999999999,
+          1.3499999999999999
+        ],
+        "yaw_deg": 8
+      },
+      {
+        "id": "T07",
+        "xy_m": [
+          676,
+          493
+        ],
+        "size_m": [
+          0.7,
+          1.5
+        ],
+        "yaw_deg": 18
+      },
+      {
+        "id": "T08",
+        "xy_m": [
+          680,
+          495
+        ],
+        "size_m": [
+          0.7999999999999999,
+          1.65
+        ],
+        "yaw_deg": -5
+      },
+      {
+        "id": "T09",
+        "xy_m": [
+          650,
+          495
+        ],
+        "size_m": [
+          0.8999999999999999,
+          1.2
+        ],
+        "yaw_deg": -12
+      },
+      {
+        "id": "T10",
+        "xy_m": [
+          655,
+          495
+        ],
+        "size_m": [
+          0.7,
+          1.3499999999999999
+        ],
+        "yaw_deg": 8
+      },
+      {
+        "id": "T11",
+        "xy_m": [
+          652,
+          506
+        ],
+        "size_m": [
+          0.7999999999999999,
+          1.5
+        ],
+        "yaw_deg": 18
+      },
+      {
+        "id": "T12",
+        "xy_m": [
+          656,
+          508
+        ],
+        "size_m": [
+          0.8999999999999999,
+          1.65
+        ],
+        "yaw_deg": -5
+      },
+      {
+        "id": "T13",
+        "xy_m": [
+          661,
+          509
+        ],
+        "size_m": [
+          0.7,
+          1.2
+        ],
+        "yaw_deg": -12
+      },
+      {
+        "id": "T14",
+        "xy_m": [
+          665,
+          510
+        ],
+        "size_m": [
+          0.7999999999999999,
+          1.3499999999999999
+        ],
+        "yaw_deg": 8
+      },
+      {
+        "id": "T15",
+        "xy_m": [
+          669,
+          510
+        ],
+        "size_m": [
+          0.8999999999999999,
+          1.5
+        ],
+        "yaw_deg": 18
+      },
+      {
+        "id": "T16",
+        "xy_m": [
+          673,
+          511
+        ],
+        "size_m": [
+          0.7,
+          1.65
+        ],
+        "yaw_deg": -5
+      },
+      {
+        "id": "T17",
+        "xy_m": [
+          679,
+          508
+        ],
+        "size_m": [
+          0.7999999999999999,
+          1.2
+        ],
+        "yaw_deg": -12
+      },
+      {
+        "id": "T18",
+        "xy_m": [
+          680,
+          503
+        ],
+        "size_m": [
+          0.8999999999999999,
+          1.3499999999999999
+        ],
+        "yaw_deg": 8
+      },
+      {
+        "id": "T19",
+        "xy_m": [
+          660,
+          505
+        ],
+        "size_m": [
+          0.7,
+          1.5
+        ],
+        "yaw_deg": 18
+      },
+      {
+        "id": "T20",
+        "xy_m": [
+          657,
+          504
+        ],
+        "size_m": [
+          0.7999999999999999,
+          1.65
+        ],
+        "yaw_deg": -5
+      }
+    ]
+  },
+  "quiet_reserves": [
+    {
+      "id": "Q-CAMPO",
+      "name": "Tombe e pietra centrale",
+      "center_xy_m": [
+        665,
+        500
+      ],
+      "size_m": [
+        40,
+        29
+      ],
+      "kind": "cemetery"
+    },
+    {
+      "id": "Q-CONN",
+      "name": "Muretto · Connessione",
+      "center_xy_m": [
+        676,
+        504
+      ],
+      "size_m": [
+        10,
+        8
+      ],
+      "kind": "connection"
+    },
+    {
+      "id": "Q-VISTA",
+      "name": "Riserva esterna · terzo avvistamento",
+      "center_xy_m": [
+        705,
+        550
+      ],
+      "size_m": [
+        45,
+        30
+      ],
+      "kind": "reveal",
+      "view_from_node": "V0",
+      "look_to_node": "SIGHT",
+      "cemetery_behind": true
+    }
+  ],
+  "encounters": [
+    {
+      "id": "ED3-01",
+      "xy_m": [
+        459,
+        518
+      ],
+      "members": [
+        "Stragoulè",
+        "Stragoulè"
+      ],
+      "reserve_radius_m": 5.0,
+      "habitat": "Primo dosso nel canneto, con passaggio laterale",
+      "layer": "surface",
+      "floor_z_m": 4.4
+    },
+    {
+      "id": "ED3-02",
+      "xy_m": [
+        488,
+        529
+      ],
+      "members": [
+        "Lécora standard"
+      ],
+      "reserve_radius_m": 5.0,
+      "habitat": "Deviazione umida, prima della tana",
+      "layer": "surface",
+      "floor_z_m": 4.4
+    },
+    {
+      "id": "ED3-04",
+      "xy_m": [
+        607,
+        476
+      ],
+      "members": [
+        "Animi",
+        "Animi"
+      ],
+      "reserve_radius_m": 5.0,
+      "habitat": "Riva laterale dopo la tana",
+      "layer": "surface",
+      "floor_z_m": 4.4
+    },
+    {
+      "id": "ED3-05",
+      "xy_m": [
+        621,
+        520
+      ],
+      "members": [
+        "Lécora standard"
+      ],
+      "reserve_radius_m": 4.0,
+      "habitat": "Dosso prima della riserva del camposanto",
+      "layer": "surface",
+      "floor_z_m": 4.4
+    },
+    {
+      "id": "ED3-03",
+      "xy_m": [
+        514,
+        472
+      ],
+      "members": [
+        "Stragoulè"
+      ],
+      "layer": "underground",
+      "floor_z_m": -2.5,
+      "reserve_radius_m": 3,
+      "habitat": "Prima camera dopo la discesa",
+      "habitat_status": "Proposta di prototipo; non una nuova regola folkloristica o aggro"
+    },
+    {
+      "id": "ED3-08",
+      "xy_m": [
+        506,
+        455
+      ],
+      "members": [
+        "Bìnn"
+      ],
+      "layer": "underground",
+      "floor_z_m": -2.5,
+      "reserve_radius_m": 3,
+      "habitat": "Seconda camera, spazio laterale libero",
+      "habitat_status": "Proposta di prototipo; non una nuova regola folkloristica o aggro"
+    },
+    {
+      "id": "ED3-09",
+      "xy_m": [
+        522,
+        440
+      ],
+      "members": [
+        "Stragoulè",
+        "Stragoulè"
+      ],
+      "layer": "underground",
+      "floor_z_m": -3.0,
+      "reserve_radius_m": 4,
+      "habitat": "Terza camera ampia, prima della profondità finale",
+      "habitat_status": "Proposta di prototipo; non una nuova regola folkloristica o aggro"
+    },
+    {
+      "id": "ED3-10",
+      "xy_m": [
+        529,
+        425
+      ],
+      "members": [
+        "Stragoulè"
+      ],
+      "layer": "underground",
+      "floor_z_m": -3.0,
+      "reserve_radius_m": 2.5,
+      "habitat": "Quarta camera prima del miniboss",
+      "habitat_status": "Proposta di prototipo; non una nuova regola folkloristica o aggro"
+    },
+    {
+      "id": "ED3-06",
+      "xy_m": [
+        676,
+        445
+      ],
+      "members": [
+        "Stragoulè",
+        "Stragoulè"
+      ],
+      "layer": "surface",
+      "floor_z_m": 4.2,
+      "reserve_radius_m": 5,
+      "habitat": "Prato sud all’esterno del camposanto",
+      "habitat_status": "Proposta di prototipo; non una nuova regola folkloristica o aggro"
+    },
+    {
+      "id": "ED3-07",
+      "xy_m": [
+        731,
+        489
+      ],
+      "members": [
+        "Mazapegulè"
+      ],
+      "layer": "surface",
+      "floor_z_m": 4.4,
+      "reserve_radius_m": 5,
+      "habitat": "Deviazione del fienile crollato",
+      "habitat_status": "Proposta di prototipo; non una nuova regola folkloristica o aggro"
+    }
+  ],
+  "collectibles": [
+    {
+      "id": "D3_R01",
+      "xy_m": [
+        445,
+        532
+      ],
+      "species": "Piantaggine",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito",
+      "previous_xy_m": [
+        445,
+        531
+      ],
+      "revision_reason": "Causal RoadMask clearance from Rev2 QA; species/count and all other existing nodes retained."
+    },
+    {
+      "id": "D3_R02",
+      "xy_m": [
+        451,
+        528
+      ],
+      "species": "Piantaggine",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R03",
+      "xy_m": [
+        457,
+        531
+      ],
+      "species": "Piantaggine",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R04",
+      "xy_m": [
+        463,
+        525
+      ],
+      "species": "Piantaggine",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R05",
+      "xy_m": [
+        470,
+        527
+      ],
+      "species": "Piantaggine",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R06",
+      "xy_m": [
+        476,
+        520
+      ],
+      "species": "Piantaggine",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R07",
+      "xy_m": [
+        479.5,
+        517.5
+      ],
+      "species": "Piantaggine",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito",
+      "previous_xy_m": [
+        482,
+        517
+      ],
+      "revision_reason": "Causal RoadMask clearance from Rev2 QA; species/count and all other existing nodes retained."
+    },
+    {
+      "id": "D3_R08",
+      "xy_m": [
+        486,
+        511
+      ],
+      "species": "Piantaggine",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R09",
+      "xy_m": [
+        454,
+        505
+      ],
+      "species": "Rovo",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R10",
+      "xy_m": [
+        459,
+        502
+      ],
+      "species": "Rovo",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R11",
+      "xy_m": [
+        466,
+        497
+      ],
+      "species": "Rovo",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R12",
+      "xy_m": [
+        471,
+        500
+      ],
+      "species": "Rovo",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R13",
+      "xy_m": [
+        480,
+        531
+      ],
+      "species": "Rovo",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R14",
+      "xy_m": [
+        488,
+        533
+      ],
+      "species": "Rovo",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R15",
+      "xy_m": [
+        590,
+        488
+      ],
+      "species": "Rosa canina",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R16",
+      "xy_m": [
+        595,
+        485
+      ],
+      "species": "Rosa canina",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R17",
+      "xy_m": [
+        599,
+        481
+      ],
+      "species": "Rosa canina",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R18",
+      "xy_m": [
+        603,
+        469
+      ],
+      "species": "Rosa canina",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R19",
+      "xy_m": [
+        609,
+        470
+      ],
+      "species": "Rosa canina",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R20",
+      "xy_m": [
+        613,
+        478
+      ],
+      "species": "Rosa canina",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R21",
+      "xy_m": [
+        606,
+        496
+      ],
+      "species": "Achillea",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito",
+      "previous_xy_m": [
+        608,
+        497
+      ],
+      "revision_reason": "Causal RoadMask clearance from Rev2 QA; species/count and all other existing nodes retained."
+    },
+    {
+      "id": "D3_R22",
+      "xy_m": [
+        611,
+        505
+      ],
+      "species": "Achillea",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito",
+      "previous_xy_m": [
+        613,
+        504
+      ],
+      "revision_reason": "Causal RoadMask clearance from Rev2 QA; species/count and all other existing nodes retained."
+    },
+    {
+      "id": "D3_R23",
+      "xy_m": [
+        620,
+        506
+      ],
+      "species": "Achillea",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R24",
+      "xy_m": [
+        625,
+        510
+      ],
+      "species": "Achillea",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R25",
+      "xy_m": [
+        627,
+        518
+      ],
+      "species": "Achillea",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R26",
+      "xy_m": [
+        631,
+        521
+      ],
+      "species": "Achillea",
+      "count": 1,
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R27",
+      "xy_m": [
+        618,
+        478
+      ],
+      "species": "Rovo",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R28",
+      "xy_m": [
+        631,
+        469
+      ],
+      "species": "Piantaggine",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R29",
+      "xy_m": [
+        641,
+        465
+      ],
+      "species": "Achillea",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R30",
+      "xy_m": [
+        653,
+        459
+      ],
+      "species": "Piantaggine",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R31",
+      "xy_m": [
+        663,
+        452
+      ],
+      "species": "Achillea",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R32",
+      "xy_m": [
+        673,
+        449
+      ],
+      "species": "Piantaggine",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R33",
+      "xy_m": [
+        688,
+        454
+      ],
+      "species": "Rosa canina",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R34",
+      "xy_m": [
+        706,
+        461
+      ],
+      "species": "Achillea",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R35",
+      "xy_m": [
+        719,
+        470
+      ],
+      "species": "Rosa canina",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R36",
+      "xy_m": [
+        721,
+        483
+      ],
+      "species": "Piantaggine",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R37",
+      "xy_m": [
+        730,
+        495
+      ],
+      "species": "Rovo",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R38",
+      "xy_m": [
+        725,
+        507
+      ],
+      "species": "Rosa canina",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R39",
+      "xy_m": [
+        714.5,
+        519.5
+      ],
+      "species": "Rovo",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R40",
+      "xy_m": [
+        702,
+        528
+      ],
+      "species": "Achillea",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R41",
+      "xy_m": [
+        689,
+        526
+      ],
+      "species": "Piantaggine",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R42",
+      "xy_m": [
+        674,
+        528
+      ],
+      "species": "Rosa canina",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R43",
+      "xy_m": [
+        657,
+        528
+      ],
+      "species": "Achillea",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    },
+    {
+      "id": "D3_R44",
+      "xy_m": [
+        642,
+        523
+      ],
+      "species": "Rovo",
+      "count": 1,
+      "layer": "surface",
+      "state": "Riserva proposta, non attore costruito"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "WET-S",
+      "name": "Ristagno profondo e canneto a sud",
+      "polygon_xy_m": [
+        [
+          460,
+          445
+        ],
+        [
+          499,
+          424
+        ],
+        [
+          538,
+          418
+        ],
+        [
+          544,
+          407
+        ],
+        [
+          502,
+          413
+        ],
+        [
+          468,
+          438
+        ]
+      ],
+      "role": "limite visibile esterno"
+    },
+    {
+      "id": "RIDGE",
+      "name": "Dosso roccioso della tana",
+      "polygon_xy_m": [
+        [
+          496.75,
+          480.21
+        ],
+        [
+          503.25,
+          487.79
+        ],
+        [
+          500,
+          499
+        ],
+        [
+          523,
+          499
+        ],
+        [
+          544,
+          491
+        ],
+        [
+          565,
+          491
+        ],
+        [
+          584.4,
+          496.8
+        ],
+        [
+          587.6,
+          487.2
+        ],
+        [
+          584,
+          474
+        ],
+        [
+          578,
+          445
+        ],
+        [
+          548,
+          422
+        ],
+        [
+          515,
+          416
+        ],
+        [
+          486,
+          433
+        ],
+        [
+          482,
+          459
+        ]
+      ],
+      "role": "suolo di copertura del piano sotterraneo; scarpate locali da definire, non volume dell’intero dungeon visibile in superficie"
+    },
+    {
+      "id": "WET-N",
+      "name": "Ristagno fra tana e camposanto",
+      "polygon_xy_m": [
+        [
+          526,
+          500
+        ],
+        [
+          545,
+          493
+        ],
+        [
+          562,
+          493
+        ],
+        [
+          577,
+          497
+        ],
+        [
+          574,
+          499
+        ],
+        [
+          552,
+          496
+        ],
+        [
+          534,
+          503
+        ]
+      ],
+      "role": "ristagno laterale sotto la strada superficiale; nessuna barriera che imponga il dungeon"
+    },
+    {
+      "id": "SEPARAZIONE",
+      "name": "Acqua e scarpata ai lati della tana",
+      "polygon_xy_m": [
+        [
+          548,
+          407
+        ],
+        [
+          580,
+          391
+        ],
+        [
+          617,
+          380
+        ],
+        [
+          612,
+          410
+        ],
+        [
+          600,
+          440
+        ],
+        [
+          590,
+          470
+        ],
+        [
+          586,
+          482
+        ],
+        [
+          578,
+          470
+        ],
+        [
+          578,
+          445
+        ],
+        [
+          548,
+          422
+        ],
+        [
+          515,
+          416
+        ]
+      ],
+      "role": "collega il dosso al bordo sud; uscita sul dosso est da OUT, senza porta evento"
+    }
+  ],
+  "sources": [
+    {
+      "path": "D:\\Where the Fog Dies-ClaudeCoWork\\Where the Fog Dies-ClaudeCoWork\\Sviluppo\\Greybox\\Zona_D_Bastiano\\D2_PIANTA_METRICA.json",
+      "sha256": "8ade1a9fd5e4efb0830f75ad2c4e9f63b75b71c4d006acd504b9292d24d65f95"
+    },
+    {
+      "path": "D:\\Where the Fog Dies-ClaudeCoWork\\Where the Fog Dies-ClaudeCoWork\\Sviluppo\\Greybox\\Zona_D_Bastiano\\Costruzione_D2\\GROUND.json",
+      "sha256": "df02270dff859c2da6f3b5022480afec73364548fe939ecd484309f0901f0a95"
+    },
+    {
+      "path": "D:\\Where the Fog Dies-ClaudeCoWork\\Where the Fog Dies-ClaudeCoWork\\Sviluppo\\Greybox\\Piano_Generale\\RIASSETTO_MACRO.json",
+      "sha256": "b04050f33a92e1f66a9849212fde3691e333237464b4de4940932c7e9500113d"
+    },
+    {
+      "path": "D:\\Where the Fog Dies-ClaudeCoWork\\Where the Fog Dies-ClaudeCoWork\\Sviluppo\\Greybox\\Lecora_Concept\\LECORA_FASE_2_ESITO.json",
+      "sha256": "16b2f02dff169361d5c1883103375d68ca746ee136410a742793804f3ced609c"
+    },
+    {
+      "path": "D:\\Where the Fog Dies-ClaudeCoWork\\Where the Fog Dies-ClaudeCoWork\\STORIA_MADRE_V2.md",
+      "sha256": "05394e551f3972aac4ae4074321c170863f54ce0ece827f624305fc006478563"
+    },
+    {
+      "path": "D:\\Where the Fog Dies-ClaudeCoWork\\Where the Fog Dies-ClaudeCoWork\\wtfd-presentazione\\Tavola_04_Palude_Profonda.html",
+      "sha256": "b0291a6d33d2ed0a30793f1dcf5946788a19257c9e3ba67c292f8c97ef930162"
+    },
+    {
+      "path": "D:\\Where the Fog Dies-ClaudeCoWork\\Where the Fog Dies-ClaudeCoWork\\wtfd-presentazione\\Tavola_06_Mappa_Generale_Livello.html",
+      "sha256": "c0ae3436429701149f44bd251df6659d92efaa968700546141e8f2cd3b73ab6b"
+    },
+    {
+      "path": "D:\\Where the Fog Dies-ClaudeCoWork\\Where the Fog Dies-ClaudeCoWork\\Sviluppo\\Greybox\\Incontri\\CATALOGO_E_PROPOSTA_C1.json",
+      "sha256": "a8b546ed4533aca1c2655f3c62f38a9b2094fdbd73e44ee2ccc6e739695caae2"
+    }
+  ],
+  "limits": [
+    "Tutte le nuove metriche sono proposte. Nessun Unreal, collisione, aggro, camera, tempo o Play certificato.",
+    "Il controllo offline di sovrapposizione riguarda ingombri conservativi: non sostituisce la successiva verifica nativa.",
+    "Scala definitiva del miniboss e comportamenti combat restano aperti; il modello non viene modificato.",
+    "Nessuna nuova lore, ricompensa, battuta, iscrizione, AI, animazione o porta evento.",
+    "La riserva del terzo avvistamento prepara lo spazio della S18; non costruisce la successiva arena finale.",
+    "Il bypass in superficie è richiesto da Roberto. Eventuali obblighi di trama e blocchi nebbia della proposta D-432 non vengono implementati o dedotti qui."
+  ],
+  "revision": 2,
+  "previous_revision": {
+    "metric_sha256": "54e94a37c2e1d649e9fc659a4655a70ab9b16e5099037d849fe3743e9d89a470",
+    "ordinary_encounters": 5,
+    "ordinary_creatures": 8,
+    "collectibles": 26,
+    "no_surface_bypass_requirement": "Superseded by Roberto explicit revision; no event gate or narrative obligation inferred."
+  },
+  "environment": [
+    {
+      "id": "ENV-RUDERE",
+      "name": "Piccolo rudere rurale",
+      "center_xy_m": [
+        651,
+        451
+      ],
+      "size_m": [
+        6,
+        5
+      ],
+      "height_m": 2.2,
+      "door_node": "RUIN_GATE",
+      "opening_width_m": 1.8,
+      "opening_height_m": 2.0,
+      "role": "Esplorazione esterna, tetto già crollato; nessuna nuova storia, NPC o ricompensa."
+    },
+    {
+      "id": "ENV-FIENILE",
+      "name": "Fienile con copertura compromessa",
+      "center_xy_m": [
+        729,
+        477
+      ],
+      "size_m": [
+        8,
+        5
+      ],
+      "height_m": 3.0,
+      "door_node": "SHED_GATE",
+      "opening_width_m": 2.5,
+      "opening_height_m": 2.5,
+      "role": "Landmark nel prato est, ingresso dal lato strada e legname a terra; nessun evento o interazione inventati."
+    }
+  ],
+  "surface_zones": [
+    {
+      "id": "PRATO-SUD",
+      "name": "Prato sud esplorabile",
+      "polygon_xy_m": [
+        [
+          610,
+          482
+        ],
+        [
+          635,
+          483
+        ],
+        [
+          647,
+          478
+        ],
+        [
+          689,
+          478
+        ],
+        [
+          714,
+          487
+        ],
+        [
+          737,
+          483
+        ],
+        [
+          731,
+          452
+        ],
+        [
+          698,
+          428
+        ],
+        [
+          650,
+          433
+        ],
+        [
+          620,
+          451
+        ]
+      ],
+      "explorable": true,
+      "contents": "Anello, rudere, due tasche di raccolta e un incontro ordinario; suolo asciutto fra i ristagni."
+    },
+    {
+      "id": "PRATO-EST",
+      "name": "Margine est esplorabile",
+      "polygon_xy_m": [
+        [
+          696,
+          482
+        ],
+        [
+          713,
+          484
+        ],
+        [
+          737,
+          478
+        ],
+        [
+          741,
+          501
+        ],
+        [
+          727,
+          523
+        ],
+        [
+          699,
+          527
+        ],
+        [
+          688,
+          520
+        ]
+      ],
+      "explorable": true,
+      "contents": "Fienile compromesso, incontro esterno e raccoglibili lungo i bordi."
+    },
+    {
+      "id": "PRATO-NORD",
+      "name": "Ritorno nord del camposanto",
+      "polygon_xy_m": [
+        [
+          628,
+          518
+        ],
+        [
+          645,
+          517
+        ],
+        [
+          681,
+          519
+        ],
+        [
+          702,
+          525
+        ],
+        [
+          697,
+          532
+        ],
+        [
+          671,
+          533
+        ],
+        [
+          645,
+          532
+        ]
+      ],
+      "explorable": true,
+      "contents": "Stradina di ritorno e raccolte; nessun contenuto dentro la riserva del terzo avvistamento."
+    }
+  ]
+}

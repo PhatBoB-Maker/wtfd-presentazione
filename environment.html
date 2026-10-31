@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="color-scheme" content="dark"><title>Environment — Where the Fog Dies</title>
+
+<style>
+
+:root{--bg:#0b1512;--panel:#102019;--panel2:#172b22;--line:#365044;--ink:#edf0e4;--muted:#b7c2b5;--gold:#e2ba6b}
+
+*{box-sizing:border-box}html,body{height:100%;margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,sans-serif}button,a{font:inherit}button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+.private{height:36px;display:flex;justify-content:center;align-items:center;gap:8px;background:#e4c888;color:#162019;font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;text-align:center;padding:5px 14px}
+
+.app{height:calc(100% - 36px);display:grid;grid-template-columns:310px minmax(0,1fr)}
+
+.sidebar{background:var(--panel);border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0}.head{padding:22px 20px 16px;border-bottom:1px solid var(--line)}.eyebrow{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.11em;text-transform:uppercase}h1{font-family:Georgia,serif;font-size:25px;line-height:1.1;margin:5px 0 10px}.head p{color:var(--muted);font-size:13px;line-height:1.45;margin:0}
+
+.maps{padding:10px;overflow:auto;display:grid;gap:4px}.map-link{appearance:none;width:100%;border:0;border-radius:7px;background:transparent;color:var(--ink);text-align:left;padding:10px 11px;cursor:pointer}.map-link:hover{background:#1b3429}.map-link.active{background:#244435;box-shadow:inset 3px 0 var(--gold)}.map-link strong{display:block;font-size:13px}.map-link span{display:block;color:var(--muted);font-size:11px;line-height:1.35;margin-top:2px}
+
+.viewer{min-width:0;display:grid;grid-template-rows:auto minmax(0,1fr)}.toolbar{min-height:70px;padding:12px 18px;background:#0e1b16;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px}.toolbar-copy{min-width:0;flex:1}.toolbar h2{font:700 19px/1.25 Georgia,serif;margin:0}.toolbar p{color:var(--muted);font-size:12px;margin:3px 0 0}.open{flex:none;border:1px solid #597565;border-radius:999px;color:var(--ink);text-decoration:none;padding:8px 12px;font-size:12px;font-weight:700}.open:hover{border-color:var(--gold);color:var(--gold)}
+
+.frame-wrap{position:relative;min-height:0;background:#101b17}iframe{width:100%;height:100%;border:0;background:white}.loading{position:absolute;inset:0;display:grid;place-items:center;background:#101b17;color:var(--muted);font-size:13px;pointer-events:none;transition:opacity .18s}.loading.done{opacity:0}
+
+.mobile-toggle{display:none}
+
+@media(max-width:800px){.app{display:block;height:calc(100% - 36px)}.sidebar{position:absolute;z-index:5;inset:36px 0 0 0;transform:translateX(-100%);transition:transform .2s;max-width:340px;box-shadow:20px 0 50px #0008}.sidebar.open{transform:none}.viewer{height:100%}.mobile-toggle{display:inline-flex;border:1px solid #597565;border-radius:7px;background:#172b22;color:var(--ink);padding:8px 10px;cursor:pointer}.toolbar{padding:9px 10px;gap:9px}.toolbar h2{font-size:16px}.toolbar p{display:none}.open{padding:7px 9px}}
+
+</style></head><body>
+
+<div class="private">MASTER-RIF · Atlante Environment · <a href="level-design.html" style="color:#162019">Level Design</a></div>
+
+<div class="app">
+
+<aside class="sidebar" id="sidebar"><div class="head"><div class="eyebrow">Where the Fog Dies</div><h1>Atlante del Master</h1><p>Mappe, reference e allegati del Master di riferimento. La nuova revisione geografica REV-GEO-01 non è ancora recepita in queste schede. Le approvazioni riportate valgono per il Master. Preparato per la condivisione il 1 novembre 2026.</p></div><nav class="maps" aria-label="Mappe del livello"><button class="map-link" type="button" data-src="assets/environment/Consegne_Environment/MAPPA_GENERALE.html" data-title="Master · schema generale" data-note="MASTER-RIF · schema di progressione, non carta metrica corrente"><strong>Master · schema generale</strong><span>MASTER-RIF · schema di progressione, non carta metrica corrente</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Consegne_Environment/Belvedere_e_Discesa/BELVEDERE_MANUALE_ENVIRONMENT.html" data-title="Belvedere e discesa" data-note="Percorso, quote, bivio e riferimenti"><strong>Belvedere e discesa</strong><span>Percorso, quote, bivio e riferimenti</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Consegne_Environment/Zona_A_Fossalta/FOSSALTA_MANUALE_ENVIRONMENT.html" data-title="A · Fossalta" data-note="Edifici, interni, mercato e circolazione"><strong>A · Fossalta</strong><span>Edifici, interni, mercato e circolazione</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Consegne_Environment/Zona_B_Argini/ZONA_B_MANUALE_ENVIRONMENT.html" data-title="B · Argini e cascina" data-note="Percorsi, incontri, raccolte e cascina"><strong>B · Argini e cascina</strong><span>Percorsi, incontri, raccolte e cascina</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#consolidamento" data-title="C1 · Soglia del bosco" data-note="MASTER-RIF · due rive e ricongiungimento"><strong>C1 · Soglia del bosco</strong><span>MASTER-RIF · due rive e ricongiungimento</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#j12-raccordo" data-title="J12 · Fosso dei salici" data-note="Raccordo: due incontri e dodici raccolte"><strong>J12 · Fosso dei salici</strong><span>Raccordo: due incontri e dodici raccolte</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#c2-consolidata" data-title="C2 · Eremo" data-note="MASTER-RIF · approccio occultato e giro di riva"><strong>C2 · Eremo</strong><span>MASTER-RIF · approccio occultato e giro di riva</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#j23-raccordo" data-title="J23 · Conca delle due rive" data-note="Raccordo: quattro incontri e ventiquattro raccolte"><strong>J23 · Conca delle due rive</strong><span>Raccordo: quattro incontri e ventiquattro raccolte</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#c3-pianta" data-title="C3 · Sentieri" data-note="Percorsi, scorci e popolamento"><strong>C3 · Sentieri</strong><span>Percorsi, scorci e popolamento</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#c4-pianta" data-title="C4 · Palude" data-note="Arena, visuali, raccolte e incontri"><strong>C4 · Palude</strong><span>Arena, visuali, raccolte e incontri</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#j4d-raccordo" data-title="J4D · Argine spezzato" data-note="Raccordo: tre incontri e quattordici raccolte"><strong>J4D · Argine spezzato</strong><span>Raccordo: tre incontri e quattordici raccolte</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#d1-pianta" data-title="D1 · Sacello" data-note="Percorso, sette incontri e pianta dell’oratorio"><strong>D1 · Sacello</strong><span>Percorso, sette incontri e pianta dell’oratorio</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#d1-sacello" data-title="Interno del Sacello" data-note="Porta, stanza, tetto e punti interattivi"><strong>Interno del Sacello</strong><span>Porta, stanza, tetto e punti interattivi</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#d2-pianta" data-title="D2 · Bastiano" data-note="Edifici, accessi, raccolte e incontro Lécora"><strong>D2 · Bastiano</strong><span>Edifici, accessi, raccolte e incontro Lécora</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#d3-generale" data-title="D3 · Percorso verso il Camposanto" data-note="Superficie, bivio e raccordi"><strong>D3 · Percorso verso il Camposanto</strong><span>Superficie, bivio e raccordi</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#d3-tana" data-title="D3 · Tana della Lécora" data-note="Dungeon sotterraneo, incontri e boss arena"><strong>D3 · Tana della Lécora</strong><span>Dungeon sotterraneo, incontri e boss arena</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#d3-campo" data-title="D3 · Camposanto" data-note="Area esplorabile, incontri e raccolte"><strong>D3 · Camposanto</strong><span>Area esplorabile, incontri e raccolte</span></button>
+<button class="map-link" type="button" data-src="assets/environment/Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#d4-pianta" data-title="D4 · Radura della Borda" data-note="Arena finale, pack, menhir e perimetro"><strong>D4 · Radura della Borda</strong><span>Arena finale, pack, menhir e perimetro</span></button></nav></aside>
+
+<main class="viewer"><header class="toolbar"><button class="mobile-toggle" type="button" aria-controls="sidebar" aria-expanded="false">Mappe</button><div class="toolbar-copy"><h2 id="view-title">Mappa generale</h2><p id="view-note">MASTER-RIF · riferimento precedente, non revisione corrente</p></div><a class="open" id="open-source" href="assets/environment/Consegne_Environment/MAPPA_GENERALE.html">Apri a pagina intera</a></header><div class="frame-wrap"><div class="loading" id="loading">Caricamento della pianta…</div><iframe id="map-frame" title="Mappa interattiva: Mappa generale" src="assets/environment/Consegne_Environment/MAPPA_GENERALE.html"></iframe></div></main>
+
+</div>
+
+<script>
+
+(()=>{const frame=document.querySelector('#map-frame'),links=[...document.querySelectorAll('.map-link')],title=document.querySelector('#view-title'),note=document.querySelector('#view-note'),open=document.querySelector('#open-source'),loading=document.querySelector('#loading'),side=document.querySelector('#sidebar'),toggle=document.querySelector('.mobile-toggle');function select(btn){links.forEach(x=>x.classList.toggle('active',x===btn));title.textContent=btn.dataset.title;note.textContent=btn.dataset.note;frame.title='Mappa interattiva: '+btn.dataset.title;const next=new URL(btn.dataset.src,document.baseURI),current=new URL(frame.src,document.baseURI);loading.classList.toggle('done',next.origin===current.origin&&next.pathname===current.pathname&&next.search===current.search);frame.src=btn.dataset.src;open.href=btn.dataset.src;if(innerWidth<=800){side.classList.remove('open');toggle.setAttribute('aria-expanded','false')}}links.forEach(btn=>btn.addEventListener('click',()=>select(btn)));links[0].classList.add('active');frame.addEventListener('load',()=>loading.classList.add('done'));toggle.addEventListener('click',()=>{const yes=side.classList.toggle('open');toggle.setAttribute('aria-expanded',String(yes))});addEventListener('message',e=>{if(e.source!==frame.contentWindow||e.origin!==location.origin||!e.data||e.data.type!=='wtfd-atlas-open')return;const btn=links.find(x=>new URL(x.dataset.src,document.baseURI).href===e.data.src);if(btn)select(btn)});addEventListener('keydown',e=>{if(e.key==='Escape'){side.classList.remove('open');toggle.setAttribute('aria-expanded','false')}})})();
+
+</script></body></html>

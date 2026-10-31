@@ -1,0 +1,2421 @@
+{
+  "title": "24/10/2026 [GPT] — D2, il ritorno a sud e la radura di Bastiano",
+  "status": "APPROVATA_COSTRUZIONE_BACKGROUND_AUTORIZZATA_NON_COSTRUITA",
+  "authority": {
+    "user_statement": "funziona tutto a quanto pare. proseguiamo",
+    "interpretation": "Riscontro positivo sul lotto precedente e prosecuzione documentale; tutte le nuove metriche D2 sono proposte.",
+    "metric_approved": true,
+    "construction_authorized": true,
+    "approval_date": "2026-10-24",
+    "corrections_authorized": true,
+    "latest_user_direction": "Roberto approva percorso e disposizione D2, autorizza costruzione in background e richiede una Lécora standard prima della radura e più raccoglibili nei dintorni di Bastiano.",
+    "scope": "Percorso, terreno, edifici, quote e disposizione approvati conservati; nuova Lécora standard e aumento raccolte sono correzioni già incaricate.",
+    "previous_metric_sha256": "76e3b42937f959454e4c38dd8451998d186321a766d0d3ecddf7e17e7e3c2cad"
+  },
+  "coordinates": {
+    "units": "metri locali Fossalta attuali dopo il riassetto; X est, Y nord, Z alto",
+    "unreal_cm": "(locale_m + [57.376,254.7,-98.961])*100",
+    "D1_applied_transform": [
+      -75,
+      [
+        114,
+        738
+      ],
+      [
+        200,
+        740
+      ]
+    ],
+    "D1_exit_original_xyz_m": [
+      140,
+      1005,
+      2.8
+    ],
+    "D1_exit_current_xyz_m": [
+      464.6314907918468,
+      783.9906135588573,
+      2.8
+    ],
+    "seam_source_xyz_m": [
+      [
+        150.0,
+        1009.9622641509434,
+        2.782236493304222
+      ],
+      [
+        149.5,
+        1010.0,
+        2.7815859952521986
+      ],
+      [
+        149.0,
+        1010.0377358490566,
+        2.781035481282936
+      ],
+      [
+        148.5,
+        1010.0754716981132,
+        2.7806269528943446
+      ],
+      [
+        148.0,
+        1010.1132075471698,
+        2.7802400435448593
+      ],
+      [
+        147.5,
+        1010.1509433962265,
+        2.7800299763820266
+      ],
+      [
+        147.0,
+        1010.188679245283,
+        2.7798559743768485
+      ],
+      [
+        146.5,
+        1010.2264150943396,
+        2.7798434108814205
+      ],
+      [
+        146.0,
+        1010.2641509433962,
+        2.779880382282197
+      ],
+      [
+        145.5,
+        1010.3018867924528,
+        2.7800605546340567
+      ],
+      [
+        145.0,
+        1010.3396226415094,
+        2.7803019493129315
+      ],
+      [
+        144.5,
+        1010.377358490566,
+        2.780666458477586
+      ],
+      [
+        144.0,
+        1010.4150943396227,
+        2.7811013669126057
+      ],
+      [
+        143.5,
+        1010.4528301886793,
+        2.781638431462706
+      ],
+      [
+        143.0,
+        1010.4905660377359,
+        2.7822519354205384
+      ],
+      [
+        142.5,
+        1010.5283018867924,
+        2.7829506457068045
+      ],
+      [
+        142.0,
+        1010.566037735849,
+        2.783720310981827
+      ],
+      [
+        141.5,
+        1010.6037735849056,
+        2.784567722946401
+      ],
+      [
+        141.0,
+        1010.6415094339623,
+        2.7854673806127987
+      ],
+      [
+        140.5,
+        1010.6792452830189,
+        2.786440460345486
+      ],
+      [
+        140.0,
+        1010.7169811320755,
+        2.787449243650799
+      ],
+      [
+        139.5,
+        1010.7547169811321,
+        2.7885228122208545
+      ],
+      [
+        139.0,
+        1010.7924528301887,
+        2.789618275820828
+      ],
+      [
+        138.5,
+        1010.8301886792453,
+        2.790765639654431
+      ],
+      [
+        138.0,
+        1010.8679245283018,
+        2.7919242507177198
+      ],
+      [
+        137.5,
+        1010.9056603773585,
+        2.7931178520453095
+      ],
+      [
+        137.0,
+        1010.9433962264151,
+        2.79431549265643
+      ],
+      [
+        136.5,
+        1010.9811320754717,
+        2.7955274350545007
+      ],
+      [
+        136.0,
+        1011.0188679245283,
+        2.7967400345959623
+      ],
+      [
+        135.5,
+        1011.0566037735849,
+        2.7979444829340014
+      ],
+      [
+        135.0,
+        1011.0943396226415,
+        2.799146755192446
+      ]
+    ],
+    "seam_current_xyz_m": [
+      [
+        472.0128603431366,
+        775.6156837650602,
+        2.782236493304222
+      ],
+      [
+        471.91990085176604,
+        776.1084134346237,
+        2.7815859952521986
+      ],
+      [
+        471.8269413603955,
+        776.6011431041873,
+        2.781035481282936
+      ],
+      [
+        471.733981869025,
+        777.0938727737507,
+        2.7806269528943446
+      ],
+      [
+        471.6410223776545,
+        777.5866024433142,
+        2.7802400435448593
+      ],
+      [
+        471.54806288628396,
+        778.0793321128778,
+        2.7800299763820266
+      ],
+      [
+        471.4551033949133,
+        778.5720617824412,
+        2.7798559743768485
+      ],
+      [
+        471.3621439035428,
+        779.0647914520047,
+        2.7798434108814205
+      ],
+      [
+        471.2691844121723,
+        779.5575211215681,
+        2.779880382282197
+      ],
+      [
+        471.1762249208017,
+        780.0502507911317,
+        2.7800605546340567
+      ],
+      [
+        471.0832654294312,
+        780.5429804606952,
+        2.7803019493129315
+      ],
+      [
+        470.99030593806066,
+        781.0357101302587,
+        2.780666458477586
+      ],
+      [
+        470.8973464466901,
+        781.5284397998222,
+        2.7811013669126057
+      ],
+      [
+        470.8043869553196,
+        782.0211694693858,
+        2.781638431462706
+      ],
+      [
+        470.7114274639491,
+        782.5138991389492,
+        2.7822519354205384
+      ],
+      [
+        470.61846797257846,
+        783.0066288085127,
+        2.7829506457068045
+      ],
+      [
+        470.5255084812079,
+        783.4993584780761,
+        2.783720310981827
+      ],
+      [
+        470.4325489898374,
+        783.9920881476396,
+        2.784567722946401
+      ],
+      [
+        470.3395894984669,
+        784.4848178172032,
+        2.7854673806127987
+      ],
+      [
+        470.2466300070963,
+        784.9775474867666,
+        2.786440460345486
+      ],
+      [
+        470.1536705157258,
+        785.4702771563302,
+        2.787449243650799
+      ],
+      [
+        470.06071102435527,
+        785.9630068258937,
+        2.7885228122208545
+      ],
+      [
+        469.9677515329848,
+        786.4557364954572,
+        2.789618275820828
+      ],
+      [
+        469.8747920416142,
+        786.9484661650207,
+        2.790765639654431
+      ],
+      [
+        469.7818325502436,
+        787.4411958345842,
+        2.7919242507177198
+      ],
+      [
+        469.688873058873,
+        787.9339255041476,
+        2.7931178520453095
+      ],
+      [
+        469.5959135675025,
+        788.4266551737111,
+        2.79431549265643
+      ],
+      [
+        469.502954076132,
+        788.9193848432747,
+        2.7955274350545007
+      ],
+      [
+        469.4099945847615,
+        789.4121145128381,
+        2.7967400345959623
+      ],
+      [
+        469.3170350933909,
+        789.9048441824017,
+        2.7979444829340014
+      ],
+      [
+        469.22407560202043,
+        790.3975738519651,
+        2.799146755192446
+      ]
+    ],
+    "seam_gate_original_xyz_m": [
+      138.70788912579957,
+      1010.814498933902,
+      2.7902839143722526
+    ],
+    "note": "OUT_D1 e cucitura dalla triangolazione salvata trasformata; ogni altra quota/posizione è nuova proposta. Nessuna query Unreal eseguita."
+  },
+  "context": {
+    "master_sha256": "97821844598aee568c7f9754339d9d045fbc18b64ada4322b92b838af76b9f91",
+    "D1_polygon_xy_m": [
+      [
+        205.06986580516633,
+        755.8523329739696
+      ],
+      [
+        211.54034193272935,
+        731.704187316743
+      ],
+      [
+        239.39988694689387,
+        705.0050159512541
+      ],
+      [
+        276.3317017796231,
+        686.9484090396273
+      ],
+      [
+        329.92449233298737,
+        687.8499636432006
+      ],
+      [
+        395.86626756574657,
+        704.483732883883
+      ],
+      [
+        449.3711253936083,
+        725.031973412461
+      ],
+      [
+        476.84675389440474,
+        749.9937409477584
+      ],
+      [
+        466.9930478091274,
+        802.2230859214891
+      ],
+      [
+        445.30799513466025,
+        836.7883646055325
+      ],
+      [
+        336.27849510085605,
+        814.8209313831762
+      ],
+      [
+        258.55614126164653,
+        791.9247370772938
+      ],
+      [
+        220.9036164077544,
+        766.3066307435494
+      ]
+    ],
+    "sacello_current_xyz_m": [
+      352.53332695957533,
+      742.5659631024774,
+      3.22
+    ],
+    "built_regions": [
+      {
+        "id": "C3",
+        "polygon_xy_m": [
+          [
+            316.23738413079997,
+            525.287170368405
+          ],
+          [
+            338.94570031498,
+            549.5633392605367
+          ],
+          [
+            342.81966903643433,
+            577.6167234832146
+          ],
+          [
+            328.5285813473737,
+            600.8710738861732
+          ],
+          [
+            298.2738171862469,
+            612.03571653852
+          ],
+          [
+            264.36509452800647,
+            605.7748437809464
+          ],
+          [
+            243.29887234223455,
+            588.0981845145666
+          ],
+          [
+            279.9377660943673,
+            544.4336512567849
+          ],
+          [
+            292.65700973340347,
+            531.609032695173
+          ]
+        ]
+      },
+      {
+        "id": "C4",
+        "polygon_xy_m": [
+          [
+            243.29887234223455,
+            588.0981845145666
+          ],
+          [
+            264.36509452800647,
+            605.7748437809464
+          ],
+          [
+            268.2655666919851,
+            626.0180232964777
+          ],
+          [
+            262.55072815319,
+            649.9416647516472
+          ],
+          [
+            241.8582678097883,
+            673.046254878649
+          ],
+          [
+            220.42626646579194,
+            687.6978526888176
+          ],
+          [
+            196.57287495900624,
+            699.0122556171211
+          ],
+          [
+            178.20505138748587,
+            716.235003866036
+          ],
+          [
+            155.29396804230026,
+            713.9806170425384
+          ],
+          [
+            134.7340249115203,
+            698.0341836338074
+          ],
+          [
+            130.71029591410922,
+            676.3821720654706
+          ],
+          [
+            140.50187033536406,
+            658.4901327643448
+          ],
+          [
+            156.17528663470586,
+            642.9227302351004
+          ],
+          [
+            172.61474737716668,
+            627.9981153155425
+          ],
+          [
+            192.51465983492506,
+            612.0609422860008
+          ],
+          [
+            210.60946629705626,
+            599.8307346386215
+          ],
+          [
+            228.43125564979823,
+            592.5930675927777
+          ]
+        ]
+      },
+      {
+        "id": "J23",
+        "polygon_xy_m": [
+          [
+            281.1114370808008,
+            478.70470970369126
+          ],
+          [
+            277.2696931028371,
+            474.78429090775705
+          ],
+          [
+            274.26660292350937,
+            470.18971478992415
+          ],
+          [
+            272.21757361425693,
+            465.09754833373296
+          ],
+          [
+            271.2013482223254,
+            459.70348064037495
+          ],
+          [
+            271.256979719621,
+            454.21480270627796
+          ],
+          [
+            272.382330218901,
+            448.8424413463633
+          ],
+          [
+            274.5341531315821,
+            443.7928533948374
+          ],
+          [
+            277.62975510988605,
+            439.2600916848359
+          ],
+          [
+            281.55017390582026,
+            435.4183477068722
+          ],
+          [
+            286.14475002365316,
+            432.41525752754455
+          ],
+          [
+            291.23691647984435,
+            430.36622821829206
+          ],
+          [
+            296.6309841732023,
+            429.35000282636054
+          ],
+          [
+            302.11966210729935,
+            429.4056343236561
+          ],
+          [
+            307.49202346721404,
+            430.53098482293615
+          ],
+          [
+            312.54161141873993,
+            432.68280773561725
+          ],
+          [
+            358.74509739371274,
+            457.98446452328096
+          ],
+          [
+            385.89560364914365,
+            519.0731035980006
+          ],
+          [
+            350.97190374973064,
+            558.5520687016848
+          ],
+          [
+            346.94960544269213,
+            562.2870113594681
+          ],
+          [
+            342.2759433039392,
+            565.1654766694071
+          ],
+          [
+            337.13052354844416,
+            567.0768468239025
+          ],
+          [
+            331.7110817718261,
+            567.9476689398261
+          ],
+          [
+            326.22588408230246,
+            567.7444778116255
+          ],
+          [
+            320.8857235509474,
+            566.4750819604066
+          ],
+          [
+            315.89581955218426,
+            564.1882635568462
+          ],
+          [
+            311.4479312983152,
+            560.9719037497307
+          ],
+          [
+            307.7129886405319,
+            556.9496054426921
+          ],
+          [
+            304.83452333059296,
+            552.2759433039391
+          ],
+          [
+            302.9231531760974,
+            547.1305235484441
+          ],
+          [
+            302.05233106017386,
+            541.7110817718261
+          ],
+          [
+            302.25552218837447,
+            536.2258840823025
+          ],
+          [
+            303.52491803959344,
+            530.8857235509474
+          ],
+          [
+            305.81173644315385,
+            525.8958195521843
+          ],
+          [
+            309.02809625026936,
+            521.4479312983152
+          ],
+          [
+            320.10439635085635,
+            508.92689640199944
+          ],
+          [
+            315.25490260628726,
+            498.01553547671904
+          ],
+          [
+            285.64419879080225,
+            481.8003116819952
+          ]
+        ]
+      },
+      {
+        "id": "J4D",
+        "polygon_xy_m": [
+          [
+            135.06637097033285,
+            702.0971422675798
+          ],
+          [
+            134.58689633554417,
+            698.205885433084
+          ],
+          [
+            134.87578122030595,
+            694.2958571466426
+          ],
+          [
+            135.92192394050534,
+            690.5173176025344
+          ],
+          [
+            137.68512181808862,
+            687.01547395641
+          ],
+          [
+            140.09761614743303,
+            683.9249000957336
+          ],
+          [
+            143.0666961244043,
+            681.364365040757
+          ],
+          [
+            146.47826167056667,
+            679.4322687176784
+          ],
+          [
+            150.20120823520907,
+            678.2028605046618
+          ],
+          [
+            154.09246506970484,
+            677.7233858698731
+          ],
+          [
+            158.00249335614623,
+            678.0122707546349
+          ],
+          [
+            161.78103290025444,
+            679.0584134748342
+          ],
+          [
+            165.2828765463788,
+            680.8216113524176
+          ],
+          [
+            168.37345040705526,
+            683.234105681762
+          ],
+          [
+            170.9339854620318,
+            686.2031856587332
+          ],
+          [
+            172.86608178511037,
+            689.6147512048956
+          ],
+          [
+            182.88372271245018,
+            712.221386653875
+          ],
+          [
+            207.02246883176784,
+            721.2734164486191
+          ],
+          [
+            210.5409092775892,
+            723.0032582063022
+          ],
+          [
+            213.6542684912828,
+            725.3862752192344
+          ],
+          [
+            216.24290182425844,
+            728.3308894800202
+          ],
+          [
+            218.2073295492521,
+            731.7239411139764
+          ],
+          [
+            219.47205981045605,
+            735.435037049655
+          ],
+          [
+            219.9884897332011,
+            739.3215619514547
+          ],
+          [
+            219.73677320517345,
+            743.2341588469875
+          ],
+          [
+            218.72658355138088,
+            747.0224688317678
+          ],
+          [
+            216.99674179369782,
+            750.5409092775892
+          ],
+          [
+            214.61372478076555,
+            753.6542684912828
+          ],
+          [
+            211.66911051997974,
+            756.2429018242584
+          ],
+          [
+            208.2760588860237,
+            758.2073295492521
+          ],
+          [
+            204.56496295034503,
+            759.472059810456
+          ],
+          [
+            200.67843804854533,
+            759.988489733201
+          ],
+          [
+            196.76584115301247,
+            759.7367732051734
+          ],
+          [
+            192.97753116823216,
+            758.7265835513809
+          ],
+          [
+            153.11627728754982,
+            743.778613346125
+          ],
+          [
+            136.29577918334954,
+            705.8200888322222
+          ]
+        ]
+      }
+    ]
+  },
+  "nodes": {
+    "OUT_D1": {
+      "xyz_m": [
+        464.6314907918468,
+        783.9906135588573,
+        2.8
+      ],
+      "role": "Fine D1 costruita, trasformata nel riassetto",
+      "origin": "Built GROUND + applied rigid transform"
+    },
+    "GATE": {
+      "xyz_m": [
+        469.9134425764058,
+        786.7435998844985,
+        2.7902839143722526
+      ],
+      "role": "Cucitura sul bordo reale del terreno D1",
+      "origin": "Interpolazione della triangolazione D1 salvata"
+    },
+    "B01": {
+      "xyz_m": [
+        486,
+        799,
+        2.9
+      ],
+      "role": "Inizio del raccordo esterno, ancora verso est",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "B02": {
+      "xyz_m": [
+        513,
+        792,
+        3.0
+      ],
+      "role": "Svolta graduale verso sud, fuori dal perimetro D1",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "B03": {
+      "xyz_m": [
+        527,
+        768,
+        3.06
+      ],
+      "role": "Chiaro settentrionale e ricongiungimento laterale",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "B04": {
+      "xyz_m": [
+        527,
+        744,
+        3.1
+      ],
+      "role": "Tratto ripariale a est di D1",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "B05": {
+      "xyz_m": [
+        518,
+        714,
+        3.24
+      ],
+      "role": "Margine asciutto fra i ristagni",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "B06": {
+      "xyz_m": [
+        505,
+        688,
+        3.42
+      ],
+      "role": "Ritorno a sud-ovest sul dosso continuo",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "B07": {
+      "xyz_m": [
+        484,
+        663,
+        3.6
+      ],
+      "role": "Ingresso nella fascia di avvicinamento",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "B08": {
+      "xyz_m": [
+        462,
+        640,
+        3.72
+      ],
+      "role": "Orientamento verso fumo e suono: sola riserva",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "B09": {
+      "xyz_m": [
+        450,
+        623,
+        3.8
+      ],
+      "role": "Rivelazione del nucleo produttivo",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "COURT": {
+      "xyz_m": [
+        450,
+        611,
+        3.8
+      ],
+      "role": "Cortile e spazio dialogo esterno",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "POST1": {
+      "xyz_m": [
+        459,
+        591,
+        3.76
+      ],
+      "role": "Cammino dopo il colloquio, sul lato del casolare",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "POST2": {
+      "xyz_m": [
+        459,
+        574,
+        3.7
+      ],
+      "role": "Passaggio esterno alla quinta vegetale",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "POST3": {
+      "xyz_m": [
+        447,
+        560,
+        3.64
+      ],
+      "role": "Casa e fumo rimangono alle spalle",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "TREE": {
+      "xyz_m": [
+        427,
+        560,
+        3.62
+      ],
+      "role": "Albero per il crollo e la connessione della S17",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "END": {
+      "xyz_m": [
+        429,
+        548,
+        3.6
+      ],
+      "role": "Fine D2; prosecuzione e destinazione non definite",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "E01": {
+      "xyz_m": [
+        537,
+        787,
+        3.0
+      ],
+      "role": "Deviazione sul bordo orientale del primo chiaro",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "E02": {
+      "xyz_m": [
+        543,
+        764,
+        3.04
+      ],
+      "role": "Spalla orientale asciutta",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "E03": {
+      "xyz_m": [
+        540,
+        733,
+        3.16
+      ],
+      "role": "Ramo orientale fra salici e scoli",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "E04": {
+      "xyz_m": [
+        531,
+        706,
+        3.3
+      ],
+      "role": "Ritorno verso il percorso principale",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "W01": {
+      "xyz_m": [
+        506,
+        748,
+        3.1
+      ],
+      "role": "Deviazione interna con raccolte",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "W02": {
+      "xyz_m": [
+        505,
+        728,
+        3.16
+      ],
+      "role": "Spalla occidentale del dosso",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "W03": {
+      "xyz_m": [
+        500,
+        705,
+        3.31
+      ],
+      "role": "Rientro separato dal margine umido",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "W04": {
+      "xyz_m": [
+        494,
+        682,
+        3.47
+      ],
+      "role": "Ricomposizione del cammino",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "GARDEN_ACCESS": {
+      "xyz_m": [
+        414,
+        616,
+        3.8
+      ],
+      "role": "Accesso all’orto dal cortile",
+      "origin": "Proposta D2, non terreno costruito"
+    },
+    "GARDEN": {
+      "xyz_m": [
+        405,
+        610,
+        3.8
+      ],
+      "role": "Passaggio interno all’orto, senza scavalco",
+      "origin": "Proposta D2, non terreno costruito"
+    }
+  },
+  "routes": [
+    {
+      "id": "D2-MAIN",
+      "name": "D1 → radura di Bastiano",
+      "nodes": [
+        "OUT_D1",
+        "GATE",
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B08",
+        "B09",
+        "COURT"
+      ],
+      "width_m": 3.2,
+      "kind": "main",
+      "curve_radius_target_min_m": 4.0
+    },
+    {
+      "id": "D2-POST",
+      "name": "Cammino dopo il colloquio → albero",
+      "nodes": [
+        "COURT",
+        "POST1",
+        "POST2",
+        "POST3",
+        "TREE",
+        "END"
+      ],
+      "width_m": 3.0,
+      "kind": "main",
+      "curve_radius_target_min_m": 4.0
+    },
+    {
+      "id": "D2-EAST",
+      "name": "Anello orientale con ricongiungimento",
+      "nodes": [
+        "B02",
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "B06"
+      ],
+      "width_m": 2.8,
+      "kind": "branch",
+      "curve_radius_target_min_m": 4.0
+    },
+    {
+      "id": "D2-WEST",
+      "name": "Deviazione interna fra i chiari",
+      "nodes": [
+        "B04",
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "B07"
+      ],
+      "width_m": 2.8,
+      "kind": "branch",
+      "curve_radius_target_min_m": 4.0
+    },
+    {
+      "id": "D2-GARDEN",
+      "name": "Cortile → orto aperto",
+      "nodes": [
+        "B09",
+        "GARDEN_ACCESS",
+        "GARDEN"
+      ],
+      "width_m": 2.4,
+      "kind": "branch",
+      "curve_radius_target_min_m": 2.0
+    }
+  ],
+  "terrain": {
+    "polygon_xy_m": [
+      [
+        469.22407560202043,
+        790.3975738519651
+      ],
+      [
+        490,
+        808
+      ],
+      [
+        520,
+        810
+      ],
+      [
+        550,
+        792
+      ],
+      [
+        552,
+        750
+      ],
+      [
+        545,
+        706
+      ],
+      [
+        535,
+        670
+      ],
+      [
+        518,
+        635
+      ],
+      [
+        494,
+        601
+      ],
+      [
+        481,
+        560
+      ],
+      [
+        455,
+        542
+      ],
+      [
+        420,
+        540
+      ],
+      [
+        391,
+        558
+      ],
+      [
+        376,
+        589
+      ],
+      [
+        380,
+        620
+      ],
+      [
+        403,
+        646
+      ],
+      [
+        442,
+        668
+      ],
+      [
+        481,
+        694
+      ],
+      [
+        492,
+        730
+      ],
+      [
+        492,
+        762
+      ],
+      [
+        472.0128603431366,
+        775.6156837650602
+      ]
+    ],
+    "new_support_area_m2": 22655.68693251931,
+    "edge_seam_current_xyz_m": [
+      [
+        472.0128603431366,
+        775.6156837650602,
+        2.782236493304222
+      ],
+      [
+        471.91990085176604,
+        776.1084134346237,
+        2.7815859952521986
+      ],
+      [
+        471.8269413603955,
+        776.6011431041873,
+        2.781035481282936
+      ],
+      [
+        471.733981869025,
+        777.0938727737507,
+        2.7806269528943446
+      ],
+      [
+        471.6410223776545,
+        777.5866024433142,
+        2.7802400435448593
+      ],
+      [
+        471.54806288628396,
+        778.0793321128778,
+        2.7800299763820266
+      ],
+      [
+        471.4551033949133,
+        778.5720617824412,
+        2.7798559743768485
+      ],
+      [
+        471.3621439035428,
+        779.0647914520047,
+        2.7798434108814205
+      ],
+      [
+        471.2691844121723,
+        779.5575211215681,
+        2.779880382282197
+      ],
+      [
+        471.1762249208017,
+        780.0502507911317,
+        2.7800605546340567
+      ],
+      [
+        471.0832654294312,
+        780.5429804606952,
+        2.7803019493129315
+      ],
+      [
+        470.99030593806066,
+        781.0357101302587,
+        2.780666458477586
+      ],
+      [
+        470.8973464466901,
+        781.5284397998222,
+        2.7811013669126057
+      ],
+      [
+        470.8043869553196,
+        782.0211694693858,
+        2.781638431462706
+      ],
+      [
+        470.7114274639491,
+        782.5138991389492,
+        2.7822519354205384
+      ],
+      [
+        470.61846797257846,
+        783.0066288085127,
+        2.7829506457068045
+      ],
+      [
+        470.5255084812079,
+        783.4993584780761,
+        2.783720310981827
+      ],
+      [
+        470.4325489898374,
+        783.9920881476396,
+        2.784567722946401
+      ],
+      [
+        470.3395894984669,
+        784.4848178172032,
+        2.7854673806127987
+      ],
+      [
+        470.2466300070963,
+        784.9775474867666,
+        2.786440460345486
+      ],
+      [
+        470.1536705157258,
+        785.4702771563302,
+        2.787449243650799
+      ],
+      [
+        470.06071102435527,
+        785.9630068258937,
+        2.7885228122208545
+      ],
+      [
+        469.9677515329848,
+        786.4557364954572,
+        2.789618275820828
+      ],
+      [
+        469.8747920416142,
+        786.9484661650207,
+        2.790765639654431
+      ],
+      [
+        469.7818325502436,
+        787.4411958345842,
+        2.7919242507177198
+      ],
+      [
+        469.688873058873,
+        787.9339255041476,
+        2.7931178520453095
+      ],
+      [
+        469.5959135675025,
+        788.4266551737111,
+        2.79431549265643
+      ],
+      [
+        469.502954076132,
+        788.9193848432747,
+        2.7955274350545007
+      ],
+      [
+        469.4099945847615,
+        789.4121145128381,
+        2.7967400345959623
+      ],
+      [
+        469.3170350933909,
+        789.9048441824017,
+        2.7979444829340014
+      ],
+      [
+        469.22407560202043,
+        790.3975738519651,
+        2.799146755192446
+      ]
+    ],
+    "explorable": "Un dosso continuo con spalle, due deviazioni e radura abitata; niente isolotti o sola apparenza di prato. Confini vegetali/umidi leggibili.",
+    "max_axis_grade_target_percent": 6,
+    "cross_slope_target_percent": [
+      2,
+      4
+    ]
+  },
+  "structures": [
+    {
+      "id": "HOUSE",
+      "name": "Casolare basso di Bastiano",
+      "center_xy_m": [
+        430,
+        608
+      ],
+      "size_m": [
+        9,
+        7
+      ],
+      "height_m": 4.4,
+      "role": "Tetto rattoppato e comignolo; solo ingombro esterno per la S17. Interno non progettato."
+    },
+    {
+      "id": "BARN",
+      "name": "Fienile addossato al fianco",
+      "center_xy_m": [
+        438,
+        608
+      ],
+      "size_m": [
+        7,
+        5
+      ],
+      "height_m": 3.8,
+      "role": "Una parete condivisa col casolare; riserva volumetrica coerente con la S17."
+    },
+    {
+      "id": "STABLE",
+      "name": "Stalla · bue e asino",
+      "center_xy_m": [
+        407,
+        585
+      ],
+      "size_m": [
+        10,
+        6
+      ],
+      "height_m": 3.4,
+      "role": "Ingombro di servizio dalla Tavola04. Nessuna AI o nuovo modello animale autorizzato."
+    },
+    {
+      "id": "COW",
+      "name": "Recinto della mucca",
+      "center_xy_m": [
+        426,
+        580
+      ],
+      "size_m": [
+        10,
+        8
+      ],
+      "height_m": 1.2,
+      "role": "Riserva produttiva su terreno asciutto, accesso aperto dal cortile laterale."
+    },
+    {
+      "id": "PIG",
+      "name": "Porcilaia",
+      "center_xy_m": [
+        443,
+        583
+      ],
+      "size_m": [
+        5,
+        4
+      ],
+      "height_m": 2.2,
+      "role": "Ingombro di servizio da Tavola04; non un evento o sistema animale."
+    },
+    {
+      "id": "HENS",
+      "name": "Galline · piccolo recinto",
+      "center_xy_m": [
+        453,
+        583
+      ],
+      "size_m": [
+        6,
+        5
+      ],
+      "height_m": 1.0,
+      "role": "Riserva di sostentamento, non simulazione."
+    },
+    {
+      "id": "GARDEN",
+      "name": "Orto piccolo",
+      "center_xy_m": [
+        405,
+        609
+      ],
+      "size_m": [
+        14,
+        10
+      ],
+      "height_m": 0.0,
+      "role": "Cinque piante raccoglibili, nessuna copia decorativa; varco aperto sul lato nord-est."
+    }
+  ],
+  "props": [
+    {
+      "id": "NPC",
+      "name": "Bastiano · sola posizione di servizio",
+      "xy_m": [
+        447,
+        616
+      ],
+      "size_m": [
+        1.0,
+        1.0
+      ],
+      "role": "Segnaposto NPC giallo paglierino; nessun dialogo o personaggio funzionante."
+    },
+    {
+      "id": "STUMP",
+      "name": "Ceppo e ascia · area di lavoro",
+      "xy_m": [
+        451,
+        616
+      ],
+      "size_m": [
+        1.2,
+        1.2
+      ],
+      "role": "Fonte del ritmo di legna nella S17; azione e suono restano riserve."
+    },
+    {
+      "id": "FIRE",
+      "name": "Fuoco esterno in fossa di pietre",
+      "xy_m": [
+        445,
+        612
+      ],
+      "size_m": [
+        1.6,
+        1.6
+      ],
+      "role": "Dialogo all’aperto vicino al ceppo; nessun invito all’interno imposto."
+    },
+    {
+      "id": "DIALOGUE",
+      "name": "Spazio esterno per il colloquio",
+      "xy_m": [
+        447,
+        612
+      ],
+      "size_m": [
+        8,
+        7
+      ],
+      "role": "Spazio libero per Rinaldo e Bastiano, senza incontrare gruppi ordinari."
+    },
+    {
+      "id": "TREE",
+      "name": "Albero della sosta dopo il colloquio",
+      "xy_m": [
+        427,
+        560
+      ],
+      "size_m": [
+        2,
+        2
+      ],
+      "role": "Riserva già presente nella S17: crollo e connessione. Nessuna nuova azione narrativa."
+    }
+  ],
+  "quiet_reserves": [
+    {
+      "id": "D2-HOME-QUIET",
+      "name": "Radura umana · pausa narrativa",
+      "center_xy_m": [
+        433,
+        608
+      ],
+      "radius_m": 38,
+      "role": "Inviluppi degli incontri ordinari esclusi. Questa distanza non è un raggio aggro e non certifica disimpegno."
+    },
+    {
+      "id": "D2-TREE-QUIET",
+      "name": "Albero · crollo e connessione",
+      "center_xy_m": [
+        427,
+        560
+      ],
+      "radius_m": 16,
+      "role": "Nessun incontro o raccolta nel momento di connessione. Regia e trigger non implementati."
+    }
+  ],
+  "screens": [
+    {
+      "id": "D2-SCREEN-POST",
+      "polygon_xy_m": [
+        [
+          419,
+          585
+        ],
+        [
+          438,
+          584
+        ],
+        [
+          439,
+          591
+        ],
+        [
+          420,
+          592
+        ]
+      ],
+      "height_m": 3.0,
+      "role": "Quinta vegetale fra cortile e albero: il cammino passa a est, senza muro sul percorso."
+    }
+  ],
+  "wetlands": [
+    {
+      "id": "D2-WET-E",
+      "polygon_xy_m": [
+        [
+          539,
+          718
+        ],
+        [
+          545,
+          706
+        ],
+        [
+          535,
+          670
+        ],
+        [
+          528,
+          675
+        ],
+        [
+          532,
+          699
+        ]
+      ],
+      "role": "Ristagno e canneto laterale non percorribile; raccolte sul solo margine asciutto esterno."
+    },
+    {
+      "id": "D2-WET-W",
+      "polygon_xy_m": [
+        [
+          381,
+          586
+        ],
+        [
+          391,
+          563
+        ],
+        [
+          400,
+          564
+        ],
+        [
+          392,
+          585
+        ],
+        [
+          392,
+          600
+        ],
+        [
+          383,
+          609
+        ]
+      ],
+      "role": "Depressione umida a ovest del dosso abitato; nessun guado obbligato."
+    }
+  ],
+  "population": {
+    "encounters": [
+      {
+        "id": "ED2-01",
+        "xy_m": [
+          508,
+          781
+        ],
+        "members": {
+          "STRAGOULE": 1,
+          "MAZAPEGULE": 1
+        },
+        "class_proposal": "medio impegnativo proposto",
+        "planning_radius_m": 6,
+        "why": "Primo chiaro esterno a D1, due minacce sul lato del percorso. Ramo orientale separato.",
+        "mandatory": false
+      },
+      {
+        "id": "ED2-02",
+        "xy_m": [
+          540,
+          751
+        ],
+        "members": {
+          "BINN": 1,
+          "STRAGOULE": 1
+        },
+        "class_proposal": "difficile proposto",
+        "planning_radius_m": 6,
+        "why": "Margine umido orientale, pressione laterale; il sentiero principale resta sul dosso asciutto.",
+        "mandatory": false
+      },
+      {
+        "id": "ED2-03",
+        "xy_m": [
+          505,
+          717
+        ],
+        "members": {
+          "STRAGOULE": 2,
+          "ANIMI": 1
+        },
+        "class_proposal": "difficile condizionale proposto",
+        "planning_radius_m": 7,
+        "why": "Tre presenze nel chiaro interno. Il controllo dello spazio è ipotesi del futuro combat, non AI implementata.",
+        "mandatory": false
+      },
+      {
+        "id": "ED2-04",
+        "xy_m": [
+          513,
+          666
+        ],
+        "members": {
+          "MAZAPEGULE": 2
+        },
+        "class_proposal": "medio impegnativo provvisorio",
+        "planning_radius_m": 6,
+        "why": "Ultimo gruppo prima della fascia quieta; piccole varianti, nessun miniboss grande.",
+        "mandatory": false
+      },
+      {
+        "id": "ED2-05",
+        "xy_m": [
+          481,
+          650
+        ],
+        "members": {
+          "LECORA": 1
+        },
+        "class_proposal": "Ordinario · difficoltà da verificare col combat",
+        "planning_radius_m": 6,
+        "why": "Lécora standard singola sul lato est dell’avvicinamento B07–B08, prima della radura di Bastiano e fuori dalla sua pausa narrativa. Posizione richiesta da Roberto; nessun miniboss o nuova abilità.",
+        "mandatory": false,
+        "variant": "LEVEL_1_STANDARD_ORDINARY",
+        "miniboss": false,
+        "static_mesh": "/Game/Developers/Roberto/Greybox_WTFD/Creature_Proxy/API_Notte_20261022/Lecora/StaticMeshes/SM_Lecora",
+        "asset_reference_source": "Percorso della Lécora standard esistente fornito dalla query nativa root del 24/10/2026; non Lecora Fase 2.",
+        "final_artistic_scale_set": false,
+        "statistics_or_aggro_defined": false
+      }
+    ],
+    "plants": [
+      {
+        "id": "D2_O01",
+        "xy_m": [
+          400,
+          606
+        ],
+        "species": "Piantaggine",
+        "habitat": "Orto piccolo del nucleo abitato; una delle sole cinque piante.",
+        "garden": true
+      },
+      {
+        "id": "D2_O02",
+        "xy_m": [
+          405,
+          606
+        ],
+        "species": "Achillea",
+        "habitat": "Orto piccolo del nucleo abitato; una delle sole cinque piante.",
+        "garden": true
+      },
+      {
+        "id": "D2_O03",
+        "xy_m": [
+          410,
+          606
+        ],
+        "species": "Piantaggine",
+        "habitat": "Orto piccolo del nucleo abitato; una delle sole cinque piante.",
+        "garden": true
+      },
+      {
+        "id": "D2_O04",
+        "xy_m": [
+          401,
+          612
+        ],
+        "species": "RovoBluastro",
+        "habitat": "Orto piccolo del nucleo abitato; una delle sole cinque piante.",
+        "garden": true
+      },
+      {
+        "id": "D2_O05",
+        "xy_m": [
+          409,
+          612
+        ],
+        "species": "RosaCanina",
+        "habitat": "Orto piccolo del nucleo abitato; una delle sole cinque piante.",
+        "garden": true
+      },
+      {
+        "id": "D2_R01",
+        "xy_m": [
+          521.28,
+          695.39
+        ],
+        "species": "Piantaggine",
+        "habitat": "Margine erboso del sentiero, fuori dalla carreggiata.",
+        "garden": false
+      },
+      {
+        "id": "D2_R02",
+        "xy_m": [
+          497.02,
+          745.7
+        ],
+        "species": "Piantaggine",
+        "habitat": "Margine erboso del sentiero, fuori dalla carreggiata.",
+        "garden": false
+      },
+      {
+        "id": "D2_R03",
+        "xy_m": [
+          494.15,
+          717.36
+        ],
+        "species": "Piantaggine",
+        "habitat": "Margine erboso del sentiero, fuori dalla carreggiata.",
+        "garden": false
+      },
+      {
+        "id": "D2_R04",
+        "xy_m": [
+          496.02,
+          666.45
+        ],
+        "species": "Piantaggine",
+        "habitat": "Margine erboso del sentiero, fuori dalla carreggiata.",
+        "garden": false
+      },
+      {
+        "id": "D2_R05",
+        "xy_m": [
+          510.91,
+          757.39
+        ],
+        "species": "Piantaggine",
+        "habitat": "Margine erboso del sentiero, fuori dalla carreggiata.",
+        "garden": false
+      },
+      {
+        "id": "D2_R06",
+        "xy_m": [
+          480.39,
+          784.17
+        ],
+        "species": "Piantaggine",
+        "habitat": "Margine erboso del sentiero, fuori dalla carreggiata.",
+        "garden": false
+      },
+      {
+        "id": "D2_R07",
+        "xy_m": [
+          497.42,
+          731.29
+        ],
+        "species": "Piantaggine",
+        "habitat": "Margine erboso del sentiero, fuori dalla carreggiata.",
+        "garden": false
+      },
+      {
+        "id": "D2_R08",
+        "xy_m": [
+          488.25,
+          699.5
+        ],
+        "species": "Piantaggine",
+        "habitat": "Margine erboso del sentiero, fuori dalla carreggiata.",
+        "garden": false
+      },
+      {
+        "id": "D2_R09",
+        "xy_m": [
+          518.12,
+          689.42
+        ],
+        "species": "Piantaggine",
+        "habitat": "Margine erboso del sentiero, fuori dalla carreggiata.",
+        "garden": false
+      },
+      {
+        "id": "D2_R10",
+        "xy_m": [
+          501.07,
+          759.03
+        ],
+        "species": "Piantaggine",
+        "habitat": "Margine erboso del sentiero, fuori dalla carreggiata.",
+        "garden": false
+      },
+      {
+        "id": "D2_R11",
+        "xy_m": [
+          506.17,
+          761.92
+        ],
+        "species": "Piantaggine",
+        "habitat": "Margine erboso del sentiero, fuori dalla carreggiata.",
+        "garden": false
+      },
+      {
+        "id": "D2_R12",
+        "xy_m": [
+          527.35,
+          694.03
+        ],
+        "species": "Piantaggine",
+        "habitat": "Margine erboso del sentiero, fuori dalla carreggiata.",
+        "garden": false
+      },
+      {
+        "id": "D2_R13",
+        "xy_m": [
+          538.19,
+          770.71
+        ],
+        "species": "Achillea",
+        "habitat": "Chiaro asciutto sul dosso.",
+        "garden": false
+      },
+      {
+        "id": "D2_R14",
+        "xy_m": [
+          501.18,
+          670.31
+        ],
+        "species": "Achillea",
+        "habitat": "Chiaro asciutto sul dosso.",
+        "garden": false
+      },
+      {
+        "id": "D2_R15",
+        "xy_m": [
+          493.14,
+          705.67
+        ],
+        "species": "Achillea",
+        "habitat": "Chiaro asciutto sul dosso.",
+        "garden": false
+      },
+      {
+        "id": "D2_R16",
+        "xy_m": [
+          499.33,
+          657.6
+        ],
+        "species": "Achillea",
+        "habitat": "Chiaro asciutto sul dosso.",
+        "garden": false
+      },
+      {
+        "id": "D2_R17",
+        "xy_m": [
+          525.34,
+          664.42
+        ],
+        "species": "Achillea",
+        "habitat": "Chiaro asciutto sul dosso.",
+        "garden": false
+      },
+      {
+        "id": "D2_R18",
+        "xy_m": [
+          511.08,
+          770.51
+        ],
+        "species": "Achillea",
+        "habitat": "Chiaro asciutto sul dosso.",
+        "garden": false
+      },
+      {
+        "id": "D2_R19",
+        "xy_m": [
+          491.23,
+          768.95
+        ],
+        "species": "Achillea",
+        "habitat": "Chiaro asciutto sul dosso.",
+        "garden": false
+      },
+      {
+        "id": "D2_R20",
+        "xy_m": [
+          531.81,
+          742.38
+        ],
+        "species": "Achillea",
+        "habitat": "Chiaro asciutto sul dosso.",
+        "garden": false
+      },
+      {
+        "id": "D2_R21",
+        "xy_m": [
+          528.28,
+          781.01
+        ],
+        "species": "RovoBluastro",
+        "habitat": "Margine umido esterno ai ristagni, presso arbusti.",
+        "garden": false
+      },
+      {
+        "id": "D2_R22",
+        "xy_m": [
+          521.37,
+          766.82
+        ],
+        "species": "RovoBluastro",
+        "habitat": "Margine umido esterno ai ristagni, presso arbusti.",
+        "garden": false
+      },
+      {
+        "id": "D2_R23",
+        "xy_m": [
+          524.95,
+          786.18
+        ],
+        "species": "RovoBluastro",
+        "habitat": "Margine umido esterno ai ristagni, presso arbusti.",
+        "garden": false
+      },
+      {
+        "id": "D2_R24",
+        "xy_m": [
+          530.3,
+          761.93
+        ],
+        "species": "RovoBluastro",
+        "habitat": "Margine umido esterno ai ristagni, presso arbusti.",
+        "garden": false
+      },
+      {
+        "id": "D2_R25",
+        "xy_m": [
+          528.8,
+          728.42
+        ],
+        "species": "RovoBluastro",
+        "habitat": "Margine umido esterno ai ristagni, presso arbusti.",
+        "garden": false
+      },
+      {
+        "id": "D2_R26",
+        "xy_m": [
+          531.32,
+          749.61
+        ],
+        "species": "RovoBluastro",
+        "habitat": "Margine umido esterno ai ristagni, presso arbusti.",
+        "garden": false
+      },
+      {
+        "id": "D2_R27",
+        "xy_m": [
+          522.75,
+          708.99
+        ],
+        "species": "RovoBluastro",
+        "habitat": "Margine umido esterno ai ristagni, presso arbusti.",
+        "garden": false
+      },
+      {
+        "id": "D2_R28",
+        "xy_m": [
+          512.52,
+          735.02
+        ],
+        "species": "RosaCanina",
+        "habitat": "Margine arbustivo e filare aperto.",
+        "garden": false
+      },
+      {
+        "id": "D2_R29",
+        "xy_m": [
+          495.97,
+          760.58
+        ],
+        "species": "RosaCanina",
+        "habitat": "Margine arbustivo e filare aperto.",
+        "garden": false
+      },
+      {
+        "id": "D2_R30",
+        "xy_m": [
+          491.89,
+          784.42
+        ],
+        "species": "RosaCanina",
+        "habitat": "Margine arbustivo e filare aperto.",
+        "garden": false
+      },
+      {
+        "id": "D2_R31",
+        "xy_m": [
+          502.03,
+          747.14
+        ],
+        "species": "RosaCanina",
+        "habitat": "Margine arbustivo e filare aperto.",
+        "garden": false
+      },
+      {
+        "id": "D2_R32",
+        "xy_m": [
+          507.19,
+          678.3
+        ],
+        "species": "RosaCanina",
+        "habitat": "Margine arbustivo e filare aperto.",
+        "garden": false
+      },
+      {
+        "id": "D2_R33",
+        "xy_m": [
+          414,
+          630
+        ],
+        "species": "Piantaggine",
+        "habitat": "Margine erboso asciutto a nord-ovest della radura, fuori dal sentiero.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R34",
+        "xy_m": [
+          429,
+          636
+        ],
+        "species": "Piantaggine",
+        "habitat": "Chiaro erboso a nord della casa, lontano dal cortile del colloquio.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R35",
+        "xy_m": [
+          445,
+          637
+        ],
+        "species": "Piantaggine",
+        "habitat": "Margine erboso del dosso a nord-est del nucleo abitato.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R36",
+        "xy_m": [
+          465,
+          626
+        ],
+        "species": "Piantaggine",
+        "habitat": "Spalla erbosa orientale della radura, separata dal percorso.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R37",
+        "xy_m": [
+          470,
+          611
+        ],
+        "species": "Piantaggine",
+        "habitat": "Margine erboso orientale, fuori da cortile e fabbricati.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R38",
+        "xy_m": [
+          392,
+          624
+        ],
+        "species": "Piantaggine",
+        "habitat": "Spalla erbosa occidentale del dosso, raggiungibile dalla radura.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R39",
+        "xy_m": [
+          404,
+          636
+        ],
+        "species": "Achillea",
+        "habitat": "Chiaro asciutto a nord-ovest, oltre il margine dell’orto.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R40",
+        "xy_m": [
+          420,
+          641
+        ],
+        "species": "Achillea",
+        "habitat": "Dosso asciutto settentrionale, lontano dal percorso principale.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R41",
+        "xy_m": [
+          466,
+          638
+        ],
+        "species": "Achillea",
+        "habitat": "Spalla asciutta dell’avvicinamento, esterna alla carreggiata.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R42",
+        "xy_m": [
+          463,
+          600
+        ],
+        "species": "Achillea",
+        "habitat": "Chiaro asciutto a est del nucleo, fuori dal cammino post-colloquio.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R43",
+        "xy_m": [
+          395,
+          598
+        ],
+        "species": "RovoBluastro",
+        "habitat": "Margine arbustivo occidentale vicino alla depressione umida, sul suolo asciutto.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R44",
+        "xy_m": [
+          389,
+          611
+        ],
+        "species": "RovoBluastro",
+        "habitat": "Margine arbustivo occidentale esterno al ristagno e all’orto.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R45",
+        "xy_m": [
+          480,
+          622
+        ],
+        "species": "RovoBluastro",
+        "habitat": "Margine arbustivo esterno del dosso orientale, su supporto accessibile.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R46",
+        "xy_m": [
+          479,
+          603
+        ],
+        "species": "RovoBluastro",
+        "habitat": "Margine arbustivo orientale fuori dalle pertinenze di servizio.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R47",
+        "xy_m": [
+          400,
+          624
+        ],
+        "species": "RosaCanina",
+        "habitat": "Siepe aperta occidentale, esterna all’orto e al passaggio.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R48",
+        "xy_m": [
+          437,
+          643
+        ],
+        "species": "RosaCanina",
+        "habitat": "Margine arbustivo a nord della radura, lontano dalle riserve di incontro.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R49",
+        "xy_m": [
+          475,
+          633
+        ],
+        "species": "RosaCanina",
+        "habitat": "Margine arbustivo orientale del chiaro di arrivo.",
+        "garden": false,
+        "near_bastiano_revision": true
+      },
+      {
+        "id": "D2_R50",
+        "xy_m": [
+          397,
+          590
+        ],
+        "species": "RosaCanina",
+        "habitat": "Margine arbustivo asciutto fra depressione occidentale e area di servizio, senza entrare nei recinti.",
+        "garden": false,
+        "near_bastiano_revision": true
+      }
+    ],
+    "wild_species_counts": {
+      "Piantaggine": 18,
+      "Achillea": 12,
+      "RovoBluastro": 11,
+      "RosaCanina": 9
+    },
+    "garden_count": 5,
+    "total_species_counts": {
+      "Piantaggine": 20,
+      "Achillea": 13,
+      "RovoBluastro": 12,
+      "RosaCanina": 10
+    },
+    "rules": "Cinque incontri ordinari, dieci creature: quattro gruppi conservati più una Lécora standard singola. Nessun miniboss. 50 raccolte esterne e cinque nell’orto;18 nuove sui margini accessibili della radura. Pausa della casa senza incontri, albero S17 senza incontri né raccolte. Aggro e difficoltà non definiti.",
+    "authorized_revision": {
+      "date": "2026-10-24",
+      "added_ordinary_encounter": "ED2-05",
+      "added_wild_collectibles": 18,
+      "previous_wild_collectibles": 32,
+      "wild_collectibles": 50,
+      "garden_collectibles": 5,
+      "total_collectibles": 55,
+      "quiet_scope": "La riserva della casa esclude gli incontri e conserva cortile/ceppo/fuoco liberi; consente raccolte esterne sui margini. La riserva dell’albero S17 continua a escludere tutte le raccolte.",
+      "catalogue_precedence": "La direttiva esplicita sulle due varianti Lécora supera il vecchio limite generico miniboss-only soltanto per la standard livello1; nessun peso o statistica nuovo dedotto."
+    }
+  },
+  "story": {
+    "source_scene": "Scena 17 — Bastiano",
+    "arrival": "Rumore di legna e fumo prima della rivelazione del casolare: sole riserve di staging, nessun audio/trigger implementato.",
+    "dialogue": "All’aperto vicino al ceppo e al fuoco; nessun interno obbligatorio.",
+    "post": "Cammino, casa e fumo alle spalle; albero per crollo e connessione già presenti in S17.",
+    "not_in_scope": [
+      "Tana della Lécora Fase 2 e camposanto: nessuna posizione o tracciato disegnato",
+      "Nessun nuovo cippo",
+      "Dialoghi, lore, AI, audio, animazioni, eventi e combat",
+      "Interni del casolare e simulazione di animali"
+    ],
+    "source_drift": "La nota narrativa su Agnese nel vecchio testo S17 è superata da D-321; qui non è copiata alcuna lore o battuta."
+  },
+  "sources": [
+    {
+      "path": "Sviluppo/Greybox/Zona_C_Bosco/D1_PIANTA_METRICA.json",
+      "sha256": "0d890201e38035161cdcb170f8c8f09ce553308a5c57279eaeced7d132ab86d5"
+    },
+    {
+      "path": "Sviluppo/Greybox/Zona_C_Bosco/Costruzione_D1/GROUND.json",
+      "sha256": "75d51370162c10076558c1a1a2932c91186db667f45d3b31fe030bca8d80bf80"
+    },
+    {
+      "path": "Sviluppo/Greybox/Piano_Generale/RIASSETTO_MACRO.json",
+      "sha256": "b04050f33a92e1f66a9849212fde3691e333237464b4de4940932c7e9500113d"
+    },
+    {
+      "path": "Sviluppo/Greybox/Piano_Generale/Cartografia_Velo_02/ESITO.json",
+      "sha256": "af991b3a3beaf77b720493aa2f7b15a7abc5cbf7520e2d81a2ff1c171c489b70"
+    },
+    {
+      "path": "STORIA_MADRE_V2.md",
+      "sha256": "05394e551f3972aac4ae4074321c170863f54ce0ece827f624305fc006478563"
+    },
+    {
+      "path": "wtfd-presentazione/Tavola_04_Palude_Profonda.html",
+      "sha256": "b0291a6d33d2ed0a30793f1dcf5946788a19257c9e3ba67c292f8c97ef930162"
+    },
+    {
+      "path": "wtfd-presentazione/Tavola_06_Mappa_Generale_Livello.html",
+      "sha256": "c0ae3436429701149f44bd251df6659d92efaa968700546141e8f2cd3b73ab6b"
+    },
+    {
+      "path": "Sviluppo/Greybox/Incontri/CATALOGO_E_PROPOSTA_C1.json",
+      "sha256": "a8b546ed4533aca1c2655f3c62f38a9b2094fdbd73e44ee2ccc6e739695caae2"
+    }
+  ],
+  "native_build": false,
+  "agent_Play": false,
+  "visual_acceptance": "Roberto dopo eventuale costruzione"
+}

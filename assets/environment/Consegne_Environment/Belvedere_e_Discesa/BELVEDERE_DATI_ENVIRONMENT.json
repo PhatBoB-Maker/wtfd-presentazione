@@ -1,0 +1,809 @@
+{
+  "title": "21/10/2026 [GPT] — Belvedere e discesa: dati Environment",
+  "map": "/Game/Developers/Roberto/Greybox_WTFD/Maps/L_Belvedere_Bivio_L01",
+  "project_relative": "Sviluppo/Unreal Project/Roberto_Greybox_Sandbox/WhereTheFogDies/WhereTheFogDies.uproject",
+  "unit_contract": "Metri LD; +X est, +Y nord convenzionale di pianta, +Z alto. Coordinate Unreal native = metri × 100, senza riflessione Y. Quota zero al bivio; non quota geografica.",
+  "approval": "Configurazione Belvedere/discesa e muretti approvata da Roberto; successiva schivata approvata.",
+  "route": {
+    "points_m": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        12.0,
+        4.0,
+        0.0
+      ],
+      [
+        26.0,
+        13.0,
+        -0.2
+      ],
+      [
+        39.0,
+        24.0,
+        -0.7
+      ],
+      [
+        49.0,
+        36.0,
+        -1.4
+      ],
+      [
+        55.93,
+        42.16,
+        -1.8619999999999999
+      ],
+      [
+        56.634392393385006,
+        42.7496098006546,
+        -1.9315542450990453
+      ],
+      [
+        57.36756957353998,
+        43.291772535951736,
+        -2.0482169803961807
+      ],
+      [
+        58.129531540464946,
+        43.7864882058914,
+        -2.2119882058914064
+      ],
+      [
+        58.9202782941599,
+        44.23375681047361,
+        -2.4228679215847224
+      ],
+      [
+        59.73980983462484,
+        44.633578349698354,
+        -2.6808561274761287
+      ],
+      [
+        60.58812616185977,
+        44.985952823565626,
+        -2.9859528235656256
+      ],
+      [
+        90.34,
+        56.32,
+        -14.32
+      ],
+      [
+        93.55307370532731,
+        57.56326582565383,
+        -15.525242983666825
+      ],
+      [
+        96.7522948213092,
+        58.83972996928197,
+        -16.687638601333955
+      ],
+      [
+        99.93766334794572,
+        60.14939243088441,
+        -17.8071868530014
+      ],
+      [
+        103.10917928523682,
+        61.49225321046118,
+        -18.88388773866916
+      ],
+      [
+        106.26684263318253,
+        62.868312308012264,
+        -19.917741258337223
+      ],
+      [
+        109.41065339178284,
+        64.27756972353765,
+        -20.908747412005606
+      ],
+      [
+        147.59714743984475,
+        81.63506701811124,
+        -32.711845572315646
+      ],
+      [
+        150.01885238878108,
+        82.8229632070217,
+        -33.48128164744142
+      ],
+      [
+        152.34873219548658,
+        84.14336311916055,
+        -34.264153587695844
+      ],
+      [
+        154.5867868599612,
+        85.59626675452782,
+        -35.06046139307891
+      ],
+      [
+        156.733016382205,
+        87.18167411312348,
+        -35.87020506359063
+      ],
+      [
+        158.78742076221792,
+        88.89958519494753,
+        -36.693384599230995
+      ],
+      [
+        160.75,
+        90.75,
+        -37.53
+      ],
+      [
+        174.25,
+        104.25,
+        -43.47
+      ],
+      [
+        175.83341759786296,
+        106.15155014992904,
+        -44.30668206596878
+      ],
+      [
+        176.75033705811848,
+        108.02286726638276,
+        -45.13006159720842
+      ],
+      [
+        177.00075838076657,
+        109.8639513493612,
+        -45.94013859371893
+      ],
+      [
+        176.58468156580722,
+        111.67480239886436,
+        -46.736913055500324
+      ],
+      [
+        175.50210661324041,
+        113.45542041489225,
+        -47.520384982552585
+      ],
+      [
+        173.75303352306622,
+        115.20580539744482,
+        -48.29055437487572
+      ],
+      [
+        156.9,
+        129.25,
+        -54.47
+      ],
+      [
+        154.54468012169903,
+        131.0422282365827,
+        -55.31009476061821
+      ],
+      [
+        152.07872048679607,
+        132.5855796129974,
+        -56.14371237580616
+      ],
+      [
+        149.50212109529105,
+        133.88005412924414,
+        -56.970852845563854
+      ],
+      [
+        146.81488194718412,
+        134.9256517853229,
+        -57.791516169891295
+      ],
+      [
+        144.01700304247518,
+        135.7223725812337,
+        -58.60570234878848
+      ],
+      [
+        141.10848438116426,
+        136.27021651697655,
+        -59.41341138225542
+      ],
+      [
+        91.879393923934,
+        143.3029437251523,
+        -72.77559307778934
+      ],
+      [
+        87.91689492101543,
+        143.84228146007416,
+        -73.79409694552537
+      ],
+      [
+        83.94899386154904,
+        144.32892381494128,
+        -74.70000393392631
+      ],
+      [
+        79.97569074553483,
+        144.7628707897536,
+        -75.4933140429922
+      ],
+      [
+        75.99698557297282,
+        145.1441223845112,
+        -76.17402727272302
+      ],
+      [
+        72.01287834386298,
+        145.47267859921408,
+        -76.74214362311878
+      ],
+      [
+        68.02336905820533,
+        145.74853943386216,
+        -77.19766309417946
+      ],
+      [
+        11.976630941794662,
+        149.25146056613784,
+        -82.80233690582054
+      ],
+      [
+        7.989480758379298,
+        149.54161046039025,
+        -83.1928613226043
+      ],
+      [
+        4.012450835996311,
+        149.913033853906,
+        -83.56599251016925
+      ],
+      [
+        0.045541174645699734,
+        150.36573074668502,
+        -83.92173046851536
+      ],
+      [
+        -3.911248225672532,
+        150.89970113872744,
+        -84.26007519764268
+      ],
+      [
+        -7.857917364958384,
+        151.51494503003318,
+        -84.58102669755118
+      ],
+      [
+        -11.794466243211863,
+        152.21146242060223,
+        -84.88458496824089
+      ],
+      [
+        -70.40906087979143,
+        163.2016989149609,
+        -89.28067956598436
+      ],
+      [
+        -73.53129227763294,
+        163.94284646872288,
+        -89.52602747637803
+      ],
+      [
+        -76.50402705768508,
+        164.96742173998265,
+        -89.78252425154861
+      ],
+      [
+        -79.32726521994786,
+        166.27542472874023,
+        -90.0501698914961
+      ],
+      [
+        -82.00100676442128,
+        167.86685543499567,
+        -90.32896439622048
+      ],
+      [
+        -84.52525169110532,
+        169.74171385874894,
+        -90.61890776572179
+      ],
+      [
+        -86.9,
+        171.9,
+        -90.92
+      ],
+      [
+        -105.62093046412825,
+        190.62093046412826,
+        -93.41612406188376
+      ],
+      [
+        -106.89509060008906,
+        192.1187017112002,
+        -93.61369726519708
+      ],
+      [
+        -107.79819131739035,
+        193.6926357618348,
+        -93.81716624972613
+      ],
+      [
+        -108.33023261603206,
+        195.34273261603207,
+        -94.02653101547094
+      ],
+      [
+        -108.49121449601427,
+        197.06899227379205,
+        -94.24179156243153
+      ],
+      [
+        -108.2811369573369,
+        198.87141473511468,
+        -94.46294789060788
+      ],
+      [
+        -107.7,
+        200.75,
+        -94.69
+      ],
+      [
+        -102.3,
+        214.25,
+        -96.31
+      ],
+      [
+        -101.44335740260433,
+        216.08387685425342,
+        -96.53057810524248
+      ],
+      [
+        -100.40676294375064,
+        217.75217408368027,
+        -96.73231242096989
+      ],
+      [
+        -99.19021662343889,
+        219.25489168828057,
+        -96.91520294718221
+      ],
+      [
+        -97.79371844166914,
+        220.59202966805435,
+        -97.07924968387948
+      ],
+      [
+        -96.21726839844135,
+        221.76358802300155,
+        -97.22445263106168
+      ],
+      [
+        -94.46086649375555,
+        222.76956675312223,
+        -97.35081178872882
+      ],
+      [
+        -75.88687640029244,
+        232.0565617998538,
+        -98.52716449464815
+      ],
+      [
+        -73.90681750020309,
+        232.9795845832318,
+        -98.63872895461678
+      ],
+      [
+        -71.89122506679666,
+        233.78636079993504,
+        -98.72486533095474
+      ],
+      [
+        -69.8400991000731,
+        234.47689044996346,
+        -98.78557362366205
+      ],
+      [
+        -67.7534396000325,
+        235.0511735333171,
+        -98.82085383273869
+      ],
+      [
+        -65.6312465666748,
+        235.50921004999594,
+        -98.83070595818468
+      ],
+      [
+        -63.47352,
+        235.851,
+        -98.81513
+      ],
+      [
+        -41.624,
+        238.7,
+        -98.53099999999999
+      ]
+    ],
+    "station_3d_m": [
+      0.0,
+      12.649110640673518,
+      29.293629257924067,
+      46.33035429532489,
+      61.966530298427436,
+      71.25006109225798,
+      72.17128101925583,
+      73.0905739012319,
+      74.0136939624505,
+      74.94632459009198,
+      75.89397807287139,
+      76.86191007195569,
+      110.65680980070016,
+      114.30676366325548,
+      117.94208208546894,
+      121.56357027427042,
+      125.17204269497904,
+      128.7683226561393,
+      132.3532418666255,
+      175.92851198851585,
+      178.73346904505624,
+      181.52357375931126,
+      184.30816058247802,
+      187.09661938023243,
+      189.8983010876302,
+      192.72242529597062,
+      212.71701456407013,
+      215.3291288688874,
+      217.56978120679983,
+      219.5967311765102,
+      221.61840152114613,
+      223.8446982909877,
+      226.43627409632091,
+      249.22771304163328,
+      252.3042976720217,
+      255.33048483087416,
+      258.3302664986339,
+      261.3282686649793,
+      264.3491608388179,
+      267.417060391259,
+      318.90988026835674,
+      323.03657793950185,
+      327.1355689215484,
+      331.210466289314,
+      335.26494752984377,
+      339.30274591347467,
+      343.32764113309923,
+      399.76273374827406,
+      403.7794566496388,
+      407.7911831138826,
+      411.79965616893196,
+      415.8066230884082,
+      419.813833116105,
+      423.8230351776065,
+      483.6208750242497,
+      486.83923239956545,
+      489.99402195747285,
+      493.11703007914633,
+      496.2410134202223,
+      499.3986982867862,
+      502.621784561098,
+      529.2145864108047,
+      531.1909056996077,
+      533.0169010251774,
+      534.7632461161681,
+      536.5103078422585,
+      538.338358558959,
+      540.3178421837982,
+      554.9477567426738,
+      556.9838303063624,
+      558.9582771787753,
+      560.900336419174,
+      562.8407117644257,
+      564.8101857078202,
+      566.8382161545752,
+      587.6378601582308,
+      589.8253360861409,
+      591.9981039515079,
+      594.1631985050412,
+      596.3277293138052,
+      598.4988114830975,
+      600.683496109521,
+      622.7198083029734
+    ],
+    "length_3d_m": 622.7198083029734,
+    "length_xy_m": 610.7341866641201,
+    "surface_drop_m": 98.53099999999999,
+    "max_grade": 0.43598539901975186,
+    "max_grade_degrees": 23.55649873627597,
+    "width_m": 4,
+    "travel_time_target_minutes": [
+      3,
+      4
+    ],
+    "travel_time_measured": false,
+    "estimate_at_3m_s_seconds": 207.5732694343245
+  },
+  "upper_routes": {
+    "arrivo": {
+      "width_m": 5,
+      "points_m": [
+        [
+          -80,
+          -23,
+          0
+        ],
+        [
+          -44,
+          -12,
+          0
+        ],
+        [
+          -18,
+          -4,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "prosecuzione": {
+      "width_m": 5,
+      "points_m": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          23,
+          -6,
+          0
+        ],
+        [
+          48,
+          -14,
+          0
+        ],
+        [
+          78,
+          -28,
+          0
+        ]
+      ]
+    },
+    "fossalta_inizio": {
+      "width_m": 4,
+      "points_m": [
+        [
+          12,
+          4,
+          0
+        ],
+        [
+          26,
+          13,
+          -0.2
+        ],
+        [
+          39,
+          24,
+          -0.7
+        ],
+        [
+          49,
+          36,
+          -1.4
+        ],
+        [
+          58,
+          44,
+          -2
+        ]
+      ]
+    },
+    "sentiero_belvedere": {
+      "width_m": 2.5,
+      "points_m": [
+        [
+          0,
+          12,
+          0
+        ],
+        [
+          -3,
+          21,
+          0
+        ],
+        [
+          -7,
+          29,
+          0
+        ],
+        [
+          -8,
+          36,
+          0
+        ]
+      ]
+    },
+    "ramo_opposto": {
+      "width_m": 5,
+      "points_m": [
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          8,
+          -16,
+          0
+        ],
+        [
+          16,
+          -32,
+          0
+        ],
+        [
+          16,
+          -45,
+          0
+        ],
+        [
+          10,
+          -52,
+          0
+        ]
+      ]
+    }
+  },
+  "piazzale_nominal_m": [
+    35,
+    25
+  ],
+  "terrace": {
+    "center_m": [
+      -8,
+      40,
+      0
+    ],
+    "nominal_size_m": [
+      10,
+      8
+    ],
+    "wall_body_thickness_m": 0.2,
+    "wall_cap_thickness_m": 0.24,
+    "approx_top_above_local_ground_m": 0.94,
+    "entry": "sud"
+  },
+  "walls": {
+    "height_above_road_m": 0.85,
+    "thickness_m": 0.35,
+    "clear_between_walls_m": 4.5,
+    "buried_depth_m": 0.3,
+    "road_start_distance_m": 40,
+    "road_end_distance_m": 594.7198083029734
+  },
+  "village_translation_m": [
+    57.376,
+    254.7,
+    -98.961
+  ],
+  "village_west_route_endpoint_m": [
+    -41.624,
+    238.7,
+    -98.53099999999999
+  ],
+  "view_reference": {
+    "eye_height_m": 1.65,
+    "fov_deg": 90,
+    "position_m": [
+      -8,
+      43.65,
+      1.65
+    ],
+    "yaw_deg": 74.8,
+    "pitch_deg": -23.3
+  },
+  "assets": [
+    {
+      "id": "BEL-01",
+      "elemento": "Suolo del bivio",
+      "misure": "35 × 25 m, inviluppo nominale",
+      "quantita": "1 spiazzo",
+      "vincolo": "Mantenere le diramazioni e gli approcci sgombri. Terra battuta irregolare raccordata alle strade.",
+      "proposta_kit": "Superficie continua o terreno con materiali stratificati; dettagli entro le quote esistenti."
+    },
+    {
+      "id": "BEL-02",
+      "elemento": "Strade alte e ramo opposto",
+      "misure": "5 m di larghezza nominale",
+      "quantita": "Arrivo, prosecuzione e ramo opposto",
+      "vincolo": "Conservare il ramo rivolto dalla parte opposta all’affaccio e la sua curvatura. Le estremità sono margini di questa consegna.",
+      "proposta_kit": "Suolo rurale con bordi raccordati; evitare cordoli moderni."
+    },
+    {
+      "id": "BEL-03",
+      "elemento": "Sentiero dell’affaccio",
+      "misure": "2,50 m di larghezza nominale",
+      "quantita": "1 collegamento breve",
+      "vincolo": "Ingresso da sud; tenere libero l’arrivo alla terrazza e la lettura del bivio.",
+      "proposta_kit": "Terra e pietre affioranti, senza gradini aggiunti."
+    },
+    {
+      "id": "BEL-04",
+      "elemento": "Terrazza panoramica",
+      "misure": "10 × 8 m, inviluppo nominale",
+      "quantita": "1 affaccio",
+      "vincolo": "Centro LD X −8 / Y 40 m, quota circa 0. Il villaggio deve restare leggibile sopra il parapetto.",
+      "proposta_kit": "Suolo compatto raccordato alla scarpata, margini organici."
+    },
+    {
+      "id": "BEL-05",
+      "elemento": "Parapetto dell’affaccio",
+      "misure": "Corpo 0,20 m; copertina 0,24 m; sommità circa 0,94 m sul piano locale",
+      "quantita": "Arco esterno nord; ingresso sud aperto",
+      "vincolo": "Arco nominale con semiassi 5,30 × 4,30 m. Non rialzare il coronamento davanti alla vista.",
+      "proposta_kit": "Muratura rurale e copertine; elementi adattabili alla curva senza varchi di collisione."
+    },
+    {
+      "id": "BEL-06",
+      "elemento": "Segnavia ligneo",
+      "misure": "Palo 0,18 × 0,18 × 3 m; tavole 1,65 × 0,12 × 0,24 m",
+      "quantita": "1 palo, 3 tavole",
+      "vincolo": "Posizione LD X 2 / Y 1 m. Conservare gli orientamenti del modello. Testi e toponimi solo da indicazioni narrative definitive.",
+      "proposta_kit": "Legno e attacchi semplici. Le etichette flottanti del greybox non fanno parte dell’asset finale."
+    },
+    {
+      "id": "BEL-07",
+      "elemento": "Strada di discesa",
+      "misure": "622,72 m lungo il tracciato 3D; carreggiata 4 m",
+      "quantita": "1 percorso continuo fino a Fossalta",
+      "vincolo": "Conservare curve, quote e innesto; nessuna interruzione o soglia nel piano calpestabile.",
+      "proposta_kit": "Terreno/mesh raccordati; dettagli superficiali con collisione di cammino regolare."
+    },
+    {
+      "id": "BEL-08",
+      "elemento": "Muretti della discesa",
+      "misure": "Altezza 0,85 m; spessore 0,35 m; luce tra facce interne 4,50 m",
+      "quantita": "2 lati, da progressiva 40 a circa 594,72 m",
+      "vincolo": "Continuità ai giunti e nelle curve. Base tecnica interrata 0,30 m; ultimi 28 m verso il piano lasciati aperti.",
+      "proposta_kit": "Moduli diritti e adattabili alla curva/pendenza; lunghezze 1–2 m suggerite per il kit, non vincolo di layout."
+    },
+    {
+      "id": "BEL-09",
+      "elemento": "Scarpata e rocce",
+      "misure": "Seguire gli ingombri del modello; dislivello complessivo circa 99 m",
+      "quantita": "Masse di raccordo e rocce ai margini",
+      "vincolo": "Nessun picco o masso davanti al cono di vista; nessun ingombro nel corridoio pedonale.",
+      "proposta_kit": "Rocce grandi/medie e transizioni al terreno coerenti con la reference allegata."
+    },
+    {
+      "id": "BEL-10",
+      "elemento": "Alberi, siepi e sottobosco",
+      "misure": "Seguire distribuzione e volumi approvati",
+      "quantita": "Masse alte del bivio e quinte lungo la strada",
+      "vincolo": "Conservare le aperture visive, la leggibilità delle diramazioni e i margini percorribili.",
+      "proposta_kit": "Tronchi, chiome e arbusti variati; diversificare i proxy senza aggiungere ostacoli."
+    },
+    {
+      "id": "BEL-11",
+      "elemento": "Campagna di fondale",
+      "misure": "Rapporti e quote dalla mappa",
+      "quantita": "Campi, canale e filari visibili dall’affaccio",
+      "vincolo": "Fossalta e il canale restano riconoscibili; evitare pattern a scacchiera e file ripetute visibili nel greybox.",
+      "proposta_kit": "Masse a distanza, materiali e LOD/HLOD adeguati; il fondale esterno al percorso non richiede nuovi spazi giocabili."
+    },
+    {
+      "id": "BEL-12",
+      "elemento": "Raccordo a Fossalta",
+      "misure": "Varco 6 m; strada 4 m; approccio finale senza muretti per 28 m",
+      "quantita": "1 innesto occidentale",
+      "vincolo": "Nessun graticcio o salto di quota attraverso l’ingresso. Edifici e corti restano quelli della consegna Fossalta.",
+      "proposta_kit": "Transizione strada/campi/recinzioni; usare il catalogo Fossalta per gli asset del villaggio."
+    }
+  ],
+  "map_sha256_at_delivery": "da4f286f86d4d0fb6f289fb0223aaf6bbf117b5c6fe82988e043c17db6cb678d",
+  "authority": "Saved UE map for exact actor transforms/collision; exported route and final dimensions for the handoff. Illustrative aerial image is not metric.",
+  "source_revision": "Final close-village configuration with opposite road and both roadside walls; no obsolete preliminary distance targets."
+}

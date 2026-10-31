@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Master di riferimento · schema di progressione</title><style>
+
+:root{--bg:#0b1612;--panel:#102019;--ink:#f5efdc;--muted:#b9c5b9;--gold:#e2ba6b;--line:#405a4d}
+
+*{box-sizing:border-box}html,body{height:100%;margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,sans-serif}button{font:inherit}.shell{height:100%;display:grid;grid-template-rows:auto minmax(0,1fr)}
+
+.bar{display:flex;align-items:center;gap:12px;padding:11px 15px;background:var(--panel);border-bottom:1px solid var(--line)}.copy{min-width:0;flex:1}.copy strong{font:700 16px/1.2 Georgia,serif}.copy span{display:block;color:var(--muted);font-size:12px;margin-top:2px}.tools{display:flex;gap:5px}.tools button{width:36px;height:36px;border:1px solid #526f60;border-radius:9px;background:#183126;color:var(--ink);cursor:pointer;font-weight:800}.tools button:hover{border-color:var(--gold);color:var(--gold)}.tools button:focus-visible,.zone:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+.viewport{overflow:auto;min-height:0;overscroll-behavior:contain;background:#13231c;scrollbar-color:#678171 #101b17}.map{position:relative;width:1600px;height:900px;transform-origin:0 0}.map svg{display:block;width:100%;height:100%}.route{fill:none;stroke:#d5bd7a;stroke-width:13;stroke-linecap:round;stroke-linejoin:round;opacity:.24;stroke-dasharray:4 18}.zone .land{stroke:#e8dfbc;stroke-width:3;vector-effect:non-scaling-stroke;transition:filter .16s,stroke .16s,transform .16s;transform-box:fill-box;transform-origin:center}.zone:hover .land,.zone:focus .land{stroke:#fff3bd;filter:brightness(1.22) drop-shadow(0 0 9px #efcf7f88)}.zone text{fill:#fff8e7;font-weight:850;font-size:20px;text-anchor:middle;paint-order:stroke;stroke:#09130f;stroke-width:5px;stroke-linejoin:round;pointer-events:none}.zone .small{font-size:15px}.zone .minor{font-size:13px;fill:#fff1c5}.junction .land{stroke:#f0cd78;stroke-dasharray:8 6}.junction text{font-size:14px}.sequence{fill:#d4dfd4;font-size:13px;font-weight:700;letter-spacing:.08em}.legend{fill:#0c1713e8;stroke:#405a4d;stroke-width:1.5}.legend-title{fill:#f3e5b8;font-size:16px;font-weight:800}.legend-copy{fill:#d7e0d7;font-size:13px}.north{fill:#ead49a;font-size:22px;font-weight:900}
+
+@media(max-width:700px){.copy span{display:none}.bar{padding:8px}.map{width:1200px;height:675px}}
+
+</style></head><body><aside class="web-edition" style="padding:10px 16px;background:#e4c888;color:#162019;font:13px/1.5 system-ui,sans-serif"><a href="../../../environment.html" target="_top" style="color:inherit;font-weight:700">Atlante Environment</a> · MASTER-RIF: riferimenti del Master precedente. Le schede non recepiscono ancora la REV-GEO-01.</aside><div class="shell"><header class="bar"><div class="copy"><strong>Master di riferimento · schema di progressione</strong><span>MASTER-RIF · schema non metrico · non rappresenta la nuova revisione geografica</span></div><div class="tools" aria-label="Controlli mappa"><button id="minus" type="button" aria-label="Riduci">−</button><button id="fit" type="button" aria-label="Adatta alla finestra">↙</button><button id="plus" type="button" aria-label="Ingrandisci">+</button></div></header><div class="viewport" id="viewport"><div class="map" id="map"><svg viewBox="0 0 1600 900" role="img" aria-label="Cartina politica interattiva del greybox con zone e raccordi nella sequenza del giocatore">
+
+<rect width="1600" height="900" fill="#13231c"/><path d="M95 690 C250 650 370 630 520 600 S690 548 760 527 S875 485 930 465 S1075 437 1160 420 S1345 430 1430 365 S1400 245 1275 240 S1120 230 1020 180 S850 130 760 105" class="route"/>
+
+<text x="52" y="845" class="sequence">INIZIO</text><text x="690" y="38" class="sequence">CONCLUSIONE</text><text x="1510" y="58" class="north">N ↑</text>
+
+<a class="zone" href="Belvedere_e_Discesa/BELVEDERE_MANUALE_ENVIRONMENT.html" data-src="Belvedere_e_Discesa/BELVEDERE_MANUALE_ENVIRONMENT.html" aria-label="Apri Belvedere e discesa"><path class="land" fill="#718e58" d="M35 598 Q55 530 128 516 L225 548 Q250 624 216 724 L132 806 Q48 784 24 706Z"/><text x="130" y="650">BELVEDERE</text><text class="small" x="130" y="675">E DISCESA</text></a>
+
+<a class="zone" href="Zona_A_Fossalta/FOSSALTA_MANUALE_ENVIRONMENT.html" data-src="Zona_A_Fossalta/FOSSALTA_MANUALE_ENVIRONMENT.html" aria-label="Apri A, Fossalta"><path class="land" fill="#b2aa9e" d="M244 542 Q302 500 386 516 L442 574 L424 690 Q362 746 274 716 L230 646Z"/><text x="338" y="614">A · FOSSALTA</text></a>
+
+<a class="zone" href="Zona_B_Argini/ZONA_B_MANUALE_ENVIRONMENT.html" data-src="Zona_B_Argini/ZONA_B_MANUALE_ENVIRONMENT.html" aria-label="Apri B, Argini e cascina"><path class="land" fill="#c9b85e" d="M456 492 L590 478 L640 536 L612 650 L502 674 L438 616Z"/><text x="539" y="550">B · ARGINI</text><text class="small" x="539" y="575">E CASCINA</text></a>
+
+<a class="zone" href="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#consolidamento" data-src="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#consolidamento" aria-label="Apri C1, Soglia del bosco"><path class="land" fill="#73a477" d="M650 445 Q728 417 785 458 L806 536 Q772 606 693 601 L638 544Z"/><text x="721" y="500">C1 · BOSCO</text><text class="small" x="721" y="524">SOGLIA</text></a>
+
+<a class="zone junction" href="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#j12-raccordo" data-src="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#j12-raccordo" aria-label="Apri J12, Fosso dei salici"><path class="land" fill="#68b7bc" d="M810 482 Q842 463 869 482 L892 519 L867 558 Q832 569 805 541Z"/><text x="849" y="514">J12</text><text class="minor" x="849" y="534">FOSSO</text><text class="minor" x="849" y="550">DEI SALICI</text></a>
+
+<a class="zone" href="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#c2-consolidata" data-src="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#c2-consolidata" aria-label="Apri C2, Eremo"><path class="land" fill="#c9974e" d="M896 407 Q961 374 1028 399 L1061 458 L1034 542 L948 560 L886 507Z"/><text x="971" y="465">C2 · EREMO</text></a>
+
+<a class="zone junction" href="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#j23-raccordo" data-src="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#j23-raccordo" aria-label="Apri J23, Conca delle due rive"><path class="land" fill="#477f78" d="M1065 398 Q1115 369 1170 393 L1200 448 L1179 526 L1112 548 L1058 503Z"/><text x="1129" y="431">J23</text><text class="minor" x="1129" y="452">CONCA</text><text class="minor" x="1129" y="469">DELLE DUE RIVE</text></a>
+
+<a class="zone" href="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#c3-pianta" data-src="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#c3-pianta" aria-label="Apri C3, Sentieri"><path class="land" fill="#9a7cc0" d="M1197 346 Q1261 311 1320 342 L1352 405 L1328 500 L1251 527 L1195 475Z"/><text x="1271" y="406">C3 · SENTIERI</text></a>
+
+<a class="zone" href="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#c4-pianta" data-src="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#c4-pianta" aria-label="Apri C4, Palude"><path class="land" fill="#bd678a" d="M1360 366 Q1422 340 1473 382 L1491 463 L1451 536 L1380 525 L1344 454Z"/><text x="1419" y="425">C4 · PALUDE</text></a>
+
+<a class="zone junction" href="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#j4d-raccordo" data-src="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#j4d-raccordo" aria-label="Apri J4D, Argine spezzato"><path class="land" fill="#81b8c4" d="M1412 307 Q1445 282 1478 302 L1497 336 L1480 369 L1441 375 L1411 349Z"/><text x="1454" y="323">J4D</text><text class="minor" x="1454" y="343">ARGINE</text><text class="minor" x="1454" y="359">SPEZZATO</text></a>
+
+<a class="zone" href="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#d1-pianta" data-src="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#d1-pianta" aria-label="Apri D1, Sacello"><path class="land" fill="#729cca" d="M1420 160 Q1490 138 1544 190 L1556 274 L1510 326 L1437 304 L1398 235Z"/><text x="1477" y="226">D1 · SACELLO</text></a>
+
+<a class="zone" href="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#d2-pianta" data-src="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#d2-pianta" aria-label="Apri D2, Bastiano"><path class="land" fill="#75bcb3" d="M1243 166 Q1324 132 1390 172 L1414 246 L1362 309 L1270 299 L1218 238Z"/><text x="1320" y="224">D2 · BASTIANO</text></a>
+
+<a class="zone" href="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#d3-generale" data-src="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#d3-generale" aria-label="Apri D3, Tana e Camposanto"><path class="land" fill="#c5c3a1" d="M1010 85 Q1112 42 1203 82 L1242 156 L1200 250 L1106 270 L1022 216 L988 145Z"/><text x="1118" y="136">D3 · TANA</text><text class="small" x="1118" y="162">E CAMPOSANTO</text></a>
+
+<a class="zone" href="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#d4-pianta" data-src="../Greybox/Zona_C_Bosco/G1_ZONA_C_PIANO.html#d4-pianta" aria-label="Apri D4, Radura della Borda"><path class="land" fill="#aa8bc4" d="M790 48 Q883 12 970 48 L1012 110 L988 184 L900 210 L817 174 L772 112Z"/><text x="892" y="104">D4 · RADURA</text><text class="small" x="892" y="130">DELLA BORDA</text></a>
+
+<g transform="translate(48 66)" pointer-events="none"><rect class="legend" width="430" height="120" rx="14"/><text x="22" y="32" class="legend-title">COME LEGGERE LA MAPPA</text><text x="22" y="60" class="legend-copy">Le aree piene sono zone di gioco.</text><path d="M22 80 h55" stroke="#f0cd78" stroke-width="7" stroke-dasharray="8 6"/><text x="92" y="86" class="legend-copy">I raccordi sono inseriti nella progressione.</text><text x="22" y="108" class="legend-copy">Ogni territorio apre la propria scheda Environment.</text></g>
+
+</svg></div></div></div><script>(()=>{const map=document.querySelector('#map'),viewport=document.querySelector('#viewport');let zoom=1;function apply(){map.style.transform=`scale(${zoom})`;map.style.marginRight=`${1600*(zoom-1)}px`;map.style.marginBottom=`${900*(zoom-1)}px`}function fit(){zoom=Math.min(viewport.clientWidth/1600,viewport.clientHeight/900);zoom=Math.max(.4,Math.min(1,zoom));apply();viewport.scrollTo(0,0)}document.querySelector('#plus').onclick=()=>{zoom=Math.min(2.25,zoom+.2);apply()};document.querySelector('#minus').onclick=()=>{zoom=Math.max(.4,zoom-.2);apply()};document.querySelector('#fit').onclick=fit;document.querySelectorAll('.zone').forEach(a=>a.addEventListener('click',e=>{if(parent!==window){e.preventDefault();parent.postMessage({type:'wtfd-atlas-open',src:new URL(a.dataset.src,document.baseURI).href},'*')}}));addEventListener('load',fit)})();</script></body></html>

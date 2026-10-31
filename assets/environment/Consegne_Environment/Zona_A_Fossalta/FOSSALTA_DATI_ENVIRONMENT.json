@@ -1,0 +1,1607 @@
+{
+  "coordinate_contract": "Metres: market origin (0,0), X east, Y north by LD convention, Z up; native UE coordinates in cm. Do not reapply OBJ Y reflection.",
+  "buildings": [
+    {
+      "id": "CHURCH",
+      "name": "CHIESA",
+      "center_xy_m": [
+        -18,
+        42
+      ],
+      "world_center_cm": [
+        -1800,
+        4200,
+        40
+      ],
+      "external_wall_wh_m": [
+        12,
+        8
+      ],
+      "total_height_m": 7,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 3.45,
+        "ridge_m": 5.7,
+        "axis": "Y",
+        "overhang_m": 0.3,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 20.556045219583464,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Interno percorribile",
+      "door_clear_wh_m": [
+        1.4,
+        2.1
+      ],
+      "note": ""
+    },
+    {
+      "id": "CHIEF_HOME",
+      "name": "CASA CAPOVILLAGGIO",
+      "center_xy_m": [
+        38,
+        -31
+      ],
+      "world_center_cm": [
+        3800,
+        -3100,
+        40
+      ],
+      "external_wall_wh_m": [
+        9,
+        7
+      ],
+      "total_height_m": 4,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 3.05,
+        "ridge_m": 4.0,
+        "axis": "X",
+        "overhang_m": 0.3,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 15.185837262201323,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Interno percorribile",
+      "door_clear_wh_m": [
+        1.4,
+        2.1
+      ],
+      "note": "Il portico fa parte della casa del capovillaggio: 9 x 2 x 3 m."
+    },
+    {
+      "id": "FORGE",
+      "name": "FUCINA DEL FABBRO",
+      "center_xy_m": [
+        -58,
+        6
+      ],
+      "world_center_cm": [
+        -5800,
+        600,
+        40
+      ],
+      "external_wall_wh_m": [
+        8,
+        6
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.65,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 15.819193947500144,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Tettoia aperta",
+      "door_clear_wh_m": null,
+      "note": "Forgia con braci statiche e luce calda locale; nessuna simulazione."
+    },
+    {
+      "id": "HOME_RINALDO",
+      "name": "CASA RINALDO E BEATRICE",
+      "center_xy_m": [
+        48,
+        35
+      ],
+      "world_center_cm": [
+        4800,
+        3500,
+        40
+      ],
+      "external_wall_wh_m": [
+        7,
+        5
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.4,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 23.749494492866763,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Interno percorribile",
+      "door_clear_wh_m": [
+        1.4,
+        2.1
+      ],
+      "note": ""
+    },
+    {
+      "id": "BARN_W",
+      "name": "FIENILE OVEST",
+      "center_xy_m": [
+        -77.5,
+        -23.5
+      ],
+      "world_center_cm": [
+        -7750.0,
+        -2350.0,
+        40
+      ],
+      "external_wall_wh_m": [
+        10,
+        7
+      ],
+      "total_height_m": 4,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.5,
+        "ridge_m": 4.0,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 23.198590513648185,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Edificio chiuso; accesso esterno",
+      "door_clear_wh_m": null,
+      "note": ""
+    },
+    {
+      "id": "BARN_N",
+      "name": "FIENILE NORD",
+      "center_xy_m": [
+        12,
+        47.5
+      ],
+      "world_center_cm": [
+        1200,
+        4750.0,
+        40
+      ],
+      "external_wall_wh_m": [
+        10,
+        7
+      ],
+      "total_height_m": 4,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.5,
+        "ridge_m": 4.0,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 23.198590513648185,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Edificio chiuso; accesso esterno",
+      "door_clear_wh_m": null,
+      "note": ""
+    },
+    {
+      "id": "H1",
+      "name": "CASA 01",
+      "center_xy_m": [
+        -31,
+        -24.5
+      ],
+      "world_center_cm": [
+        -3100,
+        -2450.0,
+        40
+      ],
+      "external_wall_wh_m": [
+        6,
+        4
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.4,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 28.810793742973065,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Edificio chiuso; accesso esterno",
+      "door_clear_wh_m": null,
+      "note": ""
+    },
+    {
+      "id": "H2",
+      "name": "CASA DEL VENDITORE DI CESTE",
+      "center_xy_m": [
+        -9,
+        -32
+      ],
+      "world_center_cm": [
+        -900,
+        -3200,
+        40
+      ],
+      "external_wall_wh_m": [
+        6,
+        4
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.4,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 28.810793742973065,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Edificio chiuso; accesso esterno",
+      "door_clear_wh_m": null,
+      "note": "Vendita di ceste; non laboratorio di produzione attestato."
+    },
+    {
+      "id": "H3",
+      "name": "CASA DEL MEDICO",
+      "center_xy_m": [
+        15.5,
+        -26.5
+      ],
+      "world_center_cm": [
+        1550.0,
+        -2650.0,
+        40
+      ],
+      "external_wall_wh_m": [
+        6,
+        4
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.4,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 28.810793742973065,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Interno percorribile",
+      "door_clear_wh_m": [
+        1.4,
+        2.1
+      ],
+      "note": "Casa del medico; distinta da Rinaldo e Beatrice."
+    },
+    {
+      "id": "H4",
+      "name": "CASA DEL FORNAIO",
+      "center_xy_m": [
+        22,
+        28
+      ],
+      "world_center_cm": [
+        2200,
+        2800,
+        40
+      ],
+      "external_wall_wh_m": [
+        6,
+        4
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.4,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 28.810793742973065,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Edificio chiuso; accesso esterno",
+      "door_clear_wh_m": null,
+      "note": "Casa chiusa; forno accessibile nella corte, sotto annesso est."
+    },
+    {
+      "id": "H5",
+      "name": "CASA DEL PARROCO",
+      "center_xy_m": [
+        -1,
+        43.5
+      ],
+      "world_center_cm": [
+        -100,
+        4350.0,
+        40
+      ],
+      "external_wall_wh_m": [
+        6,
+        4
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.4,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 28.810793742973065,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Edificio chiuso; accesso esterno",
+      "door_clear_wh_m": null,
+      "note": "Abitazione del parroco; distinta dalla chiesa."
+    },
+    {
+      "id": "H6",
+      "name": "CASA 06",
+      "center_xy_m": [
+        -69,
+        20
+      ],
+      "world_center_cm": [
+        -6900,
+        2000,
+        40
+      ],
+      "external_wall_wh_m": [
+        6,
+        4
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.4,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 28.810793742973065,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Edificio chiuso; accesso esterno",
+      "door_clear_wh_m": null,
+      "note": ""
+    },
+    {
+      "id": "H7",
+      "name": "CASA 07",
+      "center_xy_m": [
+        -85.5,
+        0
+      ],
+      "world_center_cm": [
+        -8550.0,
+        0,
+        40
+      ],
+      "external_wall_wh_m": [
+        6,
+        4
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.4,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 28.810793742973065,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Edificio chiuso; accesso esterno",
+      "door_clear_wh_m": null,
+      "note": ""
+    },
+    {
+      "id": "H8",
+      "name": "CASA 08",
+      "center_xy_m": [
+        -70,
+        38
+      ],
+      "world_center_cm": [
+        -7000,
+        3800,
+        40
+      ],
+      "external_wall_wh_m": [
+        6,
+        4
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.4,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 28.810793742973065,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Edificio chiuso; accesso esterno",
+      "door_clear_wh_m": null,
+      "note": ""
+    },
+    {
+      "id": "H9",
+      "name": "CASA 09",
+      "center_xy_m": [
+        -45.5,
+        42
+      ],
+      "world_center_cm": [
+        -4550.0,
+        4200,
+        40
+      ],
+      "external_wall_wh_m": [
+        6,
+        4
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.4,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 28.810793742973065,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Edificio chiuso; accesso esterno",
+      "door_clear_wh_m": null,
+      "note": ""
+    },
+    {
+      "id": "H10",
+      "name": "CASA 10",
+      "center_xy_m": [
+        -43,
+        -48
+      ],
+      "world_center_cm": [
+        -4300,
+        -4800,
+        40
+      ],
+      "external_wall_wh_m": [
+        6,
+        4
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.4,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 28.810793742973065,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Edificio chiuso; accesso esterno",
+      "door_clear_wh_m": null,
+      "note": ""
+    },
+    {
+      "id": "H11",
+      "name": "CASA 11",
+      "center_xy_m": [
+        -8,
+        -49
+      ],
+      "world_center_cm": [
+        -800,
+        -4900,
+        40
+      ],
+      "external_wall_wh_m": [
+        6,
+        4
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.4,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 28.810793742973065,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Edificio chiuso; accesso esterno",
+      "door_clear_wh_m": null,
+      "note": ""
+    },
+    {
+      "id": "H12",
+      "name": "CASA 12",
+      "center_xy_m": [
+        26.5,
+        -44.5
+      ],
+      "world_center_cm": [
+        2650.0,
+        -4450.0,
+        40
+      ],
+      "external_wall_wh_m": [
+        6,
+        4
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.4,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 28.810793742973065,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Edificio chiuso; accesso esterno",
+      "door_clear_wh_m": null,
+      "note": ""
+    },
+    {
+      "id": "H13",
+      "name": "CASA E BOTTEGA DEL VASAIO",
+      "center_xy_m": [
+        64.5,
+        7.5
+      ],
+      "world_center_cm": [
+        6450.0,
+        750.0,
+        40
+      ],
+      "external_wall_wh_m": [
+        6,
+        4
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.4,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 28.810793742973065,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Edificio chiuso; accesso esterno",
+      "door_clear_wh_m": null,
+      "note": "Casa chiusa; banco, tettoia e fornace nella corte esterna."
+    },
+    {
+      "id": "H14",
+      "name": "CASA DEL MUGNAIO",
+      "center_xy_m": [
+        64,
+        33
+      ],
+      "world_center_cm": [
+        6400,
+        3300,
+        40
+      ],
+      "external_wall_wh_m": [
+        6,
+        4
+      ],
+      "total_height_m": 3.5,
+      "wall_thickness_m": 0.25,
+      "roof_profile": {
+        "eave_m": 2.4,
+        "ridge_m": 3.5,
+        "axis": "X",
+        "overhang_m": 0.25,
+        "thickness_m": 0.16,
+        "slope_atan_deg": 28.810793742973065,
+        "height_surface": "upper roof at external wall face"
+      },
+      "access": "Edificio chiuso; accesso esterno",
+      "door_clear_wh_m": null,
+      "note": "Abitazione del mugnaio; distinta dal mulino tecnico sul canale."
+    }
+  ],
+  "annex_fornaio": {
+    "house_id": "H4",
+    "oven_center_xy_m": [
+      26.5,
+      28
+    ],
+    "roof_envelope_xy_m": [
+      [
+        24.95,
+        25.5
+      ],
+      [
+        28.95,
+        30.5
+      ]
+    ],
+    "ridge_above_ground_m": 3.1,
+    "eave_above_ground_m": 2.3,
+    "roof_thickness_m": 0.14,
+    "clear_front_beam_m": 2.15,
+    "mouth_faces": "south",
+    "standing_xy_m": [
+      26.5,
+      25.7
+    ],
+    "side_circulation_claimed": false
+  },
+  "main_road_width_m": 4,
+  "access_width_m": 2,
+  "door_clear_wh_m": [
+    1.4,
+    2.1
+  ],
+  "door_front_clear_depth_m": 2,
+  "main_road_xy_m": [
+    [
+      -99,
+      -16
+    ],
+    [
+      -82,
+      -12
+    ],
+    [
+      -60,
+      -10
+    ],
+    [
+      -42,
+      -5
+    ],
+    [
+      -22,
+      1
+    ],
+    [
+      -4,
+      2
+    ],
+    [
+      15,
+      2
+    ],
+    [
+      27,
+      -11
+    ],
+    [
+      43,
+      -16
+    ],
+    [
+      61,
+      -15
+    ],
+    [
+      74,
+      -3
+    ],
+    [
+      84,
+      -2
+    ],
+    [
+      108,
+      -2
+    ]
+  ],
+  "landscape_bounds_xy_m": [
+    -252,
+    -252,
+    252,
+    252
+  ],
+  "settlement_hull_m2": 13066.125,
+  "market_stations": 8,
+  "level_package": "/Game/Developers/Roberto/Greybox_WTFD/Maps/L_Village_A_Attempt2_R2_G5",
+  "accesses": [
+    {
+      "id": "LANE_N",
+      "points_xy_m": [
+        [
+          -42,
+          -5
+        ],
+        [
+          -40,
+          11
+        ],
+        [
+          -32,
+          23
+        ],
+        [
+          -18,
+          31
+        ],
+        [
+          -2,
+          30
+        ],
+        [
+          11,
+          23
+        ],
+        [
+          19,
+          14
+        ],
+        [
+          22,
+          8
+        ],
+        [
+          22,
+          3
+        ],
+        [
+          15,
+          2
+        ]
+      ],
+      "width_m": 2,
+      "target_id": null,
+      "kind": "secondary_loop"
+    },
+    {
+      "id": "LANE_W",
+      "points_xy_m": [
+        [
+          -82,
+          -12
+        ],
+        [
+          -76,
+          2
+        ],
+        [
+          -76,
+          16
+        ],
+        [
+          -78,
+          28
+        ],
+        [
+          -65,
+          32
+        ],
+        [
+          -53,
+          32
+        ],
+        [
+          -40,
+          22
+        ],
+        [
+          -40,
+          11
+        ]
+      ],
+      "width_m": 2,
+      "target_id": null,
+      "kind": "secondary_loop"
+    },
+    {
+      "id": "LANE_S",
+      "points_xy_m": [
+        [
+          -42,
+          -5
+        ],
+        [
+          -45,
+          -17
+        ],
+        [
+          -43,
+          -27
+        ],
+        [
+          -37,
+          -36
+        ],
+        [
+          -25,
+          -40
+        ],
+        [
+          -8,
+          -42
+        ],
+        [
+          13,
+          -40
+        ],
+        [
+          27,
+          -35
+        ],
+        [
+          28,
+          -23
+        ],
+        [
+          38,
+          -21
+        ],
+        [
+          43,
+          -16
+        ]
+      ],
+      "width_m": 2,
+      "target_id": null,
+      "kind": "secondary_loop"
+    },
+    {
+      "id": "LANE_NE",
+      "points_xy_m": [
+        [
+          35,
+          30
+        ],
+        [
+          43,
+          22
+        ],
+        [
+          57,
+          19
+        ],
+        [
+          73,
+          18
+        ],
+        [
+          75,
+          4
+        ],
+        [
+          74,
+          -3
+        ]
+      ],
+      "width_m": 2,
+      "target_id": null,
+      "kind": "secondary_link"
+    },
+    {
+      "id": "A1",
+      "points_xy_m": [
+        [
+          -60,
+          -10
+        ],
+        [
+          -58,
+          -3
+        ],
+        [
+          -58,
+          3
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "FORGE",
+      "kind": "destination_access"
+    },
+    {
+      "id": "A2",
+      "points_xy_m": [
+        [
+          -18,
+          31
+        ],
+        [
+          -18,
+          38
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "CHURCH",
+      "kind": "destination_access",
+      "serves_ids": [
+        "FORECOURT",
+        "CHURCH"
+      ]
+    },
+    {
+      "id": "A3",
+      "points_xy_m": [
+        [
+          19,
+          14
+        ],
+        [
+          29,
+          22
+        ],
+        [
+          35,
+          30
+        ],
+        [
+          41,
+          35
+        ],
+        [
+          44.5,
+          35
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "HOME_RINALDO",
+      "kind": "destination_access"
+    },
+    {
+      "id": "A4",
+      "points_xy_m": [
+        [
+          43,
+          -16
+        ],
+        [
+          38,
+          -21
+        ],
+        [
+          38,
+          -27.5
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "CHIEF_HOME",
+      "kind": "destination_access",
+      "serves_ids": [
+        "PORCH",
+        "CHIEF_HOME"
+      ]
+    },
+    {
+      "id": "A5",
+      "points_xy_m": [
+        [
+          -22,
+          1
+        ],
+        [
+          -24,
+          10
+        ],
+        [
+          -20,
+          16
+        ],
+        [
+          -15,
+          14
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "WELL",
+      "kind": "destination_access"
+    },
+    {
+      "id": "A6",
+      "points_xy_m": [
+        [
+          15,
+          2
+        ],
+        [
+          15.5,
+          5.5
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "OVEN",
+      "kind": "destination_access"
+    },
+    {
+      "id": "A7",
+      "points_xy_m": [
+        [
+          -60,
+          -10
+        ],
+        [
+          -58,
+          -22
+        ],
+        [
+          -53,
+          -30
+        ],
+        [
+          -53,
+          -32
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "YARD",
+      "kind": "destination_access"
+    },
+    {
+      "id": "ABARN_W",
+      "points_xy_m": [
+        [
+          -82,
+          -12
+        ],
+        [
+          -79,
+          -15
+        ],
+        [
+          -77.5,
+          -18
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "BARN_W",
+      "kind": "destination_access"
+    },
+    {
+      "id": "ABARN_N",
+      "points_xy_m": [
+        [
+          11,
+          23
+        ],
+        [
+          19,
+          35
+        ],
+        [
+          12,
+          42
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "BARN_N",
+      "kind": "destination_access"
+    },
+    {
+      "id": "APEN",
+      "points_xy_m": [
+        [
+          -79,
+          -15
+        ],
+        [
+          -88,
+          -18
+        ],
+        [
+          -87,
+          -25.5
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "PEN",
+      "kind": "destination_access"
+    },
+    {
+      "id": "AGARDEN",
+      "points_xy_m": [
+        [
+          57,
+          19
+        ],
+        [
+          55,
+          24
+        ],
+        [
+          55,
+          28
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "GARDEN",
+      "kind": "destination_access"
+    },
+    {
+      "id": "AH1",
+      "points_xy_m": [
+        [
+          -37,
+          -36
+        ],
+        [
+          -31,
+          -31
+        ],
+        [
+          -31,
+          -28.5
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "H1",
+      "kind": "destination_access"
+    },
+    {
+      "id": "AH2",
+      "points_xy_m": [
+        [
+          -8,
+          -42
+        ],
+        [
+          -9,
+          -36
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "H2",
+      "kind": "destination_access"
+    },
+    {
+      "id": "AH3",
+      "points_xy_m": [
+        [
+          13,
+          -40
+        ],
+        [
+          15.5,
+          -30.5
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "H3",
+      "kind": "destination_access"
+    },
+    {
+      "id": "AH4",
+      "points_xy_m": [
+        [
+          19,
+          14
+        ],
+        [
+          25,
+          20
+        ],
+        [
+          22,
+          24
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "H4",
+      "kind": "destination_access"
+    },
+    {
+      "id": "AH5",
+      "points_xy_m": [
+        [
+          -2,
+          30
+        ],
+        [
+          -1,
+          39.5
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "H5",
+      "kind": "destination_access"
+    },
+    {
+      "id": "AH6",
+      "points_xy_m": [
+        [
+          -76,
+          16
+        ],
+        [
+          -76.6666666667,
+          20
+        ],
+        [
+          -74,
+          20
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "H6",
+      "kind": "destination_access"
+    },
+    {
+      "id": "AH7",
+      "points_xy_m": [
+        [
+          -76,
+          2
+        ],
+        [
+          -80.5,
+          0
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "H7",
+      "kind": "destination_access"
+    },
+    {
+      "id": "AH8",
+      "points_xy_m": [
+        [
+          -65,
+          32
+        ],
+        [
+          -70,
+          34
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "H8",
+      "kind": "destination_access"
+    },
+    {
+      "id": "AH9",
+      "points_xy_m": [
+        [
+          -53,
+          32
+        ],
+        [
+          -50,
+          35
+        ],
+        [
+          -45.5,
+          38
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "H9",
+      "kind": "destination_access"
+    },
+    {
+      "id": "AH10",
+      "points_xy_m": [
+        [
+          -37,
+          -36
+        ],
+        [
+          -41,
+          -40
+        ],
+        [
+          -43,
+          -44
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "H10",
+      "kind": "destination_access"
+    },
+    {
+      "id": "AH11",
+      "points_xy_m": [
+        [
+          -8,
+          -42
+        ],
+        [
+          -8,
+          -45
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "H11",
+      "kind": "destination_access"
+    },
+    {
+      "id": "AH12",
+      "points_xy_m": [
+        [
+          27,
+          -35
+        ],
+        [
+          26.5,
+          -40.5
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "H12",
+      "kind": "destination_access"
+    },
+    {
+      "id": "AH13",
+      "points_xy_m": [
+        [
+          74,
+          -3
+        ],
+        [
+          75,
+          4
+        ],
+        [
+          69.5,
+          7.5
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "H13",
+      "kind": "destination_access"
+    },
+    {
+      "id": "AH14",
+      "points_xy_m": [
+        [
+          73,
+          18
+        ],
+        [
+          73,
+          30
+        ],
+        [
+          69,
+          33
+        ]
+      ],
+      "width_m": 2,
+      "target_id": "H14",
+      "kind": "destination_access"
+    }
+  ],
+  "connections": {
+    "west_arrival": {
+      "node_xy_m": [
+        -99,
+        -16
+      ],
+      "direction": "west/northwest toward future belvedere descent; final alignment and height pending",
+      "boundary_opening_width_m": 6,
+      "boundary_gap_centre_xy_m": [
+        -101.9,
+        -16
+      ],
+      "closed_hermetic_boundary": false,
+      "unbuilt_local_boundary_approach_xy_m": [
+        [
+          -99,
+          -16
+        ],
+        [
+          -101.9,
+          -16
+        ]
+      ]
+    },
+    "east_bank": {
+      "exit_marker_xy_m": [
+        103,
+        -2
+      ],
+      "main_end_xy_m": [
+        108,
+        -2
+      ],
+      "bank_approach_xy_m": [
+        111.93335527903955,
+        -2
+      ],
+      "opening_between_core_and_bank_y_m": [
+        -5,
+        1
+      ],
+      "width_m": 4,
+      "bridge": false,
+      "crossing": false,
+      "global_zone_b_coordinates": null
+    },
+    "canal": {
+      "centre_x_formula": "121 +1.5*sin(y/45)",
+      "water_width_m": 6,
+      "water_z_m": -0.1,
+      "bank_crest_width_m": 4,
+      "bank_z_m": 0.55
+    }
+  },
+  "mill": {
+    "name": "Mulino tecnico",
+    "access": "Edificio chiuso; ruota e argine esterni",
+    "center_xyz_m": [
+      117.1,
+      20,
+      0.55
+    ],
+    "wheel_center_xyz_m": [
+      121.4,
+      20,
+      0.8
+    ],
+    "wheel_diameter_m": 3,
+    "wheel_nominal_width_m": 0.7,
+    "external_wall_wh_m": [
+      6,
+      4
+    ],
+    "total_body_height_m": 3.5,
+    "instances": [
+      {
+        "name": "VA4M_MILL_FOUNDATION",
+        "mesh": "/Game/Developers/Roberto/Greybox_WTFD/Village_A_Attempt2_R2/G4_Mestieri/Meshes/SM_VA4M_MillFoundation.SM_VA4M_MillFoundation",
+        "position_cm": [
+          11710.0,
+          2000.0,
+          55.00000000000001
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "VA4M_MILL_WHEEL",
+        "mesh": "/Game/Developers/Roberto/Greybox_WTFD/Village_A_Attempt2_R2/G4_Mestieri/Meshes/SM_VA4M_MillWheel.SM_VA4M_MillWheel",
+        "position_cm": [
+          12140.0,
+          2000.0,
+          80.0
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "VA4M_MILL_SHAFT",
+        "mesh": "/Game/Developers/Roberto/Greybox_WTFD/Village_A_Attempt2_R2/G4_Mestieri/Meshes/SM_VA4M_MillShaft.SM_VA4M_MillShaft",
+        "position_cm": [
+          12140.0,
+          2000.0,
+          80.0
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "VA4M_MILL_roof",
+        "mesh": "/Game/Developers/Roberto/Greybox_WTFD/Village_A_Attempt2_R2/G3/Meshes/SM_VA3_H14_roof.SM_VA3_H14_roof",
+        "position_cm": [
+          11710.0,
+          2000.0,
+          55.00000000000001
+        ],
+        "rotation_deg": [
+          0.0,
+          180.0,
+          -0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "VA4M_MILL_shadow",
+        "mesh": "/Game/Developers/Roberto/Greybox_WTFD/Village_A_Attempt2_R2/G3/Meshes/SM_VA3_H14_shadow.SM_VA3_H14_shadow",
+        "position_cm": [
+          11710.0,
+          2000.0,
+          55.00000000000001
+        ],
+        "rotation_deg": [
+          0.0,
+          180.0,
+          -0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "VA4M_MILL_wall",
+        "mesh": "/Game/Developers/Roberto/Greybox_WTFD/Village_A_Attempt2_R2/G3/Corner1/Meshes/SM_VA3_H14_wall_Corner1.SM_VA3_H14_wall_Corner1",
+        "position_cm": [
+          11710.0,
+          2000.0,
+          55.00000000000001
+        ],
+        "rotation_deg": [
+          0.0,
+          180.0,
+          -0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "VA4M_MILL_wood",
+        "mesh": "/Game/Developers/Roberto/Greybox_WTFD/Village_A_Attempt2_R2/G3/Meshes/SM_VA3_H14_wood.SM_VA3_H14_wood",
+        "position_cm": [
+          11710.0,
+          2000.0,
+          55.00000000000001
+        ],
+        "rotation_deg": [
+          0.0,
+          180.0,
+          -0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "construction_note": "Corpo chiuso 6 x 4 x 3.5 m; fondazione 6 x 4 m con profondita 2.2 m sotto la base. Portata e salto idraulico richiedono progettazione specifica."
+  }
+}
