@@ -14,30 +14,30 @@
     {id:'1',title:'Strumenti e versioni',summary:'Programmi e versioni uguali per tutti. Senza questo i file non si aprono o non funzionano nel gioco.',questions:[
       {id:'1.1',when:'call',q:'Usiamo FMOD per l’audio del gioco?',serve:['se i sound designer lavorano in FMOD o dentro Unreal','quali programmi e guide preparare','se si può impostare il resto della pipeline'],prop:'Sì. La prova tecnica è passata e ad Antonio è già stato detto che l’audio passerà da FMOD.'},
       {id:'1.2',when:'call',q:'Quali suoni passano da FMOD?',serve:['cosa gestisce il progetto FMOD e cosa resta in Unreal','chi si occupa di ogni parte'],prop:'Tutti: musica, ambienti, passi, combattimento, creature, menu e voci dei dialoghi. L’audio delle cutscene si decide dopo una prova di chi fa la parte Unreal.'},
-      {id:'1.3',when:'call',q:'Quale versione di FMOD usiamo, e chi decide quando aggiornarla?',serve:['la versione da installare per tutti','che il plugin nel gioco sia della stessa versione','chi autorizza un aggiornamento'],prop:'FMOD 2.03.15 per tutti, la stessa del plugin già nel progetto del gioco. Si aggiorna solo tutti insieme, su decisione del custode FMOD.',warn:'Un progetto aperto con una versione più nuova viene convertito: chi ha la versione vecchia rischia di non riaprirlo.'},
+      {id:'1.3',when:'call',q:'Quale versione di FMOD usiamo, e come si aggiorna?',serve:['la versione da installare per tutti','che il plugin nel gioco sia della stessa versione','come si gestiscono gli aggiornamenti'],prop:'FMOD 2.03.15 per tutti, la stessa del plugin già nel progetto del gioco. Si aggiorna solo tutti insieme, su decisione del custode FMOD.',warn:'Un progetto aperto con una versione più nuova viene convertito: chi ha la versione vecchia rischia di non riaprirlo.'},
       {id:'1.4',when:'call',q:'Ognuno può creare i suoni con il programma che preferisce?',serve:['se imporre un programma di lavoro o solo le regole di consegna','se servono licenze di programmi a pagamento'],prop:'Sì. Conta solo come si consegnano i file, secondo la Sound Bible (blocco 6).'},
-      {id:'1.5',when:'later',q:'Chi registra il progetto per la licenza FMOD?',serve:['se usiamo FMOD gratis o a pagamento','chi tiene i rapporti con FMOD'],prop:'Roberto, prima della prima versione pubblica. La licenza Indie vale per budget sotto i 600.000 dollari: gratuita o 2.000 dollari a titolo, secondo le condizioni di FMOD.'}
+      {id:'1.5',who:true,when:'later',q:'Chi registra il progetto per la licenza FMOD?',serve:['se usiamo FMOD gratis o a pagamento','chi tiene i rapporti con FMOD'],prop:'Roberto, prima della prima versione pubblica. La licenza Indie vale per budget sotto i 600.000 dollari: gratuita o 2.000 dollari a titolo, secondo le condizioni di FMOD.'}
     ]},
     {id:'2',title:'Persone e tempo',summary:'Su chi possiamo contare davvero. Qui si raccolgono informazioni, persona per persona.',questions:[
-      {id:'2.1',when:'call',q:'Quante ore a settimana può dare ognuno, in quali giorni, ed entro quanto risponde a una richiesta?',serve:['quanto lavoro assegnare a ciascuno','scadenze realistiche','quando passare un lavoro a un sostituto'],prop:'Ognuno indica un minimo garantito, anche basso. Risposta alle richieste entro 3 giorni.'},
-      {id:'2.2',when:'call',q:'Chi ha già lavorato con FMOD o collegato suoni al gioco in Unreal, su un progetto vero?',serve:['chi può fare il custode del progetto FMOD','chi può fare la parte Unreal','chi ha bisogno di formazione'],prop:'Chiedere esempi concreti: cosa avete fatto, in quale progetto, quali problemi avete risolto. Un «sì, lo conosco» non basta.'},
-      {id:'2.3',when:'call',q:'Che computer usa ognuno, Windows o Mac?',serve:['quali programmi installare','quali guide scrivere','su quali computer fare la prova a due (blocco 7)'],prop:'Si chiede nel giro iniziale.'}
+      {id:'2.1',info:true,when:'call',q:'Quante ore a settimana può dare ognuno, in quali giorni, ed entro quanto risponde a una richiesta?',serve:['quanto lavoro assegnare a ciascuno','scadenze realistiche','quando passare un lavoro a un sostituto'],prop:'Ognuno indica un minimo garantito, anche basso. Risposta alle richieste entro 3 giorni.'},
+      {id:'2.2',info:true,when:'call',q:'Chi ha già lavorato con FMOD o collegato suoni al gioco in Unreal, su un progetto vero?',serve:['chi può fare il custode del progetto FMOD','chi può fare la parte Unreal','chi ha bisogno di formazione'],prop:'Chiedere esempi concreti: cosa avete fatto, in quale progetto, quali problemi avete risolto. Un «sì, lo conosco» non basta.'},
+      {id:'2.3',info:true,when:'call',q:'Che computer usa ognuno, Windows o Mac?',serve:['quali programmi installare','quali guide scrivere','su quali computer fare la prova a due (blocco 7)'],prop:'Si chiede nel giro iniziale.'}
     ]},
     {id:'3',title:'Ruoli',summary:'Chi approva, chi cura il progetto FMOD, chi mette i suoni nel gioco, chi aiuta con il codice.',questions:[
-      {id:'3.1',when:'call',q:'Chi ha l’ultima parola su un suono?',serve:['chi approva prima che un suono entri nel gioco','chi chiude i disaccordi','quante correzioni al massimo per consegna'],prop:'Approvano Roberto e Lorenzo. Per ogni area un referente fa il primo ascolto. Al massimo due giri di correzioni, poi decide la direzione.'},
-      {id:'3.2',when:'call',q:'Chi è il custode del progetto FMOD, e chi lo sostituisce?',serve:['chi tocca le parti comuni: mixer, bank principale, informazioni condivise come zona e tensione','chi prepara le bank per il gioco','chi fa rispettare nomi e cartelle'],prop:'Il sound designer con più esperienza FMOD, più un sostituto. Le parti comuni le tocca solo lui.'},
+      {id:'3.1',who:true,when:'call',q:'Chi ha l’ultima parola su un suono?',serve:['chi approva prima che un suono entri nel gioco','chi chiude i disaccordi','quante correzioni al massimo per consegna'],prop:'Approvano Roberto e Lorenzo. Per ogni area un referente fa il primo ascolto. Al massimo due giri di correzioni, poi decide la direzione.'},
+      {id:'3.2',who:true,when:'call',q:'Chi è il custode del progetto FMOD, e chi lo sostituisce?',serve:['chi tocca le parti comuni: mixer, bank principale, informazioni condivise come zona e tensione','chi prepara le bank per il gioco','chi fa rispettare nomi e cartelle'],prop:'Il sound designer con più esperienza FMOD, più un sostituto. Le parti comuni le tocca solo lui.'},
       {id:'3.3',when:'call',q:'Ognuno lavora sulla sua area nel progetto FMOD?',serve:['come lavorare in parallelo senza conflitti','chi risponde di quali suoni','a chi vanno le task di ogni area'],prop:'Sì. Ogni area ha una sua cartella di eventi, una sua bank e un responsabile (blocco 4). Due persone non lavorano sullo stesso evento nello stesso momento.',goto:'ac-workflow',gotoLabel:'Vedi la proposta nel flusso operativo'},
-      {id:'3.4',when:'call',q:'Chi mette i suoni nel gioco in Unreal, e chi lo sostituisce?',serve:['chi riceve le bank e collega i suoni alle azioni del gioco','se serve usare l’ultimo posto libero su Perforce'],prop:'Uno dei quattro che hanno già Perforce: Roberto, Lorenzo, Antonio o Giacomo. Così l’ultimo posto resta libero.'},
+      {id:'3.4',who:true,when:'call',q:'Chi mette i suoni nel gioco in Unreal, e chi lo sostituisce?',serve:['chi riceve le bank e collega i suoni alle azioni del gioco','se serve usare l’ultimo posto libero su Perforce'],prop:'Uno dei quattro che hanno già Perforce: Roberto, Lorenzo, Antonio o Giacomo. Così l’ultimo posto resta libero.'},
       {id:'3.5',when:'call',q:'Quali lavori audio servono ad Antonio, e come glieli chiediamo?',serve:['cosa fa il programmatore e cosa fa chi integra','come pianificare il suo tempo'],prop:'Ad Antonio le parti di sistema: mandare all’audio zona, tensione e stato del gioco; abbassare l’audio in dialoghi e pausa; voci dei dialoghi; audio giusto dopo un caricamento. Ogni richiesta con una task su Notion.'}
     ]},
     {id:'4',title:'Aree di lavoro',summary:'Per ogni area: chi crea i suoni e li prepara in FMOD. In «Chi se ne occupa» si spuntano i nomi. Regola generale proposta: chi crea i suoni di un’area li prepara anche in FMOD.',questions:[
-      {id:'4.1',when:'call',q:'Musica: chi se ne occupa?',serve:['chi compone tema principale, musica dell’esplorazione e del combattimento','chi prepara la musica in FMOD','a chi vanno le task musicali'],prop:'I compositori, con Luca sul tema principale. In FMOD la prepara chi compone, se conosce FMOD; altrimenti il custode.'},
-      {id:'4.2',when:'call',q:'Ambienti e natura: chi se ne occupa?',serve:['chi crea vento, acqua, fauna e i fondi di ogni zona','chi li prepara in FMOD']},
-      {id:'4.3',when:'call',q:'Passi e movimenti di Rinaldo: chi se ne occupa?',serve:['chi registra i passi su ogni terreno e i movimenti','chi valuta se servono suoni a parte per la corsa (10.5)']},
-      {id:'4.4',when:'call',q:'Combattimento: chi se ne occupa?',serve:['chi crea armi, colpi e danni','chi segue la musica e i suoni degli scontri insieme ai compositori']},
-      {id:'4.5',when:'call',q:'Creature e nemici: chi se ne occupa?',serve:['chi crea versi, attacchi e morte di ogni nemico','chi segue i tre scontri importanti']},
-      {id:'4.6',when:'call',q:'Interfaccia e menu: chi se ne occupa?',serve:['chi crea i suoni di menu, libro dei dialoghi e diario']},
-      {id:'4.7',when:'call',q:'Voci dei dialoghi in FMOD: chi se ne occupa?',serve:['chi prepara in FMOD le voci registrate, una tabella per lingua','chi controlla i nomi dei file','quando Antonio riceve gli audio di prova'],prop:'Il custode FMOD. Nomi già concordati con Antonio: VO_<Personaggio>_<Argomento>_L01. Prima consegna di prova ad Antonio subito dopo la call.'}
+      {id:'4.1',who:true,when:'call',q:'Musica: chi se ne occupa?',serve:['chi compone tema principale, musica dell’esplorazione e del combattimento','chi prepara la musica in FMOD','a chi vanno le task musicali'],prop:'I compositori, con Luca sul tema principale. In FMOD la prepara chi compone, se conosce FMOD; altrimenti il custode.'},
+      {id:'4.2',who:true,when:'call',q:'Ambienti e natura: chi se ne occupa?',serve:['chi crea vento, acqua, fauna e i fondi di ogni zona','chi li prepara in FMOD']},
+      {id:'4.3',who:true,when:'call',q:'Passi e movimenti di Rinaldo: chi se ne occupa?',serve:['chi registra i passi su ogni terreno e i movimenti','chi valuta se servono suoni a parte per la corsa (10.5)']},
+      {id:'4.4',who:true,when:'call',q:'Combattimento: chi se ne occupa?',serve:['chi crea armi, colpi e danni','chi segue la musica e i suoni degli scontri insieme ai compositori']},
+      {id:'4.5',who:true,when:'call',q:'Creature e nemici: chi se ne occupa?',serve:['chi crea versi, attacchi e morte di ogni nemico','chi segue i tre scontri importanti']},
+      {id:'4.6',who:true,when:'call',q:'Interfaccia e menu: chi se ne occupa?',serve:['chi crea i suoni di menu, libro dei dialoghi e diario']},
+      {id:'4.7',who:true,when:'call',q:'Voci dei dialoghi in FMOD: chi se ne occupa?',serve:['chi prepara in FMOD le voci registrate, una tabella per lingua','chi controlla i nomi dei file','quando Antonio riceve gli audio di prova'],prop:'Il custode FMOD. Nomi già concordati con Antonio: VO_<Personaggio>_<Argomento>_L01. Prima consegna di prova ad Antonio subito dopo la call.'}
     ]},
     {id:'5',title:'Il progetto FMOD',summary:'Come è organizzato il progetto, perché tutti trovino le cose e nessuno si pesti i piedi.',questions:[
       {id:'5.1',when:'call',q:'Come dividiamo eventi e bank?',serve:['in quali pacchetti il gioco carica i suoni','chi possiede ogni pacchetto','come evitare conflitti'],prop:'Una cartella e una bank per area: Musica, Ambienti, Passi, Combattimento, Creature, Interfaccia, Voci. La bank principale la cura solo il custode. Le voci hanno una bank per lingua.'},
@@ -52,29 +52,29 @@
       {id:'6.4',when:'later',q:'Come iniziano e finiscono i file, e come si fanno i loop?',serve:['se i suoni partono senza ritardo','se i loop si ripetono senza scatti','come si riconosce un loop dal nome'],prop:'Niente silenzio all’inizio, coda naturale alla fine. I loop chiudono senza click e hanno _LP nel nome.'},
       {id:'6.5',when:'later',q:'Quante varianti per i suoni che si ripetono?',serve:['quanto lavoro chiedere per passi, colpi e versi','quanto si sente la ripetizione'],prop:'Almeno 4 varianti per i passi su ogni terreno, come nella prova, e 3 per colpi e versi. FMOD le alterna da solo.'},
       {id:'6.6',when:'later',q:'Come si consegna la musica?',serve:['se la musica si può adattare al gioco','se servono le parti separate (stem)','come si agganciano i cambi al ritmo'],prop:'Brano completo più le parti separate quando servono; tempo e tonalità nella nota di consegna. I frammenti per l’esplorazione brevi e compatibili tra loro.'},
-      {id:'6.7',when:'call',q:'Da dove arrivano i suoni, e con quale licenza?',serve:['se possiamo usare legalmente ogni suono in un gioco venduto','chi controlla le licenze','cosa scrivere nei crediti'],prop:'Solo registrazioni proprie o librerie con licenza per uso commerciale. Ogni consegna elenca fonti e licenze.',warn:'Un suono senza licenza chiara va rifatto prima dell’uscita.'},
+      {id:'6.7',when:'call',q:'Da dove arrivano i suoni, e con quale licenza?',serve:['se possiamo usare legalmente ogni suono in un gioco venduto','come si controllano le licenze','cosa scrivere nei crediti'],prop:'Solo registrazioni proprie o librerie con licenza per uso commerciale. Ogni consegna elenca fonti e licenze; il custode le controlla quando riceve i file.',warn:'Un suono senza licenza chiara va rifatto prima dell’uscita.'},
       {id:'6.8',when:'later',q:'Dove si consegna, e cosa si scrive nella consegna?',serve:['dove il custode trova i file','come si seguono le versioni','cosa deve sapere chi riceve'],prop:'Cartella Drive dell’area più richiesta nell’Hub, con elenco dei file, cosa sono, se sono loop, fonti e licenze. Le correzioni tengono lo stesso nome file.'},
-      {id:'6.9',when:'call',q:'Chi scrive la Sound Bible, dove sta e chi la approva?',serve:['dove il team trova tutte le regole tecniche','chi le aggiorna','da quando valgono'],prop:'Un manuale di produzione come l’Artist Bible degli artisti. Prima bozza con gli esiti di questa call, revisione del custode FMOD, approvazione di Roberto e Lorenzo. Vale per tutte le task audio da quel momento.'}
+      {id:'6.9',who:true,when:'call',q:'Chi scrive la Sound Bible, dove sta e chi la approva?',serve:['dove il team trova tutte le regole tecniche','chi le aggiorna','da quando valgono'],prop:'Un manuale di produzione come l’Artist Bible degli artisti. Prima bozza con gli esiti di questa call, revisione del custode FMOD, approvazione di Roberto e Lorenzo. Vale per tutte le task audio da quel momento.'}
     ]},
     {id:'7',title:'Archivio condiviso',summary:'Dove vive il progetto FMOD condiviso, con la storia delle modifiche. Il confronto spiegato è nella sezione «SVN o Git LFS».',questions:[
-      {id:'7.1',when:'call',q:'Chi ha già usato SVN o Git?',serve:['quale sistema il team imparerà con meno fatica','quanta formazione serve'],goto:'ac-repo',gotoLabel:'Apri il confronto SVN / Git LFS'},
+      {id:'7.1',info:true,when:'call',q:'Chi ha già usato SVN o Git?',serve:['quale sistema il team imparerà con meno fatica','quanta formazione serve'],goto:'ac-repo',gotoLabel:'Apri il confronto SVN / Git LFS'},
       {id:'7.2',when:'call',q:'Proviamo SVN, Git LFS o tutti e due?',serve:['quale archivio provare per primo','quando si potrà lavorare insieme sul progetto FMOD'],prop:'Prima SVN, perché si usa da dentro FMOD. Se gestirlo è troppo pesante, si prova Git LFS.'},
-      {id:'7.3',when:'call',q:'Chi gestisce l’archivio e le copie di sicurezza?',serve:['chi installa e cura l’archivio','chi fa il backup, e ogni quanto'],prop:'Per SVN, chi gestisce già il server di Perforce. Backup settimanale, conservato fuori dal server.'},
-      {id:'7.4',when:'call',q:'Chi fa la prova a due, e chi decide se è andata bene?',serve:['chi verifica che il metodo funzioni prima di usarlo sul gioco'],prop:'Il custode FMOD e un altro sound designer. Giudicano Roberto e il custode.'},
+      {id:'7.3',who:true,when:'call',q:'Chi gestisce l’archivio e le copie di sicurezza?',serve:['chi installa e cura l’archivio','chi fa il backup, e ogni quanto'],prop:'Per SVN, chi gestisce già il server di Perforce. Backup settimanale, conservato fuori dal server.'},
+      {id:'7.4',who:true,when:'call',q:'Chi fa la prova a due, e chi decide se è andata bene?',serve:['chi verifica che il metodo funzioni prima di usarlo sul gioco'],prop:'Il custode FMOD e un altro sound designer. Giudicano Roberto e il custode.'},
       {id:'7.5',when:'later',q:'Quali regole per lavorare sull’archivio?',serve:['come evitare conflitti e lavoro perso'],prop:'Aggiornare sempre prima di iniziare. Inviare a fine sessione con una frase su cosa è cambiato. Mai inviare lavoro rotto. Le parti comuni le tocca solo il custode.'}
     ]},
     {id:'8',title:'Flusso di lavoro e controlli',summary:'Come nasce un lavoro, ogni quanto arriva nel gioco, quando è finito davvero.',questions:[
       {id:'8.1',when:'call',q:'Come nasce un lavoro audio?',serve:['dove arrivano le richieste','cosa deve sapere un sound designer prima di iniziare'],prop:'Una task su Notion per ogni consegna, con: cosa serve, dove si sente nel gioco, riferimenti, durata, loop sì o no, area e scadenza.'},
       {id:'8.2',when:'call',q:'Ogni quanto i suoni nuovi arrivano nel gioco?',serve:['il ritmo di lavoro','quando chi integra riceve le novità','come evitare interruzioni continue'],prop:'Una volta a settimana, in un giorno fisso: il custode prepara le bank, chi integra le mette nel gioco.'},
       {id:'8.3',when:'call',q:'Quali controlli prima di dire che un suono è nel gioco?',serve:['quando una consegna è finita davvero','chi fa ogni controllo'],prop:'Tre passi. Suona bene in FMOD: lo controlla chi l’ha fatto. Funziona in Unreal premendo Play: chi integra. Funziona nel gioco esportato per PC: prova settimanale.'},
-      {id:'8.4',when:'call',q:'Chi prova per primo il gioco esportato per PC con FMOD dentro?',serve:['se FMOD funziona anche fuori da Unreal','chi sistema l’avviso tecnico di FMOD ancora aperto'],prop:'Chi integra, nelle prime due settimane, con Antonio se serve.'},
+      {id:'8.4',who:true,when:'call',q:'Chi prova per primo il gioco esportato per PC con FMOD dentro?',serve:['se FMOD funziona anche fuori da Unreal','chi sistema l’avviso tecnico di FMOD ancora aperto'],prop:'Chi integra, nelle prime due settimane, con Antonio se serve.'},
       {id:'8.5',when:'later',q:'Quando una consegna audio conta come «Integrated» e dà i punti?',serve:['quando si accreditano i punti per l’audio','come non darli per prove o suoni non ancora nel gioco'],prop:'Quando il suono è nel gioco e ha passato i controlli. Lo spunta Roberto, come per le altre task. Ne decidono Roberto e Lorenzo dopo la call.'},
       {id:'8.6',when:'later',q:'Quanto può pesare l’audio, e quanti suoni insieme al massimo?',serve:['se il gioco rallenta quando partono molti suoni insieme','quanto spazio occupa l’audio'],prop:'Per ora nessun limite rigido. Il custode controlla con gli strumenti di FMOD quando il gioco cresce.'},
       {id:'8.7',when:'later',q:'Quando pensiamo alle console?',serve:['se servono licenze e kit di sviluppo','quando prepararli'],prop:'Dopo la prima accettazione su PC.'}
     ]},
     {id:'9',title:'Esplorazione: la prima prova',summary:'L’idea è decisa: l’ambiente in primo piano, la musica entra ogni tanto e poi sparisce. Qui si decide come provarla.',questions:[
       {id:'9.1',when:'call',q:'Dove facciamo la prima prova, e come capiamo se funziona?',serve:['il primo lavoro concreto del team','cosa produrre per primo','come giudicare il risultato'],prop:'Dall’uscita dal villaggio, attraverso la nebbia, fino al primo cippo. Funziona se la musica compare di rado e il silenzio sembra voluto, se non si sentono ripetizioni e se il cambio di zona non ha stacchi.'},
-      {id:'9.2',when:'call',q:'Chi prepara la proposta tecnica per l’esplorazione?',serve:['come dividere ambiente e musica in FMOD','quali informazioni servono dal gioco','quanti suoni insieme al massimo'],prop:'Il custode FMOD, insieme a chi fa la musica e a chi fa gli ambienti.'},
+      {id:'9.2',who:true,when:'call',q:'Chi prepara la proposta tecnica per l’esplorazione?',serve:['come dividere ambiente e musica in FMOD','quali informazioni servono dal gioco','quanti suoni insieme al massimo'],prop:'Il custode FMOD, insieme a chi fa la musica e a chi fa gli ambienti.'},
       {id:'9.3',when:'call',q:'Cosa fa salire la tensione?',serve:['quando la musica si fa più presente','cosa deve mandare il gioco all’audio'],prop:'Momenti della storia e zone precise, decisi da chi fa il game design.',warn:'Se la tensione sale quando un mostro è vicino ma non ti ha ancora visto, la musica avvisa del pericolo: è stato escluso.'},
       {id:'9.4',when:'later',q:'La musica entra a caso o in un ordine preciso?',serve:['come scrivono i compositori','come si costruisce in FMOD'],prop:'A caso, entro regole precise: i compositori scrivono frammenti brevi che stanno bene in qualsiasi ordine.'},
       {id:'9.5',when:'later',q:'Quanto deve essere vuoto il suono?',serve:['quanta musica si sente in esplorazione','le pause tra un frammento e l’altro'],prop:'Mai più di un frammento di musica alla volta, con pause lunghe. I numeri li propone il custode; la scelta finale spetta alla direzione.'}
@@ -126,7 +126,10 @@
   const currentIds=new Set(allQuestions.map(q=>q.id));
   /* 25/11/2026 [Claude] — Su richiesta di Roberto le risposte salvate con i codici delle versioni precedenti
      (erano prove) si cancellano all'apertura della pagina e dopo un'importazione. */
-  function removeOldAnswers(){const old=Object.keys(data.answers).filter(id=>!currentIds.has(id));old.forEach(id=>delete data.answers[id]);return old.length}
+  const questionById=new Map(allQuestions.map(q=>[q.id,q]));
+  /* 26/11/2026 [Claude] — «Chi se ne occupa» solo dove la risposta è una persona (who:true); tolto dalle
+     decisioni di progetto e dalle domande di raccolta informazioni, su richiesta di Roberto. */
+  function removeOldAnswers(){let changed=0;Object.keys(data.answers).forEach(id=>{const q=questionById.get(id);if(!q){delete data.answers[id];changed++}else if(!q.who&&data.answers[id]?.owner){data.answers[id]={...data.answers[id],owner:''};changed++}});return changed}
   /* 26/11/2026 [Claude] — «Confronta»: carica il file esportato da un’altra persona e mostra le sue risposte sotto
      ogni domanda, accanto alle proprie, senza modificarle. Il confronto resta salvato nel browser finché non si
      preme «Togli il confronto». */
@@ -137,16 +140,17 @@
   function loadCompare(){try{const raw=localStorage.getItem(COMPARE_STORAGE);const value=raw?JSON.parse(raw):null;return value&&value.answers&&typeof value.answers==='object'?value:null}catch(e){return null}}
   function saveCompare(){try{if(compare)localStorage.setItem(COMPARE_STORAGE,JSON.stringify(compare));else localStorage.removeItem(COMPARE_STORAGE)}catch(e){}}
   function hasContent(r){return !!r&&((r.status&&r.status!=='Da discutere')||r.decision||r.owner||r.notes)}
+  function theirAnswer(qid){const r=compare?.answers[qid];if(!r)return r;return questionById.get(qid)?.who?r:{...r,owner:''}}
   function sameText(a,b){return String(a||'').trim().toLowerCase()===String(b||'').trim().toLowerCase()}
   function sameOwners(a,b){return orderOwners(splitOwners(a)).join(', ')===orderOwners(splitOwners(b)).join(', ')}
   function compareName(){return compare&&compare.name?compare.name:'Altra persona'}
   function compareState(qid){
     if(!compare)return null;
-    const theirs=compare.answers[qid];
+    const theirs=theirAnswer(qid);
     if(!hasContent(theirs))return {kind:'none'};
     const mine=data.answers[qid];
     if(!hasContent(mine))return {kind:'only',theirs};
-    const same=sameText(mine.status,theirs.status)&&sameText(mine.decision,theirs.decision)&&sameOwners(mine.owner,theirs.owner);
+    const same=sameText(mine.status,theirs.status)&&sameText(mine.decision,theirs.decision)&&(!questionById.get(qid)?.who||sameOwners(mine.owner,theirs.owner));
     return {kind:same?'same':'diff',theirs};
   }
   function answerLine(r){return [r.status||'Da discutere',r.decision?`«${r.decision}»`:'',r.owner?'Chi: '+r.owner:'',r.notes?'Nota: '+r.notes:''].filter(Boolean).join(' · ')}
@@ -156,7 +160,7 @@
   }
   function compareBannerHtml(){
     if(!compare)return '';
-    const answered=allQuestions.filter(q=>hasContent(compare.answers[q.id])).length;
+    const answered=allQuestions.filter(q=>hasContent(theirAnswer(q.id))).length;
     const diff=allQuestions.filter(q=>compareState(q.id).kind==='diff').length;
     const old=Object.keys(compare.answers).filter(id=>!currentIds.has(id)&&hasContent(compare.answers[id])).sort();
     const when=compare.loaded?new Date(compare.loaded).toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}):'';
@@ -179,8 +183,8 @@
       <div class="ac-subq-head"><span class="ac-subq-num">${index+1}</span><div><h4>${esc(question.q)}</h4><p class="ac-subq-serve"><strong>Serve a decidere:</strong> ${question.serve.map(esc).join('; ')}.</p>${question.prop?`<p class="ac-subq-prop"><strong>Proposta:</strong> ${esc(question.prop)}</p>`:''}${question.warn?`<p class="ac-subq-warn"><strong>Attenzione:</strong> ${esc(question.warn)}</p>`:''}${link?`<p class="ac-subq-more">${link}</p>`:''}</div><span class="ac-tag ${tagClass}">${WHEN[question.when]}</span></div>
       <div class="ac-form-grid">
         <label class="ac-field"><span>Esito</span><select data-field="status">${STATUSES.map(s=>`<option ${s===r.status?'selected':''}>${s}</option>`).join('')}</select></label>
-        <div class="ac-field"><span>Chi se ne occupa</span>${ownerPicker(r.owner)}</div>
-        <label class="ac-field full"><span>Decisione in una riga</span><input data-field="decision" value="${esc(r.decision)}" placeholder="«Proposta confermata» oppure cosa si è deciso al suo posto"></label>
+        ${question.who?`<div class="ac-field"><span>Chi se ne occupa</span>${ownerPicker(r.owner)}</div>`:''}
+        <label class="ac-field full"><span>${question.info?'Risposte raccolte':'Decisione in una riga'}</span><input data-field="decision" value="${esc(r.decision)}" placeholder="${question.info?'Chi ha risposto cosa, in breve':'«Proposta confermata» oppure cosa si è deciso al suo posto'}"></label>
         <label class="ac-field full"><span>Nota o prova richiesta</span><input data-field="notes" value="${esc(r.notes)}" placeholder="Informazione da recuperare, prova da fare, prossimo passo"></label>
       </div>
       ${compareRowHtml(question.id)}
@@ -216,7 +220,7 @@
     $('#ac-compare-name')?.addEventListener('change',e=>{compare.name=e.target.value.trim();saveCompare();$$('.ac-compare-head strong').forEach(el=>el.textContent=compareName());resetGeneratedReport()});
     updateProgress();
   }
-  function refreshCompare(li,article,item){if(!compare)return;const row=li.querySelector('.ac-compare-row');if(row)row.outerHTML=compareRowHtml(li.dataset.qid);article.querySelector('.ac-status').textContent=itemStatus(item);const banner=document.querySelector('.ac-compare-banner p+p');if(banner){const answered=allQuestions.filter(q=>hasContent(compare.answers[q.id])).length,diff=allQuestions.filter(q=>compareState(q.id).kind==='diff').length;banner.textContent=`Nel suo file: ${plural(answered,'risposta','risposte')}, ${plural(diff,'diversa','diverse')} dalle tue. Le tue risposte non cambiano.`}}
+  function refreshCompare(li,article,item){if(!compare)return;const row=li.querySelector('.ac-compare-row');if(row)row.outerHTML=compareRowHtml(li.dataset.qid);article.querySelector('.ac-status').textContent=itemStatus(item);const banner=document.querySelector('.ac-compare-banner p+p');if(banner){const answered=allQuestions.filter(q=>hasContent(theirAnswer(q.id))).length,diff=allQuestions.filter(q=>compareState(q.id).kind==='diff').length;banner.textContent=`Nel suo file: ${plural(answered,'risposta','risposte')}, ${plural(diff,'diversa','diverse')} dalle tue. Le tue risposte non cambiano.`}}
   function openAgendaItem(id){const article=document.querySelector(`.ac-agenda-item[data-id="${id}"]`);if(!article)return;article.classList.add('open');article.querySelector('.ac-agenda-head').setAttribute('aria-expanded','true');setTimeout(()=>article.scrollIntoView({behavior:'smooth',block:'start'}),380)}
   function updateProgress(){const done=allQuestions.filter(q=>isClosed(record(q.id).status)).length,total=allQuestions.length,percent=total?done/total*100:0;$('#ac-done-count').textContent=done;$('#ac-total-count').textContent=total;$('#ac-call-progress').value=percent;$('#ac-side-progress').value=percent;$('#ac-side-count').textContent=`${done} di ${total} decisioni chiuse`}
   function makeReport(){
@@ -261,15 +265,15 @@
       const answered=item.questions.filter(q=>record(q.id).status!=='Da discutere');
       if(!answered.length)return;
       out.push(`${item.id} — ${item.title}`);
-      answered.forEach(q=>{const r=record(q.id);out.push(`  • ${q.id} ${q.q}`,...(q.prop?[`    Proposta: ${q.prop}`]:[]),`    Esito: ${r.status}`,`    Decisione: ${r.decision||'Non scritta'}`,`    Chi se ne occupa: ${r.owner||'Non assegnato'}`,`    Nota o prova: ${r.notes||'Nessuna'}`)});
+      answered.forEach(q=>{const r=record(q.id);out.push(`  • ${q.id} ${q.q}`,...(q.prop?[`    Proposta: ${q.prop}`]:[]),`    Esito: ${r.status}`,`    ${q.info?'Risposte raccolte':'Decisione'}: ${r.decision||'Non scritta'}`,...(q.who?[`    Chi se ne occupa: ${r.owner||'Non assegnato'}`]:[]),`    Nota o prova: ${r.notes||'Nessuna'}`)});
       out.push('');
     });
     if(compare){
       const who=compareName(),kind=q=>compareState(q.id).kind;
       const diff=allQuestions.filter(q=>kind(q)==='diff'),only=allQuestions.filter(q=>kind(q)==='only'),same=allQuestions.filter(q=>kind(q)==='same');
       out.push(`CONFRONTO CON ${who.toUpperCase()}`,`File caricato: ${compare.loaded?new Date(compare.loaded).toLocaleString('it-IT'):'data non nota'}`,`Uguali: ${same.length} · Diverse: ${diff.length} · Solo nel suo file: ${only.length}`,'');
-      if(diff.length){out.push('Risposte diverse:');diff.forEach(q=>out.push(`  • ${q.id} ${q.q}`,`    Tu: ${answerLine(record(q.id))}`,`    ${who}: ${answerLine(compare.answers[q.id])}`));out.push('')}
-      if(only.length){out.push(`Risposte solo nel file di ${who}:`);only.forEach(q=>out.push(`  • ${q.id} ${q.q}`,`    ${who}: ${answerLine(compare.answers[q.id])}`));out.push('')}
+      if(diff.length){out.push('Risposte diverse:');diff.forEach(q=>out.push(`  • ${q.id} ${q.q}`,`    Tu: ${answerLine(record(q.id))}`,`    ${who}: ${answerLine(theirAnswer(q.id))}`));out.push('')}
+      if(only.length){out.push(`Risposte solo nel file di ${who}:`);only.forEach(q=>out.push(`  • ${q.id} ${q.q}`,`    ${who}: ${answerLine(theirAnswer(q.id))}`));out.push('')}
     }
     out.push(`DECISIONI ANCORA APERTE (${open.length})`,'');
     agendaItems.forEach(item=>{
@@ -293,7 +297,7 @@
   $('#ac-import').onclick=()=>$('#ac-import-file').click();
   $('#ac-import-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const incoming=JSON.parse(await file.text());if(incoming.version!==2||typeof incoming.answers!=='object')throw new Error('Formato non riconosciuto');data=normalizeData(incoming);removeOldAnswers();save();renderAgenda();$('#ac-parking').value=data.parking||'';toast('Risposte importate')}catch(err){toast('Importazione non riuscita: '+err.message,true)}finally{e.target.value=''}};
   $('#ac-compare').onclick=()=>$('#ac-compare-file').click();
-  $('#ac-compare-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const incoming=JSON.parse(await file.text());if(incoming.version!==2||!incoming.answers||typeof incoming.answers!=='object')throw new Error('Formato non riconosciuto');compare={name:compare?.name||'',loaded:new Date().toISOString(),file:file.name,answers:incoming.answers};saveCompare();renderAgenda();resetGeneratedReport();showView('ac-call');toast(`Confronto caricato: ${allQuestions.filter(q=>hasContent(compare.answers[q.id])).length} risposte`)}catch(err){toast('Confronto non riuscito: '+err.message,true)}finally{e.target.value=''}};
+  $('#ac-compare-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const incoming=JSON.parse(await file.text());if(incoming.version!==2||!incoming.answers||typeof incoming.answers!=='object')throw new Error('Formato non riconosciuto');compare={name:compare?.name||'',loaded:new Date().toISOString(),file:file.name,answers:incoming.answers};saveCompare();renderAgenda();resetGeneratedReport();showView('ac-call');toast(`Confronto caricato: ${allQuestions.filter(q=>hasContent(theirAnswer(q.id))).length} risposte`)}catch(err){toast('Confronto non riuscito: '+err.message,true)}finally{e.target.value=''}};
   $('#ac-parking').value=data.parking||'';$('#ac-parking').oninput=e=>{data.parking=e.target.value;save()};
   $('#ac-generate-report').onclick=()=>{generatedReport=makeReport();$('#ac-report-text').textContent=generatedReport;$('#ac-report-text').hidden=false;$('#ac-report-state').hidden=true;$('#ac-download-report').hidden=false;$('#ac-print-report').hidden=false;$('#ac-generate-report span').textContent='Aggiorna report';toast('Report generato con i dati correnti')};
   $('#ac-download-report').onclick=()=>{if(generatedReport)download('Report_call_audio_'+new Date().toISOString().slice(0,10)+'.txt',generatedReport,'text/plain;charset=utf-8')};
