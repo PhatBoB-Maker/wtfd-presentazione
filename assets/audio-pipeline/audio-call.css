@@ -347,3 +347,75 @@ body>.shell,body>#printout,#legacy-call-source{display:none!important}
   body{background:#fff!important;color:#111!important}
   @page{margin:18mm}
 }
+
+/* 25/11/2026 [Claude] — Agenda divisa in decisioni concrete, link interni e sezione «SVN o Git LFS». */
+#audioBriefV2 .ac-subq-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+#audioBriefV2 .ac-subq{padding:18px 18px 20px;border:1px solid var(--ac-line);border-radius:var(--ac-radius);background:var(--ac-surface)}
+#audioBriefV2 .ac-subq.is-closed{border-color:var(--ac-blue-strong);background:var(--ac-blue-surface)}
+#audioBriefV2 .ac-subq-head{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:12px;align-items:start;margin-bottom:16px}
+#audioBriefV2 .ac-subq-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:999px;background:var(--ac-surface-3);color:var(--ac-muted);font-size:13px;font-weight:700;font-variant-numeric:tabular-nums}
+#audioBriefV2 .ac-subq h4{margin:2px 0 0;color:var(--ac-text);font-size:16px;font-weight:700;line-height:1.4}
+#audioBriefV2 .ac-subq-help{margin:6px 0 0;color:var(--ac-muted);font-size:14px;line-height:1.55}
+#audioBriefV2 .ac-subq .ac-tag{white-space:nowrap}
+#audioBriefV2 .ac-link{display:inline;margin:0;padding:0;border:0;background:none;color:var(--ac-blue-soft);font:inherit;font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+#audioBriefV2 .ac-link:hover{color:var(--ac-text)}
+#audioBriefV2 .ac-link:focus-visible{outline:2px solid var(--ac-focus);outline-offset:3px;border-radius:4px}
+#audioBriefV2 .ac-legacy{margin:0 0 14px;padding:12px 14px;border-radius:var(--ac-control);background:var(--ac-gold-surface);color:var(--ac-gold);font-size:13px}
+#audioBriefV2 .ac-runbook-note{margin:14px 0 0;color:var(--ac-faint);font-size:13px}
+#audioBriefV2 .ac-repo-table th[scope=row]{color:var(--ac-text);font-size:14px;letter-spacing:0;text-transform:none;min-width:150px}
+#audioBriefV2 .ac-repo-example{margin-top:18px;color:var(--ac-muted);font-size:14px}
+#audioBriefV2 .ac-repo-example strong{color:var(--ac-gold)}
+#audioBriefV2 .ac-repo-steps{margin:0;padding-left:1.3rem;color:var(--ac-muted)}
+#audioBriefV2 .ac-repo-steps li+li{margin-top:8px}
+@media(max-width:780px){
+  #audioBriefV2 .ac-agenda-body{padding-left:0}
+  #audioBriefV2 .ac-subq{padding:14px}
+  #audioBriefV2 .ac-subq-head{grid-template-columns:28px minmax(0,1fr)}
+  #audioBriefV2 .ac-subq-head .ac-tag{grid-column:2;justify-self:start}
+}
+/* 25/11/2026 [Claude] — «Chi se ne occupa» a scelta multipla (caselle da spuntare). */
+#audioBriefV2 .ac-subq .ac-form-grid{align-items:start}
+#audioBriefV2 .ac-owner-picker>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px;padding:9px 11px;border:1px solid var(--ac-line-strong);border-radius:var(--ac-control);background:#0c121b;color:var(--ac-text);cursor:pointer;list-style:none}
+#audioBriefV2 .ac-owner-picker>summary::-webkit-details-marker{display:none}
+#audioBriefV2 .ac-owner-picker>summary:focus-visible{outline:2px solid var(--ac-focus);outline-offset:2px}
+#audioBriefV2 .ac-owner-picker[open]>summary{border-color:var(--ac-focus)}
+#audioBriefV2 .ac-owner-summary{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#audioBriefV2 .ac-owner-chev{flex:none;transition:transform 180ms ease}
+#audioBriefV2 .ac-owner-picker[open] .ac-owner-chev{transform:rotate(180deg)}
+#audioBriefV2 .ac-owner-menu{display:grid;gap:2px;margin-top:6px;padding:8px;border:1px solid var(--ac-line-strong);border-radius:var(--ac-control);background:#0c121b;max-height:340px;overflow:auto}
+#audioBriefV2 .ac-owner-option{display:flex;align-items:center;gap:10px;padding:8px;border-radius:6px;color:var(--ac-text);font-size:14px;line-height:1.35;cursor:pointer}
+#audioBriefV2 .ac-owner-option:hover{background:var(--ac-surface-2)}
+#audioBriefV2 .ac-owner-option input{flex:none;width:18px;height:18px;min-height:0;margin:0;padding:0;accent-color:var(--ac-focus);cursor:pointer}
+#audioBriefV2 .ac-owner-option small{margin-left:4px;color:var(--ac-faint);font-size:12px}
+#audioBriefV2 .ac-owner-group{display:grid;gap:2px;margin-top:4px;padding-top:6px;border-top:1px solid var(--ac-line)}
+#audioBriefV2 .ac-owner-group-title{padding:4px 8px;color:var(--ac-muted);font-size:12px;font-weight:700}
+#audioBriefV2 .ac-owner-hint{margin:6px 8px 2px;color:var(--ac-faint);font-size:12px}
+/* 25/11/2026 [Claude] — Agenda rifatta: «Serve a decidere», «Proposta», «Attenzione» e risposte con codici precedenti. */
+#audioBriefV2 .ac-subq-serve,#audioBriefV2 .ac-subq-prop,#audioBriefV2 .ac-subq-warn,#audioBriefV2 .ac-subq-more{margin:6px 0 0;font-size:14px;line-height:1.55}
+#audioBriefV2 .ac-subq-serve{color:var(--ac-muted)}
+#audioBriefV2 .ac-subq-serve strong{color:var(--ac-text)}
+#audioBriefV2 .ac-subq-prop{padding:8px 10px;border-left:3px solid var(--ac-gold);border-radius:0 6px 6px 0;background:var(--ac-gold-surface);color:var(--ac-text)}
+#audioBriefV2 .ac-subq-prop strong{color:var(--ac-gold)}
+#audioBriefV2 .ac-subq-warn{color:var(--ac-orange)}
+#audioBriefV2 .ac-legacy ul{margin:8px 0 0;padding-left:1.2rem}
+#audioBriefV2 .ac-legacy li+li{margin-top:4px}
+/* 26/11/2026 [Claude] — «Confronta»: risposte di un’altra persona accanto alle proprie. */
+#audioBriefV2 .ac-compare-banner{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;align-items:start;margin:0 0 18px;padding:14px 16px;border:1px solid var(--ac-blue-strong);border-radius:var(--ac-radius);background:var(--ac-blue-surface)}
+#audioBriefV2 .ac-compare-banner p{margin:0;color:var(--ac-muted);font-size:14px}
+#audioBriefV2 .ac-compare-banner p+p{margin-top:4px}
+#audioBriefV2 .ac-compare-banner strong{color:var(--ac-text)}
+#audioBriefV2 .ac-compare-banner input{display:inline-block;width:auto;min-height:0;margin:0 2px;padding:3px 8px;font-size:14px}
+#audioBriefV2 .ac-compare-old{grid-column:1/-1;color:var(--ac-muted);font-size:13px}
+#audioBriefV2 .ac-compare-old summary{cursor:pointer}
+#audioBriefV2 .ac-compare-old ul{margin:8px 0 0;padding-left:1.2rem}
+#audioBriefV2 .ac-compare-row{margin-top:14px;padding:10px 12px;border:1px dashed var(--ac-line-strong);border-radius:var(--ac-control);font-size:14px}
+#audioBriefV2 .ac-compare-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+#audioBriefV2 .ac-compare-head strong{color:var(--ac-text)}
+#audioBriefV2 .ac-compare-tag{padding:2px 8px;border-radius:999px;background:var(--ac-surface-3);color:var(--ac-muted);font-size:12px;font-weight:700}
+#audioBriefV2 .ac-compare-row p{margin:6px 0 0;color:var(--ac-text)}
+#audioBriefV2 .ac-compare-row.is-diff{border-style:solid;border-color:var(--ac-orange)}
+#audioBriefV2 .ac-compare-row.is-diff .ac-compare-tag{background:var(--ac-orange);color:#16110a}
+#audioBriefV2 .ac-compare-row.is-same .ac-compare-tag{background:var(--ac-blue-surface);color:var(--ac-blue-soft)}
+#audioBriefV2 .ac-compare-row.is-only .ac-compare-tag{background:var(--ac-gold-surface);color:var(--ac-gold)}
+#audioBriefV2 .ac-compare-row.is-none{opacity:.7}
+@media(max-width:780px){#audioBriefV2 .ac-compare-banner{grid-template-columns:1fr}}
